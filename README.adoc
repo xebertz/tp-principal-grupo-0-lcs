@@ -16,6 +16,17 @@ En este documento se llevará a cabo la introducción al tema que nuestro grupo 
 == Objetivos del documento
 
 == Equipo de trabajo y roles
+=== Scrum Master
+Villalba, Gastón
+
+=== Líder Técnico
+Ebertz, Ximena
+
+=== Relleno de Naruto
+* Franco, Leandro
+* Torrez, Mauro
+* Venditto Pedro
+
 
 == Metodología de desarrollo
 
