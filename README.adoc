@@ -1,0 +1,27 @@
+= TP Pincipal - Laboratorio de Construcción de Software
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <>; López Gonzalo <gonzagonzalopez20@gmail.com>; Torrez Mauro <>; Venditto Pedro <>; Villalba Gastón <>;
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== Introducción
+
+Intro y objetivos del proyecto?
+
+== Objetivos del documento
+
+== Equipo de trabajo y roles
+
+== Metodología de desarrollo
+
+== Gestión
+
+== Tecnologías
+
+Acá podríamos poner enlaces
