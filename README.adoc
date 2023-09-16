@@ -1,4 +1,4 @@
-= TP Pincipal - Laboratorio de Construcción de Software
+= TP Principal - Laboratorio de Construcción de Software
 Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <>; López Gonzalo <gonzagonzalopez20@gmail.com>; Torrez Mauro <>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <>;
 v1, {docdate}
 :toc:
@@ -15,8 +15,9 @@ En este documento se llevará a cabo la introducción al tema que nuestro grupo 
 
 == Objetivos del proyecto
 
+
 == Objetivos del documento
-El principal objetivo de este documento es poder documentar los avances que logremos durante los primeros días del proyecto, en particular, en este caso se tratará de las decisiones tomadas antes del comienzo del mismo. Tales como la distribución de roles de trabajo, Riesgos del equipo, Tema a trabajar y las metodologías que se utilizarán.
+El principal objetivo de este documento es documentar las decisiones que se tomen en los días previos al inicio del proyecto. Tales como la distribución de roles de trabajo, los posibles riesgos del equipo, el tema a trabajar, las metodologías que se utilizarán, entre otras cosas relacionadas a la organización necesaria del proyecto.
 
 == Equipo de trabajo y roles
 === Scrum Master
@@ -28,9 +29,8 @@ El principal objetivo de este documento es poder documentar los avances que logr
 === Relleno de Naruto
 * Franco, Leandro
 * Torrez, Mauro
-* Venditto, Pedro
 * López, Gonzalo
-
+* Venditto, Pedro
 
 == Metodología de desarrollo
 
