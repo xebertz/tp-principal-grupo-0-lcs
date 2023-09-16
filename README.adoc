@@ -11,22 +11,33 @@ v1, {docdate}
 :pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
 
 == Introducción
-En este documento se llevará a cabo la introducción al tema que nuestro grupo trabajará durante el resto de la cursada. En donde, mediante la aplicación de tecnologías relacionadas a las inteligencias artificiales (IA), buscaremos implementar una aplicación que pueda ayudar a nuestros profesionales del área de la medicina a lograr un diagnóstico más rápido y preciso sobre alguna enfermedad o malestar en específico.
+
+La Inteligencia Artificial o _IA_ es un poderoso campo de estudio que está en constante crecimiento. Cada día, los modelos de Inteligencia Artificial evolucionan y se incorporan en nuestro día a día, funcionando como una herramienta de trabajo potente.
+
+Existen muchos campos donde la Inteligencia Artificial se está desarrollando: detección de imágenes, texto, audio, etcétera. Resulta lógico pensar que se pueden desarrollar herramientas para campos más específicos, como medicina, finanzas, o investigación.
 
 == Objetivos del proyecto
 
+Nuestro objetivo es, mediante la aplicación de tecnologías relacionadas a las inteligencias artificiales, implementar una aplicación que pueda ayudar a nuestros profesionales del área de la medicina a lograr un diagnóstico más rápido y preciso sobre alguna enfermedad o malestar en específico.
+
+Para esto, realizaremos tareas de investigación, de análisis de datos y de desarrollo, entre otras.
 
 == Objetivos del documento
-El principal objetivo de este documento es documentar las decisiones que se tomen en los días previos al inicio del proyecto. Tales como la distribución de roles de trabajo, los posibles riesgos del equipo, el tema a trabajar, las metodologías que se utilizarán, entre otras cosas relacionadas a la organización necesaria del proyecto.
+
+El principal objetivo de este documento es especificar las decisiones que se tomen en los días previos al inicio del proyecto; tales como la distribución de roles de trabajo, los posibles riesgos del equipo, el tema a trabajar, las metodologías que se utilizarán, entre otras cosas relacionadas a la organización necesaria del proyecto.
 
 == Equipo de trabajo y roles
+
 === Scrum Master
+
 * Villalba, Gastón
 
 === Líder Técnico
+
 * Ebertz, Ximena
 
 === Relleno de Naruto
+
 * Franco, Leandro
 * Torrez, Mauro
 * López, Gonzalo
