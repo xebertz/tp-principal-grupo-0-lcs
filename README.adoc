@@ -36,6 +36,8 @@ El principal objetivo de este documento es documentar las decisiones que se tome
 
 == Gestión
 
+== Riesgos
+
 == Tecnologías
 === Repositorio de GitHub
 https://github.com/ximeeb/tp-principal-grupo-0-lcs.git
