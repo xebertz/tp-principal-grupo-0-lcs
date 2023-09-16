@@ -1,5 +1,5 @@
 = TP Principal - Laboratorio de Construcción de Software
-Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <>; López Gonzalo <gonzagonzalopez20@gmail.com>; Torrez Mauro <>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <>;
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Torrez Mauro <>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <>;
 v1, {docdate}
 :toc:
 :title-page:
@@ -43,7 +43,10 @@ El principal objetivo de este documento es especificar las decisiones que se tom
 * López, Gonzalo
 * Venditto, Pedro
 
-== Metodología de desarrollo
+== Metodología de trabajo
+Utilizaremos Scrum para trabajar y coordinar al equipo. A está metodología la modificaremos para coordinarla con las preferencias del equipo para optimizarla.
+
+- Scrum Daily cada 2 días: Esto se realizará así porque los integrantes del equipo tienen tiempos diferentes y no harán tiempo para tener un avance considerable para plantearlo en las Daily. Por incovenientes o bloqueo de un integrante, en el día que no hay daily, se hablará por un canal de comunicación interna.
 
 == Gestión
 
