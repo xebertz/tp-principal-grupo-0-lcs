@@ -13,7 +13,10 @@ v1, {docdate}
 == Introducción
 En este documento se llevará a cabo la introducción al tema que nuestro grupo trabajará durante el resto de la cursada. En donde, mediante la aplicación de tecnologías relacionadas a las inteligencias artificiales (IA), buscaremos implementar una aplicación que pueda ayudar a nuestros profesionales del área de la medicina a lograr un diagnóstico más rápido y preciso sobre alguna enfermedad o malestar en específico.
 
+== Objetivos del proyecto
+
 == Objetivos del documento
+El principal objetivo de este documento es poder documentar los avances que logremos durante los primeros días del proyecto, en particular, en este caso se tratará de las decisiones tomadas antes del comienzo del mismo. Tales como la distribución de roles de trabajo, Riesgos del equipo, Tema a trabajar y las metodologías que se utilizarán.
 
 == Equipo de trabajo y roles
 === Scrum Master
@@ -26,6 +29,7 @@ En este documento se llevará a cabo la introducción al tema que nuestro grupo 
 * Franco, Leandro
 * Torrez, Mauro
 * Venditto, Pedro
+* López, Gonzalo
 
 
 == Metodología de desarrollo
@@ -33,5 +37,7 @@ En este documento se llevará a cabo la introducción al tema que nuestro grupo 
 == Gestión
 
 == Tecnologías
+=== Repositorio de GitHub
+https://github.com/ximeeb/tp-principal-grupo-0-lcs.git
 
 Acá podríamos poner enlaces
