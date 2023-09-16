@@ -28,9 +28,8 @@ El principal objetivo de este documento es especificar las decisiones que se tom
 
 == Equipo de trabajo y roles
 
-=== Scrum Master
-
-* Villalba, Gastón
+* Scrum Master:
+    Villalba, Gastón
 
 === Líder Técnico
 
@@ -56,14 +55,14 @@ Utilizaremos Scrum para trabajar y coordinar al equipo. A está metodología la 
 
 Las tecnologías a utilizar serán las siguientes:
 
-1. *Google Collab* para el desarrollo del modelo de IA, ya que el entorno de trabajo contiene todo lo necesario.
-2. *Python* como lenguaje de programación, por su simplicidad y utilidad en el desarrollo de este tipo de modelos.
-3. *TensorFlow - Keras* como biblioteca principal de desarrollo, ya que provee distintas funcionalidades para la creación de modelos de IA.
-4. *NumPy* debido a la necesidad de trabajar las imágenes como arrays multidimensionales o _tensores_.
-5. *Pandas* ya que permite obtener información de archivos .csv
-6. *cv2* como biblioteca de lectura y procesamiento de imágenes.
-7. *matplotlib.pyplot* para generar gráficos.
-8. *GitHub* como repositorio de trabajo.
+- *Google Collab* para el desarrollo del modelo de IA, ya que el entorno de trabajo contiene todo lo necesario.
+- *Python* como lenguaje de programación, por su simplicidad y utilidad en el desarrollo de este tipo de modelos.
+- *TensorFlow - Keras* como biblioteca principal de desarrollo, ya que provee distintas funcionalidades para la creación de modelos de IA.
+- *NumPy* debido a la necesidad de trabajar las imágenes como arrays multidimensionales o _tensores_.
+- *Pandas* ya que permite obtener información de archivos .csv
+- *cv2* como biblioteca de lectura y procesamiento de imágenes.
+- *matplotlib.pyplot* para generar gráficos.
+- *GitHub* como repositorio de trabajo.
 
 === Repositorio de GitHub
 
