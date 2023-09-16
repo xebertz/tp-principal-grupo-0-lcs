@@ -1,5 +1,5 @@
 = TP Pincipal - Laboratorio de Construcción de Software
-Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <>; López Gonzalo <gonzagonzalopez20@gmail.com>; Torrez Mauro <>; Venditto Pedro <>; Villalba Gastón <>;
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <>; López Gonzalo <gonzagonzalopez20@gmail.com>; Torrez Mauro <>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <>;
 v1, {docdate}
 :toc:
 :title-page:
@@ -11,8 +11,7 @@ v1, {docdate}
 :pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
 
 == Introducción
-
-Intro y objetivos del proyecto?
+En este documento se llevará a cabo la introducción al tema que nuestro grupo trabajará durante el resto de la cursada. En donde, mediante la aplicación de tecnologías relacionadas a las inteligencias artificiales (IA), buscaremos implementar una aplicación que pueda ayudar a nuestros profesionales del área de la medicina a lograr un diagnóstico más rápido y preciso sobre alguna enfermedad o malestar en específico.
 
 == Objetivos del documento
 
