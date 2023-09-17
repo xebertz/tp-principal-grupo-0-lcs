@@ -132,7 +132,7 @@ Matriz de evaluación de riesgos.
 
 [cols="7*",options="header"]
 |===
-|Descripción                         |Probabilidad de que ocurrencia         |Severidad      |Exposición al riesgo|Acciones para mitigarlos|Contingencia|Responsable
+|Descripción|Probabilidad de que ocurrencia|Severidad|Exposición al riesgo|Acciones para mitigarlos|Contingencia|Responsable
 
 |Solapamiento de _datasets_ con el grupo 2|1|3|3|Tener varios _datasets_. Acordar con el grupo 2|Cambiar a otro _dataset_.| Ebertz, Ximena; Villalba, Gastón
 |||||||
@@ -150,6 +150,15 @@ Utilizaremos los _issues_ de _GitHub_ para reportar bugs. Además se agregarán 
 === Administración de Cambios
 
 Tras recibir una petición de cambio, documentaremos las nuevas funcionalidades que se solicitan y posteriormente se agregarán al _Product Backlog_. Esta nueva modificación se evaluará, se estimará con los integrantes del proyecto, se modificará la WBS, Diccionario y se agregará al _Sprint Backlog_.
+
+=== Indicadores
+
+*Burndown Chart*: Al utilizar Scrum
+precisamos ver el avance de nuestro trabajo 
+a medida de cada sprint. 
+El trabajo se expresará en Story point, 
+teniendo en cuenta que 1 Story point = 1 hora.
+
 
 == Tecnologías
 
