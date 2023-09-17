@@ -47,13 +47,11 @@ Los roles que se utilizarán en el equipo son los siguientes:
 
 |Scrum Master   |Villalba, Gastón  |Ebertz, Ximena
 |Líder Técnico  |Ebertz, Ximena    |Franco, Leandro
-|Desarrollador  |Franco, Leandro   |
-|Desarrollador  |Torrez, Mauro     |
-|Desarrollador  |López, Gonzalo    |
-|Desarrollador  |Venditto, Pedro   |
+|Data Scientist  |Franco, Leandro   |
+|Data Scientist  |Torrez, Mauro     |
+|Machine Learning Engineer  |López, Gonzalo    |
+|Data Scientist  |Venditto, Pedro   |
 |===
-
-//modificar roles
 
 == Gestión
 
