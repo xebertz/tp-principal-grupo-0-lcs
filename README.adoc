@@ -172,6 +172,6 @@ Las tecnologías a utilizar serán las siguientes:
 
 === Repositorio de GitHub
 
-https://github.com/ximeeb/tp-principal-grupo-0-lcs.git
+El repositorio de GitHub se encuentra https://github.com/ximeeb/tp-principal-grupo-0-lcs.git[aquí].
 
 Acá podríamos poner enlaces
