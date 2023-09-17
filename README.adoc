@@ -42,7 +42,6 @@ Los roles que se utilizarán en el equipo son los siguientes:
 |Scrum Master   |Villalba, Gastón  |Ximena Ebertz
 |Líder Técnico  |Ebertz, Ximena    |
 |Desarrollador  |Franco, Leandro   |
-|Desarrollador  |Franco, Leandro   |
 |Desarrollador  |Torrez, Mauro     |
 |Desarrollador  |López, Gonzalo    |
 |Desarrollador  |Venditto, Pedro   |
@@ -81,6 +80,10 @@ Matriz de evaluación de riesgos.
 |||||||
 |||||||
 |===
+
+=== Manejo de bugs
+
+Utilizaremos Los _Issue_ de GitHub para reportar bugs. Además se agregarán al Jira de los PO, SM y LT. Posteriormente a un (Trello/Jira) de nuestro equipo para manejar el estado el bug.
 
 == Tecnologías
 
