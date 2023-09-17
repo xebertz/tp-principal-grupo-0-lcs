@@ -59,7 +59,7 @@ Los roles que se utilizarán en el equipo son los siguientes:
 
 === WBS
 .WBS
-image::wbs.png[]
+image::img/wbs.png[]
 
 === Visión
 
