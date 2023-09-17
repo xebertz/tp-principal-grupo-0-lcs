@@ -58,8 +58,14 @@ Los roles que se utilizarán en el equipo son los siguientes:
 == Gestión
 
 === WBS
+
 .WBS
 image::img/wbs.png[]
+
+=== Diagrama de precedencia
+
+.diagrama de precedencia
+image::img/diagrama-precedencia.png[]
 
 === Visión
 
