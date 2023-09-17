@@ -1,5 +1,5 @@
 = TP Principal - Laboratorio de Construcción de Software
-Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Torrez Mauro <>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <>;
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Torrez Mauro <sntorrez9@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
 v1, {docdate}
 :toc:
 :title-page:
@@ -12,24 +12,24 @@ v1, {docdate}
 
 == Introducción
 
-La Inteligencia Artificial o _IA_ es un poderoso campo de estudio que está en constante crecimiento. Cada día, los modelos de Inteligencia Artificial evolucionan y se incorporan en nuestro día a día, funcionando como una herramienta de trabajo potente.
+La Inteligencia Artificial o _IA_ es un poderoso campo de estudio que está en constante crecimiento. Cada día, los modelos de Inteligencia Artificial evolucionan y se incorporan en nuestro día a día, funcionando como una potente herramienta de trabajo.
 
 Existen muchos campos donde la Inteligencia Artificial se está desarrollando: detección de imágenes, texto, audio, etcétera. Resulta lógico pensar que se pueden desarrollar herramientas para campos más específicos, como medicina, finanzas, o investigación.
 
 == Objetivos del proyecto
 
-Nuestro objetivo es, mediante la aplicación de tecnologías relacionadas a las inteligencias artificiales, implementar una aplicación que pueda ayudar a nuestros profesionales del área de la medicina a lograr un diagnóstico más rápido y preciso sobre alguna enfermedad o malestar en específico.
+Nuestro objetivo es, mediante la aplicación de tecnologías relacionadas a las inteligencias artificiales, desarrollar un software que pueda ayudar a nuestros profesionales del área de la medicina a lograr un diagnóstico más rápido y preciso sobre alguna enfermedad o malestar en específico.
 
 Para esto, realizaremos tareas de investigación, de análisis de datos y de desarrollo, entre otras.
 
 == Objetivos del documento
 
-El principal objetivo de este documento es especificar las decisiones que se tomen en los días previos al inicio del proyecto; tales como la distribución de roles de trabajo, los posibles riesgos del equipo, el tema a trabajar, las metodologías que se utilizarán, entre otras cosas relacionadas a la organización necesaria del proyecto.
+El principal objetivo de este documento es especificar las decisiones que se tomen en los días previos al inicio del proyecto; tales como la distribución de roles de trabajo, los posibles riesgos del equipo y del proyecto, el tema a trabajar, las metodologías que se utilizarán, entre otras cosas relacionadas a la organización necesaria del proyecto.
 
 == Metodología de trabajo
 Utilizaremos Scrum para trabajar y coordinar al equipo. A está metodología la modificaremos para coordinarla con las preferencias del equipo para optimizarla.
 
-- Scrum Daily cada 2 días: Esto se realizará así porque los integrantes del equipo tienen tiempos diferentes y no harán tiempo para tener un avance considerable para plantearlo en las Daily. Por incovenientes o bloqueo de un integrante, en el día que no hay daily, se hablará por un canal de comunicación interna.
+- _*Daily Scrum*_ cada 2 días: los integrantes del equipo tienen tiempos diferentes y un día de trabajo quizá no sea suficiente para tener un avance considerable para plantearlo en las _Daily_. Por incovenientes o bloqueo de un integrante, en el día que no hay _Daily_, se comunicarán por algunos de los medios detallados más adelante.
 
 == Equipo de trabajo y roles
 
@@ -39,7 +39,7 @@ Los roles que se utilizarán en el equipo son los siguientes:
 |===
 |Rol            |Encargado         |Suplente
 
-|Scrum Master   |Villalba, Gastón  |Ximena Ebertz
+|Scrum Master   |Villalba, Gastón  |Ebertz, Ximena
 |Líder Técnico  |Ebertz, Ximena    |
 |Desarrollador  |Franco, Leandro   |
 |Desarrollador  |Torrez, Mauro     |
@@ -53,15 +53,15 @@ Los roles que se utilizarán en el equipo son los siguientes:
 
 === Plan de comunicaciones
 
-Nuestro medios de comunicación son:
+Nuestros medios de comunicación son:
 
-*Gather* Es una plataforma que nos permite tener una oficina virtual, donde cada uno tiene su personaje dentro de esta oficina. La utilizamos porque no tiene límites de tiempo, permite la comunicación a través de voz y es menos monótona que otras plataformas como Meet. Es una vía de comunicación formal que empleamos para las reuniones diarias.
+*Gather* Es una plataforma que nos permite tener una oficina virtual, donde cada uno tiene su personaje dentro de esta oficina. La utilizamos porque no tiene límites de tiempo, permite la comunicación a través de voz y es menos monótona que otras plataformas como Meet. Es una vía de comunicación formal que empleamos para las ceremonias _Scrum_.
 
 *WhatsApp*  Es un medio de comunicación informal que utilizamos para coordinar los horarios de las reuniones en Gather y discutir cuestiones relacionadas con el proyecto que no requieran la presencia de todo el equipo en ese momento. Se trata de un método de comunicación asincrónica.
 
 *Telegram* Similar al uso que le damos a WhatsApp, pero para relacionarlos con los demás equipos de trabajo. Principalmente es para coordinar reuniones o solicitar ayuda con alguna cuestión del proyecto.
 
-*Mail* En caso de que sea necesario, por algún incoveniente externo que no permita las vías convencionales, utilizaremos el mail de los integrantes para coordinar al equipo. Además, es la principal vía para comunicarnos con nuestro Product Owner.
+*Email* En caso de que sea necesario, por algún incoveniente externo que no permita las vías convencionales, utilizaremos el mail de los integrantes para coordinar al equipo. Además, es la principal vía para comunicarnos con nuestro Product Owner.
 
 
 === Riesgos
@@ -83,12 +83,11 @@ Matriz de evaluación de riesgos.
 
 === Administración en el Manejo de bugs
 
-Utilizaremos Los _Issue_ de GitHub para reportar bugs. Además se agregarán al Jira de los PO, SM y LT. Posteriormente a un (Trello/Jira) de nuestro equipo para manejar el estado el bug.
+Utilizaremos los _Issue_ de _GitHub_ para reportar bugs. Además se agregarán al tablero Jira de los PO, SM y LT. Posteriormente a un (Trello/Jira) de nuestro equipo para gestionar el estado el bug.
 
 === Administración de Cambios
 
-Tras recibir una petición de cambio, documentaremos las nuevas funcionalidades que nos solitan y posteriormente lo agregaremos al backlog. Esta nueva modificación se evaluará, se estimará con los integrantes del proyecto, se modificará la WBS, Diccionario y se agregará al Sprint.
-
+Tras recibir una petición de cambio, documentaremos las nuevas funcionalidades que se solicitan y posteriormente se agregarán al _Product Backlog_. Esta nueva modificación se evaluará, se estimará con los integrantes del proyecto, se modificará la WBS, Diccionario y se agregará al _Sprint Backlog_.
 
 == Tecnologías
 
