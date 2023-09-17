@@ -46,22 +46,21 @@ Los roles que se utilizarán en el equipo son los siguientes:
 |Rol            |Encargado         |Suplente
 
 |Scrum Master   |Villalba, Gastón  |Ebertz, Ximena
-|Líder Técnico  |Ebertz, Ximena    |
-|Desarrollador  |Franco, Leandro   |
-|Desarrollador  |Torrez, Mauro     |
-|Desarrollador  |López, Gonzalo    |
-|Desarrollador  |Venditto, Pedro   |
+|Líder Técnico  |Ebertz, Ximena    |Franco, Leandro
+|Data Scientist  |Franco, Leandro   |
+|Data Scientist  |Torrez, Mauro     |
+|Machine Learning Engineer  |López, Gonzalo    |
+|Data Scientist  |Venditto, Pedro   |
 |===
-
-//modificar roles
 
 == Gestión
 
 === WBS
+
 .WBS
 image::img/wbs.png[]
 
-=== Calendario WBS
+=== Diccionario WBS
 [cols="5*",options="header"]
 |===
 |Id|Nombre|Descripción|Tarea|Peso
@@ -85,6 +84,10 @@ image::img/wbs.png[]
 |1.3.2|Confirmación con expertos|En esta tarea se confirmará el rendimiento del modelo con expertos en el campo médico para asegurarse de que es adecuado para su uso en la industria médica. Se presentará el modelo a expertos en el campo médico y se recopilarán comentarios sobre su precisión, velocidad y facilidad de uso. También se identificarán posibles mejoras o limitaciones del modelo y se definirán planes para futuras iteraciones del proyecto.|Confirmar el rendimiento del modelo con expertos en el campo médico, presentando el modelo a expertos en el campo médico y recopilando comentarios sobre su precisión, velocidad y facilidad de uso. Identificar posibles mejoras o limitaciones del modelo y definir planes para futuras iteraciones del proyecto.|4,48
 
 |===
+=== Diagrama de precedencia
+
+.diagrama de precedencia
+image::img/diagrama-precedencia.png[]
 
 === Visión
 
