@@ -26,7 +26,14 @@ Para esto, realizaremos tareas de investigación, de análisis de datos y de des
 
 El principal objetivo de este documento es especificar las decisiones que se tomen en los días previos al inicio del proyecto; tales como la distribución de roles de trabajo, los posibles riesgos del equipo, el tema a trabajar, las metodologías que se utilizarán, entre otras cosas relacionadas a la organización necesaria del proyecto.
 
+== Metodología de trabajo
+Utilizaremos Scrum para trabajar y coordinar al equipo. A está metodología la modificaremos para coordinarla con las preferencias del equipo para optimizarla.
+
+- Scrum Daily cada 2 días: Esto se realizará así porque los integrantes del equipo tienen tiempos diferentes y no harán tiempo para tener un avance considerable para plantearlo en las Daily. Por incovenientes o bloqueo de un integrante, en el día que no hay daily, se hablará por un canal de comunicación interna.
+
 == Equipo de trabajo y roles
+
+Los roles que se utilizarán en el equipo son los siguientes:
 
 [cols="3*",options="header"]
 |===
@@ -41,10 +48,7 @@ El principal objetivo de este documento es especificar las decisiones que se tom
 |Desarrollador  |Venditto, Pedro   |
 |===
 
-== Metodología de trabajo
-Utilizaremos Scrum para trabajar y coordinar al equipo. A está metodología la modificaremos para coordinarla con las preferencias del equipo para optimizarla.
-
-- Scrum Daily cada 2 días: Esto se realizará así porque los integrantes del equipo tienen tiempos diferentes y no harán tiempo para tener un avance considerable para plantearlo en las Daily. Por incovenientes o bloqueo de un integrante, en el día que no hay daily, se hablará por un canal de comunicación interna.
+//modificar roles
 
 == Gestión
 
