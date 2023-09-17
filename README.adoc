@@ -28,19 +28,18 @@ El principal objetivo de este documento es especificar las decisiones que se tom
 
 == Equipo de trabajo y roles
 
-* Scrum Master:
-    Villalba, Gastón
+[cols="3*",options="header"]
+|===
+|Rol            |Encargado         |Suplente
 
-=== Líder Técnico
-
-* Ebertz, Ximena
-
-=== Relleno de Naruto
-
-* Franco, Leandro
-* Torrez, Mauro
-* López, Gonzalo
-* Venditto, Pedro
+|Scrum Master   |Villalba, Gastón  |Ximena Ebertz
+|Líder Técnico  |Ebertz, Ximena    |
+|Desarrollador  |Franco, Leandro   |
+|Desarrollador  |Franco, Leandro   |
+|Desarrollador  |Torrez, Mauro     |
+|Desarrollador  |López, Gonzalo    |
+|Desarrollador  |Venditto, Pedro   |
+|===
 
 == Metodología de trabajo
 Utilizaremos Scrum para trabajar y coordinar al equipo. A está metodología la modificaremos para coordinarla con las preferencias del equipo para optimizarla.
