@@ -64,7 +64,23 @@ Nuestro medios de comunicación son:
 
 *Mail* En caso de que sea necesario, por algún incoveniente externo que no permita las vías convencionales, utilizaremos el mail de los integrantes para coordinar al equipo. Además, es la principal vía para comunicarnos con nuestro Product Owner.
 
-== Riesgos
+
+=== Riesgos
+
+Matriz de evaluación de riesgos.
+
+[cols="7*",options="header"]
+|===
+|Descripción                         |Probabilidad de que ocurrencia         |Severidad      |Exposición al riesgo|Acciones para mitigarlos|Contingencia|Responsable
+
+|Falta de motivación de un integrante|2|2|4|Motivación hacía el integrante|llevarlo a una discoteca y prometerle un salario en dolares (?)| Villalba, Gastón
+|||||||
+|||||||
+|||||||
+|||||||
+|||||||
+|||||||
+|===
 
 == Tecnologías
 
