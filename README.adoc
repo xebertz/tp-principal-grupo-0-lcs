@@ -27,7 +27,7 @@ Para esto, realizaremos tareas de investigación, de análisis de datos y de des
 El principal objetivo de este documento es especificar las decisiones que se tomen en los días previos al inicio del proyecto; tales como la distribución de roles de trabajo, los posibles riesgos del equipo y del proyecto, el tema a trabajar, las metodologías que se utilizarán, entre otras cosas relacionadas a la organización necesaria del proyecto.
 
 == Metodología de trabajo
-Somos parte del _Agile Release Train_ (que plantea el marco de trabajo *_SAFe_*) en conjunto con los demás grupos. Para coordinar nuestro trabajo adaptaremos el _framework_ ágil *_Scrum_* según las preferencias del equipo para optimizarla.
+Somos parte del _Agile Release Train_ (que plantea el marco de trabajo *_SAFe_*) en conjunto con los demás grupos. Para coordinar nuestro trabajo adaptaremos el _framework_ ágil *_Scrum_* según las preferencias del equipo para optimizarla. Cada _Sprint_ dura *dos semanas*.
 
 - *_Sprint Planning_*: se realizará el primer día del _Sprint_ y en ocasiones participará el _Release Train Engineer_.
 
@@ -61,13 +61,19 @@ Los roles que se utilizarán en el equipo son los siguientes:
 
 Nuestros medios de comunicación son:
 
-*Gather* Es una plataforma que nos permite tener una oficina virtual, donde cada uno tiene su personaje dentro de esta oficina. La utilizamos porque no tiene límites de tiempo, permite la comunicación a través de voz y es menos monótona que otras plataformas como Meet. Es una vía de comunicación formal que empleamos para las ceremonias _Scrum_.
+*Gather*: es una plataforma que nos permite tener una oficina virtual, donde cada uno tiene su personaje dentro de esta oficina. La utilizamos porque no tiene límites de tiempo, permite la comunicación a través de voz, compartir pizarras y es menos monótona que otras plataformas como _Meet_. Es una vía de comunicación formal que empleamos para las ceremonias _Scrum_.
 
-*WhatsApp*  Es un medio de comunicación informal que utilizamos para coordinar los horarios de las reuniones en Gather y discutir cuestiones relacionadas con el proyecto que no requieran la presencia de todo el equipo en ese momento. Se trata de un método de comunicación asincrónica.
+*WhatsApp*: es un medio de comunicación informal que utilizamos para coordinar los horarios de las reuniones en _Gather_ y discutir cuestiones relacionadas con el proyecto que no requieran la presencia de todo el equipo en ese momento. Se trata de un método de comunicación [.underline]#asincrónica#.
 
-*Telegram* Similar al uso que le damos a WhatsApp, pero para relacionarlos con los demás equipos de trabajo. Principalmente es para coordinar reuniones o solicitar ayuda con alguna cuestión del proyecto.
+*Telegram*: similar al uso que le damos a WhatsApp, pero para contactarnos con los demás equipos de trabajo. Principalmente es para coordinar reuniones o solicitar ayuda con alguna cuestión del proyecto.
 
-*Email* En caso de que sea necesario, por algún incoveniente externo que no permita las vías convencionales, utilizaremos el mail de los integrantes para coordinar al equipo. Además, es la principal vía para comunicarnos con nuestro Product Owner.
+*Email*: en caso de que sea necesario, por algún incoveniente externo que no permita las vías convencionales, utilizaremos el email de los integrantes para coordinar al equipo. Además, es la principal vía para comunicarnos con nuestro _Product Owner_.
+
+*Jira/Trello*: comunicación de tareas y responsables de la ejecución de las mismas.
+
+*Moodle*: se realizarán las entregas de documentación solicitada para realizar el _Sprint Review_.
+
+La actualización de la documentación se hará formalmente al final de cada _Sprint_.
 
 
 === Riesgos
