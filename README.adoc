@@ -81,9 +81,14 @@ Matriz de evaluación de riesgos.
 |||||||
 |===
 
-=== Manejo de bugs
+=== Administración en el Manejo de bugs
 
 Utilizaremos Los _Issue_ de GitHub para reportar bugs. Además se agregarán al Jira de los PO, SM y LT. Posteriormente a un (Trello/Jira) de nuestro equipo para manejar el estado el bug.
+
+=== Administración de Cambios
+
+Tras recibir una petición de cambio, documentaremos las nuevas funcionalidades que nos solitan y posteriormente lo agregaremos al backlog. Esta nueva modificación se evaluará, se estimará con los integrantes del proyecto, se modificará la WBS, Diccionario y se agregará al Sprint.
+
 
 == Tecnologías
 
