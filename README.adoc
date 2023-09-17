@@ -52,6 +52,18 @@ Los roles que se utilizarán en el equipo son los siguientes:
 
 == Gestión
 
+=== Plan de comunicaciones
+
+Nuestro medios de comunicación son:
+
+*Gather* Es una plataforma que nos permite tener una oficina virtual, donde cada uno tiene su personaje dentro de esta oficina. La utilizamos porque no tiene límites de tiempo, permite la comunicación a través de voz y es menos monótona que otras plataformas como Meet. Es una vía de comunicación formal que empleamos para las reuniones diarias.
+
+*WhatsApp*  Es un medio de comunicación informal que utilizamos para coordinar los horarios de las reuniones en Gather y discutir cuestiones relacionadas con el proyecto que no requieran la presencia de todo el equipo en ese momento. Se trata de un método de comunicación asincrónica.
+
+*Telegram* Similar al uso que le damos a WhatsApp, pero para relacionarlos con los demás equipos de trabajo. Principalmente es para coordinar reuniones o solicitar ayuda con alguna cuestión del proyecto.
+
+*Mail* En caso de que sea necesario, por algún incoveniente externo que no permita las vías convencionales, utilizaremos el mail de los integrantes para coordinar al equipo. Además, es la principal vía para comunicarnos con nuestro Product Owner.
+
 == Riesgos
 
 == Tecnologías
