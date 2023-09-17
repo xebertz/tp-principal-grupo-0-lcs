@@ -145,7 +145,7 @@ Matriz de evaluación de riesgos.
 
 === Administración en el Manejo de bugs
 
-Utilizaremos los _issues_ de _GitHub_ para reportar bugs. Además se agregarán al tablero Jira de los PO, SM y LT. Posteriormente a un (Trello/Jira) de nuestro equipo para gestionar el estado el bug.
+Utilizaremos los _issues_ de _GitHub_ para reportar bugs. Además se agregarán al tablero Jira de los Product Owner, Scrum Master y Lider Técnico. Posteriormente a un Trello de nuestro equipo para gestionar el estado el bug.
 
 === Administración de Cambios
 
