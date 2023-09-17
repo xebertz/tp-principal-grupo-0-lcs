@@ -27,21 +27,22 @@ Para esto, realizaremos tareas de investigación, de análisis de datos y de des
 El principal objetivo de este documento es especificar las decisiones que se tomen en los días previos al inicio del proyecto; tales como la distribución de roles de trabajo, los posibles riesgos del equipo y del proyecto, el tema a trabajar, las metodologías que se utilizarán, entre otras cosas relacionadas a la organización necesaria del proyecto.
 
 == Metodología de trabajo
+
 Somos parte del _Agile Release Train_ (que plantea el marco de trabajo *_SAFe_*) en conjunto con los demás grupos. Para coordinar nuestro trabajo adaptaremos el _framework_ ágil *_Scrum_* según las preferencias del equipo para optimizarla. Cada _Sprint_ dura *dos semanas*.
 
 - *_Sprint Planning_*: se realizará el primer día del _Sprint_ y en ocasiones participará el _Release Train Engineer_.
 
-- *_Daily Scrum_* cada 2 días: los integrantes del equipo tienen tiempos diferentes y un día de trabajo quizá no sea suficiente para tener un avance considerable para plantearlo en las _Daily_. Por incovenientes o bloqueo de un integrante, en el día que no hay _Daily_, se comunicarán por algunos de los medios detallados más adelante.
+- *_Daily Scrum_* cada 2 días: los integrantes del equipo tienen tiempos diferentes y un día de trabajo quizá no sea suficiente para tener un avance considerable para plantearlo en las _Daily_. Por inconvenientes o bloqueo de un integrante, en el día que no hay _Daily_, se comunicarán por algunos de los medios detallados más adelante.
 
 - *_Sprint Review_*: el último día del _Sprint_ se hará una presentación de los informes solicitados mostrando el avance del equipo.
 
-- *_Sprint Retrospective_*: luego de la revisión de _Sprint_ se hará una retrospectiva del avance.
+- *_Sprint Retrospective_*: luego de la revisión de cada _Sprint_ se hará una retrospectiva del avance.
 
 == Equipo de trabajo y roles
 
 Los roles que se utilizarán en el equipo son los siguientes:
 
-[cols="3*",options="header"]
+[cols="3*", options="header"]
 |===
 |Rol            |Encargado         |Suplente
 
@@ -95,7 +96,7 @@ Nuestra visión es utilizar la tecnología de inteligencia artificial y aprendiz
 
 === Misión
 
-Nuestra misión es aplicar nuestros conocimientos y habilidades en procesamiento de imágenes y aprendizaje automático para crear soluciones innovadoras y efectivas que impacten positivamente en el ambito sanitario y el bienestar de las personas.
+Nuestra misión es aplicar nuestros conocimientos y habilidades en procesamiento de imágenes y aprendizaje automático para crear soluciones innovadoras y efectivas que impacten positivamente en el ámbito sanitario y el bienestar de las personas.
 
 === Alcance
 
@@ -105,7 +106,6 @@ Desarrollo y Entrenamiento del Modelo de IA:
 - Implementación y entrenamiento del modelo utilizando el conjunto de datos previamente preparado.
 - Optimización y validación del modelo para asegurar su eficacia y precisión en la clasificación de las imágenes médicas
 - Se considerará la posibilidad de mejorar el modelo de inteligencia artificial si es necesario.
-
 
 === Plan de comunicaciones
 
@@ -117,7 +117,7 @@ Nuestros medios de comunicación son:
 
 *Telegram*: similar al uso que le damos a WhatsApp, pero para contactarnos con los demás equipos de trabajo. Principalmente es para coordinar reuniones o solicitar ayuda con alguna cuestión del proyecto.
 
-*Email*: en caso de que sea necesario, por algún incoveniente externo que no permita las vías convencionales, utilizaremos el email de los integrantes para coordinar al equipo. Además, es la principal vía para comunicarnos con nuestro _Product Owner_.
+*Email*: en caso de que sea necesario, por algún inconveniente externo que no permita las vías convencionales, utilizaremos el email de los integrantes para coordinar al equipo. Además, es la principal vía para comunicarnos con nuestro _Product Owner_.
 
 *Jira/Trello*: comunicación de tareas y responsables de la ejecución de las mismas.
 
@@ -125,12 +125,11 @@ Nuestros medios de comunicación son:
 
 La actualización de la documentación se hará formalmente al final de cada _Sprint_.
 
-
 === Riesgos
 
 Matriz de evaluación de riesgos.
 
-[cols="7*",options="header"]
+[cols="7*", options="header"]
 |===
 |Descripción|Probabilidad de que ocurrencia|Severidad|Exposición al riesgo|Acciones para mitigarlos|Contingencia|Responsable
 
@@ -145,7 +144,7 @@ Matriz de evaluación de riesgos.
 
 === Administración en el Manejo de bugs
 
-Utilizaremos los _issues_ de _GitHub_ para reportar bugs. Además se agregarán al tablero Jira de los Product Owner, Scrum Master y Lider Técnico. Posteriormente a un Trello de nuestro equipo para gestionar el estado el bug.
+Utilizaremos los _issues_ de _GitHub_ para reportar bugs. Además se agregarán al tablero Jira de los Product Owner, Scrum Master y Líder Técnico. Posteriormente a un Trello de nuestro equipo para gestionar el estado el bug.
 
 === Administración de Cambios
 
@@ -155,10 +154,8 @@ Tras recibir una petición de cambio, documentaremos las nuevas funcionalidades 
 
 *Burndown Chart*: Al utilizar Scrum
 precisamos ver el avance de nuestro trabajo 
-a medida de cada sprint. 
-El trabajo se expresará en Story point, 
-teniendo en cuenta que 1 Story point = 1 hora.
-
+a medida de cada Sprint. 
+El trabajo se expresará en Story Point, teniendo en cuenta que un Story Point es igual a una hora.
 
 == Tecnologías
 
