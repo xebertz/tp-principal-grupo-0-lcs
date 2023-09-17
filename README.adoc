@@ -46,7 +46,7 @@ Los roles que se utilizarán en el equipo son los siguientes:
 |Rol            |Encargado         |Suplente
 
 |Scrum Master   |Villalba, Gastón  |Ebertz, Ximena
-|Líder Técnico  |Ebertz, Ximena    |
+|Líder Técnico  |Ebertz, Ximena    |Franco, Leandro
 |Desarrollador  |Franco, Leandro   |
 |Desarrollador  |Torrez, Mauro     |
 |Desarrollador  |López, Gonzalo    |
