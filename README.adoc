@@ -27,9 +27,15 @@ Para esto, realizaremos tareas de investigación, de análisis de datos y de des
 El principal objetivo de este documento es especificar las decisiones que se tomen en los días previos al inicio del proyecto; tales como la distribución de roles de trabajo, los posibles riesgos del equipo y del proyecto, el tema a trabajar, las metodologías que se utilizarán, entre otras cosas relacionadas a la organización necesaria del proyecto.
 
 == Metodología de trabajo
-Utilizaremos Scrum para trabajar y coordinar al equipo. A está metodología la modificaremos para coordinarla con las preferencias del equipo para optimizarla.
+Somos parte del _Agile Release Train_ (que plantea el marco de trabajo *_SAFe_*) en conjunto con los demás grupos. Para coordinar nuestro trabajo adaptaremos el _framework_ ágil *_Scrum_* según las preferencias del equipo para optimizarla.
 
-- _*Daily Scrum*_ cada 2 días: los integrantes del equipo tienen tiempos diferentes y un día de trabajo quizá no sea suficiente para tener un avance considerable para plantearlo en las _Daily_. Por incovenientes o bloqueo de un integrante, en el día que no hay _Daily_, se comunicarán por algunos de los medios detallados más adelante.
+- *_Sprint Planning_*: se realizará el primer día del _Sprint_ y en ocasiones participará el _Release Train Engineer_.
+
+- *_Daily Scrum_* cada 2 días: los integrantes del equipo tienen tiempos diferentes y un día de trabajo quizá no sea suficiente para tener un avance considerable para plantearlo en las _Daily_. Por incovenientes o bloqueo de un integrante, en el día que no hay _Daily_, se comunicarán por algunos de los medios detallados más adelante.
+
+- *_Sprint Review_*: el último día del _Sprint_ se hará una presentación de los informes solicitados mostrando el avance del equipo.
+
+- *_Sprint Retrospective_*: luego de la revisión de _Sprint_ se hará una retrospectiva del avance.
 
 == Equipo de trabajo y roles
 
@@ -97,7 +103,7 @@ Las tecnologías a utilizar serán las siguientes:
 - *Python* como lenguaje de programación, por su simplicidad y utilidad en el desarrollo de este tipo de modelos.
 - *TensorFlow - Keras* como biblioteca principal de desarrollo, ya que provee distintas funcionalidades para la creación de modelos de IA.
 - *NumPy* debido a la necesidad de trabajar las imágenes como arrays multidimensionales o _tensores_.
-- *Pandas* ya que permite obtener información de archivos .csv
+- *Pandas* ya que permite obtener información de archivos .csv.
 - *cv2* como biblioteca de lectura y procesamiento de imágenes.
 - *matplotlib.pyplot* para generar gráficos.
 - *GitHub* como repositorio de trabajo.
