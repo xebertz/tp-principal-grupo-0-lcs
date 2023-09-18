@@ -202,6 +202,11 @@ image::img/wbs.png[]
 .diagrama de precedencia
 image::img/diagrama-precedencia.png[]
 
+=== Calendario
+
+.Calendario Sprint 1
+image::img/calendario-sprint-1.png[]
+
 === Plan de comunicaciones
 
 Nuestros medios de comunicación son:
@@ -283,5 +288,3 @@ Las tecnologías a utilizar serán las siguientes:
 === Repositorio de GitHub
 
 El repositorio de GitHub se encuentra https://github.com/ximeeb/tp-principal-grupo-0-lcs.git[aquí].
-
-Acá podríamos poner enlaces
