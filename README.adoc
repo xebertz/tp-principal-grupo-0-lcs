@@ -64,7 +64,6 @@ image::img/wbs.png[]
 === Diccionario WBS
 
 [cols="5*", options="header"]
-.Tabla con titulo
 |===
 |ID
 |Nombre
