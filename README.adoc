@@ -226,7 +226,7 @@ Matriz de evaluación de riesgos.
 
 [cols="7*", options="header"]
 |===
-|Descripción|Probabilidad de que ocurrencia|Severidad|Exposición al riesgo|Acciones para mitigarlos|Contingencia|Responsable
+|Descripción|Probabilidad de ocurrencia|Severidad|Exposición al riesgo|Acciones para mitigarlos|Contingencia|Responsable
 
 |Solapamiento de _datasets_ con el grupo 2|1|3|3|Tener varios _datasets_. Acordar con el grupo 2|Cambiar a otro _dataset_| Ebertz, Ximena; Villalba, Gastón
 |Escasez de recursos computacionales|2|3|6|Tener alternativas de entornos de trabajo|Cambiar de entorno de trabajo| Ebertz, Ximena
