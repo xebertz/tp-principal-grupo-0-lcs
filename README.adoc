@@ -56,6 +56,23 @@ Los roles que se utilizarán en el equipo son los siguientes:
 
 == Gestión
 
+=== Visión
+
+Nuestra visión es utilizar la tecnología de inteligencia artificial y aprendizaje automático para mejorar la atención médica y el diagnóstico. A través de nuestro trabajo en el presente trabajo práctico, buscamos desarrollar un modelo de clasificación de imágenes médicas que asista a los profesionales de la salud en la toma de decisiones clínicas. 
+
+=== Misión
+
+Nuestra misión es aplicar nuestros conocimientos y habilidades en procesamiento de imágenes y aprendizaje automático para crear soluciones innovadoras y efectivas que impacten positivamente en el ámbito sanitario y el bienestar de las personas.
+
+=== Alcance
+
+Desarrollo y Entrenamiento del Modelo de IA:
+
+- Investigación exhaustiva de algoritmos de aprendizaje automático, con el objetivo de seleccionar el más adecuado para el problema de clasificación de imágenes médicas.
+- Implementación y entrenamiento del modelo utilizando el conjunto de datos previamente preparado.
+- Optimización y validación del modelo para asegurar su eficacia y precisión en la clasificación de las imágenes médicas
+- Se considerará la posibilidad de mejorar el modelo de inteligencia artificial si es necesario.
+
 === WBS
 
 .WBS
@@ -185,23 +202,6 @@ image::img/wbs.png[]
 .diagrama de precedencia
 image::img/diagrama-precedencia.png[]
 
-=== Visión
-
-Nuestra visión es utilizar la tecnología de inteligencia artificial y aprendizaje automático para mejorar la atención médica y el diagnóstico. A través de nuestro trabajo en el presente trabajo práctico, buscamos desarrollar un modelo de clasificación de imágenes médicas que asista a los profesionales de la salud en la toma de decisiones clínicas. 
-
-=== Misión
-
-Nuestra misión es aplicar nuestros conocimientos y habilidades en procesamiento de imágenes y aprendizaje automático para crear soluciones innovadoras y efectivas que impacten positivamente en el ámbito sanitario y el bienestar de las personas.
-
-=== Alcance
-
-Desarrollo y Entrenamiento del Modelo de IA:
-
-- Investigación exhaustiva de algoritmos de aprendizaje automático, con el objetivo de seleccionar el más adecuado para el problema de clasificación de imágenes médicas.
-- Implementación y entrenamiento del modelo utilizando el conjunto de datos previamente preparado.
-- Optimización y validación del modelo para asegurar su eficacia y precisión en la clasificación de las imágenes médicas
-- Se considerará la posibilidad de mejorar el modelo de inteligencia artificial si es necesario.
-
 === Plan de comunicaciones
 
 Nuestros medios de comunicación son:
@@ -250,6 +250,7 @@ Tras recibir una petición de cambio, documentaremos las nuevas funcionalidades 
 *Funcionalidad Completa/Nivel de Calidad*
 
 Decidimos utilizar funcionalidad completa, complementado con nivel de calidad ya que creemos que es el que mejor se ajusta a la metodología de trabajo que se nombró anteriormente. Esto se debe a que vamos a necesitar más de dos posibles etiquetas para cada funcionalidad, Las posibles etiquetas que tendrá cada funcionalidad son: 
+
 - *No iniciada*
 - *En elaboracion*
 - *Codigo completo* 
