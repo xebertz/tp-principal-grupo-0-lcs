@@ -62,29 +62,125 @@ Los roles que se utilizarán en el equipo son los siguientes:
 image::img/wbs.png[]
 
 === Diccionario WBS
-[cols="5*",options="header"]
-|===
-|Id|Nombre|Descripción|Tarea|Peso
-|1|Modelo ML (clasificación de imágenes médicas)|En este proyecto se busca diseñar, entrenar y optimizar un modelo de clasificación de imágenes médicas utilizando técnicas de inteligencia artificial y aprendizaje automático. El objetivo es crear un modelo que pueda clasificar imágenes médicas con alta precisión y rapidez, lo que podría tener un gran impacto en la industria médica.||
-|1.1|Investigación|En esta etapa se realizará una investigación exhaustiva sobre el problema de clasificación de imágenes médicas. Se leerán artículos y publicaciones relacionados con el tema, se entrevistará a expertos en el campo médico para obtener información sobre las características importantes a considerar en la clasificación de imágenes médicas, se comprenderán los requerimientos del proyecto y se definirán las especificaciones necesarias para el conjunto de datos y el modelo. También se recopilarán y prepararán los datos necesarios para el entrenamiento del modelo, incluyendo la limpieza y el preprocesamiento de imágenes según sea necesario.|Realizar investigación sobre el problema de clasificación de imágenes médicas, incluyendo la lectura relacionada con el tema, la entrevista a expertos y la comprensión de los requerimientos. También se debe realizar la recopilación de datos necesarios para el entrenamiento del modelo.|
-|1.1.1|Lectura relacionada con la clasificación de imágenes médicas|En esta tarea se leerán artículos y publicaciones relacionados con la clasificación de imágenes médicas para comprender mejor el problema y las técnicas utilizadas en la industria. Se buscará información sobre los diferentes tipos de imágenes médicas, las características importantes a considerar al clasificar estas imágenes y las técnicas de procesamiento de imágenes utilizadas en la industria.|Leer artículos y publicaciones relacionados con la clasificación de imágenes médicas para comprender mejor el problema y las técnicas utilizadas en la industria.|1,2
-|1.1.2|Entrevistar expertos	|En esta tarea se entrevistará a expertos en el campo médico para obtener información sobre las características importantes a considerar en la clasificación de imágenes médicas. Se buscará información sobre los diferentes tipos de imágenes médicas, las características importantes a considerar al clasificar estas imágenes y las técnicas de procesamiento de imágenes utilizadas en la industria. También se preguntará sobre los principales desafíos que enfrentan los profesionales médicos al clasificar imágenes médicas y cómo un modelo de aprendizaje automático podría ayudar a abordar estos desafíos.|Entrevistar a expertos en el campo médico para obtener información sobre las características importantes a considerar en la clasificación de imágenes médicas.|2,4
-|1.1.3|Comprender los requerimientos|	En esta tarea se comprenderán los requerimientos del proyecto y se definirán las especificaciones necesarias para el conjunto de datos y el modelo. Se buscará información sobre los requisitos específicos del modelo, como el tamaño mínimo del conjunto de datos, la precisión requerida y el tiempo máximo permitido para la clasificación de una imagen. También se definirán las especificaciones necesarias para el conjunto de datos, como el tamaño mínimo de imagen, la cantidad mínima de imágenes por clase y el equilibrio entre las clases.|Comprender los requerimientos del proyecto y definir las especificaciones necesarias para el conjunto de datos y el modelo.|1,02
-|1.1.4|Recopilación de datos|En esta tarea se recopilarán y prepararán los datos necesarios para el entrenamiento del modelo, incluyendo la limpieza y el preprocesamiento de imágenes según sea necesario. Se buscarán conjuntos de datos públicos o privados que puedan ser utilizados para entrenar y validar el modelo. También se realizará una limpieza básica de los datos, eliminando imágenes irrelevantes o corruptas y ajustando el tamaño y formato de las imágenes según sea necesario.|Recopilar y preparar los datos necesarios para el entrenamiento del modelo, incluyendo la limpieza y el preprocesamiento de imágenes según sea necesario.|2,76
-|1.2|Modelo versión 1.0|En esta etapa se diseñará, entrenará y optimizará un modelo de clasificación de imágenes médicas utilizando técnicas de inteligencia artificial y aprendizaje automático. Se investigarán las técnicas de procesamiento de imágenes necesarias para preparar los datos para el entrenamiento del modelo, refinando los datos, nivelando las clases y aumentando los datos si es necesario. También se investigarán modelos pre-entrenados que puedan ser utilizados como punto de partida para el diseño del nuevo modelo. Luego se definirá la arquitectura del modelo, se entrenará con los datos preparados en la etapa anterior y se optimizará para maximizar la precisión y minimizar el tiempo necesario para clasificar una imagen.|Diseñar, entrenar y optimizar un modelo de clasificación de imágenes médicas utilizando técnicas de inteligencia artificial y aprendizaje automático.|
-|1.2.1|Procesamiento de imagenes|En esta tarea se investigarán las técnicas de procesamiento de imágenes necesarias para preparar los datos para el entrenamiento del modelo. Se refinan los datos, nivelan las clases y aumentan los datos si es necesario, todo con el objetivo de mejorar la calidad del conjunto de datos utilizado para entrenar al modelo. También se investigará cómo mejorar la calidad del conjunto de datos mediante técnicas como la normalización, la reducción del ruido y la eliminación del fondo no deseado en las imágenes.|Investigar las técnicas de procesamiento de imágenes necesarias para preparar los datos para el entrenamiento del modelo, refinando los datos, nivelando las clases y aumentando los datos si es necesario.|
-|1.2.1.1|Investigación de técnicas de procesamiento|En esta tarea se investigarán diferentes técnicas de procesamiento de imágenes que pueden ser útiles para preparar los datos para el entrenamiento del modelo. Se buscará información sobre técnicas como la normalización, la reducción del ruido y la eliminación del fondo no deseado en las imágenes, entre otras posibles técnicas que puedan ser utilizadas para mejorar la calidad del conjunto de datos utilizado para entrenar al modelo.|Investigar diferentes técnicas de procesamiento de imágenes que pueden ser útiles para preparar los datos para el entrenamiento del modelo.|1,72
-|1.2.1.2|Refinamiento de datos|En esta tarea se refinan los datos utilizando diferentes técnicas como la normalización, la reducción del ruido y la eliminación del fondo no deseado en las imágenes, entre otras posibles técnicas que puedan ser utilizadas para mejorar la calidad del conjunto de datos utilizado para entrenar al modelo. El objetivo es eliminar cualquier ruido o distorsión en las imágenes que puedan afectar negativamente al rendimiento del modelo durante el entrenamiento o la validación.|Refinar los datos utilizando diferentes técnicas como la normalización, la reducción del ruido y la eliminación del fondo no deseado en las imágenes, entre otras posibles técnicas que puedan ser utilizadas para mejorar la calidad del conjunto de datos utilizado para entrenar al modelo.|2,04
-|1.2.1.3|Nivelación de clases|En esta tarea se nivelan las clases en el conjunto de datos utilizado para entrenar al modelo, asegurando que cada clase tenga un número similar de muestras disponibles durante el entrenamiento. Esto es importante porque si una clase tiene muchas más muestras que otra, puede afectar negativamente al rendimiento del modelo durante el entrenamiento o la validación. Se utilizarán técnicas como submuestreo o sobremuestreo según sea necesario para equilibrar las clases en el conjunto de datos utilizado para entrenar al modelo.|Nivelar las clases en el conjunto de datos utilizado para entrenar al modelo, asegurando que cada clase tenga un número similar de muestras disponibles durante el entrenamiento utilizando técnicas como submuestreo o sobremuestreo según sea necesario.|1,2
-|1.2.1.4|Aumento de datos|En esta tarea se aumentará el conjunto de datos utilizado para entrenar al modelo mediante técnicas como rotación, traslación o cambio en la escala para crear nuevas muestras a partir del conjunto original. Esto es importante porque si el conjunto original es pequeño, puede haber problemas durante el entrenamiento debido a la falta de variabilidad en los datos disponibles.|Aumentar el conjunto de datos utilizado para entrenar al modelo mediante técnicas como rotación, traslación o cambio en la escala para crear nuevas muestras a partir del conjunto original con el objetivo incrementar la variabilidad en los datos disponibles durante el entrenamiento.|1,56
-|1.2.2.1|Investigación de procesamiento modelos preentrenados|En esta tarea se investigará sobre el procesamiento de modelos preentrenados para utilizarlos en el modelo de clasificación de imágenes médicas. Se buscarán modelos preentrenados que sean relevantes para el problema específico de clasificación de imágenes médicas, se comprenderán las características y limitaciones de estos modelos y se seleccionará el modelo más adecuado para el proyecto. También se explorarán técnicas de transferencia de aprendizaje y se definirán las capas necesarias para adaptar el modelo preentrenado al problema específico de clasificación de imágenes médicas.|	Investigar sobre el procesamiento de modelos preentrenados para utilizarlos en el modelo de clasificación de imágenes médicas, seleccionar el modelo más adecuado para el proyecto y definir las capas necesarias para adaptar el modelo preentrenado al problema específico de clasificación de imágenes médicas.|1,88
-|1.2.2.2|Definición de arquitectura|	En esta tarea se definirá la arquitectura del modelo de clasificación de imágenes médicas. Se seleccionarán las capas adecuadas para el problema específico de clasificación de imágenes médicas, se definirá la estructura general del modelo y se especificarán los hiperparámetros necesarios para entrenar el modelo. También se explorarán técnicas para evitar el sobreajuste y se definirá un plan para la evaluación del modelo.|Definir la arquitectura del modelo de clasificación de imágenes médicas, seleccionar las capas adecuadas, definir la estructura general del modelo y especificar los hiperparámetros necesarios para entrenar el modelo.|1,72
-|1.2.2.3|Entrenamiento del modelo|En esta tarea se entrenará el modelo de clasificación de imágenes médicas utilizando los datos preparados en la etapa anterior. Se definirá un plan de entrenamiento que incluya la selección del optimizador y la función de pérdida adecuados, la definición del tamaño del lote y el número de épocas necesarias para entrenar el modelo. También se implementará una técnica para el seguimiento del progreso del entrenamiento y se ajustarán los hiperparámetros a medida que sea necesario.|Entrenar el modelo de clasificación de imágenes médicas utilizando los datos preparados en la etapa anterior, implementar una técnica para el seguimiento del progreso del entrenamiento y ajustar los hiperparámetros a medida que sea necesario.| 3,24
-|1.2.2.4|Optimización del modelo|En esta tarea se optimizará el modelo de clasificación de imágenes médicas para mejorar su precisión y rendimiento. Se explorarán técnicas como la regularización, la normalización y el aumento de datos para mejorar la capacidad del modelo para generalizar a nuevos datos. También se evaluará el rendimiento del modelo utilizando métricas relevantes y se ajustarán los hiperparámetros a medida que sea necesario.|Optimizar el modelo de clasificación de imágenes médicas utilizando técnicas como la regularización, la normalización y el aumento de datos, evaluar su rendimiento utilizando métricas relevantes y ajustar los hiperparámetros a medida que sea necesario.|2,08
-|1.3.1|Ajuste del modelo|En esta tarea se ajustará el modelo de clasificación de imágenes médicas para mejorar su precisión y rendimiento en los datos de validación. Se explorarán técnicas como la selección del umbral adecuado, la calibración del modelo y la combinación de modelos para mejorar la precisión del modelo en los datos de validación. También se evaluará el rendimiento del modelo utilizando métricas relevantes y se ajustarán los hiperparámetros a medida que sea necesario.|Ajustar el modelo de clasificación de imágenes médicas para mejorar su precisión y rendimiento en los datos de validación utilizando técnicas como la selección del umbral adecuado, la calibración del modelo y la combinación de modelos, evaluar su rendimiento utilizando métricas relevantes y ajustar los hiperparámetros a medida que sea necesario.|2,6
-|1.3.2|Confirmación con expertos|En esta tarea se confirmará el rendimiento del modelo con expertos en el campo médico para asegurarse de que es adecuado para su uso en la industria médica. Se presentará el modelo a expertos en el campo médico y se recopilarán comentarios sobre su precisión, velocidad y facilidad de uso. También se identificarán posibles mejoras o limitaciones del modelo y se definirán planes para futuras iteraciones del proyecto.|Confirmar el rendimiento del modelo con expertos en el campo médico, presentando el modelo a expertos en el campo médico y recopilando comentarios sobre su precisión, velocidad y facilidad de uso. Identificar posibles mejoras o limitaciones del modelo y definir planes para futuras iteraciones del proyecto.|4,48
 
+[cols="5*", options="header"]
+.Tabla con titulo
 |===
+|ID
+|Nombre
+|Descripción
+|Tarea
+|Peso
+
+|1
+|Modelo de ML (Clasificación de imágenes médicas)
+|En este proyecto se busca diseñar, entrenar y optimizar un modelo de clasificación de imágenes médicas utilizando técnicas de inteligencia artificial y aprendizaje automático. El objetivo es crear un modelo que pueda clasificar imágenes médicas con alta precisión y rapidez, lo que podría tener un gran impacto en la industria médica.
+|
+|
+
+|1.1
+|Investigación
+|En esta etapa se realizará una investigación exhaustiva sobre el problema de clasificación de imágenes médicas. Se leerán artículos y publicaciones relacionados con el tema, se entrevistará a expertos en el campo médico para obtener información sobre las características importantes a considerar en la clasificación de imágenes médicas, se comprenderán los requerimientos del proyecto y se definirán las especificaciones necesarias para el conjunto de datos y el modelo. También se recopilarán y prepararán los datos necesarios para el entrenamiento del modelo, incluyendo la limpieza y el preprocesamiento de imágenes según sea necesario.
+|Realizar investigación sobre el problema de clasificación de imágenes médicas, incluyendo la lectura relacionada con el tema, la entrevista a expertos y la comprensión de los requerimientos. También se debe realizar la recopilación de datos necesarios para el entrenamiento del modelo.
+|
+
+|1.1.1
+|Lectura relacionada con la clasificación de imágenes médicas.
+|En esta tarea se leerán artículos y publicaciones relacionados con la clasificación de imágenes médicas para comprender mejor el problema y las técnicas utilizadas en la industria. Se buscará información sobre los diferentes tipos de imágenes médicas, las características importantes a considerar al clasificar estas imágenes y las técnicas de procesamiento de imágenes utilizadas en la industria.
+|Leer artículos y publicaciones relacionados con la clasificación de imágenes médicas para comprender mejor el problema y las técnicas utilizadas en la industria.
+|1,2
+
+|1.1.2
+|Entrevistar expertos
+|En esta tarea se entrevistará a expertos en el campo médico para obtener información sobre las características importantes a considerar en la clasificación de imágenes médicas. Se buscará información sobre los diferentes tipos de imágenes médicas, las características importantes a considerar al clasificar estas imágenes y las técnicas de procesamiento de imágenes utilizadas en la industria. También se preguntará sobre los principales desafíos que enfrentan los profesionales médicos al clasificar imágenes médicas y cómo un modelo de aprendizaje automático podría ayudar a abordar estos desafíos.
+|Entrevistar a expertos en el campo médico para obtener información sobre las características importantes a considerar en la clasificación de imágenes médicas.
+|2,4
+
+|1.1.3
+|Comprender los requerimientos
+|En esta tarea se comprenderán los requerimientos del proyecto y se definirán las especificaciones necesarias para el conjunto de datos y el modelo. Se buscará información sobre los requisitos específicos del modelo, como el tamaño mínimo del conjunto de datos, la precisión requerida y el tiempo máximo permitido para la clasificación de una imagen. También se definirán las especificaciones necesarias para el conjunto de datos, como el tamaño mínimo de imagen, la cantidad mínima de imágenes por clase y el equilibrio entre las clases.
+|Comprender los requerimientos del proyecto y definir las especificaciones necesarias para el conjunto de datos y el modelo.
+|1,02
+
+|1.1.4
+|Recopilación de datos
+|En esta tarea se recopilarán y prepararán los datos necesarios para el entrenamiento del modelo, incluyendo la limpieza y el preprocesamiento de imágenes según sea necesario. Se buscarán conjuntos de datos públicos o privados que puedan ser utilizados para entrenar y validar el modelo. También se realizará una limpieza básica de los datos, eliminando imágenes irrelevantes o corruptas y ajustando el tamaño y formato de las imágenes según sea necesario.
+|Recopilar y preparar los datos necesarios para el entrenamiento del modelo, incluyendo la limpieza y el preprocesamiento de imágenes según sea necesario.
+|2,76
+
+|1.2
+|Modelo versión 1.0
+|En esta etapa se diseñará, entrenará y optimizará un modelo de clasificación de imágenes médicas utilizando técnicas de inteligencia artificial y aprendizaje automático. Se investigarán las técnicas de procesamiento de imágenes necesarias para preparar los datos para el entrenamiento del modelo, refinando los datos, nivelando las clases y aumentando los datos si es necesario. También se investigarán modelos pre-entrenados que puedan ser utilizados como punto de partida para el diseño del nuevo modelo. Luego se definirá la arquitectura del modelo, se entrenará con los datos preparados en la etapa anterior y se optimizará para maximizar la precisión y minimizar el tiempo necesario para clasificar una imagen.
+|Diseñar, entrenar y optimizar un modelo de clasificación de imágenes médicas utilizando técnicas de inteligencia artificial y aprendizaje automático.
+|
+
+|1.2.1
+|Procesamiento de imágenes
+|En esta tarea se investigarán las técnicas de procesamiento de imágenes necesarias para preparar los datos para el entrenamiento del modelo. Se refinan los datos, nivelan las clases y aumentan los datos si es necesario, todo con el objetivo de mejorar la calidad del conjunto de datos utilizado para entrenar al modelo. También se investigará cómo mejorar la calidad del conjunto de datos mediante técnicas como la normalización, la reducción del ruido y la eliminación del fondo no deseado en las imágenes.
+|Investigar las técnicas de procesamiento de imágenes necesarias para preparar los datos para el entrenamiento del modelo, refinando los datos, nivelando las clases y aumentando los datos si es necesario.
+|
+
+|1.2.1.1
+|Investigación de técnicas de procesamiento
+|En esta tarea se investigarán diferentes técnicas de procesamiento de imágenes que pueden ser útiles para preparar los datos para el entrenamiento del modelo. Se buscará información sobre técnicas como la normalización, la reducción del ruido y la eliminación del fondo no deseado en las imágenes, entre otras posibles técnicas que puedan ser utilizadas para mejorar la calidad del conjunto de datos utilizado para entrenar al modelo.
+|Investigar diferentes técnicas de procesamiento de imágenes que pueden ser útiles para preparar los datos para el entrenamiento del modelo.
+|1,72
+
+|1.2.1.2
+|Refinamiento de datos
+|En esta tarea se refinan los datos utilizando diferentes técnicas como la normalización, la reducción del ruido y la eliminación del fondo no deseado en las imágenes, entre otras posibles técnicas que puedan ser utilizadas para mejorar la calidad del conjunto de datos utilizado para entrenar al modelo. El objetivo es eliminar cualquier ruido o distorsión en las imágenes que puedan afectar negativamente al rendimiento del modelo durante el entrenamiento o la validación.
+|Refinar los datos utilizando diferentes técnicas como la normalización, la reducción del ruido y la eliminación del fondo no deseado en las imágenes, entre otras posibles técnicas que puedan ser utilizadas para mejorar la calidad del conjunto de datos utilizado para entrenar al modelo.
+|2,04
+
+|1.2.1.3
+|Nivelación de clases
+|En esta tarea se nivelan las clases en el conjunto de datos utilizado para entrenar al modelo, asegurando que cada clase tenga un número similar de muestras disponibles durante el entrenamiento. Esto es importante porque si una clase tiene muchas más muestras que otra, puede afectar negativamente al rendimiento del modelo durante el entrenamiento o la validación. Se utilizarán técnicas como submuestreo o sobremuestreo según sea necesario para equilibrar las clases en el conjunto de datos utilizado para entrenar al modelo.
+|Nivelar las clases en el conjunto de datos utilizado para entrenar al modelo, asegurando que cada clase tenga un número similar de muestras disponibles durante el entrenamiento utilizando técnicas como submuestreo o sobremuestreo según sea necesario.
+|1,2
+
+|1.2.1.4
+|Aumento de datos
+|En esta tarea se aumentará el conjunto de datos utilizado para entrenar al modelo mediante técnicas como rotación, traslación o cambio en la escala para crear nuevas muestras a partir del conjunto original. Esto es importante porque si el conjunto original es pequeño, puede haber problemas durante el entrenamiento debido a la falta de variabilidad en los datos disponibles.
+|Aumentar el conjunto de datos utilizado para entrenar al modelo mediante técnicas como rotación, traslación o cambio en la escala para crear nuevas muestras a partir del conjunto original con el objetivo incrementar la variabilidad en los datos disponibles durante el entrenamiento.
+|1,56
+
+|1.2.2.1
+|Investigación de procesamiento modelos preentrenados
+|En esta tarea se investigará sobre el procesamiento de modelos preentrenados para utilizarlos en el modelo de clasificación de imágenes médicas. Se buscarán modelos preentrenados que sean relevantes para el problema específico de clasificación de imágenes médicas, se comprenderán las características y limitaciones de estos modelos y se seleccionará el modelo más adecuado para el proyecto. También se explorarán técnicas de transferencia de aprendizaje y se definirán las capas necesarias para adaptar el modelo preentrenado al problema específico de clasificación de imágenes médicas.
+|Investigar sobre el procesamiento de modelos preentrenados para utilizarlos en el modelo de clasificación de imágenes médicas, seleccionar el modelo más adecuado para el proyecto y definir las capas necesarias para adaptar el modelo preentrenado al problema específico de clasificación de imágenes médicas.
+|1,88
+
+|1.2.2.2
+|Definición de arquitectura
+|En esta tarea se definirá la arquitectura del modelo de clasificación de imágenes médicas. Se seleccionarán las capas adecuadas para el problema específico de clasificación de imágenes médicas, se definirá la estructura general del modelo y se especificarán los hiperparámetros necesarios para entrenar el modelo. También se explorarán técnicas para evitar el sobreajuste y se definirá un plan para la evaluación del modelo.
+|Definir la arquitectura del modelo de clasificación de imágenes médicas, seleccionar las capas adecuadas, definir la estructura general del modelo y especificar los hiperparámetros necesarios para entrenar el modelo.
+|1,72
+
+|1.2.2.3
+|Entrenamiento del modelo
+|En esta tarea se entrenará el modelo de clasificación de imágenes médicas utilizando los datos preparados en la etapa anterior. Se definirá un plan de entrenamiento que incluya la selección del optimizador y la función de pérdida adecuados, la definición del tamaño del lote y el número de épocas necesarias para entrenar el modelo. También se implementará una técnica para el seguimiento del progreso del entrenamiento y se ajustarán los hiperparámetros a medida que sea necesario.
+|Entrenar el modelo de clasificación de imágenes médicas utilizando los datos preparados en la etapa anterior, implementar una técnica para el seguimiento del progreso del entrenamiento y ajustar los hiperparámetros a medida que sea necesario.
+|3,24
+
+|1.2.2.4
+|Optimización del modelo
+|En esta tarea se optimizará el modelo de clasificación de imágenes médicas para mejorar su precisión y rendimiento. Se explorarán técnicas como la regularización, la normalización y el aumento de datos para mejorar la capacidad del modelo para generalizar a nuevos datos. También se evaluará el rendimiento del modelo utilizando métricas relevantes y se ajustarán los hiperparámetros a medida que sea necesario.
+|Optimizar el modelo de clasificación de imágenes médicas utilizando técnicas como la regularización, la normalización y el aumento de datos, evaluar su rendimiento utilizando métricas relevantes y ajustar los hiperparámetros a medida que sea necesario.
+|2,08
+
+|1.3.1
+|Ajuste del modelo
+|En esta tarea se ajustará el modelo de clasificación de imágenes médicas para mejorar su precisión y rendimiento en los datos de validación. Se explorarán técnicas como la selección del umbral adecuado, la calibración del modelo y la combinación de modelos para mejorar la precisión del modelo en los datos de validación. También se evaluará el rendimiento del modelo utilizando métricas relevantes y se ajustarán los hiperparámetros a medida que sea necesario.
+|Ajustar el modelo de clasificación de imágenes médicas para mejorar su precisión y rendimiento en los datos de validación utilizando técnicas como la selección del umbral adecuado, la calibración del modelo y la combinación de modelos, evaluar su rendimiento utilizando métricas relevantes y ajustar los hiperparámetros a medida que sea necesario.
+|2,6
+
+|1.3.2
+|Confirmación con expertos
+|En esta tarea se confirmará el rendimiento del modelo con expertos en el campo médico para asegurarse de que es adecuado para su uso en la industria médica. Se presentará el modelo a expertos en el campo médico y se recopilarán comentarios sobre su precisión, velocidad y facilidad de uso. También se identificarán posibles mejoras o limitaciones del modelo y se definirán planes para futuras iteraciones del proyecto.
+|Confirmar el rendimiento del modelo con expertos en el campo médico, presentando el modelo a expertos en el campo médico y recopilando comentarios sobre su precisión, velocidad y facilidad de uso. Identificar posibles mejoras o limitaciones del modelo y definir planes para futuras iteraciones del proyecto.
+|4,48
+|===
+
 === Diagrama de precedencia
 
 .diagrama de precedencia
