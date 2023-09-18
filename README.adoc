@@ -256,7 +256,7 @@ Decidimos utilizar funcionalidad completa, complementado con nivel de calidad ya
 - *Codigo completo* 
 - *En QA*
 - *Con defectos críticos*
-- *con defectos bajos*
+- *Con defectos bajos*
 - *Liberado por QA*
 - *Aprobado por usuario*.
 
