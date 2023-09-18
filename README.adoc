@@ -231,8 +231,8 @@ Matriz de evaluación de riesgos.
 |Solapamiento de _datasets_ con el grupo 2|1|3|3|Tener varios _datasets_. Acordar con el grupo 2|Cambiar a otro _dataset_| Ebertz, Ximena; Villalba, Gastón
 |Escasez de recursos computacionales|2|3|6|Tener alternativas de entornos de trabajo|Cambiar de entorno de trabajo| Ebertz, Ximena
 |Ausencia de miembros del equipo en fechas 2023-10-05, 2023-11-02, 2023-06-11 por motivos de estudio|3|3|9|Definir reemplazantes, planificar ausencias|Reemplazos| Ebertz, Ximena
-|Pérdida de trabajo en el entorno, por solapamiento|3|3|9|Backups periódicos, registro de cambios|Restablecer backup| López, Gonzalo
-|||||||
+|Pérdida de trabajo en el entorno, por solapamiento|2|3|6|Backups periódicos, registro de cambios|Restablecer backup| López, Gonzalo
+|Pérdida de posibilidad de trabajo en el entorno|1|3|3|Backups periódicos, alternativas de entornos| Ebertz, Ximena; López, Gonzalo
 |||||||
 |||||||
 |===
