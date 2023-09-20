@@ -32,7 +32,7 @@ Un _tensor_ es una matriz multidimensional con dimensión. Para el procesamiento
  [0 1 0 ... 0 0 0]
  [0 0 0 ... 1 0 0]]
 
- //lista
+ #lista
  [[1, 0, 0, ... 0, 0, 0]
  [1, 0, 0, ... 0, 0, 0]
  [0, 1, 0, ... 0, 0, 0]
@@ -218,11 +218,11 @@ modelo_cnn = tf.keras.models.Sequential([
 
 Se ve que tenemos distintos tipos de capas:
 
-* Conv2D: la capa _convolucional_ lee cada pixel y le asigna un entero de "valor" según su entorno. Es decir, "mira" el pixel y sus pixeles adyacentes y determina qué tan importante es comparado a los demás. La cantidad de pixeles adyacentes está dada por el segundo parámetro, que es el tamaño de la matriz con centro en el pixel a analizar. El primer parámetro corresponde a cuántas matrices se utilizarán para la foto. Estas matrices son llamadas _núcleos_.
-* MaxPooling2D: esta capa toma diversos pixeles y "se queda" con los más importantes; de forma que la imagen se reduce en tamaño pero no en información.
-* Dropout: esta capa desactiva las neuronas con valores menores al dado por parámetro, ya que se considera que no son relevantes. Esto mejora el entrenamiento y la performance del modelo.
-* Flatten: Si la imagen tiene un _input_shape_ de tres canales, se debe "aplanar", cambiando su forma para que se lea en un canal, y las capas densas la puedan procesar. Este trabajo es realizado por la capa _flatten_.
-* Dense: las capas densas se utilizan en la toma de decisión final, asignando a cada neurona un peso. Luego, se "enciende" en la capa final la neurona correspondiente a la clase. Es decir, la predicción se da determinando qué neurona tiene más valor. La cantidad de neuronas está dada por el primer parámetro.
+* *Conv2D:* la capa _convolucional_ lee cada pixel y le asigna un entero de "valor" según su entorno. Es decir, "mira" el pixel y sus pixeles adyacentes y determina qué tan importante es comparado a los demás. La cantidad de pixeles adyacentes está dada por el segundo parámetro, que es el tamaño de la matriz con centro en el pixel a analizar. El primer parámetro corresponde a cuántas matrices se utilizarán para la foto. Estas matrices son llamadas _núcleos_.
+* *MaxPooling2D:* esta capa toma diversos pixeles y "se queda" con los más importantes; de forma que la imagen se reduce en tamaño pero no en información.
+* *Dropout:* esta capa desactiva las neuronas con valores menores al dado por parámetro, ya que se considera que no son relevantes. Esto mejora el entrenamiento y la performance del modelo.
+* *Flatten:* Si la imagen tiene un _input_shape_ de tres canales, se debe "aplanar", cambiando su forma para que se lea en un canal, y las capas densas la puedan procesar. Este trabajo es realizado por la capa _flatten_.
+* *Dense:* las capas densas se utilizan en la toma de decisión final, asignando a cada neurona un peso. Luego, se "enciende" en la capa final la neurona correspondiente a la clase. Es decir, la predicción se da determinando qué neurona tiene más valor. La cantidad de neuronas está dada por el primer parámetro.
 
 Luego, se puede ver que existen distintos tipos de funciones de activación. No se puede decir cuál es mejor, ya que todas funcionan mejor o peor según el caso. Se debe tener en cuenta que para la última capa se debe utilizar 'sigmoid' si se trata de clasificación binaria, o 'softmax' si se trata de clasificación multiclase.
 
