@@ -184,6 +184,12 @@ image::img/wbs.png[]
 |Optimizar el modelo de clasificación de imágenes médicas utilizando técnicas como la regularización, la normalización y el aumento de datos, evaluar su rendimiento utilizando métricas relevantes y ajustar los hiperparámetros a medida que sea necesario.
 |2,08
 
+|1.3
+|Validación del modelo
+|Se comprueban los resultados del modelo, como pueden ser la precisión, tiempo de ejecución. Se espera que el modelo pueda clasificar correctamente imágenes en clases según el entrenamiento recibido.
+|Realizar pruebas ingresándo imágenes y corroborar que sea clasificada correctamente. Someter al modelo a una serie de análisis de imágenes para obtener el porcentaje de precisión.
+|
+
 |1.3.1
 |Ajuste del modelo
 |En esta tarea se ajustará el modelo de clasificación de imágenes médicas para mejorar su precisión y rendimiento en los datos de validación. Se explorarán técnicas como la selección del umbral adecuado, la calibración del modelo y la combinación de modelos para mejorar la precisión del modelo en los datos de validación. También se evaluará el rendimiento del modelo utilizando métricas relevantes y se ajustarán los hiperparámetros a medida que sea necesario.
