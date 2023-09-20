@@ -1,0 +1,245 @@
+= Introducción al desarrollo de IA para clasificación de imágenes con TensorFlow
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== Introducción
+
+El desarrollo de inteligencia artificial para clasificación de imágenes implica diversos pasos de lectura y preprocesamiento. En este documento, se explicará la funcionalidad de cada librería utilizada, cómo cargar imágenes, y cómo mostrarlas.
+
+== Nociones previas
+
+=== Tensor
+
+Un _tensor_ es una matriz multidimensional con dimensión. Para el procesamiento de imágenes, es particularmente útil ya que los tensores tienen comportamiento, a diferencia de una lista. Esto nos permite, entre otras cosas, redimensionar la matriz.
+
+.tensor vs lista
+[source, python]
+----
+#tensor
+[[1 0 0 ... 0 0 0]
+ [1 0 0 ... 0 0 0]
+ [0 1 0 ... 0 0 0]
+ ...
+ [0 1 0 ... 0 0 0]
+ [0 1 0 ... 0 0 0]
+ [0 0 0 ... 1 0 0]]
+
+ //lista
+ [[1, 0, 0, ... 0, 0, 0]
+ [1, 0, 0, ... 0, 0, 0]
+ [0, 1, 0, ... 0, 0, 0]
+ ...
+ [0, 1, 0, ... 0, 0, 0]
+ [0, 1, 0, ... 0, 0, 0]
+ [0, 0, 0, ... 1, 0, 0]]
+----
+
+Este redimensionamiento muchas veces es necesario, ya que las imágenes y las etiquetas tienen que tener las mismas dimensiones para que el modelo los acepte como entrada.
+
+Por ejemplo, se puede redimensionar una imagen de la siguiente manera
+
+.reshape
+[source, python]
+----
+imgs_prueba.reshape(-1, 16, 1)
+----
+
+Esto devolvería algo del estilo:
+
+----
+[[[0.]
+  [0.]
+  [0.]
+  ...
+  [0.]
+  [0.]
+  [0.]]
+
+...
+
+ [[0.]
+  [0.]
+  [0.]
+  ...
+  [0.]
+  [0.]
+  [0.]]]
+----
+
+Notemos que los tensores tienen puntos ya que los pixeles fueron convertidos a `float`. Ver normalización en lectura de imágenes.
+
+Las imágenes por _default_ no se cargan como tensores, por lo que debemos convertirlas. Para esto, se debe importar la librería _NumPy_, de la siguiente manera:
+
+.tensor vs lista
+[source, python]
+----
+import numpy as np
+----
+
+=== 
+
+Si se necesita redimensionar un tensor, se puede importar la libreía _to_categorical_, de la siguiente manera:
+
+.librería to_categorical
+[source, python]
+----
+from tensorflow.keras.utils import to_categorical
+----
+
+Se ve que esto es particular de _TensorFlow_ y _keras_.
+
+=== Keras
+
+_Keras_ es una librería de TensorFlow que facilita la implementación del modelo, brindando diversos tipos de capas de redes neuronales.
+
+Para utilizarla, se debe importar TensorFlow de la siguiente manera:
+
+.import de TensorFlow
+[source, python]
+----
+import tensorflow as tf
+----
+
+En notebooks distintos a Google Colab, puede que sea necesario instalar TensorFlow mediante *!pip install tensorflow*.
+
+Un ejemplo de modelo realizado con keras es el siguiente:
+
+.arquitectura de una red convolucional
+[source, python]
+----
+modelo_cnn = tf.keras.models.Sequential([
+    tf.keras.layers.Conv2D(16, (3, 3), activation = 'relu', input_shape = (100, 100, 3)),
+    tf.keras.layers.MaxPooling2D(3, 3),
+
+    tf.keras.layers.Dropout(0.5),
+    tf.keras.layers.Flatten(),
+    tf.keras.layers.Dense(64, activation = 'relu'),
+    tf.keras.layers.Dropout(0.2),
+    tf.keras.layers.Dense(32, activation = 'relu'),
+    tf.keras.layers.Dropout(0.5),
+    tf.keras.layers.Dense(1, activation = 'sigmoid')
+])
+
+#Compilación
+modelo_cnn.compile(optimizer='adam',
+              loss='binary_crossentropy',
+              metrics=['accuracy'])
+----
+
+Como se ve, se utiliza un compilado. Existen diversos compiladores, y cada uno se importa de una manera diferente. Adam, por ejemplo, se puede importar de la siguiente manera:
+
+.importación de Adam
+[source, python]
+----
+from tensorflow.keras.optimizers import Adam
+----
+
+== Lectura de imágenes
+
+La lectura de imágenes se puede hacer de diversas maneras. Una de ellas es mediante la librería `cv2`, que se debe importar previamente con `import cv2`. En notebooks distintos a Google Colab, puede que sera necesario instalar `opencv` para que funcione. En Saturn Cloud, se debe instalar de la siguiente manera:
+
+.instalación de opencv para utilizar cv2
+[source, python]
+----
+import sys
+!{sys.executable} -m pip install opencv-python
+----
+
+Luego, la lectura de imágenes se hace sencillamente de la siguiente manera:
+
+.lectura de imagen con cv2
+[source, python]
+----
+imagen = cv2.imread(path)
+----
+
+También, existe la función `cv2.imread(path, color)`, que recibe una constante para determinar en qué escala de color se lee la imagen.
+
+Se puede leer en escala de grises, es decir, a un canal; o a color, es decir, a tres canales.
+
+Los canales determinan la dimensión de la imagen. Por ejemplo, una imagen de 100x100 a escala de grises tiene _shape_ de `(100, 100, 1)`, y la misma imagen a color tiene _shape_ de `(100, 100, 3)`.
+
+Las constantes de color se encuentran en `cv2.COLOR...`. Por default (si no me equivoco), las imágenes se leen en escala BGR. Para convertir a RGB, se puede utilizar `cv2.COLOR_BGR2RGB`; y para convertirla en escala de grises se puede utilizar `cv2.COLOR_BGR2GRAY`.
+
+Luego, se puede ajustar el tamaño de la imagen con `cv2.resize(imagen, (ancho, alto))` (recomendado, para que todas tengan el mismo tamaño), y normalizar. La normalización se realiza dividiendo cada pixel por 255, para que los valores de los pixeles estén en el intervalo [0, 1]. Esto es necesario para que el modelo realice su aprendizaje de forma más eficiente.
+
+Es necesario convertir la imagen a tensor, lo que se realiza mediante la función `np.array(imagen)` de la librería NumPy.
+
+Un ejemplo de lectura de imagen puede ser el siguiente:
+
+.ejemplo de lectura de imágenes
+[source, python]
+----
+imagen = cv2.imread(path, cv2.COLOR_BGR2GRAY)
+imagen = np.array(cv2.resize(imagen, (TAMANO_IMG, TAMANO_IMG)))
+imagen = imagen / 255
+
+imgs.append(imagen)
+----
+
+Esto puede estar dentro de un ciclo, recorriendo los nombres de las imágenes con de un directorio mediante `os.listdir(dir_path)` (realizando el previo import) y concatenándolo con _dir_path_; o leyéndolos desde un archivo _.csv_; dependiendo de la estructura del dataset.
+
+Se ve que las imágenes se cargan a una lista, para posteriormente utilizarlas en el entrenamiento.
+
+== Lectura de etiquetas
+
+Las etiquetas pueden estar definidas en una archivo _.csv_, o pueden estar dadas por los directorios. Por ejemplo, en un dataset de lunares podemos tener un directorio 'beningnos' y otro 'malignos'. Si están dadas por los directorios, se debe definir qué etiqueta se utiliza para cada directorio. Siguiendo con el ejemplo, podemos definir que los lunares benignos se identifican con 0 y los malignos con 1.
+
+En la lectura de las imágenes se debe definir la etiqueta, preferentemente cargándolas en un array correspondiente por posición.
+
+== Tipos de capas
+
+Los modelos convolucionales tienen distintos tipos de capas. Retomando con el modelo presentado en secciones anteriores:
+
+.arquitectura de una red convolucional
+[source, python]
+----
+modelo_cnn = tf.keras.models.Sequential([
+    tf.keras.layers.Conv2D(16, (3, 3), activation = 'relu', input_shape = (100, 100, 3)),
+    tf.keras.layers.MaxPooling2D(3, 3),
+
+    tf.keras.layers.Dropout(0.5),
+    tf.keras.layers.Flatten(),
+    tf.keras.layers.Dense(64, activation = 'relu'),
+    tf.keras.layers.Dropout(0.2),
+    tf.keras.layers.Dense(32, activation = 'relu'),
+    tf.keras.layers.Dropout(0.5),
+    tf.keras.layers.Dense(1, activation = 'sigmoid')
+])
+----
+
+Se ve que tenemos distintos tipos de capas:
+
+* Conv2D: la capa _convolucional_ lee cada pixel y le asigna un entero de "valor" según su entorno. Es decir, "mira" el pixel y sus pixeles adyacentes y determina qué tan importante es comparado a los demás. La cantidad de pixeles adyacentes está dada por el segundo parámetro, que es el tamaño de la matriz con centro en el pixel a analizar. El primer parámetro corresponde a cuántas matrices se utilizarán para la foto. Estas matrices son llamadas _núcleos_.
+* MaxPooling2D: esta capa toma diversos pixeles y "se queda" con los más importantes; de forma que la imagen se reduce en tamaño pero no en información.
+* Dropout: esta capa desactiva las neuronas con valores menores al dado por parámetro, ya que se considera que no son relevantes. Esto mejora el entrenamiento y la performance del modelo.
+* Flatten: Si la imagen tiene un _input_shape_ de tres canales, se debe "aplanar", cambiando su forma para que se lea en un canal, y las capas densas la puedan procesar. Este trabajo es realizado por la capa _flatten_.
+* Dense: las capas densas se utilizan en la toma de decisión final, asignando a cada neurona un peso. Luego, se "enciende" en la capa final la neurona correspondiente a la clase. Es decir, la predicción se da determinando qué neurona tiene más valor. La cantidad de neuronas está dada por el primer parámetro.
+
+Luego, se puede ver que existen distintos tipos de funciones de activación. No se puede decir cuál es mejor, ya que todas funcionan mejor o peor según el caso. Se debe tener en cuenta que para la última capa se debe utilizar 'sigmoid' si se trata de clasificación binaria, o 'softmax' si se trata de clasificación multiclase.
+
+Softmax determina un peso a cada neurona de forma que la suma de todos los pesos es 1. El valor de cada neurona determina su probabilidad de que el input pertenezca a esa clase.
+
+== Entrenamiento del modelo
+
+El entrenamiento del modelo se puede hacer de la siguiente manera:
+
+.entrenamiento de modelo
+[source, python]
+----
+historial = modelo_cnn.fit(imgs_entrenamiento, etiquetas_entrenamiento, epochs=epochs, batch_size=b_size, validation_data=(imgs_validacion, etiquetas_validacion), use_multiprocessing=True, shuffle=True)
+----
+
+En el que `epochs` y `batch_size` determinan la cantidad de vueltas y el tamaño de lote por vuelta, respectivamente.
+
+Cuando se define el optimizador, se definen las métricas a utilizar. Si es clasificación binaria, se utilizan las métricas dadas por la pérdida `binary_crossentropy`. Si no, se utilizan las dadas por `categorical_crossentropy`.
+
+Durante el entrenamiento, en cada vuelta se ven cuatro valores: los primeros dos son correspondientes al nivel de error y de accuracy obtenidos en el entrenamiento; y los otros dos corresponden al nivel de error y accuracy obtenidos mediante el proceso de validación con la información brindada en `validation_data`.
