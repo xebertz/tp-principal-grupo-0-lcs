@@ -10,4 +10,6 @@ v1, {docdate}
 :nofooter:
 :pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
 
-== X
+== Introducción
+
+En este documento se determinarán las distintas formas de clasificación de imágenes médicas para distintos tipos de imágenes; y principalmente para imágenes de _MRI_ cerebrales que determinan la presencia o ausencia de un tumor en el cerebro.
