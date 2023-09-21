@@ -13,3 +13,23 @@ v1, {docdate}
 == Introducción
 
 En este documento se determinarán las distintas formas de clasificación de imágenes médicas para distintos tipos de imágenes; y principalmente para imágenes de _MRI_ cerebrales que determinan la presencia o ausencia de un tumor en el cerebro.
+
+== Tipos de imágenes médicas
+
+=== Imágenes por resonancia magnética
+
+Para generar este tipo de imágenes se utilizan ondas de radio y campos magnéticos; lo que permite observar los órganos a través del movimiento de los protones.
+
+Este método se utiliza para generar imágenes de órganos blandos tales como el cerebro, el corazón, o el hígado. También son utilizadas para lesiones de rodilla y hombro, ya que aportan una visión más clara que los rayos X.
+
+==== Uso en el cerebro
+
+Se escoge frente a la tomografía computarizada debido a las imágenes de calidad que genera, ya que brinda un fuerte contraste entre la materia gris y la materia blanca.
+
+Existen dos tipos de magnetización, que generan imágenes con caracterísiticas invertidas según la magnetización que se utiliza:
+
+* *Magnetización Longitudinal o T1:* Las sustancias blancas y estructuras con tiempos de relajación cortos tienen una señal alta, lo que permite que se visualicen de color claro. En cambio, la sustancia gris y las estructuras con tiempos de relajación largos, como el líquido cefalorraquídeo, tienen una señal baja, por lo que se ven más oscuro.
+
+* *Magnetización Transversal o T2:* La sustancia gris y las estructuras con tiempos de relajación largos tienen una señal alta, por lo que se ven más claros. Las sustancias blancas y estructuras con tiempos de relajación cortos tienen una señal baja, lo que genera que se visualicen de color oscuro.
+
+
