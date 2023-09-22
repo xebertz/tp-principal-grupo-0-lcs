@@ -58,3 +58,4 @@ Normalizar los valores de los píxeles de las imágenes puede ayudar a que el mo
 imagen se vuelve más oscura donde ya lo era y viceversa con los colores blancos.
 
 == Aumento de datos
+Implica aplicar transformaciones aleatorias a las imágenes de entrenamiento, como rotación, traslación, cambio de escala, recorte y cambio de brillo. Esto aumenta la cantidad de datos de entrenamiento y ayuda al modelo a generalizar mejor. Esto se realiza iterando la misma imagen y realizar lo anterior mencionado.
