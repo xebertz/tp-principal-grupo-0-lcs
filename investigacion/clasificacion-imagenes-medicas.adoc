@@ -118,6 +118,10 @@ Se emiten ondas de alta energía, que son absorbidas (o no) por ciertos órganos
 
 === Qué se puede visualizar
 
+Las ondas generadas se absorben en distintos grados según el receptor. Los tejidos blandos no absorben estas ondas, por lo que se presentan en distintos tonos de gris en la imagen. Los tejidos duros, en cambio, absorben estas ondas de mejor manera; por lo que se ven de color casi blanco. Los metales, por otra parte, se ven completamente blancos; y el aire y gas se ven de color negro.
+
+Esta diferenciación se da debido a las densidades de los tejidos. A mayor densidad, mayor absorción de rayos X. Por este motivo el metal se presenta de color blanco.
+
 == Tomografía Computarizada
 
 == Ecografía
