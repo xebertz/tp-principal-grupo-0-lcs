@@ -45,5 +45,8 @@ Esta información etiquetada permite al modelo aprender patrones y relaciones en
 == División de conjuntos
 
 == Normalización
+=== Normalización de Píxeles:
+Normalizar los valores de los píxeles de las imágenes puede ayudar a que el modelo converja más rápido y a obtener resultados más estables. Se divide por 255 a la imagen y cada píxel queda en un rango de [0,1], donde el 0 es negro y 1 blanco. La 
+imagen se vuelve más oscura donde ya lo era y viceversa con los colores blancos.
 
 == Aumento de datos
