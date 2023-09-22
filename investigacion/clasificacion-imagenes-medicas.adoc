@@ -138,8 +138,6 @@ En particular, se utilizan mucho para identificar fracturas, ya que el color cla
 
 === Tipos
 
-
-
 ==== Radiografías con medio de contraste
 
 Se aplica al paciente un medio de contraste radiopaco, mediante inyección intravenosa, por vía oral, o mediante enema. Esto hace que el tejido a analizar se vea más blanco en la imagen resultante.
@@ -147,6 +145,8 @@ Se aplica al paciente un medio de contraste radiopaco, mediante inyección intra
 También se puede utilizar bario o gastrografín mediante ingesta, lo que facilita la visualización del esófago, estómago y el intestino delgado. Esto ayuda a la detección de úlceras, tumores, obstrucciones, pólipos y diverticulosis.
 
 ==== Radioscopía
+
+La radioscopía genera imágenes que muestran movimiento, por lo que son útiles para observar el funcionamiento de los órganos o estructuras. Se utiliza comunmente para detectar ritmos anómalos del corazón, detectar si un catéter está bien colocado, evaluar el tracto gastrointestinal, y observar el movimiento de los huesos y articulaciones.
 
 == Tomografía Computarizada
 
