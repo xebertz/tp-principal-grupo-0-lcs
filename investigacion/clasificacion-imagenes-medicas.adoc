@@ -32,6 +32,8 @@ Existen dos tipos de magnetización, que generan imágenes con caracterísiticas
 
 * *Magnetización Transversal o T2:* La sustancia gris y las estructuras con tiempos de relajación largos tienen una señal alta, por lo que se ven más claros. Las sustancias blancas y estructuras con tiempos de relajación cortos tienen una señal baja, lo que genera que se visualicen de color oscuro.
 
+* *Magnetización Flair:* Es una amgnetización basada en T2 en la que se eliminan las señales altas.
+
 En ambos tipos de magnetizaciones se puede utilizar un agente de contraste en el paciente para destacar de mejor forma a la lesión. En la imagen esto se ve como un halo con señal hiperintensa.
 
 Es importante aclarar que el encéfalo es un órgano simétrico. Es decir, la comparación de sus lados puede evidenciar las anomalías existentes.
