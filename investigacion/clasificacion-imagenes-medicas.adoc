@@ -134,6 +134,8 @@ La tecnología de imágenes por radiografía se utiliza en muchas partes del cue
 
 * _Abdomen:_ se utiliza para identificar problemas en el tubo digestivo y objetos tragados.
 
+En particular, se utilizan mucho para identificar fracturas, ya que el color claro de los huesos contrasta con el gris de los músculos adyacentes; neumonía, ya que el aire de los pulmones, de color negro, contrasta con los tejidos infectados, que se presentan de color blanco; y obstrucciones intestinales, ya que el aire del interior del intestino contrasta con el color gris de los tejidos que lo rodean.
+
 === Tipos
 
 ==== Radiografías con medio de contraste
