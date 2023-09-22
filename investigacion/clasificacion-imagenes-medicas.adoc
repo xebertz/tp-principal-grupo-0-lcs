@@ -142,6 +142,10 @@ En particular, se utilizan mucho para identificar fracturas, ya que el color cla
 
 ==== Radiografías con medio de contraste
 
+Se aplica al paciente un medio de contraste radiopaco, mediante inyección intravenosa, por vía oral, o mediante enema. Esto hace que el tejido a analizar se vea más blanco en la imagen resultante.
+
+También se puede utilizar bario o gastrografín mediante ingesta, lo que facilita la visualización del esófago, estómago y el intestino delgado. Esto ayuda a la detección de úlceras, tumores, obstrucciones, pólipos y diverticulosis.
+
 ==== Radioscopía
 
 == Tomografía Computarizada
