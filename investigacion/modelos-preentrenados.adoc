@@ -10,4 +10,76 @@ v1, {docdate}
 :nofooter:
 :pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
 
-== X
+== Modelos y funciones de cada uno
+
+*Transformada de Hough* : Es una técnica clásica para la detección de formas geométricas como líneas y círculos en imágenes. Puedes combinarla con otros enfoques para identificar formas geométricas más complejas.
+
+*SVM (Support Vector Machine)*: SVMs son eficaces para la clasificación binaria y multicategoría. Puedes extraer características de las imágenes y entrenar un SVM para clasificar diferentes formas geométricas. Esto se denomina Clasificación basada en características.
+
+== Recomendaciones del Senior en cuanto a aplicar modelos para tomografías
+
+La aplicación de modelos de machine learning para la identificación de formas geométricas en imágenes de tomografías médicas puede ser útil en diversos contextos clínicos y de investigación. Aquí te indico cómo puedes abordar este problema específico:
+
+*Segmentación de regiones de interés (ROI):* La aplicación de modelos de machine learning para la identificación de formas geométricas en imágenes de tomografías médicas puede ser útil en diversos contextos clínicos y de investigación. Aquí te indico cómo puedes abordar este problema específico:
+
+*Detección de formas geométricas:* Una vez que hayas segmentado las regiones de interés, puedes aplicar modelos de machine learning para identificar formas geométricas específicas dentro de estas regiones. Aquí tienes algunas opciones:
+
+- *CNNs personalizadas:* Puedes entrenar CNNs personalizadas para clasificar y localizar formas geométricas dentro de las ROIs segmentadas. Debes etiquetar manualmente un conjunto de datos con las formas geométricas que deseas identificar.
+
+- *Modelos de detección de objetos:* Si las formas geométricas son objetos claramente definidos dentro de las imágenes de tomografía, podrías considerar el uso de modelos de detección de objetos como Faster R-CNN o RetinaNet.
+
+*Postprocesamiento y análisis:* Después de identificar las formas geométricas en las imágenes de tomografía, es importante realizar análisis adicionales según el contexto clínico. Esto podría incluir medir tamaños, relaciones espaciales o características específicas de las formas geométricas identificadas.
+
+*Validación clínica:* Es fundamental realizar una validación clínica rigurosa para garantizar que los resultados del modelo sean precisos y clínicamente relevantes. Esto generalmente implica la colaboración con profesionales de la salud y la evaluación en conjuntos de datos clínicos reales.
+
+== *Redes neuronales convolucionales (CNN)*
+
+Puedes diseñar una CNN para aprender automáticamente características y patrones en las imágenes, lo que es especialmente útil cuando las formas geométricas tienen variaciones en tamaño, rotación y posición. Las redes neuronales convolucionales poseen las siguientes características:
+
+- *Capas convolucionales:* La característica central de las CNN son las capas convolucionales, que son responsables de extraer características locales de las imágenes. En lugar de conectar cada píxel de la imagen a cada neurona de la capa siguiente, las capas convolucionales utilizan filtros (kernels) que se desplazan por la imagen para realizar operaciones de convolución. Esto permite que la red aprenda características como bordes, texturas y formas en diferentes regiones de la imagen.
+
+- *Submuestreo (Pooling):* Después de las capas convolucionales, se suelen aplicar capas de submuestreo o pooling para reducir la dimensionalidad de las características extraídas y hacer que la red sea más robusta a las pequeñas variaciones en la posición de las características. El submuestreo puede realizarse utilizando operaciones como el max-pooling, que toma el valor máximo en una región local de la imagen.
+
+- *Capas completamente conectadas:* Después de varias capas convolucionales y de submuestreo, las CNN a menudo incluyen una o más capas completamente conectadas para realizar la clasificación final. Estas capas toman las características aprendidas y las utilizan para realizar la clasificación en las categorías de interés.
+
+- *Función de activación:* Las CNN suelen usar funciones de activación no lineales, como ReLU (Rectified Linear Unit), para introducir no linealidades en la red y permitir que esta aprenda representaciones más complejas de las imágenes.
+
+- *Aprendizaje automático de características:* Una de las principales ventajas de las CNN es su capacidad para aprender automáticamente características relevantes de las imágenes a partir de los datos de entrenamiento. Esto significa que no es necesario diseñar manualmente características específicas para una tarea, como bordes o texturas; la red aprende estas características durante el entrenamiento.
+
+- *Transferencia de aprendizaje:* Las CNN pre-entrenadas en grandes conjuntos de datos, como ImageNet, se pueden utilizar como base para tareas específicas de visión por computadora. Esto se conoce como transferencia de aprendizaje y permite aprovechar el conocimiento previo de la red para tareas nuevas y relacionadas.
+
+
+== *Mask R-CNN*
+
+Este modelo es útil si se necesita no solo identificar formas geométricas, sino también segmentarlas y detectar sus contornos en la imágen. Es una extensión del modelo Faster R-CNN, que combina la capacidad de detectar objetos con la capacidad de segmentarlos a nivel de píxel. Este modelo ha demostrado ser especialmente eficaz en aplicaciones de visión por computadora donde es importante no solo identificar objetos, sino también comprender su forma y ubicación precisa en la imagen. *Puedes implementar Mask R-CNN utilizando bibliotecas de aprendizaje profundo como TensorFlow y PyTorch. Además hay implementaciones preentrenadas disponibles que facilitan su uso en diversas aplicaciones.*
+
+- *Detección de objetos:* Mask R-CNN hereda la capacidad de Faster R-CNN para detectar objetos en una imagen. Utiliza regiones de interés (RoI) generadas por una red de detección para identificar objetos en la imagen y generar cajas delimitadoras (bounding boxes) alrededor de ellos.
+
+- *Segmentación semántica:* A diferencia de Faster R-CNN, Mask R-CNN va más allá de la detección de objetos y realiza segmentación semántica a nivel de píxel. Para cada objeto detectado, este genera una máscara binaria que representa la ubicación precisa de ese objeto en la imagen.
+
+- *Arquitectura:* Está compuesto por tres partes principales: una red de convolución que extrae características de la imagen de entrada, una rama de detección que genera las cajas delimitadoras y las etiquetas de clase de los objetos detectados, y una rama de segmentación que genera las máscaras de segmentación para cada objeto. Estas tres partes trabajan en conjunto y se entrenan de manera conjunta para realizar tanto la detección como la segmentación de objetos.
+
+- *Backbone:* Mask R-CNN utiliza una variedad de backbones de red, como ResNet o FPN (Feature Pyramid Network), para extraer características de la imagen. Esto permite que la red aprenda características jerárquicas a diferentes escalas y niveles de abstracción.
+
+- *Aprendizaje de características:* Mask R-CNN utiliza una función de pérdida compuesta que incluye pérdida de detección y pérdida de segmentación. La pérdida de segmentación se calcula utilizando la diferencia entre las máscaras de segmentación generadas por la red y las máscaras verdaderas proporcionadas en los datos de entrenamiento.
+
+- *Aplicaciones:* Mask R-CNN es ampliamente utilizado en aplicaciones de visión por computadora donde se requiere segmentación precisa de objetos, como la segmentación de instancias en imágenes médicas (por ejemplo, para separar diferentes células o estructuras) y la segmentación de objetos en imágenes naturales (por ejemplo, para separar personas de fondo).
+
+== *Transformada de Hough*
+
+Es una técnica clásica para la detección de formas geométricas como líneas y círculos en imágenes. Puedes combinarla con otros enfoques para identificar formas geométricas más complejas.
+
+- *Detección de líneas rectas:* La Transformada de Hough se utiliza comúnmente para detectar líneas rectas en una imagen. El objetivo es encontrar todas las líneas rectas presentes en una imagen, independientemente de su orientación y posición exacta.
+
+- *Representación paramétrica:* En lugar de representar una línea mediante su ecuación en el espacio euclidiano (y = mx + b), la Transformada de Hough utiliza una representación paramétrica polar para describir una línea en términos de su longitud y el ángulo de inclinación con respecto al eje horizontal. Esto hace que sea más fácil de manejar líneas de cualquier orientación.
+
+- *Acumulación en el espacio Hough:* La Transformada de Hough acumula votos en un espacio de parámetros llamado espacio Hough. Cada punto en el espacio de la imagen vota por todas las posibles líneas que pueden pasar por ese punto en el espacio Hough. El resultado es un pico en el espacio Hough que representa la línea más prominente en la imagen.
+
+- *Transformada de Hough estándar:* Para detectar líneas rectas, la Transformada de Hough estándar utiliza una representación paramétrica de línea en coordenadas polares. En este espacio Hough, cada píxel de la imagen vota por todas las líneas posibles que pasan por él. Las líneas se detectan como picos en el espacio Hough, y la posición y orientación de estas líneas se pueden recuperar a partir de esos picos.
+
+- *Transformada de Hough generalizada:* La Transformada de Hough se puede generalizar para detectar otros patrones geométricos, como círculos o elipses, utilizando diferentes representaciones paramétricas en el espacio Hough. Por ejemplo, para detectar círculos, se utiliza una representación paramétrica de círculo en lugar de una representación de línea.
+
+- *Parámetros y optimización:* La detección de líneas o patrones en la Transformada de Hough a menudo requiere ajustar parámetros, como la sensibilidad de umbral y la resolución del espacio Hough, para obtener resultados precisos. La optimización de estos parámetros puede ser un desafío y puede requerir técnicas de ajuste fino.
+
+
+
