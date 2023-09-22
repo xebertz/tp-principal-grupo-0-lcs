@@ -32,9 +32,15 @@ Esta práctica conlleva beneficios significativos, entre ellos:
 
 - Mejora en la Generalización del Modelo: La igualdad en las dimensiones de las imágenes facilita que el modelo aprenda patrones y características relevantes de manera consistente.
 
-== Selección de canal de colores
+== Selección de colores
+
+Es recomendable utilizar imágenes en blanco y negro (escala de grises) cuando no necesitamos información de color en el entrenamiento del modelo. Esto se debe a que las imágenes en blanco y negro poseen solo un canal de color en lugar de los tres presentes en las imágenes RGB, lo cual conlleva una reducción significativa en la dimensionalidad de los datos. Esta reducción, a su vez, resulta en un entrenamiento más ágil y en un ahorro considerable de recursos computacionales.
 
 == Etiquetado
+
+El etiquetado de imágenes desempeña un papel fundamental en el proceso de entrenamiento de modelos supervisados. Al proporcionar etiquetas precisas para cada imagen, se establece una correspondencia entre los datos visuales y la información asociada, como diagnósticos médicos, categorías de objetos o características específicas.
+
+Esta información etiquetada permite al modelo aprender patrones y relaciones entre los datos visuales y las etiquetas correspondientes. Por lo que, el etiquetado cuidadoso y preciso es esencial para lograr un rendimiento óptimo del modelo y garantizar que pueda cumplir su objetivo.
 
 == División de conjuntos
 
