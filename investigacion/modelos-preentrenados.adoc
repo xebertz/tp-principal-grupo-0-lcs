@@ -12,9 +12,15 @@ v1, {docdate}
 
 == Modelos y funciones de cada uno
 
-*Transformada de Hough* : Es una técnica clásica para la detección de formas geométricas como líneas y círculos en imágenes. Puedes combinarla con otros enfoques para identificar formas geométricas más complejas.
+*Redes neuronales convolucionales*: Puedes diseñar una CNN para aprender automáticamente características y patrones en las imágenes, lo que es especialmente útil cuando las formas geométricas tienen variaciones en tamaño, rotación y posición.
+
+*Mask R-CNN*: Este modelo es útil si necesitas no solo identificar formas geométricas, sino también segmentarlas y detectar sus contornos en la imagen.
+
+*Transformada de Hough*: Es una técnica clásica para la detección de formas geométricas como líneas y círculos en imágenes. Puedes combinarla con otros enfoques para identificar formas geométricas más complejas.
 
 *SVM (Support Vector Machine)*: SVMs son eficaces para la clasificación binaria y multicategoría. Puedes extraer características de las imágenes y entrenar un SVM para clasificar diferentes formas geométricas. Esto se denomina Clasificación basada en características.
+
+*Redes Neuronales Recurrentes (RNN)*: Las RNN se utilizan para tareas que involucran secuencias de imágenes, como el procesamiento de videos y la generación de descripciones de imágenes.
 
 == Recomendaciones del Senior en cuanto a aplicar modelos para tomografías
 
@@ -80,6 +86,36 @@ Es una técnica clásica para la detección de formas geométricas como líneas 
 - *Transformada de Hough generalizada:* La Transformada de Hough se puede generalizar para detectar otros patrones geométricos, como círculos o elipses, utilizando diferentes representaciones paramétricas en el espacio Hough. Por ejemplo, para detectar círculos, se utiliza una representación paramétrica de círculo en lugar de una representación de línea.
 
 - *Parámetros y optimización:* La detección de líneas o patrones en la Transformada de Hough a menudo requiere ajustar parámetros, como la sensibilidad de umbral y la resolución del espacio Hough, para obtener resultados precisos. La optimización de estos parámetros puede ser un desafío y puede requerir técnicas de ajuste fino.
+
+== Support Vector Machine (SVM)
+
+Las máquinas de soporte vectorial (SVM) son un tipo de modelo de aprendizaje supervisado utilizado tanto para problemas de clasificación como para regresión.
+
+*Clasificación y regresión:* Las SVM se utilizan en problemas de clasificación para separar puntos de datos en diferentes clases, y en problemas de regresión para predecir valores numéricos. El objetivo principal de SVM es encontrar un hiperplano (una línea en 2D, un plano en 3D o un hiperplano en dimensiones superiores) que maximice la separación entre las diferentes clases (en el caso de *clasificación*) o que se ajuste de la mejor manera posible a los puntos de datos (en el caso de *regresión*).
+
+*Márgenes y vectores de soporte:* Las SVM buscan encontrar el hiperplano que tenga el margen máximo entre las clases. Los puntos de datos que están más cerca de este hiperplano se llaman "vectores de soporte". La idea es que estos vectores de soporte son los más importantes para la separación entre clases.
+
+*Funciones de kernel:* Una de las características clave de las SVM es su capacidad para manejar datos no lineales utilizando funciones de kernel. Un kernel es una función que transforma los datos en un espacio de mayor dimensión donde la separación lineal es más fácil. Los kernels más comunes son el kernel lineal, el kernel polinómico y el kernel radial (RBF).
+
+*Regularización:* Las SVM también incluyen un término de regularización que controla el equilibrio entre maximizar el margen y minimizar la clasificación incorrecta. Este parámetro se ajusta durante el entrenamiento para encontrar el equilibrio adecuado.
+
+*Ventajas:* Las SVM tienen varias ventajas, como su capacidad para manejar datos de alta dimensionalidad, su robustez ante valores atípicos y su capacidad para trabajar en problemas de clasificación binaria y multiclase. También son efectivas en conjuntos de datos pequeños o con un número desigual de muestras por clase.
+
+*Limitaciones:* Aunque son poderosas, las SVM pueden ser computacionalmente costosas en conjuntos de datos muy grandes y pueden requerir una optimización cuidadosa de los hiperparámetros. Además, su capacidad para manejar problemas de clasificación multiclase puede requerir estrategias adicionales, como la clasificación uno contra todos (OvA) o uno contra uno (OvO).
+
+== Redes Neuronales Recurrentes (RNN) 
+
+#OPCIONAL, LEER COMENTARIO# 
+
+////
+quizas sirva para ver lo que se habló en clase sobre los textos dentro de las imágenes, aunque es solo una idea que se me ocurrió cuando lo leí, no lo pensé tanto.
+////
+
+Son un tipo de arquitectura de red neuronal que se utiliza en el procesamiento de secuencias y datos temporales.
+
+*Procesamiento de texto:* En el procesamiento de lenguaje natural (NLP), las RNN se utilizan para tareas como la clasificación de texto, la generación de texto, la traducción automática y el análisis de sentimientos.
+
+
 
 
 
