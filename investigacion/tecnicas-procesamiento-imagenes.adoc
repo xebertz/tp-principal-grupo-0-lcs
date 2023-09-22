@@ -1,4 +1,4 @@
-= Técnicas de Procesamiento de Imágenes con TensorFlow
+= Técnicas de Procesamiento de Imágenes
 Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Torrez Mauro <sntorrez9@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
 v1, {docdate}
 :toc:
@@ -10,4 +10,6 @@ v1, {docdate}
 :nofooter:
 :pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
 
-== X
+== Introducción
+
+En este documento, exploraremos diversas técnicas de procesamiento de imágenes en el contexto de la clasificación de imágenes mediante Deep Learning.
