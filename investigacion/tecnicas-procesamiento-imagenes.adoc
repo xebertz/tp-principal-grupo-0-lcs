@@ -15,6 +15,9 @@ v1, {docdate}
 En este documento, exploraremos diversas técnicas de procesamiento de imágenes en el contexto de la clasificación de imágenes mediante Deep Learning.
 
 == Procesamiento
+El procesamiento se refiere a una serie de pasos y transformaciones que se aplican a las imágenes antes de ser utilizadas como entrada para un modelo. El objetivo de este procesamiento es preparar los datos de manera que el modelo pueda aprender de manera efectiva y producir resultados precisos. 
+
+Teniendo en cuenta la introducción, algunos de los procesos que se pueden realizar son: Redimensionamiento, normalización, cambios de colores, eliminación de ruido, segmentación, codificación de etiquetas, extracción de carácteristicas, etc...
 
 == Balanceo de clases
 
