@@ -51,8 +51,8 @@ La metástasis se presenta como una formación de un tumor a partir de célular 
 .diferencias de visualización según magnetización
 [cols="a,a", frame=none, grid=none, role=right]
 |===
-|   image:imgs/metastasis-t1.png[align="right"]
-|   image:imgs/metastasis-t2.png[align="right"]
+|   image:imgs/metastasis-t1.png[150, 250, align="right"]
+|   image:imgs/metastasis-t2.png[150, 250 align="right"]
 |   magnetización T1  |magnetización T2
 |===
 
@@ -63,6 +63,16 @@ Las imágenes anteriores muestran dos imágenes del cerebro de una paciente con 
 Las masas extra axiales son las que se encuentran en el límite del parénquima cerebral. Generan que la corteza del cerebro se desplace hacia la sustancia blanca, y puede haber un límite de líquido cefalorraquídeo entre la lesión y el parénquima cerebral.
 
 Los más comunes son los meningiomas, es decir, los tumores benignos.
+
+.diferencias de visualización según magnetización
+[cols="a,a", frame=none, grid=none, role=right]
+|===
+|   image:imgs/extra-axial-t1.png[150, 250, align="right"]
+|   image:imgs/extra-axial-t2.png[150, 250, align="right"]
+|   magnetización T1  |magnetización T2
+|===
+
+Las imágenes anteriores muestran el cerebro de una paciente con un meningioma. Se puede observar que en este caso la magnetización T1 arrojó mejores resultados.
 
 ===== Naturaleza de lesiones
 
