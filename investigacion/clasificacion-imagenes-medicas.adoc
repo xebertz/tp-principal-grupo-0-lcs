@@ -14,15 +14,13 @@ v1, {docdate}
 
 En este documento se determinarán las distintas formas de clasificación de imágenes médicas para distintos tipos de imágenes; y principalmente para imágenes de _MRI_ cerebrales que determinan la presencia o ausencia de un tumor en el cerebro.
 
-== Tipos de imágenes médicas
-
-=== Imágenes por resonancia magnética
+== Imágenes por resonancia magnética
 
 Para generar este tipo de imágenes se utilizan ondas de radio y campos magnéticos; lo que permite observar los órganos a través del movimiento de los protones.
 
 Este método se utiliza para generar imágenes de órganos blandos tales como el cerebro, el corazón, o el hígado. También son utilizadas para lesiones de rodilla y hombro, ya que aportan una visión más clara que los rayos X.
 
-==== Uso en el cerebro
+=== Uso en el cerebro
 
 Se escoge frente a la tomografía computarizada debido a las imágenes de calidad que genera, ya que brinda un fuerte contraste entre la materia gris y la materia blanca.
 
@@ -44,7 +42,7 @@ image:imgs/tipos-de-lesiones.png[align="center"]
 
 La figura *A* corresponde a un cerebro sin lesiones, la *B* corresponde a un cerebro con una lesión extra axial; y la *C* corresponde a un cerebro con una lesión intra axial.
 
-===== Masas Intra Axiales
+==== Masas Intra Axiales
 
 Las masas intra axiales son las que se encuentran dentro del parénquima cerebral. La lesión se rodea por el parénquima encefálico. Los tipos más comunes son las metástasis o secundarismo, y los gliomas.
 
@@ -60,7 +58,7 @@ La metástasis se presenta como una formación de un tumor a partir de célular 
 
 Las imágenes anteriores muestran dos imágenes del cerebro de una paciente con metástasis. Es clara la diferencia de visualización según el tipo de magnetización utilizada en la resonancia magnética.
 
-===== Masas Extra Axiales
+==== Masas Extra Axiales
 
 Las masas extra axiales son las que se encuentran en el límite del parénquima cerebral. Generan que la corteza del cerebro se desplace hacia la sustancia blanca, y puede haber un límite de líquido cefalorraquídeo entre la lesión y el parénquima cerebral.
 
@@ -76,7 +74,7 @@ Los más comunes son los meningiomas, es decir, los tumores benignos.
 
 Las imágenes anteriores muestran el cerebro de una paciente con un meningioma. Se puede observar que en este caso la magnetización T1 arrojó mejores resultados.
 
-===== Naturaleza de lesiones
+==== Naturaleza de lesiones
 
 Las lesiones pueden tener diferentes composiciones, ya sea quística, sólida, hermorrágica, u otra. Tienen tamaño, forma, y delimitación de la forma; y pueden ser múltiples.
 
@@ -94,8 +92,7 @@ En las imágenes se observan con distinta intensidad, según la lesion y el tipo
 |Sangre             |Hiperintenso       |Hiperintenso
 |===
 
-
-===== Artificios
+=== Artificios
 
 Los artificios son distorsiones en las imágenes que no tienen relación con la condición médica del paciente.
 
@@ -111,5 +108,10 @@ Existen distintos tipos de artificios:
 |De susceptibilidad magnética   |Área de vacío de señal                     |Sustancias magnéticas
 |===
 
+Estos artificios pueden interferir en el diagóstico del profesional.
 
+== Radiografía
 
+== Tomografía Computarizada
+
+== Ecografía
