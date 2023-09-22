@@ -32,7 +32,9 @@ Esta práctica conlleva beneficios significativos, entre ellos:
 
 - Mejora en la Generalización del Modelo: La igualdad en las dimensiones de las imágenes facilita que el modelo aprenda patrones y características relevantes de manera consistente.
 
-== Selección de canal de colores
+== Selección de colores
+
+Es recomendable utilizar imágenes en blanco y negro (escala de grises) cuando no necesitamos información de color en el entrenamiento del modelo. Esto se debe a que las imágenes en blanco y negro poseen solo un canal de color en lugar de los tres presentes en las imágenes RGB, lo cual conlleva una reducción significativa en la dimensionalidad de los datos. Esta reducción, a su vez, resulta en un entrenamiento más ágil y en un ahorro considerable de recursos computacionales.
 
 == Etiquetado
 
