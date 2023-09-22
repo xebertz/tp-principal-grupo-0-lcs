@@ -122,6 +122,24 @@ Las ondas generadas se absorben en distintos grados según el receptor. Los teji
 
 Esta diferenciación se da debido a las densidades de los tejidos. A mayor densidad, mayor absorción de rayos X. Por este motivo el metal se presenta de color blanco.
 
+En este tipo de imágenes también existe la posibilidad de introducir un medio de contraste en el paciente, para mejor visualización.
+
+=== Usos
+
+La tecnología de imágenes por radiografía se utiliza en muchas partes del cuerpo. Por ejemplo:
+
+* _Huesos y dientes:_ se utiliza para identificar fracturas, infecciones, artritis, caries dentales, osteoporosis y cáncer de huesos.
+
+* _Tórax:_ se utiliza para identificar infecciones, afecciones pulmonares, cáncer mamario, corazón dilatado y vasos sanguíneos obstruidos.
+
+* _Abdomen:_ se utiliza para identificar problemas en el tubo digestivo y objetos tragados.
+
+=== Tipos
+
+==== Radiografías con medio de contraste
+
+==== Radioscopía
+
 == Tomografía Computarizada
 
 == Ecografía
