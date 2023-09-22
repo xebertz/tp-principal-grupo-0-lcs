@@ -112,6 +112,53 @@ Estos artificios pueden interferir en el diagóstico del profesional.
 
 == Radiografía
 
+La radiografía utiliza radiación electromagnética para generar imágenes del interior del cuerpo.
+
+Se emiten ondas de alta energía, que son absorbidas (o no) por ciertos órganos del cuerpo, lo que permite que se visualicen mejor.
+
+=== Qué se puede visualizar
+
+Las ondas generadas se absorben en distintos grados según el receptor. Los tejidos blandos no absorben estas ondas, por lo que se presentan en distintos tonos de gris en la imagen. Los tejidos duros, en cambio, absorben estas ondas de mejor manera; por lo que se ven de color casi blanco. Los metales, por otra parte, se ven completamente blancos; y el aire y gas se ven de color negro.
+
+Esta diferenciación se da debido a las densidades de los tejidos. A mayor densidad, mayor absorción de rayos X. Por este motivo el metal se presenta de color blanco.
+
+En este tipo de imágenes también existe la posibilidad de introducir un medio de contraste en el paciente, para mejor visualización.
+
+=== Usos
+
+La tecnología de imágenes por radiografía se utiliza en muchas partes del cuerpo. Por ejemplo:
+
+* _Huesos y dientes:_ se utiliza para identificar fracturas, infecciones, artritis, caries dentales, osteoporosis y cáncer de huesos.
+
+* _Tórax:_ se utiliza para identificar infecciones, afecciones pulmonares, cáncer mamario, corazón dilatado y vasos sanguíneos obstruidos.
+
+* _Abdomen:_ se utiliza para identificar problemas en el tubo digestivo y objetos tragados.
+
+En particular, se utilizan mucho para identificar fracturas, ya que el color claro de los huesos contrasta con el gris de los músculos adyacentes; neumonía, ya que el aire de los pulmones, de color negro, contrasta con los tejidos infectados, que se presentan de color blanco; y obstrucciones intestinales, ya que el aire del interior del intestino contrasta con el color gris de los tejidos que lo rodean.
+
+=== Tipos
+
+==== Radiografías con medio de contraste
+
+Se aplica al paciente un medio de contraste radiopaco, mediante inyección intravenosa, por vía oral, o mediante enema. Esto hace que el tejido a analizar se vea más blanco en la imagen resultante.
+
+También se puede utilizar bario o gastrografín mediante ingesta, lo que facilita la visualización del esófago, estómago y el intestino delgado. Esto ayuda a la detección de úlceras, tumores, obstrucciones, pólipos y diverticulosis.
+
+==== Radioscopía
+
+La radioscopía genera imágenes que muestran movimiento, por lo que son útiles para observar el funcionamiento de los órganos o estructuras. Se utiliza comunmente para detectar ritmos anómalos del corazón, detectar si un catéter está bien colocado, evaluar el tracto gastrointestinal, y observar el movimiento de los huesos y articulaciones.
+
 == Tomografía Computarizada
 
 == Ecografía
+
+
+
+
+
+
+//https://www.postdicom.com/es/blog/medical-imaging-types-and-modalities
+//DIEGO MIGUEL RIVERA1 SOFÍA PUENTES LIGIA CABALLERO2: Resonancia magnética cerebral: secuencias básicas e interpretación
+//https://www.youtube.com/watch?v=0eFvBrpPBk0&ab_channel=Radiolog%C3%ADa2.0
+//https://www.msdmanuals.com/es/hogar/temas-especiales/pruebas-de-diagn%C3%B3stico-por-la-imagen-habituales/radiograf%C3%ADas-simples
+//https://www.mayoclinic.org/es/tests-procedures/x-ray/about/pac-20395303
