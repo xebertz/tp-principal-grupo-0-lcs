@@ -32,15 +32,15 @@ Existen dos tipos de magnetización, que generan imágenes con caracterísiticas
 
 * *Magnetización Transversal o T2:* La sustancia gris y las estructuras con tiempos de relajación largos tienen una señal alta, por lo que se ven más claros. Las sustancias blancas y estructuras con tiempos de relajación cortos tienen una señal baja, lo que genera que se visualicen de color oscuro.
 
-===== Anatomía normal
+En ambos tipos de magnetizaciones se puede utilizar un agente de contraste en el paciente para destacar de mejor forma a la lesión. En la imagen esto se ve como un halo con señal hiperintensa.
 
 Es importante aclarar que el encéfalo es un órgano simétrico. Es decir, la comparación de sus lados puede evidenciar las anomalías existentes.
 
-Existen dos tipos de lesiones: las lesiones intra axiales y las extra axiales.
-
-Se puede ver una comparación entre ellas en la siguiente imagen:
+Existen dos tipos de lesiones: las lesiones intra axiales y las extra axiales. Se puede ver una comparación entre ellas en la siguiente imagen:
 
 image:imgs/tipos-de-lesiones.png[align="center"]
+
+La figura *A* corresponde a un cerebro sin lesiones, la *B* corresponde a un cerebro con una lesión extra axial; y la *C* corresponde a un cerebro con una lesión intra axial.
 
 ===== Masas Intra Axiales
 
@@ -51,15 +51,37 @@ La metástasis se presenta como una formación de un tumor a partir de célular 
 .diferencias de visualización según magnetización
 [cols="a,a", frame=none, grid=none, role=right]
 |===
-
 |   image:imgs/metastasis-t1.png[align="right"]
 |   image:imgs/metastasis-t2.png[align="right"]
-|Metástasis - magnetización T1  |Metástasis - magnetización T2
+|   magnetización T1  |magnetización T2
 |===
+
+Las imágenes anteriores muestran dos imágenes del cerebro de una paciente con metástasis. Es clara la diferencia de visualización según el tipo de magnetización utilizada en la resonancia magnética.
 
 ===== Masas Extra Axiales
 
 Las masas extra axiales son las que se encuentran en el límite del parénquima cerebral. Generan que la corteza del cerebro se desplace hacia la sustancia blanca, y puede haber un límite de líquido cefalorraquídeo entre la lesión y el parénquima cerebral.
+
+Los más comunes son los meningiomas, es decir, los tumores benignos.
+
+===== Naturaleza de lesiones
+
+Las lesiones pueden tener diferentes composiciones, ya sea quística, sólida, hermorrágica, u otra. Tienen tamaño, forma, y delimitación de la forma; y pueden ser múltiples.
+
+En las imágenes se observan con distinta intensidad, según la lesion y el tipo de magnetización.
+
+.Visualización de lesiones
+[cols="3*", options="header"]
+|===
+|Sustancia o tejido |Imagen T1          |Imagen T2
+|Agua               |Hipointenso        |Hiperintenso
+|Hueso              |Muy hipointenso    |Muy hipointenso
+|Músculo            |Gris intermedio    |Gris intermedio
+|Grasa              |Hiperintenso       |Hipointenso
+|Ligamentos         |Hipointenso        |Hipointenso
+|Sangre             |Hiperintenso       |Hiperintenso
+|===
+
 
 ===== Artificios
 
