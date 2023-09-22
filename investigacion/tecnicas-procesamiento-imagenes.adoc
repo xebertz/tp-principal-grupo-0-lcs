@@ -32,6 +32,8 @@ Esta práctica conlleva beneficios significativos, entre ellos:
 
 - Mejora en la Generalización del Modelo: La igualdad en las dimensiones de las imágenes facilita que el modelo aprenda patrones y características relevantes de manera consistente.
 
+== Selección de canal de colores
+
 == Etiquetado
 
 == División de conjuntos
