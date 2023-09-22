@@ -24,6 +24,14 @@ Para mitigar este problema y garantizar un entrenamiento más equitativo y preci
 
 == Redimensionamiento
 
+La igualdad en las dimensiones de las imágenes es un requisito común en la mayoría de los modelos de Deep Learning. Es muy probable que necesitemos realizar el proceso de redimensionamiento de imágenes para cumplir con esta exigencia.
+
+Esta práctica conlleva beneficios significativos, entre ellos:
+
+- Optimización del Rendimiento: Al mantener todas las imágenes en el mismo tamaño, se logra una optimización eficiente del rendimiento durante el entrenamiento del modelo.
+
+- Mejora en la Generalización del Modelo: La igualdad en las dimensiones de las imágenes facilita que el modelo aprenda patrones y características relevantes de manera consistente.
+
 == Etiquetado
 
 == División de conjuntos
