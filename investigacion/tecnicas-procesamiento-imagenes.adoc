@@ -1,0 +1,43 @@
+= Técnicas de Procesamiento de Imágenes
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Torrez Mauro <sntorrez9@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== Introducción
+
+En este documento, exploraremos diversas técnicas de procesamiento de imágenes en el contexto de la clasificación de imágenes mediante Deep Learning.
+
+== Procesamiento
+
+== Balanceo de clases
+
+En ocasiones, nos enfrentamos al desafío de trabajar con conjuntos de imágenes que presentan un desequilibrio significativo entre las clases. Este desequilibrio puede generar problemas en el proceso de aprendizaje de nuestro modelo, ya que podría inclinarse hacia la clasificación de la clase mayoritaria. Por ejemplo, si tenemos una gran cantidad de imágenes de la Clase 1 y muy pocas de la Clase 2, el modelo podría tender a clasificar la mayoría de las imágenes como pertenecientes a la Clase 1.
+
+Para mitigar este problema y garantizar un entrenamiento más equitativo y preciso, es esencial equilibrar la cantidad de imágenes en cada clase. Esto implica igualar o acercar la cantidad de imágenes en cada categoría tanto como sea posible.
+
+== Redimensionamiento
+
+La igualdad en las dimensiones de las imágenes es un requisito común en la mayoría de los modelos de Deep Learning. Es muy probable que necesitemos realizar el proceso de redimensionamiento de imágenes para cumplir con esta exigencia.
+
+Esta práctica conlleva beneficios significativos, entre ellos:
+
+- Optimización del Rendimiento: Al mantener todas las imágenes en el mismo tamaño, se logra una optimización eficiente del rendimiento durante el entrenamiento del modelo.
+
+- Mejora en la Generalización del Modelo: La igualdad en las dimensiones de las imágenes facilita que el modelo aprenda patrones y características relevantes de manera consistente.
+
+== Selección de canal de colores
+
+== Etiquetado
+
+== División de conjuntos
+
+== Normalización
+
+== Aumento de datos
