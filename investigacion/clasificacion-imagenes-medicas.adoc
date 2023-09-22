@@ -32,4 +32,50 @@ Existen dos tipos de magnetización, que generan imágenes con caracterísiticas
 
 * *Magnetización Transversal o T2:* La sustancia gris y las estructuras con tiempos de relajación largos tienen una señal alta, por lo que se ven más claros. Las sustancias blancas y estructuras con tiempos de relajación cortos tienen una señal baja, lo que genera que se visualicen de color oscuro.
 
+===== Anatomía normal
+
+Es importante aclarar que el encéfalo es un órgano simétrico. Es decir, la comparación de sus lados puede evidenciar las anomalías existentes.
+
+Existen dos tipos de lesiones: las lesiones intra axiales y las extra axiales.
+
+Se puede ver una comparación entre ellas en la siguiente imagen:
+
+image:imgs/tipos-de-lesiones.png[align="center"]
+
+===== Masas Intra Axiales
+
+Las masas intra axiales son las que se encuentran dentro del parénquima cerebral. La lesión se rodea por el parénquima encefálico. Los tipos más comunes son las metástasis o secundarismo, y los gliomas.
+
+La metástasis se presenta como una formación de un tumor a partir de célular cancerosas de un tumor previo. No necesariamente se forma en el mismo lugar, ya que las células tienen la capacidad de viajar por el cuerpo a través de la sangre o el sistema linfático.
+
+.diferencias de visualización según magnetización
+[cols="a,a", frame=none, grid=none, role=right]
+|===
+
+|   image:imgs/metastasis-t1.png[align="right"]
+|   image:imgs/metastasis-t2.png[align="right"]
+|Metástasis - magnetización T1  |Metástasis - magnetización T2
+|===
+
+===== Masas Extra Axiales
+
+Las masas extra axiales son las que se encuentran en el límite del parénquima cerebral. Generan que la corteza del cerebro se desplace hacia la sustancia blanca, y puede haber un límite de líquido cefalorraquídeo entre la lesión y el parénquima cerebral.
+
+===== Artificios
+
+Los artificios son distorsiones en las imágenes que no tienen relación con la condición médica del paciente.
+
+Existen distintos tipos de artificios:
+
+.Tipos de artificios
+[cols="3*", options="header"]
+|===
+|Tipo                           |Imagen                                     |Causa
+|De movimiento                  |Borrosa, con líneas sucesivas              |Movimientos
+|De solapamiento                |Superposición de anatomía                  |Área reducida
+|De truncameinto                |Banda de hipo o hiperintensa en el borde   |Defecto de reconstrucción de imágen
+|De susceptibilidad magnética   |Área de vacío de señal                     |Sustancias magnéticas
+|===
+
+
 
