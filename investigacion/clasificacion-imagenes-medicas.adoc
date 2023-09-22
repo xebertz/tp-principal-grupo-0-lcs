@@ -112,6 +112,12 @@ Estos artificios pueden interferir en el diagóstico del profesional.
 
 == Radiografía
 
+La radiografía utiliza radiación electromagnética para generar imágenes del interior del cuerpo.
+
+Se emiten ondas de alta energía, que son absorbidas (o no) por ciertos órganos del cuerpo, lo que permite que se visualicen mejor.
+
+=== Qué se puede visualizar
+
 == Tomografía Computarizada
 
 == Ecografía
