@@ -44,6 +44,14 @@ Esta información etiquetada permite al modelo aprender patrones y relaciones en
 
 == División de conjuntos
 
+Las imágenes a trabajar generalmente se dividen en tres conjuntos principales: entrenamiento, prueba y validación. Sin embargo, en algunos casos, especialmente cuando los datos son escasos, se pueden usar solo dos conjuntos: entrenamiento y prueba.
+
+El conjunto de entrenamiento se utiliza para entrenar el modelo. Las imágenes y sus etiquetas correspondientes se utilizan para ajustar los parámetros del modelo durante el proceso de entrenamiento.
+
+Por otro lado, el conjunto de prueba se utiliza para ajustar los hiperparámetros del modelo y evaluar su rendimiento durante el entrenamiento. Ayuda a evitar el sobreajuste y permite optimizar el modelo de manera eficiente.
+
+Por último, el conjunto de validación se reserva exclusivamente para evaluar el rendimiento final del modelo, una vez que se ha completado todo el entrenamiento y ajuste de hiperparámetros. El modelo nunca ha visto estas imágenes durante el proceso de entrenamiento ni de prueba, lo que proporciona una evaluación objetiva de su capacidad de generalización.
+
 == Normalización
 
 == Aumento de datos
