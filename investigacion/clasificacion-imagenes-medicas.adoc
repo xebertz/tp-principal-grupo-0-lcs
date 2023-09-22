@@ -138,6 +138,8 @@ En particular, se utilizan mucho para identificar fracturas, ya que el color cla
 
 === Tipos
 
+
+
 ==== Radiografías con medio de contraste
 
 ==== Radioscopía
@@ -145,3 +147,14 @@ En particular, se utilizan mucho para identificar fracturas, ya que el color cla
 == Tomografía Computarizada
 
 == Ecografía
+
+
+
+
+
+
+//https://www.postdicom.com/es/blog/medical-imaging-types-and-modalities
+//DIEGO MIGUEL RIVERA1 SOFÍA PUENTES LIGIA CABALLERO2: Resonancia magnética cerebral: secuencias básicas e interpretación
+//https://www.youtube.com/watch?v=0eFvBrpPBk0&ab_channel=Radiolog%C3%ADa2.0
+//https://www.msdmanuals.com/es/hogar/temas-especiales/pruebas-de-diagn%C3%B3stico-por-la-imagen-habituales/radiograf%C3%ADas-simples
+//https://www.mayoclinic.org/es/tests-procedures/x-ray/about/pac-20395303
