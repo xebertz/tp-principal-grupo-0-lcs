@@ -38,6 +38,10 @@ Es recomendable utilizar imágenes en blanco y negro (escala de grises) cuando n
 
 == Etiquetado
 
+El etiquetado de imágenes desempeña un papel fundamental en el proceso de entrenamiento de modelos supervisados. Al proporcionar etiquetas precisas para cada imagen, se establece una correspondencia entre los datos visuales y la información asociada, como diagnósticos médicos, categorías de objetos o características específicas.
+
+Esta información etiquetada permite al modelo aprender patrones y relaciones entre los datos visuales y las etiquetas correspondientes. Por lo que, el etiquetado cuidadoso y preciso es esencial para lograr un rendimiento óptimo del modelo y garantizar que pueda cumplir su objetivo.
+
 == División de conjuntos
 
 == Normalización
