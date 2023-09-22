@@ -13,3 +13,19 @@ v1, {docdate}
 == Introducción
 
 En este documento, exploraremos diversas técnicas de procesamiento de imágenes en el contexto de la clasificación de imágenes mediante Deep Learning.
+
+== Procesamiento
+
+El procesamiento de imágenes desempeña un papel crítico para garantizar la calidad de los datos y mejorar la capacidad de generalización del modelo. 
+
+== Balanceo de clases
+
+== Redimensionamiento
+
+== Etiquetado
+
+== División de conjuntos
+
+== Normalización
+
+== Aumento de datos
