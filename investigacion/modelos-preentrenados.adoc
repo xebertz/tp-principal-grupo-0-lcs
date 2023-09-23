@@ -164,7 +164,9 @@ image:imgs/comparacion-efficientnetv2.png[align="center"]
 
 _ConvNeXt_ es una familia de remasterizaciones de una red _ResNet_ y una red convolucional, que alcanza un nivel de eficacia top-1 de 87.8%.
 
-Está basada en _Vision Transformers_, redes neuronales diseñadas, en principio, para el procesamiento del lenguaje natural. Esta arquitectura se modificó para funcionar en procesamiento de imágenes, lo que generó un gran porcentaje de eficacia, posicionando a las redes de este tipo como una de las principales competidoras de las redes convolucionales.  
+Está basada en _Vision Transformers_, redes neuronales diseñadas, en principio, para el procesamiento del lenguaje natural. Esta arquitectura se modificó para funcionar en procesamiento de imágenes, lo que generó un gran porcentaje de eficacia, posicionando a las redes de este tipo como una de las principales competidoras de las redes convolucionales. 
+
+_ConvNeXt_ combina este tipo de redes con redes convolucionales convolucionales, aprovechando lo mejor de ambas.
 
 == Transfer Learning
 
