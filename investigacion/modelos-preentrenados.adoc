@@ -125,6 +125,23 @@ image:imgs/modelos-keras.png[300, 450, align="center"]
 
 Los modelos grandes en tamaño suelen realizar predicciones más precisas, pero tienen la desventaja de su lentitud en cuanto a procesamiento.
 
+Podemos ver las comparaciones en cuanto a precision en esta 
+https://keras.io/api/applications/[tabla].
+
+=== Inception V3
+
+_Inception V3_ es un modelo que tiene 48 capas de profundidad, que recibe imágenes de 299x299 en tres canales de color.
+
+Está conformado por bloques de compilación que incluyen capas de tipo convolucionales, de reducción promedio, de reducción máxima, concatenaciones, retirados; y capas densas. La pérdida es calculada con la función _softmax_.
+
+La red está preentrenada con el dataset _ImageNet_, que contiene 1.331.167, con 1.281.167 imágenes de entrenamiento y 50 000 imágenes de prueba.
+
+Este modelo es ampliamente utilizado para la clasificación de imágenes, y es la base de muchos modelos.
+
+=== Xception
+
+Xception es una versión de _Inception_***** con  
+
 == Transfer Learning
 
 Los modelos preentrenados nos permiten aprovechar ese entrenamiento previo para iniciar con una base de aprendizaje que nos permita entrenar al modelo más rápido, según lo que queramos realizar.
