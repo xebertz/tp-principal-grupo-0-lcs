@@ -160,9 +160,12 @@ Como _EfficientNet_, _EfficientNetV2_ es una familia de modelos preentrenados qu
 
 image:imgs/comparacion-efficientnetv2.png[align="center"]
 
-=== ConvNetXT
+=== ConvNeXt
 
-_ConvNetXT_ es una familai de remasterizaciones de una red _ResNet_ 
+_ConvNeXt_ es una familia de remasterizaciones de una red _ResNet_ y una red convolucional, que alcanza un nivel de eficacia top-1 de 87.8%.
+
+Está basada en _Vision Transformers_, redes neuronales diseñadas, en principio, para el procesamiento del lenguaje natural. Esta arquitectura se modificó para funcionar en procesamiento de imágenes, lo que generó un gran porcentaje de eficacia, posicionando a las redes de este tipo como una de las principales competidoras de las redes convolucionales.  
+
 == Transfer Learning
 
 Los modelos preentrenados nos permiten aprovechar ese entrenamiento previo para iniciar con una base de aprendizaje que nos permita entrenar al modelo más rápido, según lo que queramos realizar.
