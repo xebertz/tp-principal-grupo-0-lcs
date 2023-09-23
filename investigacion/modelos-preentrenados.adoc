@@ -136,20 +136,33 @@ Está conformado por bloques de compilación que incluyen capas de tipo convoluc
 
 La red está preentrenada con el dataset _ImageNet_, que contiene 1.331.167, con 1.281.167 imágenes de entrenamiento y 50 000 imágenes de prueba.
 
-Este modelo es ampliamente utilizado para la clasificación de imágenes, y es la base de muchos modelos.
+Este modelo es ampliamente utilizado para la clasificación de imágenes, y es la base de muchos modelos; pero también se puede utilizar para:
+
+* Detección de objetos en una imagen
+* Segmentación semántica
+* Transfer learning
 
 === Xception
 
-Xception es una versión de _Inception_***** con una ligera mejoría en cuanto a su eficacia.
+Xception es una versión de _Inception V3_ con una ligera mejoría en cuanto a su eficacia, debido a que fue construida utilizando capas convolucionales separables en profundidad. Esto implica que la cantidad de parámetros de cada capa se reduce, por lo que el modelo se entrena más rápido.
 
 === EfficientNet
 
 _EfficientNet_ es un conjunto de modelos de clasifiación de imágenes que se caracterizan por ser más chicos en tamaño y más rápidos que modelos previos. Existen muchos modelos en esta familia. En Keras se incluyen los modelos desde _B1_ hasta _B7_, siendo el mode B7 el mejor logrado hasta la fecha.
 
-Este modelo alcanza un 84.4% de eficacia top-1 y un 97.1% de eficacia top-5. Si se compara con otros modelos según su nivel de precisión en relación a la cantidad de parámetros, se puede ver que las redes EfficientNet alcanzan valores altos de precisión con pocos parámetros, comparada con las otras.
+Este modelo alcanza un 84.4% de _eficacia top-1_ y un 97.1% de _eficacia top-5_. Esto quiere decir que un 84.4% de las imágenes de la principal clase fueron clasificadas correctamente, y un 97.1% de imágenes las principales cinco clases fueron clasificadas correctamente. Si se compara con otros modelos según su nivel de precisión en relación a la cantidad de parámetros, se puede ver que las redes EfficientNet alcanzan valores altos de precisión con pocos parámetros, comparada con las otras.
 
+Otra particularidad es que, en su entrenamiento, se le proporcionó imágenes modificadas mediante técnicas de aumento de datos, por lo que el aprendizaje se llevó a cabo con un conjunto de datos más variado.
 
+=== EfficientNetV2
 
+Como _EfficientNet_, _EfficientNetV2_ es una familia de modelos preentrenados que se caracterizan por su eficiencia. Estan basados en los modelos previos, y mejoran su eficiencia alcanzando un alto nivel de eficacia con aproximadamente la mitad de datos de entrenamiento que sus predecesoras.
+
+image:imgs/comparacion-efficientnetv2.png[align="center"]
+
+=== ConvNetXT
+
+_ConvNetXT_ es una familai de remasterizaciones de una red _ResNet_ 
 == Transfer Learning
 
 Los modelos preentrenados nos permiten aprovechar ese entrenamiento previo para iniciar con una base de aprendizaje que nos permita entrenar al modelo más rápido, según lo que queramos realizar.
