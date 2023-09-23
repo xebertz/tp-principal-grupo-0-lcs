@@ -140,7 +140,15 @@ Este modelo es ampliamente utilizado para la clasificación de imágenes, y es l
 
 === Xception
 
-Xception es una versión de _Inception_***** con  
+Xception es una versión de _Inception_***** con una ligera mejoría en cuanto a su eficacia.
+
+=== EfficientNet
+
+_EfficientNet_ es un conjunto de modelos de clasifiación de imágenes que se caracterizan por ser más chicos en tamaño y más rápidos que modelos previos. Existen muchos modelos en esta familia. En Keras se incluyen los modelos desde _B1_ hasta _B7_, siendo el mode B7 el mejor logrado hasta la fecha.
+
+Este modelo alcanza un 84.4% de eficacia top-1 y un 97.1% de eficacia top-5. Si se compara con otros modelos según su nivel de precisión en relación a la cantidad de parámetros, se puede ver que las redes EfficientNet alcanzan valores altos de precisión con pocos parámetros, comparada con las otras.
+
+
 
 == Transfer Learning
 
