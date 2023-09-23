@@ -18,7 +18,7 @@ En este documento, exploraremos diversas técnicas de procesamiento de imágenes
 
 El procesamiento se refiere a una serie de pasos y transformaciones que se aplican a las imágenes antes de ser utilizadas como entrada para un modelo. El objetivo de este procesamiento es preparar los datos de manera que el modelo pueda aprender de manera efectiva y producir resultados precisos. 
 
-Teniendo en cuenta la introducción, algunos de los procesos que se pueden realizar son: Redimensionamiento, normalización, cambios de colores, eliminación de ruido, segmentación, codificación de etiquetas, extracción de características, etc...
+Teniendo en cuenta la introducción, algunos de los procesos que se pueden realizar son: redimensionamiento, normalización, reducción de canales de color, eliminación de ruido, segmentación, codificación de etiquetas, extracción de características, entre otras.
 
 == Balanceo de clases
 
@@ -36,7 +36,7 @@ Esta práctica conlleva beneficios significativos, entre ellos:
 
 - Mejora en la Generalización del Modelo: La igualdad en las dimensiones de las imágenes facilita que el modelo aprenda patrones y características relevantes de manera consistente.
 
-== Selección de colores
+== Reducción de canales de color
 
 Es recomendable utilizar imágenes en blanco y negro (escala de grises) cuando no necesitamos información de color en el entrenamiento del modelo. Esto se debe a que las imágenes en blanco y negro poseen solo un canal de color en lugar de los tres presentes en las imágenes RGB, lo cual conlleva una reducción significativa en la dimensionalidad de los datos. Esta reducción, a su vez, resulta en un entrenamiento más ágil y en un ahorro considerable de recursos computacionales.
 
@@ -65,20 +65,25 @@ Normalizar los valores de los píxeles de las imágenes puede ayudar a que el mo
 Implica aplicar transformaciones aleatorias a las imágenes de entrenamiento, como rotación, traslación, cambio de escala, recorte y cambio de brillo. Esto aumenta la cantidad de datos de entrenamiento y ayuda al modelo a generalizar mejor. Esto se realiza iterando la misma imagen y realizar lo anterior mencionado.
 
 == Reducción de ruido
+
 Eliminación o disminución de señales no deseadas para mejorar su calidad y hacer que los objetos de interés sean más visibles, o sea, la imagen se suaviza, pero puede volverse borrosa si se abusa en el porcentaje seleccionado.
 
 image::imgs/tumorSuavizado.png[]
 
-== Segmentar
+== Segmentación
+
 Divide una imagen en segmentos con características similares. Esto puede ayudar a identificar objetos en la imagen. Esto se realiza resaltando los colores oscuros y viceversa con los blancos.
 
 image::imgs/tumorUmbralizado.png[]
 
 == Extracción de características
+
 Proceso de identificar y seleccionar las características o atributos más relevantes y representativos de los datos de entrada para alimentar un algoritmo de aprendizaje automático. Estas características son las propiedades o medidas que se utilizan para describir los datos y, en última instancia, permiten al modelo aprender patrones y realizar predicciones. La extracción de características en imágenes se puede realizar tanto manualmente como automáticamente utilizando modelos de aprendizaje profundo. La elección entre ambos enfoques depende de la complejidad del problema.
 
 === Extracción manual de características
+
 En este enfoque se identifica y selecciona manualmente características específicas en las imágenes que se consideran relevantes para el problema en cuestión. Estas características pueden incluir bordes, texturas, formas geométricas, colores, o cualquier otro atributo visual que sea importante. Luego, estas características se utilizan como entrada para el modelo de aprendizaje automático.
 
-=== Extracción automática de características con modelos de aprendizaje profundo 
+=== Extracción automática de características con modelos de aprendizaje profundo
+
 Este enfoque utiliza redes neuronales convolucionales (CNN) u otros modelos de aprendizaje profundo para aprender automáticamente características relevantes de las imágenes. En lugar de depender de la intervención humana para definir las características, estos modelos aprenden representaciones jerárquicas de las imágenes a partir de los datos de entrenamiento. Esto puede incluir la detección de bordes, la identificación de objetos, la textura y características más abstractas.
