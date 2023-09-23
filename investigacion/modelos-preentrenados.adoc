@@ -57,7 +57,7 @@ Puedes diseñar una CNN para aprender automáticamente características y patron
 
 == *Mask R-CNN*
 
-Este modelo es útil si se necesita no solo identificar formas geométricas, sino también segmentarlas y detectar sus contornos en la imágen. Es una extensión del modelo Faster R-CNN, que combina la capacidad de detectar objetos con la capacidad de segmentarlos a nivel de píxel. Este modelo ha demostrado ser especialmente eficaz en aplicaciones de visión por computadora donde es importante no solo identificar objetos, sino también comprender su forma y ubicación precisa en la imagen. *Puedes implementar Mask R-CNN utilizando bibliotecas de aprendizaje profundo como TensorFlow y PyTorch. Además hay implementaciones preentrenadas disponibles que facilitan su uso en diversas aplicaciones.*
+Este modelo es útil si se necesita no solo identificar formas geométricas, sino también segmentarlas y detectar sus contornos en la imagen. Es una extensión del modelo Faster R-CNN, que combina la capacidad de detectar objetos con la capacidad de segmentarlos a nivel de píxel. Este modelo ha demostrado ser especialmente eficaz en aplicaciones de visión por computadora donde es importante no solo identificar objetos, sino también comprender su forma y ubicación precisa en la imagen. *Puedes implementar Mask R-CNN utilizando bibliotecas de aprendizaje profundo como TensorFlow y PyTorch. Además hay implementaciones preentrenadas disponibles que facilitan su uso en diversas aplicaciones.*
 
 - *Detección de objetos:* Mask R-CNN hereda la capacidad de Faster R-CNN para detectar objetos en una imagen. Utiliza regiones de interés (RoI) generadas por una red de detección para identificar objetos en la imagen y generar cajas delimitadoras (bounding boxes) alrededor de ellos.
 
@@ -114,8 +114,3 @@ quizas sirva para ver lo que se habló en clase sobre los textos dentro de las i
 Son un tipo de arquitectura de red neuronal que se utiliza en el procesamiento de secuencias y datos temporales.
 
 *Procesamiento de texto:* En el procesamiento de lenguaje natural (NLP), las RNN se utilizan para tareas como la clasificación de texto, la generación de texto, la traducción automática y el análisis de sentimientos.
-
-
-
-
-

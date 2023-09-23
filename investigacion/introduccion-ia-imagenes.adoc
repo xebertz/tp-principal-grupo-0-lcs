@@ -86,7 +86,7 @@ import numpy as np
 
 === 
 
-Si se necesita redimensionar un tensor, se puede importar la libreía _to_categorical_, de la siguiente manera:
+Si se necesita redimensionar un tensor, se puede importar la librería _to_categorical_, de la siguiente manera:
 
 .librería to_categorical
 [source, python]
@@ -191,7 +191,7 @@ Se ve que las imágenes se cargan a una lista, para posteriormente utilizarlas e
 
 == Lectura de etiquetas
 
-Las etiquetas pueden estar definidas en una archivo _.csv_, o pueden estar dadas por los directorios. Por ejemplo, en un dataset de lunares podemos tener un directorio 'beningnos' y otro 'malignos'. Si están dadas por los directorios, se debe definir qué etiqueta se utiliza para cada directorio. Siguiendo con el ejemplo, podemos definir que los lunares benignos se identifican con 0 y los malignos con 1.
+Las etiquetas pueden estar definidas en una archivo _.csv_, o pueden estar dadas por los directorios. Por ejemplo, en un dataset de lunares podemos tener un directorio 'benignos' y otro 'malignos'. Si están dadas por los directorios, se debe definir qué etiqueta se utiliza para cada directorio. Siguiendo con el ejemplo, podemos definir que los lunares benignos se identifican con 0 y los malignos con 1.
 
 En la lectura de las imágenes se debe definir la etiqueta, preferentemente cargándolas en un array correspondiente por posición.
 

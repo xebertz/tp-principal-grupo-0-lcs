@@ -24,13 +24,13 @@ Este método se utiliza para generar imágenes de órganos blandos tales como el
 
 Se escoge frente a la tomografía computarizada debido a las imágenes de calidad que genera, ya que brinda un fuerte contraste entre la materia gris y la materia blanca.
 
-Existen dos tipos de magnetización, que generan imágenes con caracterísiticas invertidas según la magnetización que se utiliza:
+Existen dos tipos de magnetización, que generan imágenes con características invertidas según la magnetización que se utiliza:
 
 * *Magnetización Longitudinal o T1:* Las sustancias blancas y estructuras con tiempos de relajación cortos tienen una señal alta, lo que permite que se visualicen de color claro. En cambio, la sustancia gris y las estructuras con tiempos de relajación largos, como el líquido cefalorraquídeo, tienen una señal baja, por lo que se ven más oscuro.
 
 * *Magnetización Transversal o T2:* La sustancia gris y las estructuras con tiempos de relajación largos tienen una señal alta, por lo que se ven más claros. Las sustancias blancas y estructuras con tiempos de relajación cortos tienen una señal baja, lo que genera que se visualicen de color oscuro.
 
-* *Magnetización Flair:* Es una amgnetización basada en T2 en la que se eliminan las señales altas.
+* *Magnetización Flair:* Es una magnetización basada en T2 en la que se eliminan las señales altas.
 
 En ambos tipos de magnetizaciones se puede utilizar un agente de contraste en el paciente para destacar de mejor forma a la lesión. En la imagen esto se ve como un halo con señal hiperintensa.
 
@@ -46,7 +46,7 @@ La figura *A* corresponde a un cerebro sin lesiones, la *B* corresponde a un cer
 
 Las masas intra axiales son las que se encuentran dentro del parénquima cerebral. La lesión se rodea por el parénquima encefálico. Los tipos más comunes son las metástasis o secundarismo, y los gliomas.
 
-La metástasis se presenta como una formación de un tumor a partir de célular cancerosas de un tumor previo. No necesariamente se forma en el mismo lugar, ya que las células tienen la capacidad de viajar por el cuerpo a través de la sangre o el sistema linfático.
+La metástasis se presenta como una formación de un tumor a partir de celular cancerosas de un tumor previo. No necesariamente se forma en el mismo lugar, ya que las células tienen la capacidad de viajar por el cuerpo a través de la sangre o el sistema linfático.
 
 .diferencias de visualización según magnetización
 [cols="a,a", frame=none, grid=none, role=right]
@@ -78,7 +78,7 @@ Las imágenes anteriores muestran el cerebro de una paciente con un meningioma. 
 
 Las lesiones pueden tener diferentes composiciones, ya sea quística, sólida, hermorrágica, u otra. Tienen tamaño, forma, y delimitación de la forma; y pueden ser múltiples.
 
-En las imágenes se observan con distinta intensidad, según la lesion y el tipo de magnetización.
+En las imágenes se observan con distinta intensidad, según la lesión y el tipo de magnetización.
 
 .Visualización de lesiones
 [cols="3*", options="header"]
@@ -104,11 +104,11 @@ Existen distintos tipos de artificios:
 |Tipo                           |Imagen                                     |Causa
 |De movimiento                  |Borrosa, con líneas sucesivas              |Movimientos
 |De solapamiento                |Superposición de anatomía                  |Área reducida
-|De truncameinto                |Banda de hipo o hiperintensa en el borde   |Defecto de reconstrucción de imágen
+|De truncamiento                |Banda de hipo o hiperintensa en el borde   |Defecto de reconstrucción de imagen
 |De susceptibilidad magnética   |Área de vacío de señal                     |Sustancias magnéticas
 |===
 
-Estos artificios pueden interferir en el diagóstico del profesional.
+Estos artificios pueden interferir en el diagnóstico del profesional.
 
 == Radiografía
 
@@ -144,9 +144,9 @@ Se aplica al paciente un medio de contraste radiopaco, mediante inyección intra
 
 También se puede utilizar bario o gastrografín mediante ingesta, lo que facilita la visualización del esófago, estómago y el intestino delgado. Esto ayuda a la detección de úlceras, tumores, obstrucciones, pólipos y diverticulosis.
 
-==== Radioscopía
+==== Radioscopia
 
-La radioscopía genera imágenes que muestran movimiento, por lo que son útiles para observar el funcionamiento de los órganos o estructuras. Se utiliza comunmente para detectar ritmos anómalos del corazón, detectar si un catéter está bien colocado, evaluar el tracto gastrointestinal, y observar el movimiento de los huesos y articulaciones.
+La radioscopia genera imágenes que muestran movimiento, por lo que son útiles para observar el funcionamiento de los órganos o estructuras. Se utiliza comúnmente para detectar ritmos anómalos del corazón, detectar si un catéter está bien colocado, evaluar el tracto gastrointestinal, y observar el movimiento de los huesos y articulaciones.
 
 //== Tomografía Computarizada
 
@@ -156,9 +156,9 @@ La radioscopía genera imágenes que muestran movimiento, por lo que son útiles
 
 https://www.postdicom.com/es/blog/medical-imaging-types-and-modalities[Postdicom - Tipos de Imágenes Médicas]
 
-https://www.redalyc.org/articulo.oa?id=231022506005[D. Rivera, S. Puentes, L. Caballero - Resonancia magnética cerebral: secuencias básicas e interpretacióon]
+https://www.redalyc.org/articulo.oa?id=231022506005[D. Rivera, S. Puentes, L. Caballero - Resonancia magnética cerebral: secuencias básicas e interpretación]
 
-https://www.youtube.com/watch?v=0eFvBrpPBk0&ab_channel=Radiolog%C3%ADa2.0[Radiología 2.0 - Analisis de las imagenes en la RM Cerebro]
+https://www.youtube.com/watch?v=0eFvBrpPBk0&ab_channel=Radiolog%C3%ADa2.0[Radiología 2.0 - Análisis de las imágenes en la RM Cerebro]
 
 https://www.msdmanuals.com/es/hogar/temas-especiales/pruebas-de-diagn%C3%B3stico-por-la-imagen-habituales/radiograf%C3%ADas-simples[Manual MSD - Radiografías simples]
 
