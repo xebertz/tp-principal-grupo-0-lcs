@@ -10,6 +10,14 @@ v1, {docdate}
 :nofooter:
 :pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
 
+== Transfer Learning
+
+Los modelos preentrenados nos permiten aprovechar el entrenamiento previo de un modelo para iniciar con una base de aprendizaje que nos permita entrenar al modelo más rápido, según lo que queramos realizar.
+
+Utilizar un modelo preentrenado y entrenarlo con nuevos datos es una técnica conocida como _Tranfer Learning_. Muchos modelos se pueden modificar en cuanto a tamaño, capas, hiperparámetros, o tamaño de entrada; y se pueden utilizar como base para añadir más capas y lograr un mejor resultado.
+
+A continuación, mencionaremos algunos modelos preentrenados sugeridos y sus características.
+
 == Modelos y funciones de cada uno
 
 *Redes neuronales convolucionales*: Puedes diseñar una CNN para aprender automáticamente características y patrones en las imágenes, lo que es especialmente útil cuando las formas geométricas tienen variaciones en tamaño, rotación y posición.
@@ -38,7 +46,7 @@ La aplicación de modelos de machine learning para la identificación de formas 
 
 *Validación clínica:* Es fundamental realizar una validación clínica rigurosa para garantizar que los resultados del modelo sean precisos y clínicamente relevantes. Esto generalmente implica la colaboración con profesionales de la salud y la evaluación en conjuntos de datos clínicos reales.
 
-== *Redes neuronales convolucionales (CNN)*
+=== *Redes neuronales convolucionales (CNN)*
 
 Puedes diseñar una CNN para aprender automáticamente características y patrones en las imágenes, lo que es especialmente útil cuando las formas geométricas tienen variaciones en tamaño, rotación y posición. Las redes neuronales convolucionales poseen las siguientes características:
 
@@ -54,8 +62,7 @@ Puedes diseñar una CNN para aprender automáticamente características y patron
 
 - *Transferencia de aprendizaje:* Las CNN pre-entrenadas en grandes conjuntos de datos, como ImageNet, se pueden utilizar como base para tareas específicas de visión por computadora. Esto se conoce como transferencia de aprendizaje y permite aprovechar el conocimiento previo de la red para tareas nuevas y relacionadas.
 
-
-== *Mask R-CNN*
+=== *Mask R-CNN*
 
 Este modelo es útil si se necesita no solo identificar formas geométricas, sino también segmentarlas y detectar sus contornos en la imagen. Es una extensión del modelo Faster R-CNN, que combina la capacidad de detectar objetos con la capacidad de segmentarlos a nivel de píxel. Este modelo ha demostrado ser especialmente eficaz en aplicaciones de visión por computadora donde es importante no solo identificar objetos, sino también comprender su forma y ubicación precisa en la imagen. *Puedes implementar Mask R-CNN utilizando bibliotecas de aprendizaje profundo como TensorFlow y PyTorch. Además hay implementaciones preentrenadas disponibles que facilitan su uso en diversas aplicaciones.*
 
@@ -71,7 +78,7 @@ Este modelo es útil si se necesita no solo identificar formas geométricas, sin
 
 - *Aplicaciones:* Mask R-CNN es ampliamente utilizado en aplicaciones de visión por computadora donde se requiere segmentación precisa de objetos, como la segmentación de instancias en imágenes médicas (por ejemplo, para separar diferentes células o estructuras) y la segmentación de objetos en imágenes naturales (por ejemplo, para separar personas de fondo).
 
-== *Transformada de Hough*
+=== *Transformada de Hough*
 
 Es una técnica clásica para la detección de formas geométricas como líneas y círculos en imágenes. Puedes combinarla con otros enfoques para identificar formas geométricas más complejas.
 
@@ -87,7 +94,7 @@ Es una técnica clásica para la detección de formas geométricas como líneas 
 
 - *Parámetros y optimización:* La detección de líneas o patrones en la Transformada de Hough a menudo requiere ajustar parámetros, como la sensibilidad de umbral y la resolución del espacio Hough, para obtener resultados precisos. La optimización de estos parámetros puede ser un desafío y puede requerir técnicas de ajuste fino.
 
-== Support Vector Machine (SVM)
+=== Support Vector Machine (SVM)
 
 Las máquinas de soporte vectorial (SVM) son un tipo de modelo de aprendizaje supervisado utilizado tanto para problemas de clasificación como para regresión.
 
@@ -103,7 +110,7 @@ Las máquinas de soporte vectorial (SVM) son un tipo de modelo de aprendizaje su
 
 *Limitaciones:* Aunque son poderosas, las SVM pueden ser computacionalmente costosas en conjuntos de datos muy grandes y pueden requerir una optimización cuidadosa de los hiperparámetros. Además, su capacidad para manejar problemas de clasificación multiclase puede requerir estrategias adicionales, como la clasificación uno contra todos (OvA) o uno contra uno (OvO).
 
-== Redes Neuronales Recurrentes (RNN) 
+=== Redes Neuronales Recurrentes (RNN) 
 
 #OPCIONAL, LEER COMENTARIO# 
 
@@ -168,7 +175,16 @@ Está basada en _Vision Transformers_, redes neuronales diseñadas, en principio
 
 _ConvNeXt_ combina este tipo de redes con redes convolucionales convolucionales, aprovechando lo mejor de ambas.
 
-== Transfer Learning
+=== VGG16 y VGG19
 
-Los modelos preentrenados nos permiten aprovechar ese entrenamiento previo para iniciar con una base de aprendizaje que nos permita entrenar al modelo más rápido, según lo que queramos realizar.
+=== ResNet y ResNetV2
+
+=== MobileNet
+
+=== DenseNet
+
+=== NasNet
+
+=== InceptionResNet
+
 
