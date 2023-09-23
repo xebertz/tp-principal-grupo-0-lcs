@@ -92,6 +92,16 @@ En las imágenes se observan con distinta intensidad, según la lesión y el tip
 |Sangre             |Hiperintenso       |Hiperintenso
 |===
 
+Según el período de tiempo en el que se analiza, los tumores se pueden visualizar mejor o peor en una resonancia magnética.
+
+image:imgs/color-tumor-segun-dia.png[align="center"]
+
+En los periodos hiperagudo y agudo es difícil identificarlo en ambas secuencias, sin embargo, en el período agudo se observan mejor en T2.
+
+En el período subagudo temprano es más fácil detectar un tumor en T1, y en el periodo subagudo tardío es más fácil identificarlo en ambos.
+
+Por último, en el período crónico, se puede identificar pero no con tanta facilidad como el el periodo subagudo temprano.
+
 === Artificios
 
 Los artificios son distorsiones en las imágenes que no tienen relación con la condición médica del paciente.
