@@ -124,3 +124,8 @@ En el siguiente gráfico, se pueden ver los modelos disponibles, su niver de _ac
 image:imgs/modelos-keras.png[300, 450, align="center"]
 
 Los modelos grandes en tamaño suelen realizar predicciones más precisas, pero tienen la desventaja de su lentitud en cuanto a procesamiento.
+
+== Transfer Learning
+
+Los modelos preentrenados nos permiten aprovechar ese entrenamiento previo para iniciar con una base de aprendizaje que nos permita entrenar al modelo más rápido, según lo que queramos realizar.
+
