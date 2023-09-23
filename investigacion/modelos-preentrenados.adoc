@@ -114,3 +114,13 @@ quizas sirva para ver lo que se habló en clase sobre los textos dentro de las i
 Son un tipo de arquitectura de red neuronal que se utiliza en el procesamiento de secuencias y datos temporales.
 
 *Procesamiento de texto:* En el procesamiento de lenguaje natural (NLP), las RNN se utilizan para tareas como la clasificación de texto, la generación de texto, la traducción automática y el análisis de sentimientos.
+
+== Modelos preentrenados de Keras
+
+Existen diversos modelos preentrenados en la librería _Keras_, disponible para TensorFlow. Esto es una gran ventaja, ya que Keras facilita la importación y el uso de los modelos.
+
+En el siguiente gráfico, se pueden ver los modelos disponibles, su niver de _accuracy_, y su tamaño, representado mediante el tamaño del círculo.
+
+image:imgs/modelos-keras.png[300, 450, align="center"]
+
+Los modelos grandes en tamaño suelen realizar predicciones más precisas, pero tienen la desventaja de su lentitud en cuanto a procesamiento.
