@@ -135,6 +135,8 @@ Los modelos grandes en tamaño suelen realizar predicciones más precisas, pero 
 Podemos ver las comparaciones en cuanto a precision en esta 
 https://keras.io/api/applications/[tabla].
 
+//modelos de keras https://keras.io/api/applications/
+
 === Inception V3
 
 _Inception V3_ es un modelo que tiene 48 capas de profundidad, que recibe imágenes de 299x299 en tres canales de color.
@@ -186,5 +188,4 @@ _ConvNeXt_ combina este tipo de redes con redes convolucionales convolucionales,
 === NasNet
 
 === InceptionResNet
-
 
