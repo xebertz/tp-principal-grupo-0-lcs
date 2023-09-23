@@ -63,3 +63,22 @@ Normalizar los valores de los píxeles de las imágenes puede ayudar a que el mo
 == Aumento de datos
 
 Implica aplicar transformaciones aleatorias a las imágenes de entrenamiento, como rotación, traslación, cambio de escala, recorte y cambio de brillo. Esto aumenta la cantidad de datos de entrenamiento y ayuda al modelo a generalizar mejor. Esto se realiza iterando la misma imagen y realizar lo anterior mencionado.
+
+== Reducción de ruido
+Eliminación o disminución de señales no deseadas para mejorar su calidad y hacer que los objetos de interés sean más visibles, o sea, la imagen se suaviza, pero puede volverse borrosa si se abusa en el porcentaje seleccionado.
+
+image::imgs/tumorSuavizado.png[]
+
+== Segmentar
+Divide una imagen en segmentos con características similares. Esto puede ayudar a identificar objetos en la imagen. Esto se realiza resaltando los colores oscuros y viceversa con los blancos.
+
+image::imgs/tumorUmbralizado.png[]
+
+== Extracción de características
+Proceso de identificar y seleccionar las características o atributos más relevantes y representativos de los datos de entrada para alimentar un algoritmo de aprendizaje automático. Estas características son las propiedades o medidas que se utilizan para describir los datos y, en última instancia, permiten al modelo aprender patrones y realizar predicciones. La extracción de características en imágenes se puede realizar tanto manualmente como automáticamente utilizando modelos de aprendizaje profundo. La elección entre ambos enfoques depende de la complejidad del problema.
+
+=== Extracción manual de características
+En este enfoque se identifica y selecciona manualmente características específicas en las imágenes que se consideran relevantes para el problema en cuestión. Estas características pueden incluir bordes, texturas, formas geométricas, colores, o cualquier otro atributo visual que sea importante. Luego, estas características se utilizan como entrada para el modelo de aprendizaje automático.
+
+=== Extracción automática de características con modelos de aprendizaje profundo 
+Este enfoque utiliza redes neuronales convolucionales (CNN) u otros modelos de aprendizaje profundo para aprender automáticamente características relevantes de las imágenes. En lugar de depender de la intervención humana para definir las características, estos modelos aprenden representaciones jerárquicas de las imágenes a partir de los datos de entrenamiento. Esto puede incluir la detección de bordes, la identificación de objetos, la textura y características más abstractas.
