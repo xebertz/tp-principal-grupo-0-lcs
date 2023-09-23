@@ -55,10 +55,10 @@ Por otro lado, el conjunto de prueba se utiliza para ajustar los hiperparámetro
 
 Por último, el conjunto de validación se reserva exclusivamente para evaluar el rendimiento final del modelo, una vez que se ha completado todo el entrenamiento y ajuste de hiperparámetros. El modelo nunca ha visto estas imágenes durante el proceso de entrenamiento ni de prueba, lo que proporciona una evaluación objetiva de su capacidad de generalización.
 
-== Normalización
-=== Normalización de Píxeles:
-Normalizar los valores de los píxeles de las imágenes puede ayudar a que el modelo converja más rápido y a obtener resultados más estables. Se divide por 255 a la imagen y cada píxel queda en un rango de [0,1], donde el 0 es negro y 1 blanco. La 
-imagen se vuelve más oscura donde ya lo era y viceversa con los colores blancos.
+== Normalización de píxeles
+
+Normalizar los valores de los píxeles de las imágenes puede ayudar a que el modelo converja más rápido y a obtener resultados más estables. Se divide por 255 a la imagen y cada píxel queda en un rango de [0,1], donde el 0 es negro y 1 blanco. La imagen se vuelve más oscura donde ya lo era y viceversa con los colores blancos.
 
 == Aumento de datos
+
 Implica aplicar transformaciones aleatorias a las imágenes de entrenamiento, como rotación, traslación, cambio de escala, recorte y cambio de brillo. Esto aumenta la cantidad de datos de entrenamiento y ayuda al modelo a generalizar mejor. Esto se realiza iterando la misma imagen y realizar lo anterior mencionado.
