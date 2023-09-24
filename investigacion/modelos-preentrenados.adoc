@@ -214,5 +214,9 @@ Con respecto al diagnóstico de enfermedades, _DenseNet_ se aplicó para diagnos
 
 === NasNet
 
+NasNet es un modelo de red neuronal convolucional que se utiliza para tareas de clasificación de imágenes¹. Utiliza un enfoque de aprendizaje automático para diseñar directamente las arquitecturas del modelo en función del conjunto de datos de interés. Esto permite que el modelo se adapte mejor a la tarea específica y al conjunto de datos utilizado.
+
+NASNet ha demostrado un rendimiento sobresaliente en tareas de clasificación de imágenes, superando a otros modelos en términos de precisión. Por ejemplo, en el conjunto de datos ImageNet, NASNet ha logrado una precisión del 82.7% en la clasificación top-1 y del 96.2% en la clasificación top-5. Además, NASNet ha demostrado ser más eficiente en términos computacionales que otros modelos con resultados similares.
+
 === InceptionResNet
 
