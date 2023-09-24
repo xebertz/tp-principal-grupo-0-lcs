@@ -194,8 +194,15 @@ _ResNetV2_ es una versión mejorada de ResNet que utiliza bloques residuales mod
 
 _ResNet_ se ha utilizado con éxito en una variedad de tareas de clasificación de imágenes, incluida la clasificación de imágenes médicas.
 
-
 === MobileNet
+
+_MobileNet_ es una arquitectura de red neuronal convolucional diseñada para aplicaciones de visión móvil y embebida. Esta arquitectura se basa en convoluciones separables en profundidad para construir redes neuronales profundas y livianas que pueden tener baja latencia en dispositivos móviles y embebidos.
+
+_MobileNet_ utiliza convoluciones separables en profundidad para reducir el número de parámetros y operaciones, lo que permite que el modelo sea más eficiente en términos de memoria y tiempo de ejecución. La arquitectura _MobileNet V2_ se basa en una estructura residual invertida donde la entrada y la salida del bloque residual son capas de cuello de botella delgadas, a diferencia de los modelos residuales tradicionales que utilizan representaciones expandidas en la entrada. _MobileNet V2_ utiliza convoluciones en profundidad livianas para filtrar características en la capa de expansión intermedia.
+
+Aunque _MobileNet_ se ha utilizado principalmente en aplicaciones de visión móvil, también se ha aplicado con éxito en tareas de clasificación de imágenes médicas, incluida la clasificación de imágenes de cáncer cervical. 
+
+Un estudio propuso un modelo llamado _MobileNet-Light_ para la clasificación de imágenes TCT de cáncer cervical. El modelo logró una precisión del 94,5% en la clasificación binaria y una precisión del 85,7% en la clasificación multiclase. Otro estudio utilizó un modelo MobileNet preentrenado para clasificar lesiones cervicales y logró una precisión del 75% en la detección de lesiones CIN2+.
 
 === DenseNet
 
