@@ -18,37 +18,34 @@ Utilizar un modelo preentrenado y entrenarlo con nuevos datos es una técnica co
 
 A continuación, mencionaremos algunos modelos preentrenados sugeridos y sus características.
 
-== Modelos y funciones de cada uno
+== Recomendaciones en cuanto a aplicar modelos para tomografías
 
-*Redes neuronales convolucionales*: Puedes diseñar una CNN para aprender automáticamente características y patrones en las imágenes, lo que es especialmente útil cuando las formas geométricas tienen variaciones en tamaño, rotación y posición.
+La aplicación de modelos de machine learning para la identificación de formas geométricas en imágenes de tomografías médicas puede ser útil en diversos contextos clínicos y de investigación. Este problema se puede abordar de la siguiente forma:
 
-*Mask R-CNN*: Este modelo es útil si necesitas no solo identificar formas geométricas, sino también segmentarlas y detectar sus contornos en la imagen.
+*Segmentación de regiones de interés (ROI):* La aplicación de modelos de machine learning para la identificación de formas geométricas en imágenes de tomografías médicas puede ser útil en diversos contextos clínicos y de investigación. Para esto, se puede utilizar:
 
-*Transformada de Hough*: Es una técnica clásica para la detección de formas geométricas como líneas y círculos en imágenes. Puedes combinarla con otros enfoques para identificar formas geométricas más complejas.
+- *CNNs personalizadas:* Puedes entrenar CNNs personalizadas para clasificar y localizar formas geométricas dentro de las ROIs segmentadas. Se debe etiquetar manualmente un conjunto de datos con las formas geométricas que se desea identificar.
 
-*SVM (Support Vector Machine)*: SVMs son eficaces para la clasificación binaria y multicategoría. Puedes extraer características de las imágenes y entrenar un SVM para clasificar diferentes formas geométricas. Esto se denomina Clasificación basada en características.
-
-*Redes Neuronales Recurrentes (RNN)*: Las RNN se utilizan para tareas que involucran secuencias de imágenes, como el procesamiento de videos y la generación de descripciones de imágenes.
-
-== Recomendaciones del Senior en cuanto a aplicar modelos para tomografías
-
-La aplicación de modelos de machine learning para la identificación de formas geométricas en imágenes de tomografías médicas puede ser útil en diversos contextos clínicos y de investigación. Aquí te indico cómo puedes abordar este problema específico:
-
-*Segmentación de regiones de interés (ROI):* La aplicación de modelos de machine learning para la identificación de formas geométricas en imágenes de tomografías médicas puede ser útil en diversos contextos clínicos y de investigación. Aquí te indico cómo puedes abordar este problema específico:
-
-*Detección de formas geométricas:* Una vez que hayas segmentado las regiones de interés, puedes aplicar modelos de machine learning para identificar formas geométricas específicas dentro de estas regiones. Aquí tienes algunas opciones:
-
-- *CNNs personalizadas:* Puedes entrenar CNNs personalizadas para clasificar y localizar formas geométricas dentro de las ROIs segmentadas. Debes etiquetar manualmente un conjunto de datos con las formas geométricas que deseas identificar.
-
-- *Modelos de detección de objetos:* Si las formas geométricas son objetos claramente definidos dentro de las imágenes de tomografía, podrías considerar el uso de modelos de detección de objetos como Faster R-CNN o RetinaNet.
+- *Modelos de detección de objetos:* Si las formas geométricas son objetos claramente definidos dentro de las imágenes de tomografía, se puede considerar el uso de modelos de detección de objetos como Faster R-CNN o RetinaNet.
 
 *Postprocesamiento y análisis:* Después de identificar las formas geométricas en las imágenes de tomografía, es importante realizar análisis adicionales según el contexto clínico. Esto podría incluir medir tamaños, relaciones espaciales o características específicas de las formas geométricas identificadas.
 
 *Validación clínica:* Es fundamental realizar una validación clínica rigurosa para garantizar que los resultados del modelo sean precisos y clínicamente relevantes. Esto generalmente implica la colaboración con profesionales de la salud y la evaluación en conjuntos de datos clínicos reales.
 
+== Posibles técnicas a emplear
+
+*Redes neuronales convolucionales*: Se puede diseñar una CNN para aprender automáticamente características y patrones en las imágenes, lo que es especialmente útil cuando las formas geométricas tienen variaciones en tamaño, rotación y posición.
+
+*Mask R-CNN*: Este modelo es útil si se necesita no solo identificar formas geométricas, sino también segmentarlas y detectar sus contornos en la imagen.
+
+*Transformada de Hough*: Es una técnica clásica para la detección de formas geométricas como líneas y círculos en imágenes.
+
+*SVM (Support Vector Machine)*: SVMs son eficaces para la clasificación binaria y multicategoría. Se puede extraer características de las imágenes y entrenar un SVM para clasificar diferentes formas geométricas. Esto se denomina _Clasificación basada en características_.
+
+
 === *Redes neuronales convolucionales (CNN)*
 
-Puedes diseñar una CNN para aprender automáticamente características y patrones en las imágenes, lo que es especialmente útil cuando las formas geométricas tienen variaciones en tamaño, rotación y posición. Las redes neuronales convolucionales poseen las siguientes características:
+Las redes neuronales convolucionales poseen las siguientes características:
 
 - *Capas convolucionales:* La característica central de las CNN son las capas convolucionales, que son responsables de extraer características locales de las imágenes. En lugar de conectar cada píxel de la imagen a cada neurona de la capa siguiente, las capas convolucionales utilizan filtros (kernels) que se desplazan por la imagen para realizar operaciones de convolución. Esto permite que la red aprenda características como bordes, texturas y formas en diferentes regiones de la imagen.
 
@@ -57,6 +54,8 @@ Puedes diseñar una CNN para aprender automáticamente características y patron
 - *Capas completamente conectadas:* Después de varias capas convolucionales y de submuestreo, las CNN a menudo incluyen una o más capas completamente conectadas para realizar la clasificación final. Estas capas toman las características aprendidas y las utilizan para realizar la clasificación en las categorías de interés.
 
 - *Función de activación:* Las CNN suelen usar funciones de activación no lineales, como ReLU (Rectified Linear Unit), para introducir no linealidades en la red y permitir que esta aprenda representaciones más complejas de las imágenes.
+
+También poseen diversas ventajas, entre las cuales se encuentran:
 
 - *Aprendizaje automático de características:* Una de las principales ventajas de las CNN es su capacidad para aprender automáticamente características relevantes de las imágenes a partir de los datos de entrenamiento. Esto significa que no es necesario diseñar manualmente características específicas para una tarea, como bordes o texturas; la red aprende estas características durante el entrenamiento.
 
@@ -76,11 +75,11 @@ Este modelo es útil si se necesita no solo identificar formas geométricas, sin
 
 - *Aprendizaje de características:* Mask R-CNN utiliza una función de pérdida compuesta que incluye pérdida de detección y pérdida de segmentación. La pérdida de segmentación se calcula utilizando la diferencia entre las máscaras de segmentación generadas por la red y las máscaras verdaderas proporcionadas en los datos de entrenamiento.
 
-- *Aplicaciones:* Mask R-CNN es ampliamente utilizado en aplicaciones de visión por computadora donde se requiere segmentación precisa de objetos, como la segmentación de instancias en imágenes médicas (por ejemplo, para separar diferentes células o estructuras) y la segmentación de objetos en imágenes naturales (por ejemplo, para separar personas de fondo).
+*Aplicaciones:* Mask R-CNN es ampliamente utilizado en aplicaciones de visión por computadora donde se requiere segmentación precisa de objetos, como la segmentación de instancias en imágenes médicas (por ejemplo, para separar diferentes células o estructuras) y la segmentación de objetos en imágenes naturales (por ejemplo, para separar personas de fondo).
 
 === *Transformada de Hough*
 
-Es una técnica clásica para la detección de formas geométricas como líneas y círculos en imágenes. Puedes combinarla con otros enfoques para identificar formas geométricas más complejas.
+Es una técnica clásica para la detección de formas geométricas como líneas y círculos en imágenes. Es posible combinarla con otras técnicas para clasificar formas más complejas.
 
 - *Detección de líneas rectas:* La Transformada de Hough se utiliza comúnmente para detectar líneas rectas en una imagen. El objetivo es encontrar todas las líneas rectas presentes en una imagen, independientemente de su orientación y posición exacta.
 
@@ -110,17 +109,17 @@ Las máquinas de soporte vectorial (SVM) son un tipo de modelo de aprendizaje su
 
 *Limitaciones:* Aunque son poderosas, las SVM pueden ser computacionalmente costosas en conjuntos de datos muy grandes y pueden requerir una optimización cuidadosa de los hiperparámetros. Además, su capacidad para manejar problemas de clasificación multiclase puede requerir estrategias adicionales, como la clasificación uno contra todos (OvA) o uno contra uno (OvO).
 
-=== Redes Neuronales Recurrentes (RNN) 
-
-#OPCIONAL, LEER COMENTARIO# 
+// lo saco porque lo de los textos lo hace otro grupo === Redes Neuronales Recurrentes (RNN) 
 
 ////
 quizas sirva para ver lo que se habló en clase sobre los textos dentro de las imágenes, aunque es solo una idea que se me ocurrió cuando lo leí, no lo pensé tanto.
 ////
 
+////
 Son un tipo de arquitectura de red neuronal que se utiliza en el procesamiento de secuencias y datos temporales.
 
 *Procesamiento de texto:* En el procesamiento de lenguaje natural (NLP), las RNN se utilizan para tareas como la clasificación de texto, la generación de texto, la traducción automática y el análisis de sentimientos.
+//// 
 
 == Modelos preentrenados de Keras
 
@@ -152,11 +151,17 @@ Este modelo es ampliamente utilizado para la clasificación de imágenes, y es l
 * Segmentación semántica
 * Transfer learning
 
-INception V3 Ha demostrado un rendimiento sobresaliente en la clasificación de imágenes y ha alcanzado una precisión del 80.4% en la clasificación top-1 y del 95.3% en la clasificación top-5 en el conjunto de datos ImageNet.
+Inception V3 Ha demostrado un rendimiento sobresaliente en la clasificación de imágenes y ha alcanzado una precisión del 80.4% en la clasificación top-1 y del 95.3% en la clasificación top-5 en el conjunto de datos ImageNet.
+
+También, se utilizó para la segmentación precisa de órganos en imágenes médicas, como tomografías computarizadas (TC) y resonancias magnéticas (RM). 
+
+Un ejemplo de uso es la detección de adenopatías cervicales mediante imágenes citológicas; campo en el que alzanzó un 89.29% de precisión.
 
 === Xception
 
 Xception es una versión de _Inception V3_ con una ligera mejoría en cuanto a su eficacia, debido a que fue construida utilizando capas convolucionales separables en profundidad. Esto implica que la cantidad de parámetros de cada capa se reduce, por lo que el modelo se entrena más rápido.
+
+Este modelo se puede utilizar para cumplir los mismos objetivos que con _Inception V3_.
 
 === EfficientNet
 
@@ -166,11 +171,15 @@ Este modelo alcanza un 84.4% de _eficacia top-1_ y un 97.1% de _eficacia top-5_.
 
 Otra particularidad es que, en su entrenamiento, se le proporcionó imágenes modificadas mediante técnicas de aumento de datos, por lo que el aprendizaje se llevó a cabo con un conjunto de datos más variado.
 
+Fue utilizado para diversos problemas de clasificación. Entre ellos, la detección de enfermedades pulmonares a partir de imágenes de rayos x. Con este objetivo, alcanzó una precisión del 95%.
+
 === EfficientNetV2
 
 Como _EfficientNet_, _EfficientNetV2_ es una familia de modelos preentrenados que se caracterizan por su eficiencia. Estan basados en los modelos previos, y mejoran su eficiencia alcanzando un alto nivel de eficacia con aproximadamente la mitad de datos de entrenamiento que sus predecesoras.
 
 image:imgs/comparacion-efficientnetv2.png[align="center"]
+
+Este modelo se puede utilizar para cumplir los mismos objetivos que con _EfficientNet_.
 
 === ConvNeXt
 
@@ -178,13 +187,17 @@ _ConvNeXt_ es una familia de remasterizaciones de una red _ResNet_ y una red con
 
 Está basada en _Vision Transformers_, redes neuronales diseñadas, en principio, para el procesamiento del lenguaje natural. Esta arquitectura se modificó para funcionar en procesamiento de imágenes, lo que generó un gran porcentaje de eficacia, posicionando a las redes de este tipo como una de las principales competidoras de las redes convolucionales. _ConvNeXt_ combina este tipo de redes con redes convolucionales convolucionales, aprovechando lo mejor de ambas.
 
-Existe también tiene una versión mejorada llamada _ConvNeXt V2_, que utiliza técnicas de aprendizaje auto-supervisado y mejoras arquitectónicas para mejorar aún más el rendimiento del modelo
+Existe también tiene una versión mejorada llamada _ConvNeXt V2_, que utiliza técnicas de aprendizaje auto-supervisado y mejoras arquitectónicas para mejorar aún más el rendimiento del modelo.
+
+Este modelo se utilizó para detección de cáncer mamario, alcanzando una precisión de más del 91%.
 
 === VGG16 y VGG19
 
 _VGG16_ y _VGG19_ son dos modelos de redes neuronales convolucionales preentrenados que se utilizan comúnmente en tareas de clasificación de imágenes. 
 
 La arquitectura _VGG16_ consta de 16 capas, mientras que la arquitectura _VGG19_ consta de 19 capas, por lo que _VGG19_ puede ser más lento, ya que requiere más parámetros. Ambas arquitecturas utilizan filtros convolucionales de tamaño 3x3 y max-pooling para reducir el tamaño de los mapas de características.
+
+Los modelos V6616 Y VGG19 se utilizaron en deteccion de enfermedades oculares tales como la retinopatía diabética, alcanzando un nivel de precisión de mas del 90%.
 
 === ResNet y ResNetV2
 
@@ -194,7 +207,13 @@ ResNet es conocido por su arquitectura de "aprendizaje residual", que permite el
 
 _ResNetV2_ es una versión mejorada de ResNet que utiliza bloques residuales modificados para mejorar aún más el rendimiento del modelo. En particular, ResNetV2 utiliza una técnica llamada _"normalización por lotes antes de la activación"_ (o _"BN-AC"_), que se ha demostrado que mejora la precisión del modelo en algunas tareas.
 
-_ResNet_ se ha utilizado con éxito en una variedad de tareas de clasificación de imágenes, incluida la clasificación de imágenes médicas.
+_ResNet_ fue utilizado con éxito en una variedad de tareas de clasificación de imágenes, incluida la clasificación de imágenes médicas. Por ejemplo:
+
+* Segmentación de imágenes: para segmentar imágenes médicas, como la segmentación de tumores en imágenes de resonancia magnética.
+
+* Clasificación de enfermedades: ResNet ha demostrado un buen rendimiento en la clasificación de enfermedades a partir de imágenes médicas, como la clasificación de enfermedades pulmonares en radiografías de tórax.
+
+* Detección de anomalías: ResNet se ha utilizado para detectar anomalías en imágenes médicas, como la detección de lesiones cerebrales en imágenes de resonancia magnética.
 
 === MobileNet
 
@@ -220,9 +239,13 @@ _NasNet_ es un modelo de red neuronal convolucional que se utiliza para tareas d
 
 NASNet ha demostrado un rendimiento sobresaliente en tareas de clasificación de imágenes, superando a otros modelos en términos de precisión. Por ejemplo, en el conjunto de datos ImageNet, NASNet ha logrado una precisión del 82.7% en la clasificación top-1 y del 96.2% en la clasificación top-5. Además, NASNet ha demostrado ser más eficiente en términos computacionales que otros modelos con resultados similares.
 
+Se utilizó para clasificar imágenes médicas según su tipo. Es decir, una imagen puede ser "imagen del cerebro", "imagen del pecho", "imagen de la mano", etcétera. Alcanzó, en este caso de uso, niveles de precisión mayores al 90%.
+
 === InceptionResNet
 
 _InceptionResNet_ es una arquitectura de red neuronal convolucional que se basa en el concepto de búsqueda de arquitectura neuronal. Esta arquitectura combina los beneficios de las redes _Inception_ y _ResNet_. InceptionResNet utiliza conexiones residuales para mejorar el flujo de información a través de la red y filtros Inception para capturar características a diferentes escalas.
 
 InceptionResNet ha demostrado un rendimiento sobresaliente en tareas de clasificación de imágenes. Por ejemplo, en el conjunto de datos ImageNet, InceptionResNet ha logrado una precisión del 80.4% en la clasificación top-1 y del 95.3% en la clasificación top-5. Además, InceptionResNet ha demostrado ser más eficiente en términos computacionales que otros modelos con resultados similares.
+
+Con respecto a la clasificación de imágenes en el campo médico, InceptionResNet fue utilizada para clasificar imágenes cerebrales de resonancia magnética en alta resolución, alcanzando altos niveles de precisión.
 
