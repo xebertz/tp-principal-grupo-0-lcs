@@ -152,6 +152,8 @@ Este modelo es ampliamente utilizado para la clasificación de imágenes, y es l
 * Segmentación semántica
 * Transfer learning
 
+INception V3 Ha demostrado un rendimiento sobresaliente en la clasificación de imágenes y ha alcanzado una precisión del 80.4% en la clasificación top-1 y del 95.3% en la clasificación top-5 en el conjunto de datos ImageNet.
+
 === Xception
 
 Xception es una versión de _Inception V3_ con una ligera mejoría en cuanto a su eficacia, debido a que fue construida utilizando capas convolucionales separables en profundidad. Esto implica que la cantidad de parámetros de cada capa se reduce, por lo que el modelo se entrena más rápido.
