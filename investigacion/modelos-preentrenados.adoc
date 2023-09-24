@@ -186,6 +186,15 @@ La arquitectura _VGG16_ consta de 16 capas, mientras que la arquitectura _VGG19_
 
 === ResNet y ResNetV2
 
+_ResNet_ y _ResNetV2_ son dos modelos de redes neuronales convolucionales que se utilizan comúnmente en tareas de clasificación de imágenes.
+
+ResNet es conocido por su arquitectura de "aprendizaje residual", que permite el entrenamiento de redes neuronales más profundas con menos problemas de gradiente. Su arquitectura consta de bloques residuales que permiten que la información fluya directamente a través de la red sin pasar por todas las capas.
+
+_ResNetV2_ es una versión mejorada de ResNet que utiliza bloques residuales modificados para mejorar aún más el rendimiento del modelo. En particular, ResNetV2 utiliza una técnica llamada _"normalización por lotes antes de la activación"_ (o _"BN-AC"_), que se ha demostrado que mejora la precisión del modelo en algunas tareas.
+
+_ResNet_ se ha utilizado con éxito en una variedad de tareas de clasificación de imágenes, incluida la clasificación de imágenes médicas.
+
+
 === MobileNet
 
 === DenseNet
