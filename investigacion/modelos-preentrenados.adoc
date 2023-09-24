@@ -198,9 +198,9 @@ _ResNet_ se ha utilizado con éxito en una variedad de tareas de clasificación 
 
 _MobileNet_ es una arquitectura de red neuronal convolucional diseñada para aplicaciones de visión móvil y embebida. Esta arquitectura se basa en convoluciones separables en profundidad para construir redes neuronales profundas y livianas que pueden tener baja latencia en dispositivos móviles y embebidos.
 
-_MobileNet_ utiliza convoluciones separables en profundidad para reducir el número de parámetros y operaciones, lo que permite que el modelo sea más eficiente en términos de memoria y tiempo de ejecución. La arquitectura _MobileNet V2_ se basa en una estructura residual invertida donde la entrada y la salida del bloque residual son capas de cuello de botella delgadas, a diferencia de los modelos residuales tradicionales que utilizan representaciones expandidas en la entrada. _MobileNet V2_ utiliza convoluciones en profundidad livianas para filtrar características en la capa de expansión intermedia.
+_MobileNet_ utiliza convoluciones separables en profundidad para reducir el número de parámetros y operaciones, lo que permite que el modelo sea más eficiente en términos de memoria y tiempo de ejecución. La arquitectura _MobileNet V2_ se basa en una estructura residual invertida donde la entrada y la salida del bloque residual son capas de cuello de botella delgadas, a diferencia de los modelos residuales tradicionales que utilizan representaciones expandidas en la entrada. MobileNet V2 utiliza convoluciones en profundidad livianas para filtrar características en la capa de expansión intermedia.
 
-Aunque _MobileNet_ se ha utilizado principalmente en aplicaciones de visión móvil, también se ha aplicado con éxito en tareas de clasificación de imágenes médicas, incluida la clasificación de imágenes de cáncer cervical. 
+Aunque MobileNet se ha utilizado principalmente en aplicaciones de visión móvil, también se ha aplicado con éxito en tareas de clasificación de imágenes médicas, incluida la clasificación de imágenes de cáncer cervical. 
 
 Un estudio propuso un modelo llamado _MobileNet-Light_ para la clasificación de imágenes TCT de cáncer cervical. El modelo logró una precisión del 94,5% en la clasificación binaria y una precisión del 85,7% en la clasificación multiclase. Otro estudio utilizó un modelo MobileNet preentrenado para clasificar lesiones cervicales y logró una precisión del 75% en la detección de lesiones CIN2+.
 
@@ -208,15 +208,19 @@ Un estudio propuso un modelo llamado _MobileNet-Light_ para la clasificación de
 
 _DenseNet_ es un tipo de red neuronal convolucional que utiliza conexiones densas entre capas a través de bloques densos, para conectar todas las capas directamente entre sí.
 
-_DenseNet_ también se ha utilizado en aplicaciones de clasificación de imágenes médicas con buenos resultados. Por ejemplo, se ha utilizado para el análisis de imágenes microscópicas en histopatología, alcanzando un nivel de precisión de 97%. Además, se ha aplicado en tareas como el diagnóstico de enfermedades, la detección de lesiones y anomalías, la segmentación de imágenes y la detección de objetos.
+DenseNet también se ha utilizado en aplicaciones de clasificación de imágenes médicas con buenos resultados. Por ejemplo, se ha utilizado para el análisis de imágenes microscópicas en histopatología, alcanzando un nivel de precisión de 97%. Además, se ha aplicado en tareas como el diagnóstico de enfermedades, la detección de lesiones y anomalías, la segmentación de imágenes y la detección de objetos.
 
-Con respecto al diagnóstico de enfermedades, _DenseNet_ se aplicó para diagnosticar la enfermedad COVID-19 a través de imágenes de rayos X del tórax. El modelo logró una precisión del 93,5% en la clasificación binaria y una precisión del 87,4% en la clasificación multiclase.
+Con respecto al diagnóstico de enfermedades, DenseNet se aplicó para diagnosticar la enfermedad COVID-19 a través de imágenes de rayos X del tórax. El modelo logró una precisión del 93,5% en la clasificación binaria y una precisión del 87,4% en la clasificación multiclase.
 
 === NasNet
 
-NasNet es un modelo de red neuronal convolucional que se utiliza para tareas de clasificación de imágenes¹. Utiliza un enfoque de aprendizaje automático para diseñar directamente las arquitecturas del modelo en función del conjunto de datos de interés. Esto permite que el modelo se adapte mejor a la tarea específica y al conjunto de datos utilizado.
+_NasNet_ es un modelo de red neuronal convolucional que se utiliza para tareas de clasificación de imágenes¹. Utiliza un enfoque de aprendizaje automático para diseñar directamente las arquitecturas del modelo en función del conjunto de datos de interés. Esto permite que el modelo se adapte mejor a la tarea específica y al conjunto de datos utilizado.
 
 NASNet ha demostrado un rendimiento sobresaliente en tareas de clasificación de imágenes, superando a otros modelos en términos de precisión. Por ejemplo, en el conjunto de datos ImageNet, NASNet ha logrado una precisión del 82.7% en la clasificación top-1 y del 96.2% en la clasificación top-5. Además, NASNet ha demostrado ser más eficiente en términos computacionales que otros modelos con resultados similares.
 
 === InceptionResNet
+
+_InceptionResNet_ es una arquitectura de red neuronal convolucional que se basa en el concepto de búsqueda de arquitectura neuronal. Esta arquitectura combina los beneficios de las redes _Inception_ y _ResNet_. InceptionResNet utiliza conexiones residuales para mejorar el flujo de información a través de la red y filtros Inception para capturar características a diferentes escalas.
+
+InceptionResNet ha demostrado un rendimiento sobresaliente en tareas de clasificación de imágenes. Por ejemplo, en el conjunto de datos ImageNet, InceptionResNet ha logrado una precisión del 80.4% en la clasificación top-1 y del 95.3% en la clasificación top-5. Además, InceptionResNet ha demostrado ser más eficiente en términos computacionales que otros modelos con resultados similares.
 
