@@ -174,11 +174,15 @@ image:imgs/comparacion-efficientnetv2.png[align="center"]
 
 _ConvNeXt_ es una familia de remasterizaciones de una red _ResNet_ y una red convolucional, que alcanza un nivel de eficacia top-1 de 87.8%.
 
-Está basada en _Vision Transformers_, redes neuronales diseñadas, en principio, para el procesamiento del lenguaje natural. Esta arquitectura se modificó para funcionar en procesamiento de imágenes, lo que generó un gran porcentaje de eficacia, posicionando a las redes de este tipo como una de las principales competidoras de las redes convolucionales. 
+Está basada en _Vision Transformers_, redes neuronales diseñadas, en principio, para el procesamiento del lenguaje natural. Esta arquitectura se modificó para funcionar en procesamiento de imágenes, lo que generó un gran porcentaje de eficacia, posicionando a las redes de este tipo como una de las principales competidoras de las redes convolucionales. _ConvNeXt_ combina este tipo de redes con redes convolucionales convolucionales, aprovechando lo mejor de ambas.
 
-_ConvNeXt_ combina este tipo de redes con redes convolucionales convolucionales, aprovechando lo mejor de ambas.
+Existe también tiene una versión mejorada llamada _ConvNeXt V2_, que utiliza técnicas de aprendizaje auto-supervisado y mejoras arquitectónicas para mejorar aún más el rendimiento del modelo
 
 === VGG16 y VGG19
+
+_VGG16_ y _VGG19_ son dos modelos de redes neuronales convolucionales preentrenados que se utilizan comúnmente en tareas de clasificación de imágenes. 
+
+La arquitectura _VGG16_ consta de 16 capas, mientras que la arquitectura _VGG19_ consta de 19 capas, por lo que _VGG19_ puede ser más lento, ya que requiere más parámetros. Ambas arquitecturas utilizan filtros convolucionales de tamaño 3x3 y max-pooling para reducir el tamaño de los mapas de características.
 
 === ResNet y ResNetV2
 
