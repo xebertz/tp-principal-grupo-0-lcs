@@ -16,19 +16,19 @@ Los modelos preentrenados nos permiten aprovechar el entrenamiento previo de un 
 
 Utilizar un modelo preentrenado y entrenarlo con nuevos datos es una técnica conocida como _Tranfer Learning_. Muchos modelos se pueden modificar en cuanto a tamaño, capas, hiperparámetros, o tamaño de entrada; y se pueden utilizar como base para añadir más capas y lograr un mejor resultado.
 
-A continuación, mencionaremos algunos modelos preentrenados sugeridos y sus características.
+A continuación, mencionaremos algunas técnicas útiles para aplicar a modelos cuyo objetivo es analizar imágenes médicas, y algunos modelos preentrenados sugeridos y sus características.
 
-== Recomendaciones en cuanto a aplicar modelos para tomografías
+== Recomendaciones en cuanto a aplicar modelos para imágenes médicas
 
-La aplicación de modelos de machine learning para la identificación de formas geométricas en imágenes de tomografías médicas puede ser útil en diversos contextos clínicos y de investigación. Este problema se puede abordar de la siguiente forma:
+La aplicación de modelos de machine learning para la identificación de formas geométricas en imágenes de imágenes médicas puede ser útil en diversos contextos clínicos y de investigación. Este problema se puede abordar de la siguiente forma:
 
-*Segmentación de regiones de interés (ROI):* La aplicación de modelos de machine learning para la identificación de formas geométricas en imágenes de tomografías médicas puede ser útil en diversos contextos clínicos y de investigación. Para esto, se puede utilizar:
+*Segmentación de regiones de interés (ROI):* La aplicación de modelos de machine learning para la identificación de formas geométricas en imágenes de imágenes médicas puede ser útil en diversos contextos clínicos y de investigación. Para esto, se puede utilizar:
 
 - *CNNs personalizadas:* Puedes entrenar CNNs personalizadas para clasificar y localizar formas geométricas dentro de las ROIs segmentadas. Se debe etiquetar manualmente un conjunto de datos con las formas geométricas que se desea identificar.
 
-- *Modelos de detección de objetos:* Si las formas geométricas son objetos claramente definidos dentro de las imágenes de tomografía, se puede considerar el uso de modelos de detección de objetos como Faster R-CNN o RetinaNet.
+- *Modelos de detección de objetos:* Si las formas geométricas son objetos claramente definidos dentro de las imágenes, se puede considerar el uso de modelos de detección de objetos como Faster R-CNN o RetinaNet.
 
-*Postprocesamiento y análisis:* Después de identificar las formas geométricas en las imágenes de tomografía, es importante realizar análisis adicionales según el contexto clínico. Esto podría incluir medir tamaños, relaciones espaciales o características específicas de las formas geométricas identificadas.
+*Postprocesamiento y análisis:* Después de identificar las formas geométricas en las imágenes, es importante realizar análisis adicionales según el contexto clínico. Esto podría incluir medir tamaños, relaciones espaciales o características específicas de las formas geométricas identificadas.
 
 *Validación clínica:* Es fundamental realizar una validación clínica rigurosa para garantizar que los resultados del modelo sean precisos y clínicamente relevantes. Esto generalmente implica la colaboración con profesionales de la salud y la evaluación en conjuntos de datos clínicos reales.
 
