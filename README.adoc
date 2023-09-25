@@ -73,6 +73,24 @@ Desarrollo y Entrenamiento del Modelo de IA:
 - Se considerará la posibilidad de mejorar el modelo de inteligencia artificial si es necesario.
 - Despliegue del modelo de IA. Recibe como inputs una imagen y determiados datos y devuelve un resultado.
 
+=== Requerimientos
+
+==== Requerimientos Funcionales
+1. El modelo debe recibir imágenes y procesarlas de acuerdo a la arquitectura del modelo.
+
+2. El modelo debe realizar una predicción de la imagen mediante técnicas de _Machine Learning_.
+
+3. El modelo debe recibir datos y combinarlos con el resultado de la imagen para mejorar la precisión.
+
+4. El modelo debe retornar los resultados.
+
+==== Requerimientos No Funcionales
+1. El modelo debe responder rápidamente. Para ello se aplicarán las mejores prácticas para aumentar su *rendimiento*.
+
+2. El modelo debe mantener un porcentaje de aciertos mayor o igual al 85% para mantener la *confiabilidad*.
+
+3. El modelo debe estar *disponible* para su uso en cualquier momento. Para comprobarlo se creará un _endpoint_ el cual retornará el estado del servicio.
+
 === WBS
 
 .WBS Sprint 1
