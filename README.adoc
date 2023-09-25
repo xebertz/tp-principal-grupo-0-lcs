@@ -192,6 +192,8 @@ image::img/diagrama-precedencia.png[]
 .Calendario Sprint 1
 image::img/calendario-sprint-1.png[]
 
+Consideramos como **hito** actualizar la documentación referida a la investigación ya que es el paso previo a desarrollar los modelos de los Sprints 2 y 3, nos brinda un soporte de conocimientos para determinar qué tipo de modelo elegir y cómo estructurarlo.
+
 === Plan de comunicaciones
 
 Nuestros medios de comunicación son:
@@ -209,6 +211,13 @@ Nuestros medios de comunicación son:
 *Moodle*: se realizarán las entregas de documentación solicitada para realizar el _Sprint Review_.
 
 La actualización de la documentación se hará formalmente al final de cada _Sprint_.
+
+==== Horarios
+
+Se armó una tabla con rangos de horarios en los cuales cada integrante del equipo indicaba cuándo se encontraba disponible en este primer Sprint.
+
+.Horarios Sprint 1
+image::img/horarios-sprint.png[]
 
 === Riesgos
 
@@ -230,11 +239,20 @@ Los _bugs_ encontrados serán agregados como _card_ en el tablero del equipo en 
 
 Tras recibir una petición de cambio, documentaremos las nuevas funcionalidades que se solicitan y posteriormente se agregarán al _Product Backlog_. Esta nueva modificación se evaluará, se estimará con los integrantes del proyecto, se modificará la WBS, Diccionario y se agregará al _Sprint Backlog_.
 
+En este primer Sprint contamos con dos cambios:
+
+- *Cambio de alcance*: en una primera instancia se había asumido que nuestro equipo realizaba tareas de investigación, recopilación de datos y desarrollo de modelos de IA. El cambio surge al momento en el que se determina que cada equipo debe realizar un despliegue en la nube, por lo que el alcance del grupo 0 aumentó -> Deployment API Modelo.
+
+- *Cambio de tecnología*: se cambió la manera de registrar _bugs_. Ahora se registran en una _card_ en Trello a diferencia de crear un _issue_ en GitHub. Se decidió por la facilidad de agregar registros y de actualizarlos, además de tenerlos en el tablero interno del equipo para que todos puedan verlo.
+
 === Indicadores
-*Burndown Chart*: Al utilizar Scrum
-precisamos ver el avance de nuestro trabajo 
-a medida de cada Sprint. 
+*Burndown Chart*: Al utilizar Scrum precisamos ver el avance de nuestro trabajo de cada Sprint. 
 El trabajo se expresará en Story Points, teniendo en cuenta que un Story Point es igual a 1 hora.
+
+.Burndown Chart Sprint 1
+image::img/burndown-chart.png[]
+
+El día 22/09 no hubo avance al preparar consultas para la clase presencial.
 
 == Tecnologías
 
