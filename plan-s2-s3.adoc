@@ -78,6 +78,7 @@ Son tres etapas del Sprint:
 ''''
 
 **Prueba**
+
 - Determinar parámetros de imagen.
 
 - Testeo del modelo. Evaluar el porcentaje de precisión y tomar acciones.
