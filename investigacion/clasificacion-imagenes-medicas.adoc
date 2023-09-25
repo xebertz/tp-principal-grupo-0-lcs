@@ -8,7 +8,7 @@ v1, {docdate}
 :source-highlighter: highlight.js
 :tabsize: 4
 :nofooter:
-:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+:pdf-page-margin: [3.2cm, 3.2cm, 3.2cm, 3.2cm]
 
 == Introducción
 
@@ -38,7 +38,7 @@ Es importante aclarar que el encéfalo es un órgano simétrico. Es decir, la co
 
 Existen dos tipos de lesiones: las lesiones intra axiales y las extra axiales. Se puede ver una comparación entre ellas en la siguiente imagen:
 
-image:imgs/tipos-de-lesiones.png[align="center"]
+image::imgs/tipos-de-lesiones.png[600, 400, align="center"]
 
 La figura *A* corresponde a un cerebro sin lesiones, la *B* corresponde a un cerebro con una lesión extra axial; y la *C* corresponde a un cerebro con una lesión intra axial.
 
@@ -48,15 +48,16 @@ Las masas intra axiales son las que se encuentran dentro del parénquima cerebra
 
 La metástasis se presenta como una formación de un tumor a partir de celular cancerosas de un tumor previo. No necesariamente se forma en el mismo lugar, ya que las células tienen la capacidad de viajar por el cuerpo a través de la sangre o el sistema linfático.
 
+Las siguientes imágenes muestran dos imágenes del cerebro de una paciente con metástasis. Es clara la diferencia de visualización según el tipo de magnetización utilizada en la resonancia magnética.
+
 .diferencias de visualización según magnetización
 [cols="a,a", frame=none, grid=none, role=right]
 |===
-|   image:imgs/metastasis-t1.png[150, 250, align="right"]
-|   image:imgs/metastasis-t2.png[150, 250 align="right"]
+|   image::imgs/metastasis-t1.png[150, 200, align="center"]
+|   image::imgs/metastasis-t2.png[150, 200, align="center"]
 |   magnetización T1  |magnetización T2
 |===
 
-Las imágenes anteriores muestran dos imágenes del cerebro de una paciente con metástasis. Es clara la diferencia de visualización según el tipo de magnetización utilizada en la resonancia magnética.
 
 ==== Masas Extra Axiales
 
@@ -65,10 +66,10 @@ Las masas extra axiales son las que se encuentran en el límite del parénquima 
 Los más comunes son los meningiomas, es decir, los tumores benignos.
 
 .diferencias de visualización según magnetización
-[cols="a,a", frame=none, grid=none, role=right]
+[cols="a,a", frame=none, grid=none]
 |===
-|   image:imgs/extra-axial-t1.png[150, 250, align="right"]
-|   image:imgs/extra-axial-t2.png[150, 250, align="right"]
+|   image::imgs/extra-axial-t1.png[150, 200, align="center"]
+|   image::imgs/extra-axial-t2.png[150, 200, align="center"]
 |   magnetización T1  |magnetización T2
 |===
 
@@ -94,7 +95,8 @@ En las imágenes se observan con distinta intensidad, según la lesión y el tip
 
 Según el período de tiempo en el que se analiza, los tumores se pueden visualizar mejor o peor en una resonancia magnética.
 
-image:imgs/color-tumor-segun-dia.png[align="center"]
+
+image::imgs/color-tumor-segun-dia.png[500, 400, float="center", align="center"]
 
 En los periodos hiperagudo y agudo es difícil identificarlo en ambas secuencias, sin embargo, en el período agudo se observan mejor en T2.
 

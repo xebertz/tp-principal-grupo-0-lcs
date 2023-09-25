@@ -8,7 +8,7 @@ v1, {docdate}
 :source-highlighter: highlight.js
 :tabsize: 4
 :nofooter:
-:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+:pdf-page-margin: [2.8cm, 2.8cm, 2.8cm, 2.8cm]
 
 == Transfer Learning
 
@@ -127,7 +127,7 @@ Existen diversos modelos preentrenados en la librería _Keras_, disponible para 
 
 En el siguiente gráfico, se pueden ver los modelos disponibles, su niver de _accuracy_, y su tamaño, representado mediante el tamaño del círculo.
 
-image:imgs/modelos-keras.png[300, 450, align="center"]
+image::imgs/modelos-keras.png[130, 280, align="center"]
 
 Los modelos grandes en tamaño suelen realizar predicciones más precisas, pero tienen la desventaja de su lentitud en cuanto a procesamiento.
 
@@ -177,7 +177,9 @@ Fue utilizado para diversos problemas de clasificación. Entre ellos, la detecci
 
 Como _EfficientNet_, _EfficientNetV2_ es una familia de modelos preentrenados que se caracterizan por su eficiencia. Estan basados en los modelos previos, y mejoran su eficiencia alcanzando un alto nivel de eficacia con aproximadamente la mitad de datos de entrenamiento que sus predecesoras.
 
-image:imgs/comparacion-efficientnetv2.png[align="center"]
+Se comparó con distintos modelos de IA y se obtuvo muy buenos resultados en cuanto a su eficiencia y su eficacia. También fue entrenado con el conjunto de datos
+
+image::imgs/comparacion-efficientnetv2.png[200, 350, align="center"]
 
 Este modelo se puede utilizar para cumplir los mismos objetivos que con _EfficientNet_.
 
