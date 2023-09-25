@@ -14,11 +14,15 @@ v1, {docdate}
 
 Este documento tiene como objetivo plantear, en términos generales, el plan del grupo 0 en los Sprints 2 y 3.
 
+El Sprint 1 fue una etapa de **investigación** y **capacitación** para desarrollar modelos de IA de análisis de imágenes.
+
+En el Sprint Planning del Sprint 2 se realizará una planificación más detallada al tener mayor conocimiento del área de _Machine Learning_ en análisis de imágenes y sobre la enfermedad seleccionada para implementar el modelo.
+
 == Gestión
 
 === WBS
 
-.WBS Sprint 1
+.WBS Sprint 2
 image::img/wbs-estimado-s2-s3.png[]
 
 === Diagrama de precedencia
@@ -27,6 +31,8 @@ image::img/wbs-estimado-s2-s3.png[]
 image::img/wbs-precedencia-estimado-s2-s3.png[]
 
 === Arquitectura de Solución
+
+Una vez hecho el _deploy_, nuestro modelo recibe una imagen y determinados datos (que posteriormente se definirán) desde el _backend_. Nuestro servidor procesa la imagen para que el modelo pueda analizarla. Luego del análisis se complementará el resultado con los datos extra brindados para mejorar la precisión. Finalmente devuelve la predicción final al _backend_.
 
 .Representación del proceso de predicción
 image::img/arquitectura-solucion.png[]
