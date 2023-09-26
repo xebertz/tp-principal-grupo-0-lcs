@@ -14,7 +14,7 @@ v1, {docdate}
 
 Los modelos preentrenados nos permiten aprovechar el entrenamiento previo de un modelo para iniciar con una base de aprendizaje que nos permita entrenar al modelo más rápido, según lo que queramos realizar.
 
-Utilizar un modelo preentrenado y entrenarlo con nuevos datos es una técnica conocida como _Tranfer Learning_. Muchos modelos se pueden modificar en cuanto a tamaño, capas, hiperparámetros, o tamaño de entrada; y se pueden utilizar como base para añadir más capas y lograr un mejor resultado.
+Utilizar un modelo preentrenado y entrenarlo con nuevos datos es una técnica conocida como _Transfer Learning_. Muchos modelos se pueden modificar en cuanto a tamaño, capas, hiperparámetros, o tamaño de entrada; y se pueden utilizar como base para añadir más capas y lograr un mejor resultado.
 
 A continuación, mencionaremos algunas técnicas útiles para aplicar a modelos cuyo objetivo es analizar imágenes médicas, y algunos modelos preentrenados sugeridos y sus características.
 
