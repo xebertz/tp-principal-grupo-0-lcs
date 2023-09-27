@@ -12,4 +12,10 @@ v1, {docdate}
 
 == Introducción
 
+La Transformada de Hough es una función que detecta figuras geométricas en una imagen. En particular, se puede utilizar para la detección de círculos.
+
+En nuestro caso, la transformada de Hough puede ser util para delimitar un tumor, lo que ayudaría en la clasificación de la imagen.
+
+En este documento se explica cómo se puede utilizar esta herramienta y qué tan util resulta en nuestro problema.
+
 == Prueba en Saturn Cloud
