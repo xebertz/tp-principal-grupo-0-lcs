@@ -19,3 +19,10 @@ En nuestro caso, la transformada de Hough puede ser util para delimitar un tumor
 En este documento se explica cómo se puede utilizar esta herramienta y qué tan util resulta en nuestro problema.
 
 == Prueba en Saturn Cloud
+
+- cv2.imshow deprecated --> kernel crash
+- parámetros
+- blur gaussiano empeora las cosas
+- muestra de ejemplo
+- mejora
+
