@@ -15,3 +15,19 @@ v1, {docdate}
 Una plataforma de despliegue, en términos sencillos, se refiere a un conjunto de instrumentos y recursos para llevar a cabo la implementación y puesta en funcionamiento de aplicaciones y/o bases de datos en entornos de producción en la nube. 
 
 Existen plataformas que se denominan PaaS (Platform as a Service) estos proporciona una plataforma y un entorno completo para el desarrollo, implementación y administración de aplicaciones en la nube. En este modelo, los proveedores de servicios en la nube ofrecen una plataforma que incluye sistemas operativos, entornos de desarrollo, herramientas de base de datos y servicios de alojamiento, lo que permite a los desarrolladores centrarse en escribir código y crear aplicaciones sin preocuparse por la infraestructura subyacente.
+
+=== Fly.io
+
+Fly.io nos permite trabajar con varios lenguajes y frameworks, porque permite trabajar con Docker. Aunque tiene opciones para el despliegue rápido de ciertos frameworks y lenguajes.
+Además, permite alojar bases de datos como PostgreSQL, MySQL, Sqlite y Redis.
+
+Por otro lado, ofrece un programa de consola llamada flyCTL que permite registrarse en el sitio, realizar el deploy e incluyendo la posibilidad de realizarlo sin estar subido a un repositorio Git.
+
+Su servicio gratuito incluye:
+
+* 3 maquinas virtuales con cpu compartida.
+* 256 mb de ram.
+* 3 gb de almacenamiento persistente.
+* 160 gb de transferencias de datos (outbound).
+
+Tutorial para realizar un deploy de una aplicación flask: https://fly.io/docs/languages-and-frameworks/python/
