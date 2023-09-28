@@ -61,4 +61,4 @@ Su servicio gratuito incluye:
 * 2 contenedores.
 * 512 Mb de ram por contenedor.
 * 1 GB de almacenamiento persistente.
-* 500 Horas de intancia de los servicios.
+* Railway mensualmente nos proporcionara un saldo gratuito de 5 dólares, con el que tendremos disponibles 500 horas de uso de una máquina sencilla, estas cuentan desde que el proyecto queda activo y se descontaran por cada hora activa que tengas un proyecto funcionando.
