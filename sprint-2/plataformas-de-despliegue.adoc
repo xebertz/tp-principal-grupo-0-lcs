@@ -26,8 +26,24 @@ Por otro lado, ofrece un programa de consola llamada flyCTL que permite registra
 Su servicio gratuito incluye:
 
 * 3 maquinas virtuales con cpu compartida.
-* 256 mb de ram.
-* 3 gb de almacenamiento persistente.
-* 160 gb de transferencias de datos (outbound).
+* 256 MB de ram.
+* 3 GB de almacenamiento persistente.
+* 160 GB de transferencias de datos (outbound).
 
-Tutorial para realizar un deploy de una aplicación flask: https://fly.io/docs/languages-and-frameworks/python/
+Tutorial para realizar un deploy de una aplicación Flask: https://fly.io/docs/languages-and-frameworks/python/
+
+=== Render
+
+Render permite trabajar con Docker, es decir, permite trabajar con los lenguajes que soporten Docker. Pero tiene opciones de despliegue rápido para ciertos lenguajes como Python, Rails NodeJS, Ruby, Elixir, PHP y Go. 
+
+Además, permite alojar bases de datos como PostgreSQL y Redis.
+
+Su servicio gratuito incluye:
+
+* Cpu compartida. 
+* 512 MB de ram.
+* 750 Horas totales de instancias de los servicios al mes, o sea, 31 días activo con solo 1 aplicación. En cambio, si hay dos aplicaciones funcionando al mismo tiempo, se repartirían los días quedando 15 días activos durante el mes. A principio de cada mes se reinicia el contador de horas.
+* 100 GB de transferencias de datos (outbound).
+* 500 Minutos de compilación en la nube de la aplicación.
+
+Hay una desventaja en Render con la actividad de la aplicación: Si se deja de utilizar durante un tiempo, el servidor entra en reposo. Por lo tanto, cada vez que se intenta utilizar el servicio, se debe esperar que la aplicación inicie nuevamente. Esto se puede solucionar con un bot que haga un llamado a una API de la aplicación periodicamente para que el servicio se mantenga activo, pero consume el outbound.
