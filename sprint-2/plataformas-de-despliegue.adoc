@@ -47,3 +47,18 @@ Su servicio gratuito incluye:
 * 500 Minutos de compilación en la nube de la aplicación.
 
 Hay una desventaja en Render con la actividad de la aplicación: Si se deja de utilizar durante un tiempo, el servidor entra en un estado de reposo. Por lo tanto, si se dejo de utilizar la aplicación durante un cierto tiempo, cada vez que entra en el estado de reposo y se intenta utilizar el servicio, se debe esperar que la aplicación inicie nuevamente. Esto se puede solucionar con un bot que haga un llamado a una API de la aplicación periodicamente para que el servicio se mantenga activo, pero consume el outbound.
+
+=== Railway
+
+Railway es una de las plataformas más nuevas. Admite lenguajes como Javascript/Typescript, Python, PHP, Golang, Ruby, Rust, simplemente importando el proyecto desde un repositorio Github y el despliegue es muy rapido (en menos de 1 minuto). También tiene más de 75 templates para iniciar el proyecto. Además permite Docker, por ende soporta los lenguajes que puedan utilizar Docker.
+
+También ofrece subir bases de datos gratuitas en MySQL, PostgreSQL, Mongodb y Redis.
+
+Por otro lado, ofrece un CLI para su uso mediante linea de comandos.
+
+Su servicio gratuito incluye:
+
+* 2 contenedores.
+* 512 Mb de ram por contenedor.
+* 1 GB de almacenamiento persistente.
+* 500 Horas de intancia de los servicios.
