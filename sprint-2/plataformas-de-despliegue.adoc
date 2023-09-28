@@ -62,3 +62,9 @@ Su servicio gratuito incluye:
 * 512 Mb de ram por contenedor.
 * 1 GB de almacenamiento persistente.
 * Railway mensualmente nos proporcionara un saldo gratuito de 5 dólares, con el que tendremos disponibles 500 horas de uso de una máquina sencilla, estas cuentan desde que el proyecto queda activo y se descontaran por cada hora activa que tengas un proyecto funcionando.
+
+== Conclusión
+
+Estás plataformas PaaS no son las únicas para realizar un despliegue de nuestra API, pero consideramos que son las más sencillas de utilizar y que cumplen con los requisitos que estamos buscando. 
+
+Entonces, nuestras posibles opciones es utilizar solamente Fly.io o Render, pero Render junto con otro servicio en otra plataforma como Fly.io o Cyclic.sh que haga un llamado a un endpoint de la API para que Render no entre en un estado de hibernación.
