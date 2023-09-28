@@ -9,3 +9,9 @@ v1, {docdate}
 :tabsize: 4
 :nofooter:
 :pdf-page-margin: [2.8cm, 2.8cm, 2.8cm, 2.8cm]
+
+== Plataforma
+
+Una plataforma de despliegue, en términos sencillos, se refiere a un conjunto de instrumentos y recursos para llevar a cabo la implementación y puesta en funcionamiento de aplicaciones y/o bases de datos en entornos de producción en la nube. 
+
+Existen plataformas que se denominan PaaS (Platform as a Service) estos proporciona una plataforma y un entorno completo para el desarrollo, implementación y administración de aplicaciones en la nube. En este modelo, los proveedores de servicios en la nube ofrecen una plataforma que incluye sistemas operativos, entornos de desarrollo, herramientas de base de datos y servicios de alojamiento, lo que permite a los desarrolladores centrarse en escribir código y crear aplicaciones sin preocuparse por la infraestructura subyacente.
