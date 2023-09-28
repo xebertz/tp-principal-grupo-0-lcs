@@ -52,7 +52,7 @@ Hay una desventaja en Render con la actividad de la aplicación: Si se deja de u
 
 Railway es una de las plataformas más nuevas. Admite lenguajes como Javascript/Typescript, Python, PHP, Golang, Ruby, Rust, simplemente importando el proyecto desde un repositorio Github y el despliegue es muy rapido (en menos de 1 minuto). También tiene más de 75 templates para iniciar el proyecto. Además permite Docker, por ende soporta los lenguajes que puedan utilizar Docker.
 
-También ofrece subir bases de datos gratuitas en MySQL, PostgreSQL, Mongodb y Redis.
+También ofrece subir bases de datos gratuitas en MySQL, PostgreSQL, Mongodb y Redis. Estos mismos sin REGISTRARSE &#x1F640; &#x1F640; &#x1F640;.
 
 Por otro lado, ofrece un CLI para su uso mediante linea de comandos.
 
