@@ -9,3 +9,6 @@ v1, {docdate}
 :tabsize: 4
 :nofooter:
 :pdf-page-margin: [2.8cm, 2.8cm, 2.8cm, 2.8cm]
+
+== Plataforma
+Una plataforma de despliegue, en términos sencillos, se refiere a un conjunto de instrumentos y recursos que permiten llevar a cabo la implementación y puesta en funcionamiento de aplicaciones y/o Bases de datos en entornos de producción en la nube. 
