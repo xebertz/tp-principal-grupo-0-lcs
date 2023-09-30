@@ -1,4 +1,4 @@
-= Modelos preentrenados: Comparación y definición
+= EfficientNetV2
 Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
 v1, {docdate}
 :toc:
@@ -10,7 +10,7 @@ v1, {docdate}
 :nofooter:
 :pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
 
-== EfficientNetV2
+== ¿Qué es EfficientNetV2?
 
 EfficientNetV2 es una versión mejorada y más eficiente de la arquitectura de redes neuronales convolucionales (CNN) conocida como EfficientNet. Fue desarrollada por Google Research y se ha diseñado específicamente para abordar tareas de visión por computadora de manera más efectiva y eficiente que sus predecesores.
 
