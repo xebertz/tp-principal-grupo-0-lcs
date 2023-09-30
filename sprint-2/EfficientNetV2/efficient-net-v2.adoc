@@ -89,7 +89,6 @@ Epoch 20/20
 [source, python]
 ----
 Epoch 1/20
-2023-09-30 01:17:59.157963: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 5298585600 exceeds 10% of free system memory.
 275/275 [==============================] - 155s 539ms/step - loss: 0.5749 - accuracy: 0.2562 - val_loss: 0.5600 - val_accuracy: 0.3377
 Epoch 2/20
 275/275 [==============================] - 143s 519ms/step - loss: 0.5661 - accuracy: 0.2695 - val_loss: 0.5567 - val_accuracy: 0.3395
