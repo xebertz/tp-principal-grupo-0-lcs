@@ -80,9 +80,9 @@ Epoch 20/20
 275/275 [==============================] - 107s 389ms/step - loss: 0.5436 - accuracy: 0.3512 - val_loss: 0.5395 - val_accuracy: 0.3873
 ----
 
-*Precisión en entrenamiento:* 
+*Precisión en entrenamiento:* 35%
 
-*Mejor precisión en prueba:*
+*Mejor precisión en prueba:* 39%
 
 === EfficientNetV2B1
 
