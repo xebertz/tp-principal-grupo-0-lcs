@@ -1,4 +1,4 @@
-= Técnicas de procesamiento de imágenes: Transformada de Hough
+= Modelos preentrenados: Comparación y definición
 Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
 v1, {docdate}
 :toc:
@@ -12,17 +12,38 @@ v1, {docdate}
 
 == Introducción
 
+En este documento compararemos los diferentes modelos preentrenados probados, y definiremos cuál es mejor para nuestro caso de uso.
+
+== EfficientNetV2
+
+== ResNet
+
+== SVM
+
+== Xception
+
+== CNN Manual
+
+== Mask R CNN
+
+== Inception ResNet
+
+== VGG16
+
+== VGG19
+
+== Transformada de Hough
+
 La Transformada de Hough es una función que detecta figuras geométricas en una imagen. En particular, se puede utilizar para la detección de círculos.
 
 En nuestro caso, la transformada de Hough puede ser util para delimitar un tumor, lo que ayudaría en la clasificación de la imagen.
 
 En este documento se explica cómo se puede utilizar esta herramienta y qué tan util resulta en nuestro problema.
 
-== Prueba en Saturn Cloud
-
 - cv2.imshow deprecated --> kernel crash
 - parámetros
 - blur gaussiano empeora las cosas
 - muestra de ejemplo
 - mejora
+
 
