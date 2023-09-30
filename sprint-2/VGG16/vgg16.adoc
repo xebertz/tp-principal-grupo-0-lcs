@@ -1,0 +1,100 @@
+= Modelos VGG16: Entrenamiento y pruebas
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== Modelo
+
+El modelo VGG16 es un modelo preentrenado de la librería *Keras* que cuenta con 16 capas.
+
+Para utilizarlo, importamos el modelo y le añadimos una capa de _input_, para que se adapte a nuestras imágenes, una capa de _pooling_, y una capa de _output_.
+
+[source, python]
+----
+vgg16 = tf.keras.applications.vgg16.VGG16(
+    include_top=False,
+    weights='imagenet',
+    input_shape=(224, 224, 3),
+)
+vgg16.trainable = False
+
+inputs = keras.Input(shape=(224, 224, 3))
+x = vgg16(inputs, training=False)
+
+x = keras.layers.GlobalAveragePooling2D()(x)
+outputs = keras.layers.Dense(4, activation='softmax')(x)
+model = keras.Model(inputs, outputs)
+----
+
+El modelo fue _freezado_, es decir, se mantuvieron los pesos que obtuvo durante el entrenamiento con el dataset _imagenet_, para utilizar la técnica _transfer learning_.
+
+== Entrenamiento
+
+El primer problema que surgió durante el entrenamiento es que el modelo es demasiado lento. Nuestro https://www.kaggle.com/datasets/gonzajl/tumores-cerebrales-mri-dataset/data[dataset] cuenta con 44000 imágenes, lo que hizo que utilizar todas las imágenes sea insostenible.
+
+No se podía entrenar ni con 10000 imágenes, por lo que decidimos importar 1000 imágenes por clase y dividirlas en conjuntos de entrenamiento y prueba, siendo un 80% de entrenamiento y un 20% de prueba.
+
+Estas imágenes fueron mezcladas previamente, para que el modelo no reciba bloques de imágenes según categoría.
+
+El modelo empezó a permitir su entrenamiento, pero surgió otro problema: no elevaba su precisión. La precisión máxima que tenía era del 25%, lo que no es ideal. Por esto, decidimos ajustar los hiperparámetros del modelo, de forma que aumente su precisión. Lo "descongelamos", le agregamos capas, le sacamos capas, y probamos distintas combinaciones de todo esto. Finalmente, llegamos a la versión presentada anteriormente.
+
+Con dos vueltas de entrenamiento, obtuvimos los siguientes resultados en las imágenes de prueba:
+
+[source, console]
+----
+Cantidad de predicciones: 800
+Etiquetas:   [G,  M,  P,  N]
+Total:       [227, 139, 216, 218]
+Correctas:   [149, 92, 149, 142]
+Incorrectas: [78, 47, 67, 76]
+----
+
+Se puede ver que, a pesar de las pocas imágenes de prueba, el modelo predecía bien al menos el 50% de las imágenes. Esto es una mejora con respecto al 25% previo.
+
+Luego, se entrenó el modelo con diez vueltas de entrenamiento. Este entrenamiento se completó en 50 minutos. El resultado en cuanto a sus métricas fue el siguiente:
+
+[source, console]
+----
+Epoch 1/10
+100/100 [==============================] - 294s 3s/step - loss: 0.9926 - categorical_accuracy: 0.6981 - val_loss: 0.9531 - val_categorical_accuracy: 0.7013
+Epoch 2/10
+100/100 [==============================] - 293s 3s/step - loss: 0.9068 - categorical_accuracy: 0.7175 - val_loss: 0.8842 - val_categorical_accuracy: 0.7138
+Epoch 3/10
+100/100 [==============================] - 293s 3s/step - loss: 0.8461 - categorical_accuracy: 0.7312 - val_loss: 0.8269 - val_categorical_accuracy: 0.7362
+Epoch 4/10
+100/100 [==============================] - 292s 3s/step - loss: 0.7916 - categorical_accuracy: 0.7481 - val_loss: 0.7855 - val_categorical_accuracy: 0.7500
+Epoch 5/10
+100/100 [==============================] - 293s 3s/step - loss: 0.7517 - categorical_accuracy: 0.7597 - val_loss: 0.7554 - val_categorical_accuracy: 0.7500
+Epoch 6/10
+100/100 [==============================] - 293s 3s/step - loss: 0.7194 - categorical_accuracy: 0.7738 - val_loss: 0.7188 - val_categorical_accuracy: 0.7588
+Epoch 7/10
+100/100 [==============================] - 293s 3s/step - loss: 0.6887 - categorical_accuracy: 0.7850 - val_loss: 0.6973 - val_categorical_accuracy: 0.7738
+Epoch 8/10
+100/100 [==============================] - 293s 3s/step - loss: 0.6633 - categorical_accuracy: 0.7891 - val_loss: 0.6683 - val_categorical_accuracy: 0.7775
+Epoch 9/10
+100/100 [==============================] - 293s 3s/step - loss: 0.6416 - categorical_accuracy: 0.8016 - val_loss: 0.6489 - val_categorical_accuracy: 0.7875
+Epoch 10/10
+100/100 [==============================] - 293s 3s/step - loss: 0.6208 - categorical_accuracy: 0.8078 - val_loss: 0.6330 - val_categorical_accuracy: 0.7850
+----
+
+Y, con respecto a las imágenes de prueba, se obtuvo lo siguiente:
+
+[source, console]
+----
+25/25 [==============================] - 59s 2s/step
+Cantidad de predicciones: 800
+Etiquetas:   [G,  M,  P,  N]
+Total:       [196, 190, 230, 184]
+Correctas:   [154, 137, 182, 155]
+Incorrectas: [42, 53, 48, 29]
+----
+
+Vemos que hubo una mejora, aumentando la precisión a más del 75%.
+
