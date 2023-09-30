@@ -1,0 +1,324 @@
+= Modelos preentrenados: Comparación y definición
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== EfficientNetV2
+
+EfficientNetV2 es una versión mejorada y más eficiente de la arquitectura de redes neuronales convolucionales (CNN) conocida como EfficientNet. Fue desarrollada por Google Research y se ha diseñado específicamente para abordar tareas de visión por computadora de manera más efectiva y eficiente que sus predecesores.
+
+== Variantes
+
+Esta nueva versión de EfficientNet se presenta en múltiples variantes, cada una diseñada para satisfacer diferentes necesidades en términos de tamaño y capacidad. A continuación, proporcionamos un resumen de estas variantes:
+
+- EfficientNetV2B0, B1, B2 y B3: Estas versiones varían en tamaño y capacidad, con B0 siendo la más compacta y B3 la más robusta en términos de parámetros y capacidad de representación.
+
+- EfficientNetV2S: La variante "S" (Small) de EfficientNetV2 ocupa un espacio intermedio entre B0 y B1 en lo que respecta a dimensiones y capacidad. Se posiciona como un equilibrio entre la eficiencia y la precisión, lo que la hace idónea para una amplia gama de aplicaciones de visión por computadora.
+
+- EfficientNetV2M: La variante "M" (Medium) se ubica entre B2 y B3 en términos de tamaño y capacidad. Ofrece un desempeño superior en comparación con las versiones más compactas, al tiempo que mantiene una eficiencia razonable.
+
+- EfficientNetV2L: La variante "L" (Large) se erige como la más grande y poderosa entre todas las variantes de EfficientNetV2. Con un mayor número de parámetros y una capacidad de representación extensa, resulta especialmente apta para abordar tareas de visión por computadora altamente complejas. No obstante, es importante destacar que esta variante demanda un gran cantidad de recursos computacionales.
+
+== Entrenamiento y prueba
+
+Hemos evaluado todas las variantes del modelo utilizando un conjunto de datos que creamos nosotros mismos y que consta de 44,000 imágenes. Sin embargo, decidimos trabajar solo con 11,000 de estas imágenes. De ese total, 8,800 imágenes se utilizaron para el conjunto de entrenamiento, mientras que las 2,200 restantes se reservaron para las pruebas.
+
+La elección de limitar el conjunto de datos a este tamaño se debió a las restricciones de nuestros recursos computacionales y a la complejidad inherente del modelo preentrenado que estábamos empleando. Cuando intentamos utilizar un conjunto de datos más grande, nos encontramos con errores durante la ejecución de algunas secciones del código. Por lo tanto, decidimos optar por esta configuración más manejable que nos permitió llevar a cabo nuestras evaluaciones de manera efectiva.
+
+== Resultados
+
+=== EfficientNetV2B0
+
+[source, python]
+----
+Epoch 1/20
+275/275 [==============================] - 115s 400ms/step - loss: 0.5732 - accuracy: 0.2531 - val_loss: 0.5618 - val_accuracy: 0.2414
+Epoch 2/20
+275/275 [==============================] - 107s 388ms/step - loss: 0.5641 - accuracy: 0.2820 - val_loss: 0.5573 - val_accuracy: 0.2755
+Epoch 3/20
+275/275 [==============================] - 106s 386ms/step - loss: 0.5612 - accuracy: 0.3011 - val_loss: 0.5524 - val_accuracy: 0.3359
+Epoch 4/20
+275/275 [==============================] - 107s 388ms/step - loss: 0.5598 - accuracy: 0.3107 - val_loss: 0.5481 - val_accuracy: 0.4159
+Epoch 5/20
+275/275 [==============================] - 106s 386ms/step - loss: 0.5564 - accuracy: 0.3274 - val_loss: 0.5498 - val_accuracy: 0.3368
+Epoch 6/20
+275/275 [==============================] - 106s 386ms/step - loss: 0.5542 - accuracy: 0.3334 - val_loss: 0.5445 - val_accuracy: 0.3773
+Epoch 7/20
+275/275 [==============================] - 107s 388ms/step - loss: 0.5536 - accuracy: 0.3435 - val_loss: 0.5448 - val_accuracy: 0.3486
+Epoch 8/20
+275/275 [==============================] - 106s 387ms/step - loss: 0.5542 - accuracy: 0.3328 - val_loss: 0.5466 - val_accuracy: 0.3391
+Epoch 9/20
+275/275 [==============================] - 107s 390ms/step - loss: 0.5498 - accuracy: 0.3460 - val_loss: 0.5413 - val_accuracy: 0.3805
+Epoch 10/20
+275/275 [==============================] - 107s 388ms/step - loss: 0.5496 - accuracy: 0.3380 - val_loss: 0.5393 - val_accuracy: 0.3936
+Epoch 11/20
+275/275 [==============================] - 107s 389ms/step - loss: 0.5509 - accuracy: 0.3452 - val_loss: 0.5412 - val_accuracy: 0.3964
+Epoch 12/20
+275/275 [==============================] - 106s 387ms/step - loss: 0.5485 - accuracy: 0.3460 - val_loss: 0.5367 - val_accuracy: 0.3900
+Epoch 13/20
+275/275 [==============================] - 107s 388ms/step - loss: 0.5485 - accuracy: 0.3505 - val_loss: 0.5490 - val_accuracy: 0.3209
+Epoch 14/20
+275/275 [==============================] - 106s 386ms/step - loss: 0.5459 - accuracy: 0.3547 - val_loss: 0.5452 - val_accuracy: 0.3395
+Epoch 15/20
+275/275 [==============================] - 106s 388ms/step - loss: 0.5461 - accuracy: 0.3548 - val_loss: 0.5383 - val_accuracy: 0.3595
+Epoch 16/20
+275/275 [==============================] - 107s 391ms/step - loss: 0.5441 - accuracy: 0.3540 - val_loss: 0.5361 - val_accuracy: 0.4186
+Epoch 17/20
+275/275 [==============================] - 106s 385ms/step - loss: 0.5461 - accuracy: 0.3552 - val_loss: 0.5416 - val_accuracy: 0.3673
+Epoch 18/20
+275/275 [==============================] - 106s 386ms/step - loss: 0.5469 - accuracy: 0.3483 - val_loss: 0.5472 - val_accuracy: 0.3255
+Epoch 19/20
+275/275 [==============================] - 107s 391ms/step - loss: 0.5433 - accuracy: 0.3548 - val_loss: 0.5404 - val_accuracy: 0.3486
+Epoch 20/20
+275/275 [==============================] - 107s 389ms/step - loss: 0.5436 - accuracy: 0.3512 - val_loss: 0.5395 - val_accuracy: 0.3873
+----
+
+*Precisión en entrenamiento:* 
+
+*Mejor precisión en prueba:*
+
+=== EfficientNetV2B1
+
+[source, python]
+----
+Epoch 1/20
+2023-09-30 01:17:59.157963: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 5298585600 exceeds 10% of free system memory.
+275/275 [==============================] - 155s 539ms/step - loss: 0.5749 - accuracy: 0.2562 - val_loss: 0.5600 - val_accuracy: 0.3377
+Epoch 2/20
+275/275 [==============================] - 143s 519ms/step - loss: 0.5661 - accuracy: 0.2695 - val_loss: 0.5567 - val_accuracy: 0.3395
+Epoch 3/20
+275/275 [==============================] - 143s 520ms/step - loss: 0.5632 - accuracy: 0.2977 - val_loss: 0.5526 - val_accuracy: 0.4427
+Epoch 4/20
+275/275 [==============================] - 143s 519ms/step - loss: 0.5611 - accuracy: 0.3099 - val_loss: 0.5500 - val_accuracy: 0.3818
+Epoch 5/20
+275/275 [==============================] - 143s 520ms/step - loss: 0.5605 - accuracy: 0.3111 - val_loss: 0.5507 - val_accuracy: 0.2795
+Epoch 6/20
+275/275 [==============================] - 143s 520ms/step - loss: 0.5591 - accuracy: 0.3097 - val_loss: 0.5475 - val_accuracy: 0.3509
+Epoch 7/20
+275/275 [==============================] - 142s 519ms/step - loss: 0.5597 - accuracy: 0.3103 - val_loss: 0.5509 - val_accuracy: 0.4086
+Epoch 8/20
+275/275 [==============================] - 142s 518ms/step - loss: 0.5584 - accuracy: 0.3200 - val_loss: 0.5493 - val_accuracy: 0.3695
+Epoch 9/20
+275/275 [==============================] - 143s 521ms/step - loss: 0.5578 - accuracy: 0.3159 - val_loss: 0.5482 - val_accuracy: 0.3600
+Epoch 10/20
+275/275 [==============================] - 143s 521ms/step - loss: 0.5552 - accuracy: 0.3212 - val_loss: 0.5438 - val_accuracy: 0.4145
+Epoch 11/20
+275/275 [==============================] - 143s 520ms/step - loss: 0.5538 - accuracy: 0.3292 - val_loss: 0.5405 - val_accuracy: 0.3855
+Epoch 12/20
+275/275 [==============================] - 142s 518ms/step - loss: 0.5529 - accuracy: 0.3267 - val_loss: 0.5426 - val_accuracy: 0.4341
+Epoch 13/20
+275/275 [==============================] - 143s 520ms/step - loss: 0.5506 - accuracy: 0.3276 - val_loss: 0.5437 - val_accuracy: 0.3950
+Epoch 14/20
+275/275 [==============================] - 143s 521ms/step - loss: 0.5489 - accuracy: 0.3361 - val_loss: 0.5408 - val_accuracy: 0.3959
+Epoch 15/20
+275/275 [==============================] - 143s 521ms/step - loss: 0.5490 - accuracy: 0.3361 - val_loss: 0.5397 - val_accuracy: 0.4091
+Epoch 16/20
+275/275 [==============================] - 143s 522ms/step - loss: 0.5470 - accuracy: 0.3393 - val_loss: 0.5386 - val_accuracy: 0.3573
+Epoch 17/20
+275/275 [==============================] - 143s 519ms/step - loss: 0.5463 - accuracy: 0.3403 - val_loss: 0.5418 - val_accuracy: 0.3618
+Epoch 18/20
+275/275 [==============================] - 144s 524ms/step - loss: 0.5454 - accuracy: 0.3392 - val_loss: 0.5371 - val_accuracy: 0.4005
+Epoch 19/20
+275/275 [==============================] - 143s 520ms/step - loss: 0.5470 - accuracy: 0.3388 - val_loss: 0.5351 - val_accuracy: 0.4273
+Epoch 20/20
+275/275 [==============================] - 143s 520ms/step - loss: 0.5445 - accuracy: 0.3344 - val_loss: 0.5339 - val_accuracy: 0.4014
+----
+
+*Precisión en entrenamiento:* 33%
+
+*Mejor precisión en prueba:* 44%
+
+=== EfficientNetV2B2
+
+[source, python]
+----
+Epoch 1/20
+275/275 [==============================] - 169s 590ms/step - loss: 0.5486 - accuracy: 0.3258 - val_loss: 0.5301 - val_accuracy: 0.3773
+Epoch 2/20
+275/275 [==============================] - 156s 568ms/step - loss: 0.5359 - accuracy: 0.3495 - val_loss: 0.5293 - val_accuracy: 0.4450
+Epoch 3/20
+275/275 [==============================] - 156s 568ms/step - loss: 0.5338 - accuracy: 0.3549 - val_loss: 0.5295 - val_accuracy: 0.3409
+Epoch 4/20
+275/275 [==============================] - 156s 569ms/step - loss: 0.5319 - accuracy: 0.3631 - val_loss: 0.5253 - val_accuracy: 0.3736
+Epoch 5/20
+275/275 [==============================] - 156s 568ms/step - loss: 0.5297 - accuracy: 0.3722 - val_loss: 0.5216 - val_accuracy: 0.4236
+Epoch 6/20
+275/275 [==============================] - 156s 566ms/step - loss: 0.5304 - accuracy: 0.3651 - val_loss: 0.5227 - val_accuracy: 0.3991
+Epoch 7/20
+275/275 [==============================] - 156s 567ms/step - loss: 0.5308 - accuracy: 0.3644 - val_loss: 0.5293 - val_accuracy: 0.3677
+Epoch 8/20
+275/275 [==============================] - 157s 570ms/step - loss: 0.5283 - accuracy: 0.3711 - val_loss: 0.5205 - val_accuracy: 0.3927
+Epoch 9/20
+275/275 [==============================] - 157s 572ms/step - loss: 0.5272 - accuracy: 0.3807 - val_loss: 0.5199 - val_accuracy: 0.3900
+Epoch 10/20
+275/275 [==============================] - 157s 571ms/step - loss: 0.5263 - accuracy: 0.3776 - val_loss: 0.5220 - val_accuracy: 0.3955
+Epoch 11/20
+275/275 [==============================] - 157s 570ms/step - loss: 0.5249 - accuracy: 0.3790 - val_loss: 0.5368 - val_accuracy: 0.3418
+Epoch 12/20
+275/275 [==============================] - 157s 570ms/step - loss: 0.5285 - accuracy: 0.3675 - val_loss: 0.5208 - val_accuracy: 0.4400
+Epoch 13/20
+275/275 [==============================] - 156s 568ms/step - loss: 0.5260 - accuracy: 0.3851 - val_loss: 0.5179 - val_accuracy: 0.4155
+Epoch 14/20
+275/275 [==============================] - 156s 568ms/step - loss: 0.5246 - accuracy: 0.3831 - val_loss: 0.5248 - val_accuracy: 0.4205
+Epoch 15/20
+275/275 [==============================] - 157s 570ms/step - loss: 0.5239 - accuracy: 0.3830 - val_loss: 0.5184 - val_accuracy: 0.3814
+Epoch 16/20
+275/275 [==============================] - 156s 569ms/step - loss: 0.5254 - accuracy: 0.3773 - val_loss: 0.5179 - val_accuracy: 0.4055
+Epoch 17/20
+275/275 [==============================] - 157s 571ms/step - loss: 0.5239 - accuracy: 0.3817 - val_loss: 0.5182 - val_accuracy: 0.4141
+Epoch 18/20
+275/275 [==============================] - 157s 570ms/step - loss: 0.5246 - accuracy: 0.3799 - val_loss: 0.5179 - val_accuracy: 0.3945
+Epoch 19/20
+275/275 [==============================] - 156s 569ms/step - loss: 0.5230 - accuracy: 0.3852 - val_loss: 0.5251 - val_accuracy: 0.3605
+Epoch 20/20
+275/275 [==============================] - 158s 576ms/step - loss: 0.5217 - accuracy: 0.3801 - val_loss: 0.5179 - val_accuracy: 0.4182
+----
+
+*Precisión en entrenamiento:* 38%
+
+*Mejor precisión en prueba:* 44%
+
+=== EfficientNetV2B3
+
+[source, python]
+----
+Epoch 1/20
+275/275 [==============================] - 221s 773ms/step - loss: 0.5485 - accuracy: 0.3290 - val_loss: 0.5358 - val_accuracy: 0.3482
+Epoch 2/20
+275/275 [==============================] - 207s 752ms/step - loss: 0.5359 - accuracy: 0.3548 - val_loss: 0.5274 - val_accuracy: 0.3759
+Epoch 3/20
+275/275 [==============================] - 207s 753ms/step - loss: 0.5322 - accuracy: 0.3607 - val_loss: 0.5284 - val_accuracy: 0.4259
+Epoch 4/20
+275/275 [==============================] - 208s 756ms/step - loss: 0.5284 - accuracy: 0.3747 - val_loss: 0.5267 - val_accuracy: 0.3382
+Epoch 5/20
+275/275 [==============================] - 207s 752ms/step - loss: 0.5313 - accuracy: 0.3683 - val_loss: 0.5341 - val_accuracy: 0.3500
+Epoch 6/20
+275/275 [==============================] - 206s 750ms/step - loss: 0.5278 - accuracy: 0.3806 - val_loss: 0.5231 - val_accuracy: 0.3759
+Epoch 7/20
+275/275 [==============================] - 207s 752ms/step - loss: 0.5264 - accuracy: 0.3758 - val_loss: 0.5233 - val_accuracy: 0.3764
+Epoch 8/20
+275/275 [==============================] - 206s 750ms/step - loss: 0.5282 - accuracy: 0.3709 - val_loss: 0.5228 - val_accuracy: 0.4223
+Epoch 9/20
+275/275 [==============================] - 206s 748ms/step - loss: 0.5269 - accuracy: 0.3801 - val_loss: 0.5220 - val_accuracy: 0.3786
+Epoch 10/20
+275/275 [==============================] - 206s 750ms/step - loss: 0.5286 - accuracy: 0.3760 - val_loss: 0.5189 - val_accuracy: 0.4005
+Epoch 11/20
+275/275 [==============================] - 207s 752ms/step - loss: 0.5270 - accuracy: 0.3720 - val_loss: 0.5207 - val_accuracy: 0.4400
+Epoch 12/20
+275/275 [==============================] - 207s 754ms/step - loss: 0.5252 - accuracy: 0.3884 - val_loss: 0.5205 - val_accuracy: 0.4173
+Epoch 13/20
+275/275 [==============================] - 208s 757ms/step - loss: 0.5258 - accuracy: 0.3819 - val_loss: 0.5202 - val_accuracy: 0.4318
+Epoch 14/20
+275/275 [==============================] - 207s 752ms/step - loss: 0.5229 - accuracy: 0.3857 - val_loss: 0.5183 - val_accuracy: 0.4405
+Epoch 15/20
+275/275 [==============================] - 207s 752ms/step - loss: 0.5237 - accuracy: 0.3825 - val_loss: 0.5189 - val_accuracy: 0.3886
+Epoch 16/20
+275/275 [==============================] - 207s 754ms/step - loss: 0.5218 - accuracy: 0.3902 - val_loss: 0.5147 - val_accuracy: 0.4477
+Epoch 17/20
+275/275 [==============================] - 206s 751ms/step - loss: 0.5226 - accuracy: 0.3919 - val_loss: 0.5143 - val_accuracy: 0.4236
+Epoch 18/20
+275/275 [==============================] - 206s 750ms/step - loss: 0.5232 - accuracy: 0.3894 - val_loss: 0.5225 - val_accuracy: 0.3841
+Epoch 19/20
+275/275 [==============================] - 206s 751ms/step - loss: 0.5226 - accuracy: 0.3873 - val_loss: 0.5185 - val_accuracy: 0.3732
+Epoch 20/20
+275/275 [==============================] - 206s 749ms/step - loss: 0.5241 - accuracy: 0.3939 - val_loss: 0.5193 - val_accuracy: 0.4045
+----
+
+*Precisión en entrenamiento:* 39%
+
+*Mejor precisión en prueba:* 44%
+
+=== EfficientNetV2S
+
+[source, python]
+----
+Epoch 1/20
+275/275 [==============================] - 325s 1s/step - loss: 0.4750 - accuracy: 0.5018 - val_loss: 0.4202 - val_accuracy: 0.6014
+Epoch 2/20
+275/275 [==============================] - 309s 1s/step - loss: 0.4344 - accuracy: 0.5624 - val_loss: 0.3880 - val_accuracy: 0.6450
+Epoch 3/20
+275/275 [==============================] - 311s 1s/step - loss: 0.4179 - accuracy: 0.5847 - val_loss: 0.3698 - val_accuracy: 0.6641
+Epoch 4/20
+275/275 [==============================] - 311s 1s/step - loss: 0.4054 - accuracy: 0.6080 - val_loss: 0.3613 - val_accuracy: 0.6805
+Epoch 5/20
+275/275 [==============================] - 311s 1s/step - loss: 0.3967 - accuracy: 0.6133 - val_loss: 0.3589 - val_accuracy: 0.6623
+Epoch 6/20
+275/275 [==============================] - 311s 1s/step - loss: 0.3901 - accuracy: 0.6252 - val_loss: 0.3481 - val_accuracy: 0.6964
+Epoch 7/20
+275/275 [==============================] - 312s 1s/step - loss: 0.3848 - accuracy: 0.6295 - val_loss: 0.3456 - val_accuracy: 0.6918
+Epoch 8/20
+275/275 [==============================] - 311s 1s/step - loss: 0.3785 - accuracy: 0.6425 - val_loss: 0.3365 - val_accuracy: 0.7109
+Epoch 9/20
+275/275 [==============================] - 311s 1s/step - loss: 0.3748 - accuracy: 0.6406 - val_loss: 0.3435 - val_accuracy: 0.6750
+Epoch 10/20
+275/275 [==============================] - 313s 1s/step - loss: 0.3699 - accuracy: 0.6555 - val_loss: 0.3266 - val_accuracy: 0.7155
+Epoch 11/20
+275/275 [==============================] - 312s 1s/step - loss: 0.3691 - accuracy: 0.6497 - val_loss: 0.3331 - val_accuracy: 0.7050
+Epoch 12/20
+275/275 [==============================] - 311s 1s/step - loss: 0.3681 - accuracy: 0.6534 - val_loss: 0.3287 - val_accuracy: 0.7000
+Epoch 13/20
+275/275 [==============================] - 311s 1s/step - loss: 0.3615 - accuracy: 0.6626 - val_loss: 0.3220 - val_accuracy: 0.7227
+Epoch 14/20
+275/275 [==============================] - 310s 1s/step - loss: 0.3570 - accuracy: 0.6657 - val_loss: 0.3229 - val_accuracy: 0.7132
+Epoch 15/20
+275/275 [==============================] - 313s 1s/step - loss: 0.3586 - accuracy: 0.6610 - val_loss: 0.3151 - val_accuracy: 0.7214
+Epoch 16/20
+275/275 [==============================] - 313s 1s/step - loss: 0.3565 - accuracy: 0.6685 - val_loss: 0.3137 - val_accuracy: 0.7177
+Epoch 17/20
+275/275 [==============================] - 310s 1s/step - loss: 0.3542 - accuracy: 0.6682 - val_loss: 0.3223 - val_accuracy: 0.7105
+Epoch 18/20
+275/275 [==============================] - 310s 1s/step - loss: 0.3503 - accuracy: 0.6749 - val_loss: 0.3051 - val_accuracy: 0.7432
+Epoch 19/20
+275/275 [==============================] - 312s 1s/step - loss: 0.3500 - accuracy: 0.6755 - val_loss: 0.3063 - val_accuracy: 0.7255
+Epoch 20/20
+275/275 [==============================] - 313s 1s/step - loss: 0.3461 - accuracy: 0.6809 - val_loss: 0.3137 - val_accuracy: 0.7191
+----
+
+*Precisión en entrenamiento:* 68%
+
+*Mejor precisión en prueba:* 74%
+
+=== EfficientNetV2M
+
+Debido a la complejidad inherente de esta variante y el tiempo que requiere para cada época de entrenamiento, decidimos limitar el entrenamiento a solo 5 épocas.
+
+[source, python]
+----
+Epoch 1/5
+275/275 [==============================] - 571s 2s/step - loss: 0.5699 - accuracy: 0.2602 - val_loss: 0.5601 - val_accuracy: 0.2695
+Epoch 2/5
+275/275 [==============================] - 539s 2s/step - loss: 0.5640 - accuracy: 0.2794 - val_loss: 0.5550 - val_accuracy: 0.3786
+Epoch 3/5
+275/275 [==============================] - 548s 2s/step - loss: 0.5589 - accuracy: 0.3068 - val_loss: 0.5503 - val_accuracy: 0.3241
+Epoch 4/5
+275/275 [==============================] - 560s 2s/step - loss: 0.5553 - accuracy: 0.3228 - val_loss: 0.5451 - val_accuracy: 0.3618
+Epoch 5/5
+275/275 [==============================] - 563s 2s/step - loss: 0.5516 - accuracy: 0.3313 - val_loss: 0.5425 - val_accuracy: 0.3109
+----
+
+*Precisión en entrenamiento:* 33%
+
+*Mejor precisión en prueba:* 37%
+
+=== EfficientNetV2L
+
+De manera similar a lo que hicimos con la variante anterior, decidimos llevar a cabo un entrenamiento de solo 2 épocas para esta variante. Esta elección se basó en las mismas consideraciones de eficiencia y recursos que mencionamos previamente.
+
+[source, python]
+----
+Epoch 1/2
+275/275 [==============================] - 1138s 4s/step - loss: 0.5458 - accuracy: 0.3595 - val_loss: 0.5087 - val_accuracy: 0.4677
+Epoch 2/2
+275/275 [==============================] - 1120s 4s/step - loss: 0.5204 - accuracy: 0.4222 - val_loss: 0.4832 - val_accuracy: 0.4823
+----
+
+*Precisión en entrenamiento:* 42%
+
+*Mejor precisión en prueba:* 48%
