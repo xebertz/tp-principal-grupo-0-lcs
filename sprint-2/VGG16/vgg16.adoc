@@ -47,14 +47,12 @@ El modelo empezó a permitir su entrenamiento, pero surgió otro problema: no el
 
 Con dos vueltas de entrenamiento, obtuvimos los siguientes resultados en las métricas:
 
-[source, python]
+[source, console]
 ----
-25/25 [==============================] - 59s 2s/step
-Cantidad de predicciones: 800
-Etiquetas:   [G,  M,  P,  N]
-Total:       [196, 190, 230, 184]
-Correctas:   [154, 137, 182, 155]
-Incorrectas: [42, 53, 48, 29]
+Epoch 1/20
+100/100 [==============================] - 297s 3s/step - loss: 1.3319 - categorical_accuracy: 0.4469 - val_loss: 1.2102 - val_categorical_accuracy: 0.5750
+Epoch 2/20
+100/100 [==============================] - 293s 3s/step - loss: 1.1207 - categorical_accuracy: 0.6547 - val_loss: 1.0460 - val_categorical_accuracy: 0.6875
 ----
 
 Y, con respecto a las imágenes de prueba, obtuvimos los siguientes resultados:
@@ -68,9 +66,9 @@ Correctas:   [149, 92, 149, 142]
 Incorrectas: [78, 47, 67, 76]
 ----
 
-Se puede ver que, a pesar de las pocas imágenes de prueba, el modelo predecía bien al menos el 50% de las imágenes. Esto es una mejora con respecto al 25% previo.
+Se puede ver que, a pesar de las pocas imágenes de prueba, el modelo predecía bien al menos el 50% de las imágenes. Esto es una mejora con respecto al 25% previo. También, se ve que la precisión tiende a subir, y el nivel de error tiende a bajar.
 
-Luego, se entrenó el modelo con diez vueltas de entrenamiento. Este entrenamiento se completó en 50 minutos. El resultado en cuanto a sus métricas fue el siguiente:
+Por este motivo, se entrenó el modelo con diez vueltas de entrenamiento. Este entrenamiento se completó en 50 minutos. El resultado en cuanto a sus métricas fue el siguiente:
 
 [source, console]
 ----
