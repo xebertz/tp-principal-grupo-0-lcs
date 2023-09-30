@@ -45,7 +45,19 @@ Estas imágenes fueron mezcladas previamente, para que el modelo no reciba bloqu
 
 El modelo empezó a permitir su entrenamiento, pero surgió otro problema: no elevaba su precisión. La precisión máxima que tenía era del 25%, lo que no es ideal. Por esto, decidimos ajustar los hiperparámetros del modelo, de forma que aumente su precisión. Lo "descongelamos", le agregamos capas, le sacamos capas, y probamos distintas combinaciones de todo esto. Finalmente, llegamos a la versión presentada anteriormente.
 
-Con dos vueltas de entrenamiento, obtuvimos los siguientes resultados en las imágenes de prueba:
+Con dos vueltas de entrenamiento, obtuvimos los siguientes resultados en las métricas:
+
+[source, python]
+----
+25/25 [==============================] - 59s 2s/step
+Cantidad de predicciones: 800
+Etiquetas:   [G,  M,  P,  N]
+Total:       [196, 190, 230, 184]
+Correctas:   [154, 137, 182, 155]
+Incorrectas: [42, 53, 48, 29]
+----
+
+Y, con respecto a las imágenes de prueba, obtuvimos los siguientes resultados:
 
 [source, console]
 ----
