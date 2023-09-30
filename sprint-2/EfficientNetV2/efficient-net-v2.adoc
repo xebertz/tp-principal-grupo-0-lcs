@@ -28,7 +28,7 @@ Esta nueva versión de EfficientNet se presenta en múltiples variantes, cada un
 
 == Entrenamiento y prueba
 
-Hemos evaluado todas las variantes del modelo utilizando un conjunto de datos que creamos nosotros mismos y que consta de 44,000 imágenes. Sin embargo, decidimos trabajar solo con 11,000 de estas imágenes. De ese total, 8,800 imágenes se utilizaron para el conjunto de entrenamiento, mientras que las 2,200 restantes se reservaron para las pruebas.
+Hemos evaluado todas las variantes del modelo utilizando un https://www.kaggle.com/datasets/gonzajl/tumores-cerebrales-mri-dataset/data[dataset] que creamos nosotros mismos y que consta de 44,000 imágenes. Sin embargo, decidimos trabajar solo con 11,000 de estas imágenes. De ese total, 8,800 imágenes se utilizaron para el conjunto de entrenamiento, mientras que las 2,200 restantes se reservaron para las pruebas.
 
 La elección de limitar el conjunto de datos a este tamaño se debió a las restricciones de nuestros recursos computacionales y a la complejidad inherente del modelo preentrenado que estábamos empleando. Cuando intentamos utilizar un conjunto de datos más grande, nos encontramos con errores durante la ejecución de algunas secciones del código. Por lo tanto, decidimos optar por esta configuración más manejable que nos permitió llevar a cabo nuestras evaluaciones de manera efectiva.
 
