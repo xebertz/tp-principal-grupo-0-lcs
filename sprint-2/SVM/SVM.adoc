@@ -12,4 +12,8 @@ v1, {docdate}
 
 == Modelo
 
-menem
+Las máquinas de soporte vectorial (SVM) son un tipo de modelo de aprendizaje supervisado utilizado tanto para problemas de clasificación como para regresión.
+
+Las SVM son inherentemente para dominios binarios, es decir, problemas de clasificación donde es o no es. Por ejemplo: un modelo para clasificar imágenes donde pueden ser una banana o no serlo.
+
+Para su uso se utiliza la libreria _sklearn_.
