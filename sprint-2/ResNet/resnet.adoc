@@ -1,0 +1,71 @@
+= ResNet
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== ¿Qué es ResNet?
+
+ResNet, que es la abreviatura de "Redes Residuales" (en inglés, "Residual Networks"), es una arquitectura de red neuronal profunda que se utiliza comúnmente en el campo de la visión por computadora y el procesamiento de imágenes.
+
+La arquitectura ResNet ha demostrado ser muy efectiva en tareas de clasificación de imágenes, detección de objetos, segmentación semántica y otras tareas relacionadas con el procesamiento de imágenes. Ha establecido récords en varios conjuntos de datos de referencia y se ha convertido en una base importante para muchas aplicaciones de visión por computadora.
+
+== Variantes
+
+La arquitectura ResNet ha dado lugar a una serie de variantes. A continuación, se presentan dos de las variantes más conocidas:
+
+- ResNet50: es una de las variantes más populares de la arquitectura ResNet. Se caracteriza por su profundidad, constando de 50 capas en total. Utiliza conexiones residuales y bloques básicos de construcción, que incluyen dos capas de convolución seguidas de una capa de Batch Normalization (normalización por lotes) y una función de activación ReLU.
+
+- ResNet50V2: es una versión mejorada de ResNet50 que aborda algunas limitaciones y desafíos en el entrenamiento de redes profundas. La principal diferencia radica en la forma en que se aplica la normalización por lotes (Batch Normalization) en los bloques residuales; en ResNet50V2, la normalización por lotes se aplica antes de la activación, lo que se conoce como "pre-activación". Además, esta variante utiliza una estructura de bloques residuales ligeramente diferente, lo que reduce la cantidad de parámetros y mejora la eficiencia del modelo. ResNet50V2 ha demostrado ser más fácil de entrenar y generalmente logra resultados similares o mejores que ResNet50 en términos de precisión de clasificación.
+
+== Entrenamiento y prueba
+
+Hemos evaluado el modelo utilizando un https://www.kaggle.com/datasets/gonzajl/tumores-cerebrales-mri-dataset/data[dataset] que creamos nosotros mismos y que consta de 44,000 imágenes. Sin embargo, decidimos trabajar solo con 11,000 de estas imágenes. De ese total, 8,800 imágenes se utilizaron para el conjunto de entrenamiento, mientras que las 2,200 restantes se reservaron para las pruebas.
+
+La elección de limitar el conjunto de datos a este tamaño se debió a las restricciones de nuestros recursos computacionales y a la complejidad inherente del modelo preentrenado que estábamos empleando. Cuando intentamos utilizar un conjunto de datos más grande, nos encontramos con errores durante la ejecución de algunas secciones del código. Por lo tanto, decidimos optar por esta configuración más manejable que nos permitió llevar a cabo nuestras evaluaciones de manera efectiva.
+
+== Resultados
+
+=== ResNet50
+
+image::imgs/resnet50.png[]
+
+*Precisión en entrenamiento:* 65%
+
+*Precisión en prueba:* 70%
+
+.Prueba de predicciones
+[source, python]
+----
+69/69 [==============================] - 67s 955ms/step
+Cantidad de predicciones: 2200
+Etiquetas:   [G,  M,  P,  N]
+Total:       [520, 367, 655, 658]
+Correctas:   [322, 237, 493, 506]
+Incorrectas: [198, 130, 162, 152]
+----
+
+=== ResNet50V2
+
+image::imgs/resnet50v2.png[]
+
+*Precisión en entrenamiento:* 98%
+
+*Precisión en prueba:* 93%
+
+.Prueba de predicciones
+[source, python]
+----
+69/69 [==============================] - 45s 654ms/step
+Cantidad de predicciones: 2200
+Etiquetas:   [G,  M,  P,  N]
+Total:       [507, 602, 539, 552]
+Correctas:   [482, 516, 516, 543]
+Incorrectas: [25, 86, 23, 9]
+----
