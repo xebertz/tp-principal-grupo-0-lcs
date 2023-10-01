@@ -143,12 +143,12 @@ Y, en el testing, se obtuvo lo siguiente:
 
 [source, console]
 ----
-100/100 [==============================] - 104s 1s/step
+100/100 [==============================] - 103s 1s/step
 Cantidad de predicciones: 3200
 Etiquetas:   [G,  M,  P,  N]
-Total:       [768, 762, 827, 843]
-Correctas:   [690, 644, 754, 800]
-Incorrectas: [78, 118, 73, 43]
+Total:       [724, 835, 825, 816]
+Correctas:   [661, 707, 750, 763]
+Incorrectas: [63, 128, 75, 53]
 ----
 
 Esto es, aproximadamente, un 89% de precisión. Este nivel de precisión es lo suficientemente alto para ser utilizado en nuestro contexto. Las métricas determinan que el modelo aprende consistentemente, y tiende a reducir su nivel de error, aumentando su nivel de precisión.
