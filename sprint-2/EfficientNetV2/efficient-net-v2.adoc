@@ -308,16 +308,26 @@ Epoch 5/5
 
 === EfficientNetV2L
 
-De manera similar a lo que hicimos con la variante anterior, decidimos llevar a cabo un entrenamiento de solo 2 épocas para esta variante. Esta elección se basó en las mismas consideraciones de eficiencia y recursos que mencionamos previamente.
+De igual forma a lo que hicimos con la variante anterior, decidimos llevar a cabo un entrenamiento de solo 5 épocas para esta variante.
 
 [source, python]
 ----
-Epoch 1/2
-275/275 [==============================] - 1138s 4s/step - loss: 0.5458 - accuracy: 0.3595 - val_loss: 0.5087 - val_accuracy: 0.4677
-Epoch 2/2
-275/275 [==============================] - 1120s 4s/step - loss: 0.5204 - accuracy: 0.4222 - val_loss: 0.4832 - val_accuracy: 0.4823
+Epoch 1/5
+275/275 [==============================] - 1133s 4s/step - loss: 0.5490 - accuracy: 0.3542 - val_loss: 0.5270 - val_accuracy: 0.4145
+Epoch 2/5
+275/275 [==============================] - 1093s 4s/step - loss: 0.5186 - accuracy: 0.4242 - val_loss: 0.4893 - val_accuracy: 0.4723
+Epoch 3/5
+275/275 [==============================] - 1089s 4s/step - loss: 0.5005 - accuracy: 0.4492 - val_loss: 0.4768 - val_accuracy: 0.4941
+Epoch 4/5
+275/275 [==============================] - 1102s 4s/step - loss: 0.4898 - accuracy: 0.4694 - val_loss: 0.4649 - val_accuracy: 0.4905
+Epoch 5/5
+275/275 [==============================] - 1088s 4s/step - loss: 0.4815 - accuracy: 0.4774 - val_loss: 0.4639 - val_accuracy: 0.5041
 ----
 
 *Precisión en entrenamiento:* 42%
 
 *Mejor precisión en prueba:* 48%
+
+== Variante óptima
+
+Como se puede apreciar en los resultados, la variante que destacó por su excelente desempeño en comparación con las demás, tanto en el conjunto de entrenamiento como en el de prueba, fue EfficientNetV2S. Esta variante logró una precisión del 68% en el conjunto de entrenamiento, y su máximo porcentaje en la prueba alcanzó un 74%.
