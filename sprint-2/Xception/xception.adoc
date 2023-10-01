@@ -38,7 +38,9 @@ outputs = keras.layers.Dense(4, activation='softmax')(x)
 model = keras.Model(inputs, outputs)
 ----
 
-Con 1000 imágenes por clase, provenientes de nuestro https://www.kaggle.com/datasets/gonzajl/tumores-cerebrales-mri-dataset/data[dataset], y 5 vueltas de entrenamiento, se obtuvieron las siguientes métricas:
+Se leyeron 1000 imágenes por clase, y el total se separaró en dos conjuntos: _validación_, correspondiente a un 20% de la información total; y _pruebas_ correspondiente al 80% restante. Las imágenes son provenientes de nuestro https://www.kaggle.com/datasets/gonzajl/tumores-cerebrales-mri-dataset/data[dataset].
+
+En principio, probamos con 5 vueltas de entrenamiento, y se obtuvieron las siguientes métricas:
 
 [source, console]
 ----
@@ -54,6 +56,8 @@ Epoch 5/5
 100/100 [==============================] - 131s 1s/step - loss: 0.2807 - categorical_accuracy: 0.9222 - val_loss: 0.2928 - val_categorical_accuracy: 0.9137
 ----
 
+Las métricas `categorical_accuracy` y `val_categorical_accuracy` nos indican la precisión de las predicciones durante el entrenamiento y la validación; y `loss` y `val_loss` nos indican la pérdida del modelo durante el entrenamiento y la validación. Si las métricas de precisión y las métricas de pérdida son similares, quiere decir que el modelo aumenta o disminuye su capacidad de manera pareja, y no se está amoldando a las imágenes de prueba para poder predecir solo éstas. 
+
 En las pruebas, con las imágenes de test, se obtuvo lo siguiente:
 
 [source, console]
@@ -66,9 +70,9 @@ Correctas:   [174, 189, 182, 186]
 Incorrectas: [16, 28, 10, 15]
 ----
 
-Esto es aproximadamente un 90% de precisión en las pruebas.
+Esto es aproximadamente un 90% de precisión en las pruebas, lo cual es un excelente resultado. Sin embargo, la cantidad de imágenes utilizadas es baja.
 
-Debido a los buenos resultados, decidimos realizar un segundo entrenamiento, esta vez con 8000 imágenes por clase. Sin embargo, este entrenamiento no se pudo realizar debido a la cantidad de imágenes. Por este motivo, entrenamos al modelo con 4000 imágenes por clase, y nuevamente 5 epochs. Los resultados en cuanto a métricas fueron los siguientes:
+Debido a los buenos resultados, decidimos realizar un segundo entrenamiento, esta vez con 8000 imágenes por clase. Sin embargo, este entrenamiento no se pudo realizar debido a la gran cantidad de imágenes. Por este motivo, entrenamos al modelo con 4000 imágenes por clase (también divididaas en dos conjuntos), y nuevamente 5 epochs. Los resultados en cuanto a métricas fueron los siguientes:
 
 [source, console]
 ----
@@ -90,7 +94,7 @@ Se puede ver que el modelo mantiene los niveles altos de precisión y bajos en c
 2023-10-01 18:04:11.825033: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 7707033600 exceeds 10% of free system memory.
 ----
 
-Lo que indica que el entrenamiento no se puede realizar con más imágenes que estas, ya que hay un exceso de recursos.
+Este mensaje indica que el entrenamiento no se puede realizar con más imágenes que estas, ya que hay un exceso de recursos.
 
 En la etapa de testing, los resultados fueron los siguientes:
 
@@ -104,9 +108,9 @@ Correctas:   [649, 609, 775, 781]
 Incorrectas: [85, 125, 105, 71]
 ----
 
-Lo que es, aproximadamente, un 87% de precisión en las pruebas.
+Lo que es, aproximadamente, un 87% de precisión en las pruebas. Nuevamente, pensamos en aumentar la cantidad de datos con los que se entrena, para una mejor precisión.
 
-Debido al buen rendimiento del modelo, realizamos un tercer entrenamiento de 10 epochs y la misma cantidad de imágenes.
+Posteriormente, realizamos un tercer entrenamiento de 10 vueltas y la misma cantidad de imágenes.
 
 El entrenamiento duró 50 minutos, y las métricas obtenidas fueron las siguientes:
 
@@ -147,10 +151,21 @@ Correctas:   [690, 644, 754, 800]
 Incorrectas: [78, 118, 73, 43]
 ----
 
-Esto es, aproximadamente, un 89% de precisión.
+Esto es, aproximadamente, un 89% de precisión. Este nivel de precisión es lo suficientemente alto para ser utilizado en nuestro contexto. Las métricas determinan que el modelo aprende consistentemente, y tiende a reducir su nivel de error, aumentando su nivel de precisión.
 
-Luego, se llevaron a cabo entrenamientos con la misma cantidad de imágenes, pero modificando los hiperparámetros del modelo. Estos no arrojaron resultados significativos.
+Con la finalidad de obtener un modelo con resultados incluso mejores, se llevaron a cabo entrenamientos con la misma cantidad de imágenes, pero modificando los hiperparámetros del modelo. Estos no arrojaron resultados significativos.
+
+Por lo tanto, determinamos que la arquitectura definida de Xception con 4000 imágemes por clase es la que más se ajusta a nuestro caso de uso. Se puede ver que su nivel de precisión, es de más de 90%, y su nivel de pérdida es menor a 45%. Estas métricas son excelentes en general, en cuanto a modelos de IA. 
+
+.niveles de precisión y pérdida
+[cols="a,a", frame=none, grid=none, role=right]
+|===
+|   image::imgs/precision-xception.png[200, 350, align="center"]
+|   image::imgs/perdida-xception.png[200, 330, align="center"]
+|===
+
+Creemos que se puede mejorar incluso más, aumentando la cantidad de vueltas de entrenamiento.
 
 == Conclusión
 
-Xception es un modelo que tiene un alto nivel de precisión, y se puede entrenar con muchas imágenes en relativamente poco tiempo. Por este motivo, será tomado en cuenta durante la evaluación del modelo final.
+Xception es un modelo que tiene un alto nivel de precisión para nuestro _dataset_, y se puede entrenar con muchas imágenes en relativamente poco tiempo. Por este motivo, será tomado en cuenta durante la evaluación del modelo final en su versión entrenada con 4000 imágenes por clase.
