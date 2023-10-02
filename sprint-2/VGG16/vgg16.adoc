@@ -14,7 +14,11 @@ v1, {docdate}
 
 El modelo VGG16 es un modelo preentrenado de la librería *Keras* que cuenta con 16 capas.
 
-Para utilizarlo, importamos el modelo y le añadimos una capa de _input_, para que se adapte a nuestras imágenes, una capa de _pooling_, y una capa de _output_.
+Para utilizarlo, importamos el modelo y le añadimos una capa de _input_, para que se adapte a nuestras imágenes, una capa de _pooling_, y una capa de _output_. El modelo fue _freezado_, es decir, se mantuvieron los pesos que obtuvo durante el entrenamiento con el dataset _imagenet_, para utilizar la técnica _transfer learning_.
+
+== Entrenamiento
+
+El modelo utilizado es el siguiente:
 
 [source, python]
 ----
@@ -33,9 +37,7 @@ outputs = keras.layers.Dense(4, activation='softmax')(x)
 model = keras.Model(inputs, outputs)
 ----
 
-El modelo fue _freezado_, es decir, se mantuvieron los pesos que obtuvo durante el entrenamiento con el dataset _imagenet_, para utilizar la técnica _transfer learning_.
-
-== Entrenamiento
+Que corresponde a un modelo VGG16 con leves modificaciones en cuanto a _inputs_ y _outputs_.
 
 El primer problema que surgió durante el entrenamiento es que el modelo es demasiado lento. Nuestro https://www.kaggle.com/datasets/gonzajl/tumores-cerebrales-mri-dataset/data[dataset] cuenta con 44000 imágenes, por lo que utilizar todas las imágenes fue imposible.
 
@@ -55,7 +57,9 @@ Epoch 2/20
 100/100 [==============================] - 293s 3s/step - loss: 1.1207 - categorical_accuracy: 0.6547 - val_loss: 1.0460 - val_categorical_accuracy: 0.6875
 ----
 
-Y, con respecto a las imágenes de prueba, obtuvimos los siguientes resultados:
+Las métricas `categorical_accuracy` y `val_categorical_accuracy` nos indican la precisión de las predicciones durante el entrenamiento y la validación; y `loss` y `val_loss` nos indican la pérdida del modelo durante el entrenamiento y la validación. Si las métricas de precisión y las métricas de pérdida son similares, quiere decir que el modelo aumenta o disminuye su capacidad de manera pareja, y no se está amoldando a las imágenes de prueba para poder predecir solo éstas. En este caso, se ve que ambos pares de etiquetas son similares, y aumentan o disminuyen casi en igual medida.
+
+Con respecto a las imágenes de prueba, obtuvimos los siguientes resultados:
 
 [source, console]
 ----
@@ -148,7 +152,7 @@ Epoch 20/20
 
 Se ve que la pérdida pasó de 0.6208 a 0.5060, y que la eficacia pasí de 0.8078 a 0.8494. Esto es una mejora significativa, y son los mejores resultados obtenidos hasta el momento. Sin embargo, el entrenamiento sigue siendo lento. En esta ocasión, el entrenamiento demoró 1h 45m.
 
-El resultaod obtenido evaluando las imágenes de prueba fue el siguiente:
+El resultados obtenidos evaluando las imágenes de prueba fue el siguiente:
 
 [source, console]
 ----

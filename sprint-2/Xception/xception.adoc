@@ -1,0 +1,171 @@
+= Modelo Xception: Entrenamiento y pruebas
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== Modelo
+
+El modelo Xception es una versión de _Inception V3_ con una ligera mejoría en cuanto a su eficacia, debido a que fue construida utilizando capas convolucionales separables en profundidad. Esto implica que la cantidad de parámetros de cada capa se reduce, por lo que el modelo se entrena más rápido.
+
+Para utilizarlo, importamos el modelo y le añadimos una capa de _input_, para que se adapte a nuestras imágenes, una capa de _pooling_, y una capa de _output_. El modelo fue _freezado_, es decir, se mantuvieron los pesos que obtuvo durante el entrenamiento con el dataset _imagenet_, para utilizar la técnica _transfer learning_.
+
+== Entrenamiento
+
+El primer entrenamiento se llevó a cabo con el siguiente modelo:
+
+[source, python]
+----
+xception = tf.keras.applications.xception.Xception(
+    include_top=False,
+    weights='imagenet',
+    input_shape=(224, 224, 3),
+)
+
+xception.trainable = False
+
+inputs = keras.Input(shape=(224, 224, 3))
+x = xception(inputs, training=False)
+
+x = keras.layers.GlobalAveragePooling2D()(x)
+outputs = keras.layers.Dense(4, activation='softmax')(x)
+model = keras.Model(inputs, outputs)
+----
+
+Se leyeron 1000 imágenes por clase, y el total se separaró en dos conjuntos: _validación_, correspondiente a un 20% de la información total; y _pruebas_ correspondiente al 80% restante. Las imágenes son provenientes de nuestro https://www.kaggle.com/datasets/gonzajl/tumores-cerebrales-mri-dataset/data[dataset].
+
+En principio, probamos con 5 vueltas de entrenamiento, y se obtuvieron las siguientes métricas:
+
+[source, console]
+----
+Epoch 1/5
+100/100 [==============================] - 132s 1s/step - loss: 0.7579 - categorical_accuracy: 0.7234 - val_loss: 0.5550 - val_categorical_accuracy: 0.8325
+Epoch 2/5
+100/100 [==============================] - 129s 1s/step - loss: 0.4688 - categorical_accuracy: 0.8594 - val_loss: 0.4192 - val_categorical_accuracy: 0.8800
+Epoch 3/5
+100/100 [==============================] - 130s 1s/step - loss: 0.3737 - categorical_accuracy: 0.8903 - val_loss: 0.3655 - val_categorical_accuracy: 0.8850
+Epoch 4/5
+100/100 [==============================] - 128s 1s/step - loss: 0.3211 - categorical_accuracy: 0.9131 - val_loss: 0.3336 - val_categorical_accuracy: 0.8963
+Epoch 5/5
+100/100 [==============================] - 131s 1s/step - loss: 0.2807 - categorical_accuracy: 0.9222 - val_loss: 0.2928 - val_categorical_accuracy: 0.9137
+----
+
+Las métricas `categorical_accuracy` y `val_categorical_accuracy` nos indican la precisión de las predicciones durante el entrenamiento y la validación; y `loss` y `val_loss` nos indican la pérdida del modelo durante el entrenamiento y la validación. Si las métricas de precisión y las métricas de pérdida son similares, quiere decir que el modelo aumenta o disminuye su capacidad de manera pareja, y no se está amoldando a las imágenes de prueba para poder predecir solo éstas. 
+
+En las pruebas, con las imágenes de test, se obtuvo lo siguiente:
+
+[source, console]
+----
+25/25 [==============================] - 27s 1s/step
+Cantidad de predicciones: 800
+Etiquetas:   [G,  M,  P,  N]
+Total:       [190, 217, 192, 201]
+Correctas:   [174, 189, 182, 186]
+Incorrectas: [16, 28, 10, 15]
+----
+
+Esto es aproximadamente un 90% de precisión en las pruebas, lo cual es un excelente resultado. Sin embargo, la cantidad de imágenes utilizadas es baja.
+
+Debido a los buenos resultados, decidimos realizar un segundo entrenamiento, esta vez con 8000 imágenes por clase. Sin embargo, este entrenamiento no se pudo realizar debido a la gran cantidad de imágenes. Por este motivo, entrenamos al modelo con 4000 imágenes por clase (también divididaas en dos conjuntos), y nuevamente 5 epochs. Los resultados en cuanto a métricas fueron los siguientes:
+
+[source, console]
+----
+400/400 [==============================] - 517s 1s/step - loss: 0.6591 - categorical_accuracy: 0.7602 - val_loss: 0.5092 - val_categorical_accuracy: 0.8175
+Epoch 2/5
+400/400 [==============================] - 510s 1s/step - loss: 0.4582 - categorical_accuracy: 0.8416 - val_loss: 0.4384 - val_categorical_accuracy: 0.8444
+Epoch 3/5
+400/400 [==============================] - 507s 1s/step - loss: 0.3935 - categorical_accuracy: 0.8640 - val_loss: 0.4033 - val_categorical_accuracy: 0.8547
+Epoch 4/5
+400/400 [==============================] - 508s 1s/step - loss: 0.3515 - categorical_accuracy: 0.8819 - val_loss: 0.3610 - val_categorical_accuracy: 0.8734
+Epoch 5/5
+400/400 [==============================] - 509s 1s/step - loss: 0.3211 - categorical_accuracy: 0.8939 - val_loss: 0.3371 - val_categorical_accuracy: 0.8794
+----
+
+Se puede ver que el modelo mantiene los niveles altos de precisión y bajos en cuanto a nivel de error. Sin embargo, se mostró el siguiente mensaje:
+
+[source, console]
+----
+2023-10-01 18:04:11.825033: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 7707033600 exceeds 10% of free system memory.
+----
+
+Este mensaje indica que el entrenamiento no se puede realizar con más imágenes que estas, ya que hay un exceso de recursos.
+
+En la etapa de testing, los resultados fueron los siguientes:
+
+[source, console]
+----
+100/100 [==============================] - 102s 1s/step
+Cantidad de predicciones: 3200
+Etiquetas:   [G,  M,  P,  N]
+Total:       [734, 734, 880, 852]
+Correctas:   [649, 609, 775, 781]
+Incorrectas: [85, 125, 105, 71]
+----
+
+Lo que es, aproximadamente, un 87% de precisión en las pruebas. Nuevamente, pensamos en aumentar la cantidad de datos con los que se entrena, para una mejor precisión.
+
+Posteriormente, realizamos un tercer entrenamiento de 10 vueltas y la misma cantidad de imágenes.
+
+El entrenamiento duró 50 minutos, y las métricas obtenidas fueron las siguientes:
+
+[source, console]
+----
+Epoch 1/10
+2023-10-01 18:04:11.825033: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 7707033600 exceeds 10% of free system memory.
+400/400 [==============================] - 520s 1s/step - loss: 0.6705 - categorical_accuracy: 0.7545 - val_loss: 0.5035 - val_categorical_accuracy: 0.8322
+Epoch 2/10
+400/400 [==============================] - 517s 1s/step - loss: 0.4615 - categorical_accuracy: 0.8381 - val_loss: 0.4229 - val_categorical_accuracy: 0.8512
+Epoch 3/10
+400/400 [==============================] - 522s 1s/step - loss: 0.3948 - categorical_accuracy: 0.8666 - val_loss: 0.3858 - val_categorical_accuracy: 0.8687
+Epoch 4/10
+400/400 [==============================] - 521s 1s/step - loss: 0.3568 - categorical_accuracy: 0.8805 - val_loss: 0.3533 - val_categorical_accuracy: 0.8716
+Epoch 5/10
+400/400 [==============================] - 517s 1s/step - loss: 0.3246 - categorical_accuracy: 0.8898 - val_loss: 0.3326 - val_categorical_accuracy: 0.8847
+Epoch 6/10
+400/400 [==============================] - 518s 1s/step - loss: 0.3024 - categorical_accuracy: 0.9008 - val_loss: 0.3233 - val_categorical_accuracy: 0.8884
+Epoch 7/10
+400/400 [==============================] - 525s 1s/step - loss: 0.2818 - categorical_accuracy: 0.9063 - val_loss: 0.3028 - val_categorical_accuracy: 0.8944
+Epoch 8/10
+400/400 [==============================] - 528s 1s/step - loss: 0.2669 - categorical_accuracy: 0.9093 - val_loss: 0.2988 - val_categorical_accuracy: 0.8938
+Epoch 9/10
+400/400 [==============================] - 523s 1s/step - loss: 0.2515 - categorical_accuracy: 0.9177 - val_loss: 0.2971 - val_categorical_accuracy: 0.8981
+Epoch 10/10
+400/400 [==============================] - 521s 1s/step - loss: 0.2389 - categorical_accuracy: 0.9232 - val_loss: 0.2779 - val_categorical_accuracy: 0.9025
+----
+
+Y, en el testing, se obtuvo lo siguiente:
+
+[source, console]
+----
+100/100 [==============================] - 103s 1s/step
+Cantidad de predicciones: 3200
+Etiquetas:   [G,  M,  P,  N]
+Total:       [724, 835, 825, 816]
+Correctas:   [661, 707, 750, 763]
+Incorrectas: [63, 128, 75, 53]
+----
+
+Esto es, aproximadamente, un 89% de precisión. Este nivel de precisión es lo suficientemente alto para ser utilizado en nuestro contexto. Las métricas determinan que el modelo aprende consistentemente, y tiende a reducir su nivel de error, aumentando su nivel de precisión.
+
+Con la finalidad de obtener un modelo con resultados incluso mejores, se llevaron a cabo entrenamientos con la misma cantidad de imágenes, pero modificando los hiperparámetros del modelo. Estos no arrojaron resultados significativos.
+
+Por lo tanto, determinamos que la arquitectura definida de Xception con 4000 imágemes por clase es la que más se ajusta a nuestro caso de uso. Se puede ver que su nivel de precisión, es de más de 90%, y su nivel de pérdida es menor a 45%. Estas métricas son excelentes en general, en cuanto a modelos de IA. 
+
+.niveles de precisión y pérdida
+[cols="a,a", frame=none, grid=none, role=right]
+|===
+|   image::imgs/precision-xception.png[200, 350, align="center"]
+|   image::imgs/perdida-xception.png[200, 330, align="center"]
+|===
+
+Creemos que se puede mejorar incluso más, aumentando la cantidad de vueltas de entrenamiento.
+
+== Conclusión
+
+Xception es un modelo que tiene un alto nivel de precisión para nuestro _dataset_, y se puede entrenar con muchas imágenes en relativamente poco tiempo. Por este motivo, será tomado en cuenta durante la evaluación del modelo final en su versión entrenada con 4000 imágenes por clase.
