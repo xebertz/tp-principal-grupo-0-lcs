@@ -18,11 +18,15 @@ La arquitectura ResNet ha demostrado ser muy efectiva en tareas de clasificació
 
 == Variantes
 
-La arquitectura ResNet ha dado lugar a una serie de variantes. A continuación, se presentan dos de las variantes más conocidas:
+La arquitectura ResNet ha dado lugar a una serie de variantes. A continuación, se presentan algunas de las variantes más conocidas:
 
-- ResNet50: es una de las variantes más populares de la arquitectura ResNet. Se caracteriza por su profundidad, constando de 50 capas en total. Utiliza conexiones residuales y bloques básicos de construcción, que incluyen dos capas de convolución seguidas de una capa de Batch Normalization (normalización por lotes) y una función de activación ReLU.
+- ResNet50: Una de las variantes más populares de la arquitectura ResNet. Se caracteriza por su profundidad, constando de 50 capas en total. Utiliza conexiones residuales y bloques básicos de construcción, que incluyen dos capas de convolución seguidas de una capa de Batch Normalization (normalización por lotes) y una función de activación ReLU.
 
-- ResNet50V2: es una versión mejorada de ResNet50 que aborda algunas limitaciones y desafíos en el entrenamiento de redes profundas. La principal diferencia radica en la forma en que se aplica la normalización por lotes (Batch Normalization) en los bloques residuales; en ResNet50V2, la normalización por lotes se aplica antes de la activación, lo que se conoce como "pre-activación". Además, esta variante utiliza una estructura de bloques residuales ligeramente diferente, lo que reduce la cantidad de parámetros y mejora la eficiencia del modelo. ResNet50V2 ha demostrado ser más fácil de entrenar y generalmente logra resultados similares o mejores que ResNet50 en términos de precisión de clasificación.
+- ResNet50V2: Una versión mejorada de ResNet50 que aborda algunas limitaciones y desafíos en el entrenamiento de redes profundas. La principal diferencia radica en la forma en que se aplica la normalización por lotes (Batch Normalization) en los bloques residuales; en ResNet50V2, la normalización por lotes se aplica antes de la activación, lo que se conoce como "pre-activación". Además, esta variante utiliza una estructura de bloques residuales ligeramente diferente, lo que reduce la cantidad de parámetros y mejora la eficiencia del modelo. ResNet50V2 ha demostrado ser más fácil de entrenar y generalmente logra resultados similares o mejores que ResNet50 en términos de precisión de clasificación.
+
+- ResNet152: Una variante profunda de ResNet con 152 capas, utilizada en tareas de visión por computadora en las que se requiere una gran capacidad de representación.
+
+- ResNet152V2: Una versión mejorada de ResNet152 que implementa la normalización por lotes antes de la activación y reduce el número de parámetros para facilitar el entrenamiento y mejorar la eficiencia del modelo.
 
 == Entrenamiento y prueba
 
@@ -69,3 +73,45 @@ Total:       [507, 602, 539, 552]
 Correctas:   [482, 516, 516, 543]
 Incorrectas: [25, 86, 23, 9]
 ----
+
+=== ResNet152
+
+image::imgs/resnet152.png[]
+
+*Precisión en entrenamiento:* 60%
+
+*Precisión en prueba:* 59%
+
+.Prueba de predicciones
+[source, python]
+----
+69/69 [==============================] - 153s 2s/step
+Cantidad de predicciones: 2200
+Etiquetas:   [G,  M,  P,  N]
+Total:       [565, 442, 707, 486]
+Correctas:   [312, 243, 393, 367]
+Incorrectas: [253, 199, 314, 119]
+----
+
+=== ResNet152V2
+
+image::imgs/resnet152v2.png[]
+
+*Precisión en entrenamiento:* 91%
+
+*Precisión en prueba:* 90%
+
+.Prueba de predicciones
+[source, python]
+----
+69/69 [==============================] - 140s 2s/step
+Cantidad de predicciones: 2200
+Etiquetas:   [G,  M,  P,  N]
+Total:       [527, 512, 601, 560]
+Correctas:   [475, 444, 552, 526]
+Incorrectas: [52, 68, 49, 34]
+----
+
+== Variante óptima
+
+Los resultados destacan claramente que la variante que sobresalió por su excelente rendimiento, tanto en el conjunto de entrenamiento como en el de prueba, fue ResNet50V2. Esta variante logró una precisión del 98% en el conjunto de entrenamiento y un impresionante 93% en el conjunto de prueba.
