@@ -61,11 +61,90 @@ Es importante destacar que para mostrar la imagen *no* se debe utilizar el méto
 [source, python]
 ----
 plt.xticks([])
-    plt.yticks([])
-    plt.imshow(image)
-    plt.show()
+plt.yticks([])
+plt.imshow(image)
+plt.show()
 ----
 
+Luego, esto se probó con tres imágenes por clase de nuestro dataset.
 
+Partimos desde la base de los siguientes parámetros:
+
+[source, python]
+----
+cv2.HoughCircles(image, cv2.HOUGH_GRADIENT, 1, 1, param1=1, param2=1, minRadius=1, maxRadius=10)
+----
+
+Y, después de diversas pruebas, llegamos a la conclusión de que los siguientes parámetros son los mejores para la función
+
+[source, python]
+----
+cv2.HoughCircles(image, cv2.HOUGH_GRADIENT, 1, 50, param1=3, param2=31, minRadius=3, maxRadius=30)
+----
+
+Con estos valores, llegamos al siguiente resultado para una imagen de un tumor de tipo _meningioma_:
+
+[cols="a,a", frame=none, grid=none, role=right]
+|===
+|   image::imgs/meningioma.png[200, 350, align="center"]
+|   image::imgs/deteccion-meningioma.png[200, 350, align="center"]
+|===
+
+Se puede ver que la detección no es la mejor, aunque puede definir un círculo en el tumor.
+
+Otras detecciones para esta configuración fueron las siguientes:
+
+image::imgs/detecciones-sin-umbral.png[align="center"]
+
+Se puede ver que la función detecta demasiados círculos, lo que complejiza el análisis de las imagenes.
+
+Para reducir la cantidad de círculos detectados, utilizamos un filtro umbral. Este filtro realza los colores claros y oscurece los colores más profundos, logrando la siguiente diferenciación:
+
+[cols="a,a", frame=none, grid=none, role=right]
+|===
+|   image::imgs/meningioma.png[200, 350, align="center"]
+|   image::imgs/umbral-meningioma.png[200, 350, align="center"]
+|===
+
+Se puede ver el realce del meningioma en color blanco, lo que facilitaría su detección. Sin embargo, no se obtuvieron resultados. Por este motivo, cambiamos los parámetros de la función por los siguientes:
+
+[source, python]
+----
+cv2.HoughCircles(image, cv2.HOUGH_GRADIENT, 0.2, 1, param1=2, param2=21, minRadius=3, maxRadius=30)
+----
+
+Esto generó la siguiente detección:
+
+[cols="a,a", frame=none, grid=none, role=right]
+|===
+|   image::imgs/deteccion-umbral-meningioma-orig.png[200, 350, align="center"]
+|   image::imgs/deteccion-umbral-meningioma.png[200, 350, align="center"]
+|===
+
+La mejoría entre la detección previa y la actual es notoria. Sin embargo, si vemos todas las detecciones, podemos observar que no todas fueron muy buenas. La precisión varía demasiado entre una imagen y otra.
+
+image::imgs/detecciones-con-umbral.png[align="center"]
+
+También podemos observar que la predicción es distinta para iguales imágenes, como las siguientes:
+
+[cols="a,a", frame=none, grid=none, role=right]
+|===
+|   image::imgs/deteccion-umbral-meningioma-brillante.png[200, 350, align="center"]
+|   image::imgs/deteccion-umbral-meningioma-orig.png[200, 350, align="center"]
+|===
+
+Esto se debe a la diferencia de contraste entre las imágenes. En la primera, debido a que es más brillante, el filtro umbral genera el efecto contrario al deseado.
+
+[cols="a,a", frame=none, grid=none, role=right]
+|===
+|   image::imgs/deteccion-umbral-meningioma-brillante.png[200, 350, align="center"]
+|   image::imgs/umbral-meningioma-brillante.png[200, 350, align="center"]
+|===
+
+Esto es contraproducente, ya que la detección va a estar determinada por factores como el brillo de la imagen.
 
 == Conclusión
+
+La técnica _Transformada de Hough_ es muy útil en cuanto a detección de formas en imágenes, pero consideramos que en nuestro dominio su implementación es riesgosa, ya que los resultados pueden variar mucho con pocos cambios en la imagen.
+
+También, consideramos que la cantidad extra de círculos detectados puede entorpecer el diagnóstico del profesional, más que favorecerlo.
