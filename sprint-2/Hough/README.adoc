@@ -1,4 +1,4 @@
-= Modelo Xception: Entrenamiento y pruebas
+= Transformada de Hough: Pruebas
 Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
 v1, {docdate}
 :toc:
@@ -19,5 +19,44 @@ La biblioteca OpenCV cuenta con un dos implementaciones de esta técnica: `Hough
 Para nuestro dominio, la implementación que podría ser útil es `HoughCircles`, debido que estos círculos pueden ser tumores cerebrales. Por este motivo, realizamos unas pruebas en base a nuestro https://www.kaggle.com/datasets/gonzajl/tumores-cerebrales-mri-dataset/data[dataset].
 
 == Pruebas
+
+Para utilizar esta técnica, se deben realizar dos pasos:
+
+1. Obtener los círculos de una imagen
+2. Dibujar estos círculos en la imagen
+
+Luego, la imagen se puede mostrar, exportar, o lo que sea necesario.
+
+Para obtener los círculos de una imagen, basta con utilizar la siguiente función:
+
+[source, python]
+----
+circles = cv2.HoughCircles(image, method, dp, minDist, param1, param2, minRadius, maxRadius)
+----
+
+Los paámetros que recibe son los siguientes:
+
+* `image`: la imagen a procesar, en formato _tensor_ con codificación _uint8_.
+* `method`: el método de detección a utilizar. CV2 solo cuenta con `cv2.HOUGH_GRADIENT`.
+* `dp`: resolución acumulativa en la detección de círculos. A medida que este valor disminuye, la resolución se considera que aumenta, y con eso la precisión de la detección de círculos
+* `minDis`: la mínima distancia entre los centros de los círculos.
+* `param1`: controla la sensibilidad de la detección de bordes en la imagen. Un valor menor de `param1` hará que el detector sea más sensible a los bordes.
+* `param2`: controla cuántos votos se necesitan para considerar un punto como parte de un círculo. Un valor menor de `param2` hará que el detector sea más permisivo y detecte más círculos.
+* `minRadius`: radio mínimo de los círculos.
+* `maxRadius`: radio máximo de los círculos.
+
+Esta función retorna un conjunto de círculos, que se pueden dibujar sobre la imagen de la siguiente manera
+
+[source, python]
+----
+if circles is not None:    
+        circles = np.uint16(np.around(circles))
+        for i in circles[0,:]:
+            # dibujar circulo 
+            cv2.circle(img_u, (i[0], i[1]), i[2], (0,255,0), 2)
+            # dibujar centro
+            cv2.circle(img_u, (i[0], i[1]), 2, (0,0,255), 3)
+----
+
 
 == Conclusión
