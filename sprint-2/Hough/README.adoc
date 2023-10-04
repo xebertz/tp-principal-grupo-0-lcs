@@ -52,11 +52,20 @@ Esta función retorna un conjunto de círculos, que se pueden dibujar sobre la i
 if circles is not None:    
         circles = np.uint16(np.around(circles))
         for i in circles[0,:]:
-            # dibujar circulo 
-            cv2.circle(img_u, (i[0], i[1]), i[2], (0,255,0), 2)
-            # dibujar centro
-            cv2.circle(img_u, (i[0], i[1]), 2, (0,0,255), 3)
+            cv2.circle(image, (i[0], i[1]), i[2], (0,255,0), 2) # dibujar círculo 
+            cv2.circle(image, (i[0], i[1]), 2, (0,0,255), 3)    # dibujar centro
 ----
+
+Es importante destacar que para mostrar la imagen *no* se debe utilizar el método `cv2.imshow()`, ya que está obsoleto y causa _kernel crash_ en cuadernos de Jupyter Notebook. Por lo que para mostrar la imagen se debe utilizar la biblioteca `matplotlib.pyplot` de la siguiente forma:
+
+[source, python]
+----
+plt.xticks([])
+    plt.yticks([])
+    plt.imshow(image)
+    plt.show()
+----
+
 
 
 == Conclusión
