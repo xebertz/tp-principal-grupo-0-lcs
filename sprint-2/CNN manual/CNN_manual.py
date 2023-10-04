@@ -1,3 +1,5 @@
+#---
+
 import os
 import cv2
 import numpy as np
@@ -7,12 +9,25 @@ import pandas as pd
 from PIL import Image
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.utils import to_categorical
-
 #---
 
 od.download("https://www.kaggle.com/datasets/gonzajl/tumores-cerebrales-mri-dataset")
 datos = pd.read_csv("./datos.csv")
+
+#---
+
+cant_max = 4000
+
+glioma_df = datos[datos['glioma'] == 1].head(cant_max)
+meningioma_df = datos[datos['meningioma'] == 1].head(cant_max)
+pituitary_df = datos[datos['pituitary'] == 1].head(cant_max)
+no_tumor_df = datos[datos['no_tumor'] == 1].head(cant_max)
+
+datos = pd.concat([glioma_df, meningioma_df, pituitary_df, no_tumor_df], ignore_index=True)
+
+#---
+
+datos = datos.sample(frac=1).reset_index(drop=True)
 
 #---
 
@@ -27,6 +42,7 @@ def cargar_imagenes(nombres, et):
         
     return imagenes, etiquetas
 
+#---
 
 paths = datos.iloc[:, 0]
 tags = datos.iloc[:, 1:]   #ignoro filas particulares y traigo las columnas de 1 a fin
@@ -37,13 +53,20 @@ magenes, etiquetas = cargar_imagenes(paths, tags)
 
 #---
 
-imagenes_entrenamiento, imagenes_prueba = imagenes[:3000], imagenes[:1000]  # el maximo aca es 33000 de entrenamiento y 9000 de prueba
-etiquetas_entrenamiento, etiquetas_prueba = etiquetas[:3000], etiquetas[:1000] # el maximo aca es 33000 de entrenamiento y 9000 de prueba
+div_test = int(len(imagenes) * 0.8)
 
 #---
 
-imagenes_entrenamiento_resized = np.array([cv2.resize(img, (100, 100)) for img in imagenes_entrenamiento])
-imagenes_prueba_resized = np.array([cv2.resize(img, (100, 100)) for img in imagenes_prueba])
+imagenes_entrenamiento, imagenes_prueba = imagenes[:div_test], imagenes[div_test:]
+etiquetas_entrenamiento, etiquetas_prueba = etiquetas[:div_test], etiquetas[div_test:]
+
+#---
+
+print(len(imagenes_entrenamiento)) #esto no es necesario pero muestra la cantidad de elementos en cada array.
+print(len(imagenes_prueba))
+
+print(len(etiquetas_entrenamiento))
+print(len(etiquetas_prueba))
 
 #---
 
@@ -55,23 +78,14 @@ etiquetas_prueba = np.array(etiquetas_prueba)
 
 #---
 
-# Asumiendo que tus etiquetas son listas de listas con valores 0 o 1
-etiquetas_entrenamiento = to_categorical([clase[0] for clase in etiquetas_entrenamiento], num_classes=4)
-etiquetas_prueba = to_categorical([clase[0] for clase in etiquetas_prueba], num_classes=4)
-
-# Imprime las formas para verificar
-print("Forma de etiquetas_entrenamiento después de to_categorical:", etiquetas_entrenamiento.shape)
-print("Forma de etiquetas_prueba después de to_categorical:", etiquetas_prueba.shape)
-
-#---
-
-forma_etiqueta = etiquetas_entrenamiento[0].shape
+forma_etiqueta = etiquetas_entrenamiento[0].shape #Esto muestra el formato actual de las etiquetas, en particular muestra la primera
+                                                    #del array de entrenamiento
 print(forma_etiqueta)
 
 #---
 
 modelo_cnn = tf.keras.models.Sequential([ 
-    tf.keras.layers.Conv2D(16, (3, 3), activation='relu', input_shape=(100, 100, 3)),
+    tf.keras.layers.Conv2D(16, (3, 3), activation='relu', input_shape=(224, 224, 3)),
     tf.keras.layers.MaxPooling2D(3, 3),
     tf.keras.layers.Conv2D(32, (3, 3), activation='relu'),
     tf.keras.layers.MaxPooling2D(2, 2),
@@ -88,10 +102,40 @@ modelo_cnn = tf.keras.models.Sequential([
 
 modelo_cnn.compile(optimizer='adam',
                    loss='categorical_crossentropy',  # función de pérdida para clasificación multiclase
-                   metrics=['accuracy'])
+                   metrics=['categorical_accuracy'])
 
 #---
 
 print("Entrenando modelo convolucional...")
-historial_cnn = modelo_cnn.fit(imagenes_entrenamiento_resized, etiquetas_entrenamiento, epochs=5, validation_data=(imagenes_prueba_resized, etiquetas_prueba), use_multiprocessing=True, shuffle=True)
+historial_cnn = modelo_cnn.fit(imagenes_entrenamiento, etiquetas_entrenamiento, epochs=5, validation_data=(imagenes_prueba, etiquetas_prueba), use_multiprocessing=True, shuffle=True)
 print("Modelo convolucional entrenado!")
+
+#---
+
+def es_correcta(prediccion, esperado):
+    return prediccion.index(max(prediccion)) == esperado.index(max(esperado))
+
+#---
+
+correctas_segun_tipo = [0, 0, 0, 0]
+falladas_segun_tipo = [0, 0, 0, 0]
+
+predicciones = modelo_cnn.predict(imagenes_prueba_resized)
+print(f"Cantidad de predicciones: {len(predicciones)}")
+
+for i in range(len(predicciones)):
+    prediccion = list(predicciones[i])
+    index = prediccion.index(max(prediccion))
+    
+    if es_correcta(prediccion, list(etiquetas_prueba[i])):
+        correctas_segun_tipo[index] += 1  
+    else: 
+        falladas_segun_tipo[index] += 1
+        
+cant_totales = list(map(lambda x, y: x + y, correctas_segun_tipo, falladas_segun_tipo))
+print("Etiquetas:   [G,  M,  P,  N]")
+print(f"Total:       {cant_totales}")
+print(f"Correctas:   {correctas_segun_tipo}")
+print(f"Incorrectas: {falladas_segun_tipo}")
+
+#---
