@@ -12,6 +12,12 @@ v1, {docdate}
 
 == Transformada de Hough
 
+La transformada de Hough es una técnica de procesamiento de imágenes que permite detectar figuras en una imagen, tales como líneas, elipses y círculos. No es un modelo de inteligencia artificial, por lo que no se debe entrenar. Es decir, se puede importar y utilizar para una imagen en específico.
+
+La biblioteca OpenCV cuenta con un dos implementaciones de esta técnica: `HoughCircles` y `HoughLines`. La primera es utilizada para detectar círculos en una imagen, y la segunda es para detectar líneas.
+
+Para nuestro dominio, la implementación que podría ser útil es `HoughCircles`, debido que estos círculos pueden ser tumores cerebrales. Por este motivo, realizamos unas pruebas en base a nuestro https://www.kaggle.com/datasets/gonzajl/tumores-cerebrales-mri-dataset/data[dataset].
+
 == Pruebas
 
 == Conclusión
