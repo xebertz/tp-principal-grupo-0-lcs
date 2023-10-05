@@ -63,8 +63,26 @@ Su servicio gratuito incluye:
 * 1 GB de almacenamiento persistente.
 * Railway mensualmente nos proporcionara un saldo gratuito de 5 dólares, con el que tendremos disponibles 500 horas de uso de una máquina sencilla, estas cuentan desde que el proyecto queda activo y se descontaran por cada hora activa que tengas un proyecto funcionando.
 
+=== FL0
+FL0 es otro PaaS similar a los anteriores mencionados. Este servicio admite lenguajes como .Net, GO, Java, Node.js, PHP, Python, Ruby, Rust y Static Sites. Además, existe la posibilidad de utilizar Docker. La manera de realizar el Deploy es una de la más sencillas y aún más si se cuenta con un _Dockerfile_, Simplemente es Linkear una cuenta de GitHub y seleccionar el proyecto que se quiera subir. Por otro lado, también permite tener una Base de datos PostgreSQL.
+
+Su servicio gratuito incluye:
+
+* Un solo proyecto activo siempre.
+* CPU compartida.
+* 10 GB de transferencias de datos (outbound).
+* 1 GB de almacenamiento.
+* 14 días de Logs.
+* 3 GB de almacenamiento en caso de levantar una Base de datos.
+
 == Conclusión
 
 Estás plataformas PaaS no son las únicas para realizar un despliegue de nuestra API, pero consideramos que son las más sencillas de utilizar y que cumplen con los requisitos que estamos buscando. 
 
-Entonces, nuestras posibles opciones es utilizar solamente Fly.io o Render, pero Render junto con otro servicio en otra plataforma como Fly.io o Cyclic.sh que haga un llamado a un endpoint de la API para que Render no entre en un estado de hibernación.
+Tras barajar varias opciones y documentar las 4 más potables, decidimos utilizar FL0.
+
+Decidimos utilizar FL0 por estar activa 24/7 al mes. Sus otros beneficios de su capa gratuita es similar a los demás servicios.
+
+Aunque nuestra plataforma final es FL0 tenemos como alternativas a Railway que permite 500 horas por mes, es decir, 21 días aproximadamente. Por lo último dicho, Railway queda como segunda opción. 
+
+Por último, tenemos tercer opción: Render, que permite 750 horas activa la aplicación por mes, pero tras un tiempo de desuso se entra en un estado de hibernación.  
