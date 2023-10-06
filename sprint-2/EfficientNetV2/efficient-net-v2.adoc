@@ -1,4 +1,4 @@
-= EfficientNetV2
+= Modelo EfficientNetV2
 Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
 v1, {docdate}
 :toc:
@@ -10,7 +10,7 @@ v1, {docdate}
 :nofooter:
 :pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
 
-== ¿Qué es EfficientNetV2?
+== Modelo
 
 EfficientNetV2 es una versión mejorada y más eficiente de la arquitectura de redes neuronales convolucionales (CNN) conocida como EfficientNet. Fue desarrollada por Google Research y se ha diseñado específicamente para abordar tareas de visión por computadora de manera más efectiva y eficiente que sus predecesores.
 
@@ -32,7 +32,45 @@ Hemos evaluado todas las variantes del modelo utilizando un https://www.kaggle.c
 
 La elección de limitar el conjunto de datos a este tamaño se debió a las restricciones de nuestros recursos computacionales y a la complejidad inherente del modelo preentrenado que estábamos empleando. Cuando intentamos utilizar un conjunto de datos más grande, nos encontramos con errores durante la ejecución de algunas secciones del código. Por lo tanto, decidimos optar por esta configuración más manejable que nos permitió llevar a cabo nuestras evaluaciones de manera efectiva.
 
+La arquitectura utilizada para todas las variantes es la siguiente:
+
+[source, python]
+----
+base_model = tf.keras.applications.Variante(
+    include_top=False,
+    weights="imagenet",
+    input_shape=(224, 224, 3),
+)
+
+base_model.trainable = False
+
+num_classes = 4
+x = layers.GlobalAveragePooling2D()(base_model.output)
+x = layers.Dense(512, activation='relu')(x)
+x = layers.Dropout(0.5)(x)
+output = layers.Dense(num_classes, activation='sigmoid')(x)
+model = Model(inputs=base_model.input, outputs=output)
+----
+
+`base_model = tf.keras.applications.Variante(...)` crea la base del modelo utilizando una arquitectura preentrenada llamada "Variante". Esto es donde especificarías el nombre de la arquitectura específica que se desea utilizar (por ejemplo, EfficientNetB0, ResNet50, MobileNetV2, etc.). La opción `include_top=False` indica que se omitirán las capas totalmente conectadas (top) del modelo preentrenado, ya que se agregarán capas personalizadas para adaptar el modelo a una tarea específica. También se especifica el tamaño de entrada de las imágenes con `input_shape=(224, 224, 3)` (imágenes de 224x224 píxeles, con 3 canales de color).
+
+`base_model.trainable = False` congela las capas del modelo base, lo que significa que sus pesos no se actualizarán durante el proceso de entrenamiento. Esto es útil cuando se utiliza un modelo preentrenado y se quiere mantener sus características aprendidas.
+
+`x = layers.GlobalAveragePooling2D()(base_model.output)` agrega una capa de reducción de dimensionalidad llamada "Global Average Pooling 2D" a la salida del modelo base. Esta capa calcula el promedio global de las activaciones en cada canal de la última capa convolucional y reduce la dimensionalidad de los datos.
+
+`x = layers.Dense(512, activation='relu')(x)` añade una capa completamente conectada con 512 unidades y función de activación ReLU. Esto introduce capacidad de aprendizaje en el modelo.
+
+`x = layers.Dropout(0.5)(x)` agrega una capa de dropout con una tasa de dropout del 50%. El dropout ayuda a reducir el sobreajuste al apagar aleatoriamente algunas neuronas durante el entrenamiento.
+
+`output = layers.Dense(num_classes, activation='sigmoid')(x)` agrega una capa de salida con un número de neuronas igual al número de clases definido anteriormente, y utiliza una función de activación sigmoide. Esto es común en problemas de clasificación multiclase donde cada clase es independiente.
+
+model = Model(inputs=base_model.input, outputs=output): Con esta línea, se crea el modelo completo que toma las imágenes como entrada y produce las salidas de clasificación. Especifica las entradas (base_model.input) y las salidas (output) del modelo.
+
 == Resultados
+
+En los resultados que se presentarán a continuación, se pueden observar los entrenamientos de las variantes. Cada entrenamiento consta de un número específico de `epocs` (épocas), que son ciclos de entrenamiento a través de todo el conjunto de datos.
+
+Además, se incluyen métricas cruciales como `loss` (pérdida), `accuracy` (precisión), `val_loss` (pérdida en validación) y `val_accuracy` (precisión en validación). Estas métricas desempeñan un papel fundamental en la evaluación del rendimiento del modelo durante el proceso de entrenamiento y validación. La `loss` y `accuracy` se aplican al conjunto de entrenamiento y miden qué tan bien el modelo se ajusta a los datos de entrenamiento. Por otro lado, `val_loss` y `val_accuracy` se calculan en el conjunto de validación y evalúan la capacidad del modelo para generalizar sus predicciones a datos no vistos. Estas métricas son esenciales para monitorear y ajustar el modelo a lo largo del entrenamiento, garantizando así que aprenda de manera efectiva y sea capaz de realizar predicciones precisas en nuevas muestras.
 
 === EfficientNetV2B0
 
