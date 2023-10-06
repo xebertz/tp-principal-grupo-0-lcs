@@ -18,7 +18,7 @@ Las SVM son inherentemente para dominios binarios, es decir, problemas de clasif
 
 == Implementación
 
-Para su uso se utiliza la libreria _sklearn_.
+Para su uso se utiliza la librería _sklearn_.
 
 Como nuestro problema entra en el dominio de la multiclases, SVM no es precisamente la mejor solución. Pero decidimos utilizar el método de *Dividir y conquistar*, o sea, dividir el dominio en sub-dominios para conseguir una predicción multiclase utilizando SVM que es inherentemente binario. 
 
@@ -37,7 +37,7 @@ Entonces, decidimos dividir en los siguientes tres modelos:
 
 ====
 [source,python]
-.Ejemplo: Creación del modelo de prediccion de tumores del estilo glioma.
+.Ejemplo: Creación del modelo de predicción de tumores del estilo glioma.
 ----
 .
 .
@@ -108,14 +108,14 @@ Todos los sub-modelos son completamente eficaz.
 A continuación las matriz de confución de cada uno:
 
 .Glioma
-image::matriz_confusión_glioma.png[]
+image::imgs/matriz_confusión_glioma.png[]
 .Meningioma
-image::matriz_confusión_meningioma.png[]
+image::imgs/matriz_confusión_meningioma.png[]
 .Pituitary
-image::matriz_confusión_pituitary.png[]
+image::imgs/matriz_confusión_pituitary.png[]
 
-Todos los sub-modelos superan el 96% de aciertos, pero hay un problema: Al realizar la comparación entre los 3 modelos, por lo general, cuando se utiliza el modelo para clasificar una tomografía con algún tumor, sin importar su tipo, puede clasificarla como dos o tres tipos de tumores. Por ejemplo: La tomografía recibida como input es un tumor de tipo Glioma, pero como son similares a los demás tumores es posible que lo clasifique con más de una categoria.
+Todos los sub-modelos superan el 96% de aciertos, pero hay un problema: Al realizar la comparación entre los 3 modelos, por lo general, cuando se utiliza el modelo para clasificar una tomografía con algún tumor, sin importar su tipo, puede clasificarla como dos o tres tipos de tumores. Por ejemplo: La tomografía recibida como input es un tumor de tipo Glioma, pero como son similares a los demás tumores es posible que lo clasifique con más de una categoría.
 
 Entonces, por lo anteriormente dicho queda demostrado que SVM no es conveniente para el dominio de este problema.
 
-Aunque no fue en vano su intento de implementación. Descubrimos un nuevo modelo que nos puede ayudar en problemas de dominio binario. En caso de que en los próximos Sprints tengamos un dominio binario, es una técnica que nos ayudará a concluir el problema más facilmente por los conocimientos adquiridos.
+Aunque no fue en vano su intento de implementación. Descubrimos un nuevo modelo que nos puede ayudar en problemas de dominio binario. En caso de que en los próximos Sprints tengamos un dominio binario, es una técnica que nos ayudará a concluir el problema más fácilmente por los conocimientos adquiridos.
