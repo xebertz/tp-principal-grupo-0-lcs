@@ -73,7 +73,7 @@ image::imgs/resnet50.png[]
 *Precisión en prueba:* 70%
 
 .Prueba de predicciones
-[source, python]
+[source, console]
 ----
 69/69 [==============================] - 67s 955ms/step
 Cantidad de predicciones: 2200
@@ -92,7 +92,7 @@ image::imgs/resnet50v2.png[]
 *Precisión en prueba:* 93%
 
 .Prueba de predicciones
-[source, python]
+[source, console]
 ----
 69/69 [==============================] - 45s 654ms/step
 Cantidad de predicciones: 2200
@@ -111,7 +111,7 @@ image::imgs/resnet152.png[]
 *Precisión en prueba:* 59%
 
 .Prueba de predicciones
-[source, python]
+[source, console]
 ----
 69/69 [==============================] - 153s 2s/step
 Cantidad de predicciones: 2200
@@ -130,7 +130,7 @@ image::imgs/resnet152v2.png[]
 *Precisión en prueba:* 90%
 
 .Prueba de predicciones
-[source, python]
+[source, console]
 ----
 69/69 [==============================] - 140s 2s/step
 Cantidad de predicciones: 2200

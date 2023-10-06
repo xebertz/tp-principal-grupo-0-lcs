@@ -26,7 +26,7 @@ Como se dijo anteriormente, el entrenamiento se realizó con 3.250 imágenes en 
 
 == Resultados obtenidos
 
-[source, python]
+[source, console]
 ----
 Epoch 1
 loss: 0.2602 - categorical_accuracy: 0.9130 - val_loss: 0.4122 - val_categorical_accuracy: 0.8604
@@ -34,7 +34,7 @@ loss: 0.2602 - categorical_accuracy: 0.9130 - val_loss: 0.4122 - val_categorical
 
 == Resultados por clase
 
-[source, python]
+[source, console]
 ----
 Cantidad de predicciones: 2600
 Etiquetas:   [G,  M,  P,  N]

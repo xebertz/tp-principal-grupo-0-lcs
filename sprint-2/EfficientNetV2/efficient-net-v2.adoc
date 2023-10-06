@@ -74,7 +74,7 @@ Además, se incluyen métricas cruciales como `loss` (pérdida), `accuracy` (pre
 
 === EfficientNetV2B0
 
-[source, python]
+[source, console]
 ----
 Epoch 1/20
 275/275 [==============================] - 115s 400ms/step - loss: 0.5732 - accuracy: 0.2531 - val_loss: 0.5618 - val_accuracy: 0.2414
@@ -124,7 +124,7 @@ Epoch 20/20
 
 === EfficientNetV2B1
 
-[source, python]
+[source, console]
 ----
 Epoch 1/20
 275/275 [==============================] - 155s 539ms/step - loss: 0.5749 - accuracy: 0.2562 - val_loss: 0.5600 - val_accuracy: 0.3377
@@ -174,7 +174,7 @@ Epoch 20/20
 
 === EfficientNetV2B2
 
-[source, python]
+[source, console]
 ----
 Epoch 1/20
 275/275 [==============================] - 169s 590ms/step - loss: 0.5486 - accuracy: 0.3258 - val_loss: 0.5301 - val_accuracy: 0.3773
@@ -224,7 +224,7 @@ Epoch 20/20
 
 === EfficientNetV2B3
 
-[source, python]
+[source, console]
 ----
 Epoch 1/20
 275/275 [==============================] - 221s 773ms/step - loss: 0.5485 - accuracy: 0.3290 - val_loss: 0.5358 - val_accuracy: 0.3482
@@ -274,7 +274,7 @@ Epoch 20/20
 
 === EfficientNetV2S
 
-[source, python]
+[source, console]
 ----
 Epoch 1/20
 275/275 [==============================] - 325s 1s/step - loss: 0.4750 - accuracy: 0.5018 - val_loss: 0.4202 - val_accuracy: 0.6014
@@ -326,7 +326,7 @@ Epoch 20/20
 
 Debido a la complejidad inherente de esta variante y el tiempo que requiere para cada época de entrenamiento, decidimos limitar el entrenamiento a solo 5 épocas.
 
-[source, python]
+[source, console]
 ----
 Epoch 1/5
 275/275 [==============================] - 571s 2s/step - loss: 0.5699 - accuracy: 0.2602 - val_loss: 0.5601 - val_accuracy: 0.2695
@@ -348,7 +348,7 @@ Epoch 5/5
 
 De igual forma a lo que hicimos con la variante anterior, decidimos llevar a cabo un entrenamiento de solo 5 épocas para esta variante.
 
-[source, python]
+[source, console]
 ----
 Epoch 1/5
 275/275 [==============================] - 1133s 4s/step - loss: 0.5490 - accuracy: 0.3542 - val_loss: 0.5270 - val_accuracy: 0.4145
