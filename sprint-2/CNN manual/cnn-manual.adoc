@@ -18,7 +18,7 @@ Cada una de ellas se encuentra conformada por una serie de capas, en donde cada 
 == Modelo Implementado
 Nuestro modelo trabaja con un dataset creado por nosotros en base a otros dataset obtenidos de Kaggle. Nuestro dataset puede obtenerse del siguiente link: "https://www.kaggle.com/datasets/gonzajl/tumores-cerebrales-mri-dataset".
 
-La implementación del modelo utilizando redes neuronales convolucionales es similar al que realizó el grupo 1 en el trabajo inicial. Los cambios realizados son principalmente con el objetivo de adaptarlo para que no sea binario, sino multiclase, en particular, el modelo puede clasificar en 4 clases distintas. La primera, es *glioma*, el cual es un tumor que se origina en el tronco encefálico, la médula espinal y el cerebelo. La segunda clasificación posible es *meningioma*, Un meningioma es un tumor que se origina en las membranas que rodean al cerebro y la médula espinal. El tercer tipo posible es el denominado *"pituitary tumors"*, el cual en español significa *"Tumores Hipofisarios"*, estos se encuentran en la base del cerebro. Finalmente, la última clasificación que considera el modelo se denomina *No tumor*, que como dice el nombre, hace referencia a cuando no se detecta ningún tumor en la imágen.
+La implementación del modelo utilizando redes neuronales convolucionales es similar al que realizó el grupo 1 en el trabajo inicial. Los cambios realizados son principalmente con el objetivo de adaptarlo para que no sea binario, sino multiclase, en particular, el modelo puede clasificar en 4 clases distintas. La primera, es *glioma*, el cual es un tumor que se origina en el tronco encefálico, la médula espinal y el cerebelo. La segunda clasificación posible es *meningioma*, Un meningioma es un tumor que se origina en las membranas que rodean al cerebro y la médula espinal. El tercer tipo posible es el denominado *"pituitary tumors"*, el cual en español significa *"Tumores Hipofisarios"*, estos se encuentran en la base del cerebro. Finalmente, la última clasificación que considera el modelo se denomina *No tumor*, que como dice el nombre, hace referencia a cuando no se detecta ningún tumor en la imagen.
 
 == Adaptación del modelo multiclase
 
@@ -33,6 +33,8 @@ La distribución más prometedora fue de 16 mil imágenes en total (12800 de ent
 
 === 12800 imágenes de entrenamiento y 3200 de prueba
 
+[source, python]
+----
 Epoch 1/7
 loss: 0.9600 - categorical_accuracy: 0.5920 - val_loss: 0.6198 - val_categorical_accuracy: 0.7625
 
@@ -53,11 +55,15 @@ loss: 0.1459 - categorical_accuracy: 0.9469 - val_loss: 0.2558 - val_categorical
 
 Epoch 7/7
 loss: 0.1268 - categorical_accuracy: 0.9560 - val_loss: 0.2666 - val_categorical_accuracy: 0.9200
+----
 
 == Resultados por clase
 
+[source, python]
+----
 Cantidad de predicciones: 3200
 Etiquetas:   [G,  M,  P,  N] (G: Glioma, M: Meningioma, P: Pituitary, N: No Tumor)
 Total:       [859, 742, 778, 821]
 Correctas:   [737, 678, 769, 760]
 Incorrectas: [122, 64, 9, 61]
+----
