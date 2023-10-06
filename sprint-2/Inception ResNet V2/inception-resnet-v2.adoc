@@ -1,4 +1,4 @@
-= Inception ResNet V2
+= Modelo InceptionResNetV2
 Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
 v1, {docdate}
 :toc:
@@ -16,7 +16,7 @@ Es una arquitectura de red neuronal profunda que combina las ideas clave de las 
 
 == Modelo Implementado
 
-Nuestro modelo trabaja con un dataset creado por nosotros en base a otros dataset obtenidos de Kaggle. Nuestro dataset puede obtenerse del siguiente link: "https://www.kaggle.com/datasets/gonzajl/tumores-cerebrales-mri-dataset".
+Nuestro modelo trabaja con un dataset creado por nosotros en base a otros dataset obtenidos de Kaggle. Para obtener nuestro dataset dar click https://www.kaggle.com/datasets/gonzajl/tumores-cerebrales-mri-dataset[aquí].
 
 La implementación del modelo en este caso es una aplicación del modelo pre-entrenado llamado Inception ReNet V2. Este modelo es uno de los más pesados computacionalmente, por lo que el entrenamiento del mismo se realizó con una cantidad de imágenes menor a otros modelos y en una sola vuelta de entrenamiento. Aun así, este modelo dio resultados que merecen ser tenidos en cuenta a la hora de elegir un modelo.
 
@@ -26,17 +26,19 @@ Como se dijo anteriormente, el entrenamiento se realizó con 3.250 imágenes en 
 
 == Resultados obtenidos
 
+[source, python]
+----
 Epoch 1
-
 loss: 0.2602 - categorical_accuracy: 0.9130 - val_loss: 0.4122 - val_categorical_accuracy: 0.8604
+----
 
 == Resultados por clase
 
+[source, python]
+----
 Cantidad de predicciones: 2600
 Etiquetas:   [G,  M,  P,  N]
 Total:       [600, 637, 459, 904]
 Correctas:   [533, 567, 459, 678]
 Incorrectas: [67, 70, 0, 226]
-
-
-
+----
