@@ -19,7 +19,22 @@ Una API es un conjunto de definiciones y protocolos que se usa para diseñar e i
 Tras desarrollar el modelo de clasificación de tumores cerebrales, hemos contemplado la necesidad de realizar una API para el uso de esta misma. En este contexto, hemos tenido el privilegio de desarrollar la API que facilita el acceso y la utilización del modelo.
 
 == Desarrollo
-Para la implementación de la API se utilizó el 
-Framework de Flask y distintas librerias necesarias para la utilización del modelo y para la manipulación de imágenes. 
+Para la implementación de la API se utilizó el lenguaje Python con el Framework de Flask, y distintas librerias necesarias para la utilización del modelo y para la manipulación de imágenes. 
 
+=== Flask
+
+Flask nos permite, de una manera rápida y sencilla, crear endpoints para el uso de la API y enlazar funciones a estás mismas. 
+
+El siguiente ejemplo trata sobre un endpoint que retorna un _status_code_ 200 que significa que la API está activa. 
+
+[source,python]
+----
+@cross_origin
+@app.route("/ping", methods=["GET"])
+def ping():
+    response = make_response(jsonify(message='API on!'))
+    response.status_code = 200
+    return response
+----
+Como se puede observar solo con un decorador *@app.route* definiendo una ruta URL y el método HTTP, el endpoint ya estaría funcionando. Por otro lado el decorador *cross_origin* habilita el acceso al endpoint desde orígenes cruzados, es decir, que permite que un sitio web o dominio diferente al de la aplicación tenga acceso a los recursos de la aplicación a través de solicitudes HTTP.
 
