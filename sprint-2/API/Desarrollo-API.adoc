@@ -17,3 +17,9 @@ Una API es un conjunto de definiciones y protocolos que se usa para diseñar e i
 
 === Necesidad
 Tras desarrollar el modelo de clasificación de tumores cerebrales, hemos contemplado la necesidad de realizar una API para el uso de esta misma. En este contexto, hemos tenido el privilegio de desarrollar la API que facilita el acceso y la utilización del modelo.
+
+== Desarrollo
+Para la implementación de la API se utilizó el 
+Framework de Flask y distintas librerias necesarias para la utilización del modelo y para la manipulación de imágenes. 
+
+
