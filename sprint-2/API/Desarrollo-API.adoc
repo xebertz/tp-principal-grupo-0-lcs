@@ -90,3 +90,28 @@ def classify_result(index):
     class_model = ["Glioma", "Meningioma", "Pituitary", "No_tumor"]
     return class_model[index]
 ----
+
+=== Test
+Para comprobar el correcto funcionamiento de la API se implementó varios tests unitarios para los endpoints, utilizando la libreria *unittest* y *Request* proveniente de Flask.
+
+Los casos que se toman en cuenta son los siguientes:
+
+1. Obtener el _status_code_ 200 del endpoint ping.
+
+2. Validar que se ingresó una imagen válida del endpoint predict obteniendo el _status_code_ 200.
+
+3. Validar que se ingresó un binario no valido en el endpoint predict obteniendo el _status_code_ 418.
+
+4. Obtener el _status_code_ 400 del endpoint predict tras no recibir ningún binario.
+
+5. Obtener el _status_code_ 400 del endpoint predict tras recibir un String vacío.
+
+6. Obtener el _status_code_ 400 del endpoint predict tras recibir un None.
+
+7. Obtener el resultado _Glioma_ del endpoint predict tras enviar una imagen de una tomografía de un cerebro con el tumor del mismo nombre.
+
+8. Obtener el resultado _Meningioma_ del endpoint predict tras enviar una imagen de una tomografía de un cerebro con el tumor del mismo nombre.
+
+9. Obtener el resultado _Pituitary_ del endpoint predict tras enviar una imagen de una tomografía de un cerebro con el tumor del mismo nombre.
+
+10. Obtener el resultado _No_tumor_ del endpoint predict tras enviar una imagen de una tomografía de un cerebro sin algún tumor.
