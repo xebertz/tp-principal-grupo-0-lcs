@@ -75,5 +75,7 @@ Probamos distintos modelos, algunos preentrenados y otros manuales:
 
 Durante el proceso de entrenamiento se determinó que ciertos modelos no valían la pena ser entrenados. Estos son *Mask R CNN* y *VGG19*. El primero se descartó por problemas de compatibilidad entre versiones de kernel y Tenserflow necesarias para la implementación de este modelo. Solucionar este problema sería muy costoso y no valía la pena debido a los buenos resultados obtenidos en otros modelos. El segundo se descartó debido a que es similar a *VGG16*, y es uno de los que demostró peor performance y resultados más pobres. Entrenarlo llevaría mucho tiempo y tampoco es necesario.
 
+== Modelo seleccionado
+
 == Deploy
 
