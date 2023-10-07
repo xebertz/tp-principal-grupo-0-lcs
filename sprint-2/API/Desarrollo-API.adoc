@@ -22,10 +22,9 @@ Tras desarrollar el modelo de clasificación de tumores cerebrales, hemos contem
 Para la implementación de la API se utilizó el lenguaje Python con el Framework de Flask, y distintas librerias necesarias para la utilización del modelo y para la manipulación de imágenes. 
 
 === Flask
-
 Flask nos permite, de una manera rápida y sencilla, crear endpoints para el uso de la API y enlazar funciones a estás mismas. 
 
-El siguiente ejemplo trata sobre un endpoint que retorna un _status_code_ 200 que significa que la API está activa. 
+El siguiente ejemplo trata sobre un endpoint que retorna un _status_code_ 200, que significa que la API está activa. 
 
 [source,python]
 ----
@@ -38,3 +37,56 @@ def ping():
 ----
 Como se puede observar solo con un decorador *@app.route* definiendo una ruta URL y el método HTTP, el endpoint ya estaría funcionando. Por otro lado el decorador *cross_origin* habilita el acceso al endpoint desde orígenes cruzados, es decir, que permite que un sitio web o dominio diferente al de la aplicación tenga acceso a los recursos de la aplicación a través de solicitudes HTTP.
 
+=== Implementación del modelo
+Tras haber realizado el desarrollo del modelo utilizando keras y tensorflow, se exportó en el formato .h5, que un formato de archivo diseñado para almacenar y organizar grandes cantidades de datos de manera eficiente.
+
+Tras obtener el modelo exportado se procedío a implementarlo para el consumo de la API. Para esto mismo primero se debe obtener la imagen mediante un endpoint y un método HTTP POST.
+
+[source,python]
+----
+@cross_origin
+@app.route('/predict', methods=['POST'])
+def predict():
+    #Recibe y guarda la imagen
+    image = request.files['image']
+    if image.filename.lower().endswith(('.png', '.jpg', '.jpeg')):
+        image.save("image.png")
+        response = make_response(jsonify(message= prediction()))
+        response.status_code = 200
+        return response
+    else:
+        #En caso de no ser una imagen, se retorna un 418
+        response = make_response(jsonify(message="I'm a teapot!"))
+        response.status_code = 418
+        return response 
+----
+ 
+Tras obtener la imagen, se tiene que procesar para que corresponda con las utilizadas para el modelo. Para esto se utiliza la libreria Pillow y además se utiliza Numpy para transformar la imagen en una matriz de bits y que lo acepte el modelo.
+
+[source,python]
+----
+def prediction():
+    #Carga el modelo.
+    model = tensorflow.keras.models.load_model("tumor_model.h5")
+    img = Image.open("image.png").convert("L")
+    #Transforma la imagen para que coincidan con el modelo. 
+    img = img.resize((224, 224)) 
+    img = np.array(img)
+    img = img / 255.0
+    img = img.reshape((1,224,224,1))
+    #Predice el modelo
+    predict = model.predict(img)    
+    #Como son 4 clases, entonces es un arreglo de 4 elementos.
+    #Entonces, predicted_class retorna la posición del arreglo donde la posición es la clase que predice.
+    predicted_class = np.argmax(predict)
+    return classify_result(predicted_class)
+----
+
+Como el modelo es uno multiclase, retorna un arreglo de tamaño 4. la línea *predicted_class = np.argmax(predict)* obtiene un índice del arreglo, donde el índice representa en que clase clasifica la imagen ingresada. Esto se define en la función *classify_result*.
+
+[source,python]
+----
+def classify_result(index):
+    class_model = ["Glioma", "Meningioma", "Pituitary", "No_tumor"]
+    return class_model[index]
+----
