@@ -108,7 +108,7 @@ Correctas:   [649, 609, 775, 781]
 Incorrectas: [85, 125, 105, 71]
 ----
 
-Lo que es, aproximadamente, un 87% de precisión en las pruebas. Nuevamente, pensamos en aumentar la cantidad de datos con los que se entrena, para una mejor precisión.
+Lo que es, aproximadamente, un 87% de precisión en las pruebas. Nuevamente, pensamos en aumentar la cantidad de vueltas de entrenamiento, para lograr una mejor precisión.
 
 Posteriormente, realizamos un tercer entrenamiento de 10 vueltas y la misma cantidad de imágenes.
 
