@@ -134,3 +134,11 @@ import os
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
 ----
+
+== Problemas encontrados
+
+1. Para manipular la imagen y que corresponda con el modelo, anteriormente utilizabamos la biblioteca _OpenCv_, pero en los servicios para desplegar tenía errores. Se utilizó _Pillow_ como reemplazo.
+
+2. La libreria _TensorFlow_ utiliza la GPU por defecto, pero los servicios de despliegue solo tienen CPU. Para solucionar esto se utilizo la libreria _TensorFlow-cpu_ que permite utilizar _TensorFlow_ con la CPU.
+
+3. La libreria _TensorFlow-cpu_ instala una libreria adicional llamada _TensorFlow-intel_. Esta libreria no permitía el despliegue y además no se utiliza en el modelo. Se eliminó para solucionar el despliegue.
