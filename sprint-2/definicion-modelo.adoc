@@ -16,16 +16,33 @@ Como ya se mencionó, el objetivo del proyecto es desarrollar un software que pe
 
 Para este sprint, nuestro objetivo es desarrollar y hacer el deploy de un modelo que determine si un paciente tiene o no un tumor, y de qué tipo, a través de imágenes de resonancia magnética.
 
-
 == Objetivos del documento
 
 Una vez establecido el objetivo del trabajo, procedimos a realizar las tareas necesarias para el preprocesamiento de datos y el entrenamiento de distintos modelos, tantos preentrenados como manuales.
 
 En este documento expondremos cómo preparamos los datos, qué modelos entrenamos y cuál es el elegido para nuestro problema. También explicaremos las distintas decisiones tomadas durante el desarrollo.
 
+== Metodología de trabajo
+
+Debido a la necesidad de entrenar distintos modelos, fueron divididos por miembros del equipo. Cada miembro trabajó en su entorno de Saturn Cloud de manera autónoma, y al finalizar los entrenamientos elegimos un modelo para realizar el deploy.
+
+También fueron necesarias tareas de preparación de datos, deploy y gestión, las cuales fueron asignadas a miembros específicos del equipo de trabajo.
+
+.división de tareas del equipo de trabajo
+[cols="3*", options="header"]
+|===
+|Encargado         |Tarea
+
+|Villalba, Gastón  |Tomar mate, gestión
+|Ebertz, Ximena    |Desarrollo de modelos VGG16, VGG19, Xception y Transformada de Hough, gestión
+|López, Gonzalo    |Preparación de datos y desarrollo de modelos ResNet y EfficientNetV2
+|Franco, Leandro   |Deploy y desarrollo de modelo SVM, preparación de entorno
+|Venditto, Pedro   |Desarrollo de modelos CNN Manual, InceptionResNet y Mask R - CNN, preparación de entorno
+|===
+
 == Datos
 
-Para la detección de tu
+Determinamos que los siguientes _datasets_ serían útiles para nuestro trabajo:
 
 == Modelos probados
 
