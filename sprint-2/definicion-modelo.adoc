@@ -53,24 +53,27 @@ El dataset generado se encuentra https://www.kaggle.com/datasets/gonzajl/tumores
 
 == Modelos probados
 
+Decidimos que la mejor opción era probar diversos modelos, para utilizar el mejor en el desarrollo final, y reutilizar los otros en caso que sea necesario.
 
-* ResNet
+Probamos distintos modelos, algunos preentrenados y otros manuales:
 
-* SVM
+* *ResNet:* La aquitectura ResNet tiene diversas variantes, entre las cuales están ResNet50, ResNet50V2, ResNet152, ResNet152V2. De estas, la que mejor resultados arrojó fue ResNet50V2, con un 93% de precisión en las pruebas.
 
-* Xception
+* *SVM:*
 
-* CNN Manual
+* *Xception:*
 
-* Inception ResNet
+* *CNN Manual:*
 
-* VGG16
+* *Inception ResNet:*
 
-* Transformada de Hough
+* *VGG16:*
+
+* *Transformada de Hough:*
 
 == Modelos descartados
 
-* Mask R CNN
+* *Mask R CNN:*
 
-* VGG19
+* *VGG19:*
 
