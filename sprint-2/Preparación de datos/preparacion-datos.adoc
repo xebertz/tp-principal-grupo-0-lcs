@@ -1,0 +1,67 @@
+= Preparación de imágenes
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== Introducción
+
+Este documento presenta un programa diseñado para descargar, procesar y organizar conjuntos de datos relacionados con tumores cerebrales en imágenes MRI. El programa se enfoca en la adquisición de datos, el refinamiento de las imágenes, el aumento de datos, la organización estructurada y la creación de un DataFrame para su posterior análisis. A través de estas operaciones, se busca facilitar el acceso y la utilización de datos coherentes y equilibrados para la investigación y el desarrollo de soluciones médicas avanzadas.
+
+== Desarollo
+
+El programa tiene como objetivo procesar y preparar conjuntos de imágenes médicas relacionadas con tumores cerebrales. A continuación, se describen las principales funciones y operaciones realizadas por el programa:
+
+=== Descarga de datasets
+
+El programa utiliza la biblioteca `opendatasets` para descargar dos datasets de Kaggle relacionados con imágenes de resonancia magnética (MRI) de tumores cerebrales.
+
+- Dataset 1: https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset[brain-tumor-mri-dataset] con 7022 imágenes.
+- Dataset 2: https://www.kaggle.com/datasets/mohammadhossein77/brain-tumors-dataset[brain-tumors-dataset] con 21672 imágenes.
+
+=== Refinamiento de imágenes
+
+Las imágenes descargadas se procesan de la siguiente manera:
+
+- Se convierten a escala de grises.
+- Se redimensionan a un tamaño específico (224x224 píxeles).
+- Se guardan nuevamente con los cambios aplicados.
+
+=== Aumento de datos
+
+Dado que el dataset "brain-tumors-dataset" ya contenía una amplia variedad de imágenes generadas mediante la técnica de aumento de datos, se optó por aplicar transformaciones a las imágenes del dataset "brain-tumor-mri-dataset", el cual carecía de esta característica. Estas transformaciones consisten en:
+
+- Volteo horizontal.
+- Rotación de 90 grados en el sentido horario.
+- Desenfoque mediano.
+- Además, se consideran otras transformaciones opcionales (estas están comentadas en el código del programa), que pueden ser aplicadas según las necesidades específicas del análisis.
+
+=== Organización de carpetas
+
+El programa organiza las imágenes procesadas en carpetas según la categoría de tumor. Las categorías incluyen "glioma," "meningioma," "pituitary," y "no-tumor."
+
+=== Creación de un DataFrame y exportación a CSV
+
+Se crea un DataFrame que contiene información sobre las imágenes y sus etiquetas. Este DataFrame se exporta como un archivo CSV llamado "datos.csv."
+
+=== Nivelación de datos
+
+Con el fin de lograr un equilibrio en la cantidad de imágenes por categoría, se lleva a cabo un proceso de nivelación y filtrado de datos, resultando en la obtención de un conjunto de 11,000 imágenes para cada categoría. Estos datos equilibrados son posteriormente exportados a un archivo CSV denominado "datos_nivelados.csv".
+
+image::imgs/grafico-nivelado.png[]
+
+En consecuencia, este dataset cuenta con una asombrosa cantidad total de 44000 imágenes.
+
+=== Limpieza de archivos no utilizados
+
+Los archivos de imágenes que no se utilizan en los datos nivelados se eliminan automáticamente.
+
+== Conclusión
+
+La preparación de estas imágenes se realizó con el propósito de ser cargadas en la plataforma Kaggle y compartirlas, de manera que todos los miembros del equipo puedan trabajar con el mismo conjunto de imágenes, previamente refinadas y niveladas. Esto evita que cada miembro tenga que llevar a cabo las mismas tareas de procesamiento de forma individual, lo que optimiza significativamente la eficiencia del equipo al eliminar duplicaciones y garantizar un dataset coherente y listo para ser utilizado de manera colaborativa.
