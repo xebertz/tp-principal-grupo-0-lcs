@@ -94,7 +94,7 @@ Desarrollo y Entrenamiento del Modelo de IA:
 === WBS
 
 .WBS Sprint 1
-image::img/wbs.png[]
+image::imgs/wbs.png[]
 
 === Diccionario WBS Sprint 1
 
@@ -185,12 +185,12 @@ image::img/wbs.png[]
 === Diagrama de precedencia
 
 .diagrama de precedencia
-image::img/diagrama-precedencia.png[]
+image::imgs/diagrama-precedencia.png[]
 
 === Calendario
 
 .Calendario Sprint 1
-image::img/calendario-sprint-1.png[]
+image::imgs/calendario-sprint-1.png[]
 
 Consideramos como **hito** actualizar la documentación referida a la investigación ya que es el paso previo a desarrollar los modelos de los Sprints 2 y 3, nos brinda un soporte de conocimientos para determinar qué tipo de modelo elegir y cómo estructurarlo.
 
@@ -217,7 +217,7 @@ La actualización de la documentación se hará formalmente al final de cada _Sp
 Se armó una tabla con rangos de horarios en los cuales cada integrante del equipo indicaba cuándo se encontraba disponible en este primer Sprint.
 
 .Horarios Sprint 1
-image::img/horarios-sprint.png[]
+image::imgs/horarios-sprint.png[]
 
 === Riesgos
 
