@@ -69,7 +69,7 @@ Probamos distintos modelos, algunos preentrenados y otros manuales:
 
 * *VGG16:* Este modelo, al ser pesado, no permitió muchas imágenes de entrenamiento ni de prueba. Obtuvo un 83% de precisión en las pruebas, para 800 imágenes.
 
-* *Transformada de Hough:*
+* *Transformada de Hough:* Esta técnica fue utilizada para encontrar círculos en imagenes de resonancia magnética, pero no dio los resultados esperados.
 
 == Modelos descartados
 
