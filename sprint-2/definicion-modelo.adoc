@@ -65,9 +65,9 @@ Probamos distintos modelos, algunos preentrenados y otros manuales:
 
 * *CNN Manual:* Este modelo fue el más liviano y rápido de todos, y obtuvo resultados sorprendentes: 92% de precisión en las pruebas, para 3200 imágenes.
 
-* *Inception ResNet:*
+* *Inception ResNetV2:* Este modelo alcanzó un porcentaje superior al 86% de precisión en las pruebas, para 2600 imágenes. Sin embargo, fue entrenado en una sola vuelta por su complejidad.
 
-* *VGG16:*
+* *VGG16:* Este modelo, al ser pesado, no permitió muchas imágenes de entrenamiento ni de prueba. Obtuvo un 83% de precisión en las pruebas, para 800 imágenes.
 
 * *Transformada de Hough:*
 
