@@ -12,9 +12,20 @@ v1, {docdate}
 
 == Introducción
 
-Una vez establecidos los objetivos del trabajo, procedimos a realizar las tareas necesarias para el preprocesamiento de datos y el entrenamiento de distintos modelos, tantos preentrenados como manuales.
+Como ya se mencionó, el objetivo del proyecto es desarrollar un software que permita diagnosticar enfermedades de distintas partes del cuerpo a través de imágenes. El software está dirigido a todos profesionales de la salud que requieran utilizarlo.
+
+Para este sprint, nuestro objetivo es desarrollar y hacer el deploy de un modelo que determine si un paciente tiene o no un tumor, y de qué tipo, a través de imágenes de resonancia magnética.
+
+
+== Objetivos del documento
+
+Una vez establecido el objetivo del trabajo, procedimos a realizar las tareas necesarias para el preprocesamiento de datos y el entrenamiento de distintos modelos, tantos preentrenados como manuales.
 
 En este documento expondremos cómo preparamos los datos, qué modelos entrenamos y cuál es el elegido para nuestro problema. También explicaremos las distintas decisiones tomadas durante el desarrollo.
+
+== Datos
+
+Para la detección de tu
 
 == Modelos probados
 
