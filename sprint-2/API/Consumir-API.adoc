@@ -1,0 +1,64 @@
+= API
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== Consumir API
+La API tiene dos endpoints para su uso y además tiene un index.html, donde tiene una breve explicación de como se realizan las peticiones a la API.
+
+=== Endpoints
+Los *endpoints* son puntos de acceso o URLs específicas que se utilizan para realizar operaciones o solicitudes a través de la API. Cada endpoint está diseñado para llevar a cabo una función específica y proporciona una forma estructurada y estandarizada de interactuar con la API.
+
+Los *endpoints* pueden recibir solicitudes, como solicitudes HTTP-GET para obtener información o solicitudes HTTP-POST para enviar datos al servidor. En resumen, los *endpoints* actúan como interfaces que permiten a los clientes (como aplicaciones o usuarios) comunicarse de manera eficiente con la API y acceder a sus recursos o servicios de manera predefinida.
+
+=== */ping*
+Mediante una solicitud HTTP-GET se puede solicitar el endpoint, donde si está activo el servicio retorna un 200 y un JSON con el mensaje "API on!". Para acceder al endpoint se debe agregar al dominio donde está la API subida _/ping_. EJ: https://tumorapi-production.up.railway.app/ping
+
+
+.ejemplo_get.js
+[source,javascript]
+----
+fetch('https://tumorapi-production.up.railway.app/ping')
+  .then(response => {
+    if (response.ok) {
+      // El código de estado es 200 (OK)
+      console.log('Código de estado: ' + response.status);
+      return response.json();
+    }
+----
+
+=== */predict*
+Mediante una solicitud HTTP-POST se puede enviar al endpoint un binario, donde si es una imagen retorna un String. El String puede ser una de las siguientes: "Glioma", "Meningioma", "Pituitary" y "No_tumor". En caso contrario, que no sea un binario aceptado, retorna un _status_code_ 418. Para acceder al endpoint se debe agregar al dominio donde está la API subida _/predict_. EJ: tumorapi-production.up.railway.app/predict
+
+.ejemplo_post.js
+[source,javascript]
+----
+const formData = new FormData();
+formData.append('image', imagenFile); 
+
+// Realizar la solicitud POST a la API
+fetch('tumorapi-production.up.railway.app/predict', {
+  method: 'POST',
+  body: formData
+})
+  .then(response => {
+    if (response.ok) {
+      return response.text();
+    } else {
+      throw new Error('Error en la solicitud');
+    }
+  })
+  .then(data => {
+    console.log('Respuesta de la API:', data);
+  })
+  .catch(error => {
+    console.error('Error al enviar la imagen:', error);
+  });
+----
