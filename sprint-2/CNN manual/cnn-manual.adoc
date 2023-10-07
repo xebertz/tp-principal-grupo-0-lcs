@@ -11,14 +11,16 @@ v1, {docdate}
 :pdf-page-margin: [2.8cm, 2.8cm, 2.8cm, 2.8cm]
 
 == ¿Qué es una Red Neuronal Convolucional?
+
 Las CNN son una clase especializada de redes neuronales profundas diseñadas para procesar y analizar datos de tipo grid, como imágenes y vídeos. Se destacan por su capacidad para capturar patrones espaciales en los datos mediante el uso de capas de convolución.
 
 Cada una de ellas se encuentra conformada por una serie de capas, en donde cada una de ellas tiene una funcionalidad distinta. Primero, están las *capas de convolución*, estas capas aplican filtros sobre las imágenes con el objetivo de poder detectar mas eficientemente los bordes, texturas y formas. Por otro lado, también existen las denominadas *"Capas de Pooling"*, las cuales se utilizan para reducir la dimensionalidad espacial de las representaciones y hacer que la red sea más invariante a pequeñas traslaciones y variaciones. Finalmente, luego de varias capas de convolución y pooling, aparecen las *capas completamente conectadas*, estas capas utilizan las características aprendidas por las capas anteriores para asignar la entrada a clases específicas.
 
 == Modelo Implementado
-Nuestro modelo trabaja con un dataset creado por nosotros en base a otros dataset obtenidos de Kaggle. Nuestro dataset puede obtenerse del siguiente link: "https://www.kaggle.com/datasets/gonzajl/tumores-cerebrales-mri-dataset".
 
-La implementación del modelo utilizando redes neuronales convolucionales es similar al que realizó el grupo 1 en el trabajo inicial. Los cambios realizados son principalmente con el objetivo de adaptarlo para que no sea binario, sino multiclase, en particular, el modelo puede clasificar en 4 clases distintas. La primera, es *glioma*, el cual es un tumor que se origina en el tronco encefálico, la médula espinal y el cerebelo. La segunda clasificación posible es *meningioma*, Un meningioma es un tumor que se origina en las membranas que rodean al cerebro y la médula espinal. El tercer tipo posible es el denominado *"pituitary tumors"*, el cual en español significa *"Tumores Hipofisarios"*, estos se encuentran en la base del cerebro. Finalmente, la última clasificación que considera el modelo se denomina *No tumor*, que como dice el nombre, hace referencia a cuando no se detecta ningún tumor en la imágen.
+Nuestro modelo trabaja con un dataset creado por nosotros en base a otros dataset obtenidos de Kaggle. Para obtener nuestro dataset dar click https://www.kaggle.com/datasets/gonzajl/tumores-cerebrales-mri-dataset[aquí].
+
+La implementación del modelo utilizando redes neuronales convolucionales es similar al que realizó el grupo 1 en el trabajo inicial. Los cambios realizados son principalmente con el objetivo de adaptarlo para que no sea binario, sino multiclase, en particular, el modelo puede clasificar en 4 clases distintas. La primera, es *glioma*, el cual es un tumor que se origina en el tronco encefálico, la médula espinal y el cerebelo. La segunda clasificación posible es *meningioma*, Un meningioma es un tumor que se origina en las membranas que rodean al cerebro y la médula espinal. El tercer tipo posible es el denominado *"pituitary tumors"*, el cual en español significa *"Tumores Hipofisarios"*, estos se encuentran en la base del cerebro. Finalmente, la última clasificación que considera el modelo se denomina *No tumor*, que como dice el nombre, hace referencia a cuando no se detecta ningún tumor en la imagen.
 
 == Adaptación del modelo multiclase
 
@@ -33,6 +35,8 @@ La distribución más prometedora fue de 16 mil imágenes en total (12800 de ent
 
 === 12800 imágenes de entrenamiento y 3200 de prueba
 
+[source, console]
+----
 Epoch 1/7
 loss: 0.9600 - categorical_accuracy: 0.5920 - val_loss: 0.6198 - val_categorical_accuracy: 0.7625
 
@@ -53,11 +57,15 @@ loss: 0.1459 - categorical_accuracy: 0.9469 - val_loss: 0.2558 - val_categorical
 
 Epoch 7/7
 loss: 0.1268 - categorical_accuracy: 0.9560 - val_loss: 0.2666 - val_categorical_accuracy: 0.9200
+----
 
 == Resultados por clase
 
+[source, console]
+----
 Cantidad de predicciones: 3200
 Etiquetas:   [G,  M,  P,  N] (G: Glioma, M: Meningioma, P: Pituitary, N: No Tumor)
 Total:       [859, 742, 778, 821]
 Correctas:   [737, 678, 769, 760]
 Incorrectas: [122, 64, 9, 61]
+----
