@@ -1,0 +1,152 @@
+= API
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== Introducción
+
+=== API
+Una API es un conjunto de definiciones y protocolos que se utilizan para diseñar e integrar el software de las aplicaciones. Permiten que los productos y servicios se comuniquen con otros, sin necesidad de saber cómo están implementados.
+ 
+Una API utiliza *endpoints*, que son puntos de acceso o URLs específicas que se utilizan para realizar operaciones o solicitudes a través de la API. Cada endpoint está diseñado para llevar a cabo una función específica y proporciona una forma estructurada y estandarizada de interactuar con la API.
+
+=== Necesidad
+Tras desarrollar el modelo de clasificación de tumores cerebrales, hemos contemplado la necesidad de realizar una API para el uso de esta misma. En este contexto, hemos tenido el privilegio de desarrollar la API que facilita el acceso y la utilización del modelo.
+
+== Desarrollo
+Para la implementación de la API se utilizó el lenguaje Python con el Framework de Flask, y distintas librerias necesarias para la utilización del modelo y para la manipulación de imágenes. 
+
+=== Flask
+Flask nos permite, de una manera rápida y sencilla, crear endpoints para el uso de la API y enlazar funciones a estas mismas. 
+
+El siguiente ejemplo trata sobre un endpoint que retorna un _status_code_ 200, que significa que la API está activa. 
+
+[source,python]
+----
+@cross_origin
+@app.route("/ping", methods=["GET"])
+def ping():
+    response = make_response(jsonify(message='API on!'))
+    response.status_code = 200
+    return response
+----
+Como se puede observar solo con un decorador *@app.route* definiendo una ruta URL y el método HTTP, el endpoint ya estaría funcionando. Por otro lado el decorador *cross_origin* habilita el acceso al endpoint desde orígenes cruzados, es decir, que permite que un sitio web o dominio diferente al de la aplicación tenga acceso a los recursos de la aplicación a través de solicitudes HTTP.
+
+=== Implementación del modelo
+Tras haber realizado el desarrollo del modelo utilizando keras y tensorflow, se exportó en el formato .h5, que un formato de archivo diseñado para almacenar y organizar grandes cantidades de datos de manera eficiente.
+
+Tras obtener el modelo exportado se procedío a implementarlo para el consumo de la API. Para esto mismo primero se debe obtener la imagen mediante un endpoint y un método HTTP-POST.
+
+[source,python]
+----
+@cross_origin
+@app.route('/predict', methods=['POST'])
+def predict():
+    #Recibe y guarda la imagen
+    image = request.files['image']
+    if image.filename.lower().endswith(('.png', '.jpg', '.jpeg')):
+        image.save("image.png")
+        response = make_response(jsonify(message= prediction()))
+        response.status_code = 200
+        return response
+    else:
+        #En caso de no ser una imagen, se retorna un 418
+        response = make_response(jsonify(message="I'm a teapot!"))
+        response.status_code = 418
+        return response 
+----
+ 
+Tras obtener la imagen, se tiene que procesar para que corresponda con las utilizadas para el modelo. Para esto se utiliza la libreria Pillow y además se utiliza Numpy para transformar la imagen en una matriz de bits y que lo acepte el modelo.
+
+[source,python]
+----
+def prediction():
+    #Carga el modelo.
+    model = tensorflow.keras.models.load_model("tumor_model.h5")
+    img = Image.open("image.png").convert("L")
+    #Transforma la imagen para que coincidan con el modelo. 
+    img = img.resize((224, 224)) 
+    img = np.array(img)
+    img = img / 255.0
+    img = img.reshape((1,224,224,1))
+    #Predice el modelo
+    predict = model.predict(img)    
+    #Como son 4 clases, entonces es un arreglo de 4 elementos.
+    #Entonces, predicted_class retorna la posición del arreglo donde la posición es la clase que predice.
+    predicted_class = np.argmax(predict)
+    return classify_result(predicted_class)
+----
+
+Como el modelo es uno multiclase, retorna un arreglo de tamaño 4. la línea *predicted_class = np.argmax(predict)* obtiene un índice del arreglo, donde el índice representa en que clase clasifica la imagen ingresada. Esto se define en la función *classify_result*.
+
+[source,python]
+----
+def classify_result(index):
+    class_model = ["Glioma", "Meningioma", "Pituitary", "No_tumor"]
+    return class_model[index]
+----
+
+=== Test
+Para comprobar el correcto funcionamiento de la API se implementó varios tests unitarios para los endpoints, utilizando la libreria *unittest* y *Request* proveniente de Flask.
+
+Los casos que se toman en cuenta son los siguientes:
+
+1. Obtener el _status_code_ 200 del endpoint ping.
+
+2. Validar que se ingresó una imagen válida del endpoint predict obteniendo el _status_code_ 200.
+
+3. Validar que se ingresó un binario no valido en el endpoint predict obteniendo el _status_code_ 418.
+
+4. Obtener el _status_code_ 400 del endpoint predict tras no recibir ningún binario.
+
+5. Obtener el _status_code_ 400 del endpoint predict tras recibir un String vacío.
+
+6. Obtener el _status_code_ 400 del endpoint predict tras recibir un None.
+
+7. Obtener el resultado _Glioma_ del endpoint predict tras enviar una imagen de una tomografía de un cerebro con el tumor del mismo nombre.
+
+8. Obtener el resultado _Meningioma_ del endpoint predict tras enviar una imagen de una tomografía de un cerebro con el tumor del mismo nombre.
+
+9. Obtener el resultado _Pituitary_ del endpoint predict tras enviar una imagen de una tomografía de un cerebro con el tumor del mismo nombre.
+
+10. Obtener el resultado _No_tumor_ del endpoint predict tras enviar una imagen de una tomografía de un cerebro sin algún tumor.
+
+== Desplegar
+Ya desarrollado la aplicación y ser probada localmente, procedimos a desplegar la API en la nube. 
+
+Se utilizó Docker para aislar la aplicación del servicio donde se despliega la aplicación y asegurar que se comporte de la misma manera en cualquier entorno.
+
+Se utiliza el puerto que provee el servicio por defecto, y en caso que no tenga uno por defecto se utiliza el 8080.
+
+[source,python]
+----
+import os
+.
+.
+.
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+----
+
+== Problemas encontrados
+
+1. Para manipular la imagen y que corresponda con el modelo, anteriormente utilizabamos la biblioteca _OpenCv_, pero en los servicios para desplegar tenía errores. Se utilizó _Pillow_ como reemplazo.
+
+2. La libreria _TensorFlow_ utiliza la GPU por defecto, pero los servicios de despliegue solo tienen CPU. Para solucionar esto se utilizo la libreria _TensorFlow-cpu_ que permite utilizar _TensorFlow_ con la CPU.
+
+3. La libreria _TensorFlow-cpu_ instala una libreria adicional llamada _TensorFlow-intel_. Esta libreria no permitía el despliegue y además no se utiliza en el modelo. Se eliminó para solucionar el despliegue.
+
+== Bibliografia
+
+* https://www.redhat.com/es/topics/api/what-are-application-programming-interfaces
+
+* https://pypi.org/project/tensorflow-intel/
+
+* https://www.tensorflow.org/?hl=es-419
