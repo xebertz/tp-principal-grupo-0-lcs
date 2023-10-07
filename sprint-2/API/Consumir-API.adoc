@@ -62,3 +62,6 @@ fetch('tumorapi-production.up.railway.app/predict', {
     console.error('Error al enviar la imagen:', error);
   });
 ----
+
+== Herramientas
+Otras herramientas para realizar pruebas o solicitudes a la API pueden ser Postman, SoapUI, RapidAPI, Rayuela, etc... Además, se puede consumir con diferentes lenguajes de preferencia.
