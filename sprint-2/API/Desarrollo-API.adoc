@@ -142,3 +142,11 @@ if __name__ == "__main__":
 2. La libreria _TensorFlow_ utiliza la GPU por defecto, pero los servicios de despliegue solo tienen CPU. Para solucionar esto se utilizo la libreria _TensorFlow-cpu_ que permite utilizar _TensorFlow_ con la CPU.
 
 3. La libreria _TensorFlow-cpu_ instala una libreria adicional llamada _TensorFlow-intel_. Esta libreria no permitía el despliegue y además no se utiliza en el modelo. Se eliminó para solucionar el despliegue.
+
+== Bibliografia
+
+* https://www.redhat.com/es/topics/api/what-are-application-programming-interfaces
+
+* https://pypi.org/project/tensorflow-intel/
+
+* https://www.tensorflow.org/?hl=es-419
