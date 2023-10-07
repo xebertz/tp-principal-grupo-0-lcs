@@ -61,7 +61,7 @@ Probamos distintos modelos, algunos preentrenados y otros manuales:
 
 * *SVM:* Este modelo es binario. Llevando nuestro problema a un problema binario, obtuvimos un 96% de precisión en las pruebas. Sin embargo, no será utilizado por no ser multiclase.
 
-* *Xception:*
+* *Xception:* Este modelo alcanzó un porcentaje superior al 90% de precisión en las pruebas, con 4000 imágenes por clase.
 
 * *CNN Manual:*
 
