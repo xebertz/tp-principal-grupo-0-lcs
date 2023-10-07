@@ -32,7 +32,6 @@ También fueron necesarias tareas de preparación de datos, deploy y gestión, l
 [cols="3*", options="header"]
 |===
 |Encargado         |Tarea
-
 |Villalba, Gastón  |Tomar mate, gestión
 |Ebertz, Ximena    |Desarrollo de modelos VGG16, VGG19, Xception y Transformada de Hough, gestión
 |López, Gonzalo    |Preparación de datos y desarrollo de modelos ResNet y EfficientNetV2
