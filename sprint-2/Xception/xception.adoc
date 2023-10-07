@@ -155,7 +155,7 @@ Esto es, aproximadamente, un 89% de precisión. Este nivel de precisión es lo s
 
 Con la finalidad de obtener un modelo con resultados incluso mejores, se llevaron a cabo entrenamientos con la misma cantidad de imágenes, pero modificando los hiperparámetros del modelo. Estos no arrojaron resultados significativos.
 
-Por lo tanto, determinamos que la arquitectura definida de Xception con 4000 imágemes por clase es la que más se ajusta a nuestro caso de uso. Se puede ver que su nivel de precisión, es de más de 90%, y su nivel de pérdida es menor a 45%. Estas métricas son excelentes en general, en cuanto a modelos de IA. 
+Por lo tanto, determinamos que la arquitectura definida de Xception con 4000 imágenes por clase es la que más se ajusta a nuestro caso de uso. Se puede ver que su nivel de precisión, es de más de 90%, y su nivel de pérdida es menor a 45%. Estas métricas son excelentes en general, en cuanto a modelos de IA. 
 
 .niveles de precisión y pérdida
 [cols="a,a", frame=none, grid=none, role=right]
