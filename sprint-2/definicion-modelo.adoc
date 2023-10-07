@@ -59,7 +59,7 @@ Probamos distintos modelos, algunos preentrenados y otros manuales:
 
 * *ResNet:* La aquitectura ResNet tiene diversas variantes, entre las cuales están ResNet50, ResNet50V2, ResNet152, ResNet152V2. De estas, la que mejor resultados arrojó fue ResNet50V2, con un 93% de precisión en las pruebas.
 
-* *SVM:*
+* *SVM:* Este modelo es binario. Llevando nuestro problema a un problema binario, obtuvimos un 96% de precisión en las pruebas. Sin embargo, no será utilizado por no ser multiclase.
 
 * *Xception:*
 
