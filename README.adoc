@@ -29,7 +29,7 @@ Debido a la necesidad de entrenar distintos modelos, fueron divididos por miembr
 También fueron necesarias tareas de preparación de datos, deploy y gestión, las cuales fueron asignadas a miembros específicos del equipo de trabajo.
 
 .división de tareas del equipo de trabajo
-[cols="3*", options="header"]
+[cols="2*", options="header"]
 |===
 |Encargado         |Tarea
 |Villalba, Gastón  |Tomar mate, gestión
