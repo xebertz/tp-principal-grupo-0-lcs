@@ -44,7 +44,15 @@ También fueron necesarias tareas de preparación de datos, deploy y gestión, l
 
 Determinamos que los siguientes _datasets_ serían útiles para nuestro trabajo:
 
+- Dataset 1: https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset[brain-tumor-mri-dataset] con 7022 imágenes.
+- Dataset 2: https://www.kaggle.com/datasets/mohammadhossein77/brain-tumors-dataset[brain-tumors-dataset] con 21672 imágenes.
+
+Decidimos que la mejor opción sería combinarlos y subirlos a Kaggle, ya que, de esta forma, todos los miembros pueden utilizarlo, sin realizar demasiadas tareas de preprocesamiento por código.
+
+El dataset generado se encuentra https://www.kaggle.com/datasets/gonzajl/tumores-cerebrales-mri-dataset/data[acá].
+
 == Modelos probados
+
 
 * ResNet
 
