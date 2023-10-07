@@ -1,4 +1,4 @@
-= Modelos preentrenados: Comparación y definición
+= TP Principal - Laboratorio de Construcción de Software: Sprint 2
 Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
 v1, {docdate}
 :toc:
@@ -12,38 +12,29 @@ v1, {docdate}
 
 == Introducción
 
-En este documento compararemos los diferentes modelos preentrenados probados, y definiremos cuál es mejor para nuestro caso de uso.
+Una vez establecidos los objetivos del trabajo, procedimos a realizar las tareas necesarias para el preprocesamiento de datos y el entrenamiento de distintos modelos, tantos preentrenados como manuales.
 
-== EfficientNetV2
+En este documento expondremos cómo preparamos los datos, qué modelos entrenamos y cuál es el elegido para nuestro problema. También explicaremos las distintas decisiones tomadas durante el desarrollo.
 
-== ResNet
+== Modelos probados
 
-== SVM
+* ResNet
 
-== Xception
+* SVM
 
-== CNN Manual
+* Xception
 
-== Mask R CNN
+* CNN Manual
 
-== Inception ResNet
+* Inception ResNet
 
-== VGG16
+* VGG16
 
-== VGG19
+* Transformada de Hough
 
-== Transformada de Hough
+== Modelos descartados
 
-La Transformada de Hough es una función que detecta figuras geométricas en una imagen. En particular, se puede utilizar para la detección de círculos.
+* Mask R CNN
 
-En nuestro caso, la transformada de Hough puede ser util para delimitar un tumor, lo que ayudaría en la clasificación de la imagen.
-
-En este documento se explica cómo se puede utilizar esta herramienta y qué tan util resulta en nuestro problema.
-
-- cv2.imshow deprecated --> kernel crash
-- parámetros
-- blur gaussiano empeora las cosas
-- muestra de ejemplo
-- mejora
-
+* VGG19
 
