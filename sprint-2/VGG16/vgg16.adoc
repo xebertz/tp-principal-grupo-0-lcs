@@ -14,7 +14,7 @@ v1, {docdate}
 
 El modelo VGG16 es un modelo preentrenado de la librería *Keras* que cuenta con 16 capas.
 
-Para utilizarlo, importamos el modelo y le añadimos una capa de _input_, para que se adapte a nuestras imágenes, una capa de _pooling_, y una capa de _output_. El modelo fue _freezado_, es decir, se mantuvieron los pesos que obtuvo durante el entrenamiento con el dataset _imagenet_, para utilizar la técnica _transfer learning_.
+Para utilizarlo, importamos el modelo y le añadimos una capa de _input_, una capa de _pooling_, y una capa de _output_. El modelo fue _freezado_, es decir, se mantuvieron los pesos que obtuvo durante el entrenamiento con el dataset _imagenet_, para utilizar la técnica _transfer learning_.
 
 == Entrenamiento
 
@@ -37,15 +37,15 @@ outputs = keras.layers.Dense(4, activation='softmax')(x)
 model = keras.Model(inputs, outputs)
 ----
 
-Que corresponde a un modelo VGG16 con leves modificaciones en cuanto a _inputs_ y _outputs_.
+Que corresponde a un modelo VGG16 con leves modificaciones en cuanto a _inputs_ y _outputs_, para que se adapte a nuestras imágenes.
 
-El primer problema que surgió durante el entrenamiento es que el modelo es demasiado lento. Nuestro https://www.kaggle.com/datasets/gonzajl/tumores-cerebrales-mri-dataset/data[dataset] cuenta con 44000 imágenes, por lo que utilizar todas las imágenes fue imposible.
+El primer problema que surgió durante el entrenamiento es que el modelo es demasiado lento, debido a su cantidad de capas. Nuestro https://www.kaggle.com/datasets/gonzajl/tumores-cerebrales-mri-dataset/data[dataset] cuenta con 44000 imágenes, por lo que utilizar todas las imágenes fue imposible.
 
-Intentamos con 10000 imágenes, pero tampoco se podía entrenar. Por este motivo, decidimos importar 1000 imágenes por clase y dividirlas en conjuntos de entrenamiento y prueba, siendo un 80% de entrenamiento y un 20% de prueba.
+Intentamos con 10000 imágenes, pero el entrenamiento continuó siendo imposible. Por este motivo, decidimos importar 1000 imágenes por clase y dividirlas en conjuntos de entrenamiento y prueba, siendo un 80% de entrenamiento y un 20% de prueba.
 
 Estas imágenes fueron mezcladas previamente, para que el modelo no reciba bloques de imágenes iguales según su categoría.
 
-Luego de esto, se pudo iniciar el entrenamiento, pero surgió otro problema: el modelo no elevaba su precisión. La precisión máxima que tenía era del 25%, lo que no es ideal. Decidimos ajustar los hiperparámetros del modelo, para elevar su precisión. Lo "descongelamos", le agregamos capas, le sacamos capas, y probamos distintas combinaciones de todo esto. Finalmente, llegamos a la versión presentada anteriormente.
+Luego de esto se pudo iniciar el entrenamiento, pero surgió otro problema: el modelo no elevaba su precisión. La precisión máxima que tenía era del 25%, lo que no es ideal. Decidimos ajustar los hiperparámetros del modelo, para elevar su precisión. Lo "descongelamos", le agregamos y sacamos capas, y probamos distintas combinaciones de todo esto. Finalmente, llegamos a la versión presentada anteriormente.
 
 Con dos vueltas de entrenamiento, obtuvimos los siguientes resultados en las métricas:
 
