@@ -12,5 +12,8 @@ v1, {docdate}
 
 == Introducción
 
-Tras desarrollar el modelo de clasificación de tumores cerebrales, hemos contemplado la necesidad de realizar una API para el uso de esta misma. En este contexto, hemos tenido el privilegio de desarrollar la API que facilita el acceso y la utilización del modelo.
+=== API
+Una API es un conjunto de definiciones y protocolos que se usa para diseñar e integrar el software de las aplicaciones. Permiten que los productos y servicios se comuniquen con otros, sin necesidad de saber cómo están implementados. 
 
+=== Necesidad
+Tras desarrollar el modelo de clasificación de tumores cerebrales, hemos contemplado la necesidad de realizar una API para el uso de esta misma. En este contexto, hemos tenido el privilegio de desarrollar la API que facilita el acceso y la utilización del modelo.
