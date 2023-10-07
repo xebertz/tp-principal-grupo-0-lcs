@@ -250,7 +250,7 @@ En este primer Sprint contamos con dos cambios:
 El trabajo se expresará en Story Points, teniendo en cuenta que un Story Point es igual a 1 hora.
 
 .Burndown Chart Sprint 1
-image::img/burndown-chart.png[]
+image::imgs/burndown-chart.png[]
 
 El día 22/09 no hubo avance al preparar consultas para la clase presencial.
 
