@@ -23,19 +23,19 @@ En el Sprint Planning del Sprint 2 se realizará una planificación más detalla
 === WBS
 
 .WBS Sprint 2
-image::img/wbs-estimado-s2-s3.png[]
+image::imgs/wbs-estimado-s2-s3.png[]
 
 === Diagrama de precedencia
 
 .Diagrama de precedencia
-image::img/wbs-precedencia-estimado-s2-s3.png[]
+image::imgs/wbs-precedencia-estimado-s2-s3.png[]
 
 === Arquitectura de Solución
 
 Una vez hecho el _deploy_, nuestro modelo recibe una imagen y determinados datos (que posteriormente se definirán) desde el _backend_. Nuestro servidor procesa la imagen para que el modelo pueda analizarla. Luego del análisis se complementará el resultado con los datos extra brindados para mejorar la precisión. Finalmente devuelve la predicción final al _backend_.
 
 .Representación del proceso de predicción
-image::img/arquitectura-solucion.png[]
+image::imgs/arquitectura-solucion.png[]
 
 === Riesgos
 
