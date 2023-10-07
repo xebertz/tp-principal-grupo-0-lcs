@@ -63,7 +63,7 @@ Probamos distintos modelos, algunos preentrenados y otros manuales:
 
 * *Xception:* Este modelo alcanzó un porcentaje superior al 90% de precisión en las pruebas, para 3200 imágenes.
 
-* *CNN Manual:*
+* *CNN Manual:* Este modelo fue el más liviano y rápido de todos, y obtuvo resultados sorprendentes: 92% de precisión en las pruebas, para 3200 imágenes.
 
 * *Inception ResNet:*
 
