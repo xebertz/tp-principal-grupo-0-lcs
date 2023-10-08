@@ -326,8 +326,6 @@ El trabajo se expresará en Story Points, teniendo en cuenta que un Story Point 
 .Burndown Chart Sprint 2
 image::.img/burndown-chart.png[]
 
-El día 22/09 no hubo avance al preparar consultas para la clase presencial.
-
 == Tecnologías
 
 Las tecnologías a utilizar serán las siguientes:
