@@ -212,7 +212,7 @@ image::.img/diagrama-precedencia.png[]
 .Calendario Sprint 2
 image::.img/calendario.png[]
 
-Consideramos como **hito** actualizar la documentación referida a la investigación ya que es el paso previo a desarrollar los modelos de los Sprints 2 y 3, nos brinda un soporte de conocimientos para determinar qué tipo de modelo elegir y cómo estructurarlo.
+Consideramos como **hito** definir la arquitectura del modelo de IA y el despliegue del mismo para su consumo mediante API.
 
 === Plan de comunicaciones
 
