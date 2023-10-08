@@ -76,5 +76,7 @@ Durante el proceso de entrenamiento se determinó que ciertos modelos no valían
 
 == Modelo seleccionado
 
+El modelo elegido fue *CNN Manual*, debido a su alto nivel de precisión. *ResNet50V2* quedó como segunda opción, ya que a pesar de tener un nivel de precisión más alto que *CNN Manual*, fue entrenado con menos imágenes y cuenta con una performance inferior.
+
 == Deploy
 
