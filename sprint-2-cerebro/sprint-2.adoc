@@ -221,7 +221,7 @@ Consideramos como **hito** definir la arquitectura del modelo de IA y el desplie
 image::.img/comparativa.png[]
 
 .Referencia de color
-image:.img/comparativa-color.png[align="center"]
+image:.img/comparativa-color.png[120,120, align="center"]
 
 === Plan de comunicaciones
 
