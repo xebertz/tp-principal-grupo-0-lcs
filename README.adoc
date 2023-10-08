@@ -79,4 +79,14 @@ Durante el proceso de entrenamiento se determinó que ciertos modelos no valían
 El modelo elegido fue *CNN Manual*, debido a su alto nivel de precisión. *ResNet50V2* quedó como segunda opción, ya que a pesar de tener un nivel de precisión más alto que *CNN Manual*, fue entrenado con menos imágenes y cuenta con una performance inferior.
 
 == Deploy
+Tras haber exportado el modelo seleccionado se empezó con el desarrollo de una API para facilitar el uso del modelo.
+Se utilizó Python junto el Framework de Flask para desarrollar la API. Tras haber desarrollado la API, se procedió a desplegar la aplicación utilizando el PaaS de Railway, aunque en primer lugar se decidió por FL0, últimamente la plataforma tiene mal funcionamiento.
 
+La API cuenta con 2 endpoints:
+
+* /ping: Mediante una solicitud HTTP-GET retorna un JSON con el siguiente mensaje: "API on!", y un _status_code_ 200.
+
+* /predict: Mediante una solicitud HTTP-POST se le debe envíar un binario (Imagen) y retorna un JSON con los siguientes posibles mensajes: "Glioma", "Meningioma", "Pituitary" y "No_tumor". En caso contrario de no ser un binario aceptado, retorna un _status_code_ 418.
+
+La API se puede ingresar desde: https://tumorapi-production.up.railway.app/
+. En la misma se puede encontrar un pequeño resumen de como consumir la API.
