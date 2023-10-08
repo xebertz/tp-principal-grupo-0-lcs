@@ -208,11 +208,20 @@ image::.img/wbs.png[]
 image::.img/diagrama-precedencia.png[]
 
 === Calendario
+==== Estimado
 
 .Calendario Sprint 2
 image::.img/calendario.png[]
 
 Consideramos como **hito** definir la arquitectura del modelo de IA y el despliegue del mismo para su consumo mediante API.
+
+==== Comparativa estimado vs real
+
+.Comparativa
+image::.img/comparativa.png[]
+
+.Referencia de color
+image:.img/comparativa-color.png[align="center"]
 
 === Plan de comunicaciones
 
