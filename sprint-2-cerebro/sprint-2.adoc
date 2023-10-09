@@ -28,24 +28,25 @@ El principal objetivo de este documento es especificar las decisiones que se tom
 
 == Metodología de trabajo
 
-Somos parte del _Agile Release Train_ (que plantea el marco de trabajo *_SAFe_*) en conjunto con los demás grupos. Para coordinar nuestro trabajo adaptaremos el _framework_ ágil *_Scrum_* según las preferencias del equipo para optimizarla. Cada _Sprint_ dura *dos semanas*.
+Somos parte del _Agile Release Train_ (que plantea el marco de trabajo *_SAFe_*) en conjunto con los demás grupos. Para coordinar nuestro trabajo adaptaremos el _framework_ ágil *_Scrum_* según las preferencias del equipo para optimizarla. Cada _sprint_ dura *dos semanas*.
 
-- *_Sprint Planning_*: se realizará el primer día del _Sprint_ y en ocasiones participará el _Release Train Engineer_.
+- *_Sprint Planning_*: se realizará el primer día del _sprint_ y en ocasiones participará el _Release Train Engineer_.
 
 - *_Daily Scrum_* cada 2 días: los integrantes del equipo tienen tiempos diferentes y un día de trabajo quizá no sea suficiente para tener un avance considerable para plantearlo en las _Daily_. Por inconvenientes o bloqueo de un integrante, en el día que no hay _Daily_, se comunicarán por algunos de los medios detallados más adelante.
 
-- *_Sprint Review_*: el último día del _Sprint_ se hará una presentación de los informes solicitados mostrando el avance del equipo.
+- *_Sprint Review_*: el último día del _sprint_ se hará una presentación de los informes solicitados mostrando el avance del equipo.
 
-- *_Sprint Retrospective_*: luego de la revisión de cada _Sprint_ se hará una retrospectiva del avance.
+- *_Sprint Retrospective_*: luego de la revisión de cada _sprint_ se hará una retrospectiva del avance.
 
 == Equipo de trabajo y roles
 
 Los roles que se utilizarán en el equipo son los siguientes:
 
-[cols="3*", options="header"]
+[cols="3,2,2", options="header"]
 |===
 |Rol            |Encargado         |Suplente
 
+|Product Owner | Dikenstein, Leandro|
 |Scrum Master   |Villalba, Gastón  |Ebertz, Ximena
 |Líder Técnico  |Ebertz, Ximena    |Franco, Leandro
 |Machine Learning Engineer  |López, Gonzalo    |
@@ -132,7 +133,7 @@ image::.img/wbs.png[]
 |5
 |1.1
 |Investigación
-|Referido a la investigación, en este sprint esperamos que un especialista nos brinde información sobre qué cosas tener en cuenta para el desarrollo y uso del modelo de machine learning.
+|Referido a la investigación, en este _sprint_ esperamos que un especialista nos brinde información sobre qué cosas tener en cuenta para el desarrollo y uso del modelo de machine learning.
 |Realizar entrevistas a profesionales de la salud.
 |15
 |1.1.2
@@ -147,7 +148,7 @@ image::.img/wbs.png[]
 |166
 |1.2.1
 |Procesamiento de imágenes
-|En este sprint, el procesamiento de imágenes está centrado en crear el dataset  aplicando determinadas transformaciones a las imágenes para el entrenamiento en igualdad de condiciones de todos los modelos a desarrollar.
+|En este _sprint_, el procesamiento de imágenes está centrado en crear el dataset  aplicando determinadas transformaciones a las imágenes para el entrenamiento en igualdad de condiciones de todos los modelos a desarrollar.
 |Investigar las técnicas de procesamiento de imágenes necesarias para preparar los datos para el entrenamiento del modelo, refinando los datos, nivelando las clases y aumentando los datos si es necesario.
 |7
 |1.2.1.2
@@ -207,11 +208,18 @@ image::.img/wbs.png[]
 .Diagrama de precedencia
 image::.img/diagrama-precedencia.png[]
 
+El diagrama de precedencia cuenta con los pesos estimados en días para la finalización de cada tarea. Aquellas con color rosa son las tareas incluidas en el camino crítico.
+
+Se puede observar que tiene una longitud de *11* días. Como el _sprint_ dura *13* días si no contamos el _Sprint Review_, la holgura total de esas tareas no puede superar los *2* días.
+
 === Calendario
 ==== Estimado
 
 .Calendario Sprint 2
 image::.img/calendario.png[]
+
+.Referencia de color
+image::.img/calendario-color.png[align="center"]
 
 Consideramos como **hito** definir la arquitectura del modelo de IA y el despliegue del mismo para su consumo mediante API.
 
@@ -222,6 +230,8 @@ image::.img/comparativa.png[]
 
 .Referencia de color
 image:.img/comparativa-color.png[120,120, align="center"]
+
+Las tareas asignadas durante el _sprint_ se encuentran por debajo de la fila de color rosa claro, cuyos ID son en números romanos.
 
 === Plan de comunicaciones
 
@@ -239,11 +249,11 @@ Nuestros medios de comunicación son:
 
 *Moodle*: se realizarán las entregas de documentación solicitada para realizar el _Sprint Review_.
 
-La actualización de la documentación se hará formalmente al final de cada _Sprint_.
+La actualización de la documentación se hará formalmente al final de cada _sprint_.
 
 ==== Horarios
 
-Se armó una tabla con rangos de horarios en los cuales cada integrante del equipo indicaba cuándo se encontraba disponible en el _Sprint_.
+Se armó una tabla con rangos de horarios en los cuales cada integrante del equipo indicaba cuándo se encontraba disponible en el _sprint_.
 
 .Horarios Sprint 2
 image::.img/horarios-sprint.png[align="center"]
@@ -308,6 +318,12 @@ Matriz de evaluación de riesgos.
 |1|1|1
 |===
 
+==== Nivel de Riesgo
+
+.Nivel de Riesgo en 3 semanas
+image::.img/nivel-riesgo.png[420,420,align="center"]
+
+
 === Administración en el Manejo de bugs
 Los _bugs_ encontrados serán agregados como _card_ en el tablero del equipo en *Trello*.
 
@@ -315,16 +331,21 @@ Los _bugs_ encontrados serán agregados como _card_ en el tablero del equipo en 
 
 Tras recibir una petición de cambio, documentaremos las nuevas funcionalidades que se solicitan y posteriormente se agregarán al _Product Backlog_. Esta nueva modificación se evaluará, se estimará con los integrantes del proyecto, se modificará la WBS, Diccionario y se agregará al _Sprint Backlog_.
 
-En este _Sprint_ contamos con un cambio:
+En este _sprint_ contamos con un cambio:
 
 - Cambios en las fechas y recursos debido a una petición del grupo 3 para realizar el _deploy_ de una API de prueba para que puedan testear sus funcionalidades.
 
 === Indicadores
-*Burndown Chart*: Al utilizar Scrum precisamos ver el avance de nuestro trabajo de cada Sprint. 
+*Burndown Chart*: Al utilizar _Scrum_ precisamos ver el avance de nuestro trabajo de cada _sprint_. 
 El trabajo se expresará en Story Points, teniendo en cuenta que un Story Point es igual a 1 hora.
 
 .Burndown Chart Sprint 2
 image::.img/burndown-chart.png[]
+
+Se puede apreciar la diferencia entre los _story points_ estimados con los reales. Al principio la diferencia es muy grande, al asumir linealidad en el desarollo de modelos. A medida que se iban desarrollando distintos modelos de IA, el conocimiento aprendido reducía el tiempo de desarrollo de los modelos posteriores.
+
+Nos quedaron *20* _story points_ por quemar, *15* de la tarea **Entrevistar expertos** y *5* de **Ajuste del modelo** los cuales fueron desplazados al siguiente _sprint_.
+
 
 == Tecnologías
 
