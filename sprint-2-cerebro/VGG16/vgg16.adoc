@@ -102,7 +102,6 @@ Y, con respecto a las imágenes de prueba, se obtuvo lo siguiente:
 
 [source, console]
 ----
-25/25 [==============================] - 59s 2s/step
 Cantidad de predicciones: 800
 Etiquetas:   [G,  M,  P,  N]
 Total:       [196, 190, 230, 184]
@@ -156,7 +155,6 @@ El resultados obtenidos evaluando las imágenes de prueba fue el siguiente:
 
 [source, console]
 ----
-25/25 [==============================] - 58s 2s/step
 Cantidad de predicciones: 800
 Etiquetas:   [G,  M,  P,  N]
 Total:       [192, 201, 208, 199]

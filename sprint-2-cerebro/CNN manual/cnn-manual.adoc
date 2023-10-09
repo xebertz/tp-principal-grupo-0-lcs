@@ -63,7 +63,6 @@ Epoch 10/10
 
 [source, console]
 ----
-238/238 [==============================] - 13s 56ms/step
 Cantidad de predicciones: 7600
 Etiquetas:   [G,  M,  P,  N]
 Total:       [1920, 1893, 1868, 1919]
