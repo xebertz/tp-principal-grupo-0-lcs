@@ -62,7 +62,7 @@ Probamos distintos modelos, algunos preentrenados y otros manuales:
 
 * *Xception:* Este modelo alcanzó un porcentaje superior al 90% de precisión en las pruebas, para 3200 imágenes.
 
-* *CNN Manual:* Este modelo fue el más liviano y rápido de todos, y obtuvo resultados sorprendentes: 92% de precisión en las pruebas, para 3200 imágenes.
+* *CNN Manual:* Este modelo fue el más liviano y rápido de todos, y obtuvo resultados sorprendentes: 96% de precisión en las pruebas, para 7600 imágenes.
 
 * *Inception ResNetV2:* Este modelo alcanzó un porcentaje superior al 86% de precisión en las pruebas, para 2600 imágenes. Sin embargo, fue entrenado en una sola vuelta por su complejidad.
 
@@ -76,7 +76,7 @@ Durante el proceso de entrenamiento se determinó que ciertos modelos no valían
 
 == Modelo seleccionado
 
-El modelo elegido fue *CNN Manual*, debido a su alto nivel de precisión. *ResNet50V2* quedó como segunda opción, ya que a pesar de tener un nivel de precisión más alto que *CNN Manual*, fue entrenado con menos imágenes y cuenta con una performance inferior.
+El modelo elegido fue *CNN Manual*, debido a su alto nivel de precisión y su performance. *ResNet50V2* quedó como segunda opción, ya que a pesar de tener un muy buen nivel de precisión, fue entrenado con menos imágenes y cuenta con una performance inferior.
 
 == Deploy
 Tras haber exportado el modelo seleccionado se empezó con el desarrollo de una API para facilitar el uso del modelo.
