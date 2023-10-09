@@ -29,7 +29,7 @@ Los cambios que se realizaron para que el modelo pasara de ser binario a multicl
 == Entrenamiento y prueba
 
 Se utilizaron distintas distribuciones de las 44 mil imágenes disponibles para entrenar el modelo, por cuestiones de recursos, de esas 44 mil pudimos utilizar eficazmente alrededor de 42 mil imágenes, ya que si se agregaban más tiraba error al momento de la ejecución de algunas secciones del código por falta de recursos.
-La distribución más prometedora fue de 16 mil imágenes en total (12800 de entrenamiento y 3200 de prueba), balanceando todas las clases con 4000 imágenes cada una.
+La distribución más prometedora fue de 38000 imágenes en total (30400 de entrenamiento y 7600 de prueba), balanceando todas las clases con 9500 imágenes cada una.
 
 == Mejores resultados
 
