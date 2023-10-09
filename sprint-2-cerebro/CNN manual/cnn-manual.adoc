@@ -29,43 +29,43 @@ Los cambios que se realizaron para que el modelo pasara de ser binario a multicl
 == Entrenamiento y prueba
 
 Se utilizaron distintas distribuciones de las 44 mil imágenes disponibles para entrenar el modelo, por cuestiones de recursos, de esas 44 mil pudimos utilizar eficazmente alrededor de 42 mil imágenes, ya que si se agregaban más tiraba error al momento de la ejecución de algunas secciones del código por falta de recursos.
-La distribución más prometedora fue de 16 mil imágenes en total (12800 de entrenamiento y 3200 de prueba), balanceando todas las clases con 4000 imágenes cada una.
+La distribución más prometedora fue de 38000 imágenes en total (30400 de entrenamiento y 7600 de prueba), balanceando todas las clases con 9500 imágenes cada una.
 
 == Mejores resultados
 
-=== 12800 imágenes de entrenamiento y 3200 de prueba
+=== 30400 imágenes de entrenamiento y 7600 de prueba
 
 [source, console]
 ----
-Epoch 1/7
-loss: 0.9600 - categorical_accuracy: 0.5920 - val_loss: 0.6198 - val_categorical_accuracy: 0.7625
-
-Epoch 2/7 
-loss: 0.5579 - categorical_accuracy: 0.7797 - val_loss: 0.4064 - val_categorical_accuracy: 0.8384
-
-Epoch 3/7
-loss: 0.3680 - categorical_accuracy: 0.8624 - val_loss: 0.3031 - val_categorical_accuracy: 0.8875
-
-Epoch 4/7
-loss: 0.2692 - categorical_accuracy: 0.8983 - val_loss: 0.2429 - val_categorical_accuracy: 0.9137
-
-Epoch 5/7
-loss: 0.1876 - categorical_accuracy: 0.9338 - val_loss: 0.2475 - val_categorical_accuracy: 0.9162
-
-Epoch 6/7
-loss: 0.1459 - categorical_accuracy: 0.9469 - val_loss: 0.2558 - val_categorical_accuracy: 0.9206
-
-Epoch 7/7
-loss: 0.1268 - categorical_accuracy: 0.9560 - val_loss: 0.2666 - val_categorical_accuracy: 0.9200
+Epoch 1/10
+950/950 [==============================] - 190s 200ms/step - loss: 0.0346 - accuracy: 0.9764 - val_loss: 0.0687 - val_accuracy: 0.9613
+Epoch 2/10
+950/950 [==============================] - 190s 200ms/step - loss: 0.0334 - accuracy: 0.9763 - val_loss: 0.0704 - val_accuracy: 0.9650
+Epoch 3/10
+950/950 [==============================] - 188s 198ms/step - loss: 0.0322 - accuracy: 0.9782 - val_loss: 0.0720 - val_accuracy: 0.9626
+Epoch 4/10
+950/950 [==============================] - 188s 198ms/step - loss: 0.0291 - accuracy: 0.9809 - val_loss: 0.0990 - val_accuracy: 0.9438
+Epoch 5/10
+950/950 [==============================] - 187s 197ms/step - loss: 0.0273 - accuracy: 0.9815 - val_loss: 0.0742 - val_accuracy: 0.9607
+Epoch 6/10
+950/950 [==============================] - 190s 200ms/step - loss: 0.0265 - accuracy: 0.9820 - val_loss: 0.0764 - val_accuracy: 0.9628
+Epoch 7/10
+950/950 [==============================] - 187s 197ms/step - loss: 0.0238 - accuracy: 0.9839 - val_loss: 0.0830 - val_accuracy: 0.9575
+Epoch 8/10
+950/950 [==============================] - 188s 197ms/step - loss: 0.0228 - accuracy: 0.9845 - val_loss: 0.0801 - val_accuracy: 0.9628
+Epoch 9/10
+950/950 [==============================] - 189s 199ms/step - loss: 0.0219 - accuracy: 0.9852 - val_loss: 0.0800 - val_accuracy: 0.9643
+Epoch 10/10
+950/950 [==============================] - 190s 200ms/step - loss: 0.0208 - accuracy: 0.9868 - val_loss: 0.0743 - val_accuracy: 0.9668
 ----
 
 == Resultados por clase
 
 [source, console]
 ----
-Cantidad de predicciones: 3200
-Etiquetas:   [G,  M,  P,  N] (G: Glioma, M: Meningioma, P: Pituitary, N: No Tumor)
-Total:       [859, 742, 778, 821]
-Correctas:   [737, 678, 769, 760]
-Incorrectas: [122, 64, 9, 61]
+Cantidad de predicciones: 7600
+Etiquetas:   [G,  M,  P,  N]
+Total:       [1920, 1893, 1868, 1919]
+Correctas:   [1838, 1808, 1845, 1857]
+Incorrectas: [82, 85, 23, 62]
 ----

@@ -62,7 +62,6 @@ En las pruebas, con las imágenes de test, se obtuvo lo siguiente:
 
 [source, console]
 ----
-25/25 [==============================] - 27s 1s/step
 Cantidad de predicciones: 800
 Etiquetas:   [G,  M,  P,  N]
 Total:       [190, 217, 192, 201]
@@ -100,7 +99,6 @@ En la etapa de testing, los resultados fueron los siguientes:
 
 [source, console]
 ----
-100/100 [==============================] - 102s 1s/step
 Cantidad de predicciones: 3200
 Etiquetas:   [G,  M,  P,  N]
 Total:       [734, 734, 880, 852]
@@ -117,7 +115,6 @@ El entrenamiento duró 50 minutos, y las métricas obtenidas fueron las siguient
 [source, console]
 ----
 Epoch 1/10
-2023-10-01 18:04:11.825033: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 7707033600 exceeds 10% of free system memory.
 400/400 [==============================] - 520s 1s/step - loss: 0.6705 - categorical_accuracy: 0.7545 - val_loss: 0.5035 - val_categorical_accuracy: 0.8322
 Epoch 2/10
 400/400 [==============================] - 517s 1s/step - loss: 0.4615 - categorical_accuracy: 0.8381 - val_loss: 0.4229 - val_categorical_accuracy: 0.8512
@@ -143,7 +140,6 @@ Y, en el testing, se obtuvo lo siguiente:
 
 [source, console]
 ----
-100/100 [==============================] - 103s 1s/step
 Cantidad de predicciones: 3200
 Etiquetas:   [G,  M,  P,  N]
 Total:       [724, 835, 825, 816]

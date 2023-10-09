@@ -75,7 +75,6 @@ image::imgs/resnet50.png[]
 .Prueba de predicciones
 [source, console]
 ----
-69/69 [==============================] - 67s 955ms/step
 Cantidad de predicciones: 2200
 Etiquetas:   [G,  M,  P,  N]
 Total:       [520, 367, 655, 658]
@@ -94,7 +93,6 @@ image::imgs/resnet50v2.png[]
 .Prueba de predicciones
 [source, console]
 ----
-69/69 [==============================] - 45s 654ms/step
 Cantidad de predicciones: 2200
 Etiquetas:   [G,  M,  P,  N]
 Total:       [507, 602, 539, 552]
@@ -113,7 +111,6 @@ image::imgs/resnet152.png[]
 .Prueba de predicciones
 [source, console]
 ----
-69/69 [==============================] - 153s 2s/step
 Cantidad de predicciones: 2200
 Etiquetas:   [G,  M,  P,  N]
 Total:       [565, 442, 707, 486]
@@ -132,7 +129,6 @@ image::imgs/resnet152v2.png[]
 .Prueba de predicciones
 [source, console]
 ----
-69/69 [==============================] - 140s 2s/step
 Cantidad de predicciones: 2200
 Etiquetas:   [G,  M,  P,  N]
 Total:       [527, 512, 601, 560]
