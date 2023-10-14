@@ -46,3 +46,5 @@ Para fotografiar los pulmones con el propósito de detectar enfermedades, se uti
 * *Tomografía computarizada:* La tomografía computarizada, también conocida como tomografía axial computarizada (TAC), proporciona imágenes más detalladas y tridimensionales de los pulmones. Es especialmente útil para detectar enfermedades pulmonares más pequeñas o para evaluar la extensión de enfermedades como el cáncer de pulmón.
 
 * *Resonancia magnética (RM):* La resonancia magnética se utiliza en ciertos casos para evaluar los pulmones, especialmente cuando se necesita información detallada sobre estructuras cercanas, como el corazón y los vasos sanguíneos.
+
+* *Ecografía pulmonar:* La ecografía pulmonar utiliza ondas sonoras de alta frecuencia para crear imágenes en tiempo real de los pulmones. Se utiliza principalmente en situaciones de emergencia o para guiar procedimientos invasivos, como la colocación de un tubo de drenaje en el pecho.
