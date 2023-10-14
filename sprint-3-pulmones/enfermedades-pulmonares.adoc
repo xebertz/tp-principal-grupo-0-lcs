@@ -33,3 +33,5 @@ Las enfermedades más comunes son las siguientes:
 * *Bronquitis:* La Bronquitis es una inflamación de los bronquios, los conductos que llevan el aire a los pulmones. Puede ser aguda (de corta duración) o crónica (de larga duración) y se caracteriza por tos, producción de esputo y dificultad para respirar.
 
 * *Neumonía:* La Neumonía es una infección pulmonar que puede ser causada por bacterias, virus u hongos. Los síntomas incluyen fiebre, tos, dificultad para respirar y dolor en el pecho.
+
+* *Tuberculosis:* La tuberculosis es una enfermedad infecciosa bacteriana que afecta principalmente los pulmones. Puede provocar síntomas como tos crónica, fiebre, pérdida de peso y debilidad general.
