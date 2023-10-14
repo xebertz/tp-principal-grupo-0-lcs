@@ -53,3 +53,10 @@ Para fotografiar los pulmones con el propósito de detectar enfermedades, se uti
 De estás herramientas seleccionamos las imágenes generadas mediante radiografías, porque hemos notado que son las más comúnes en los datasets que hemos investigado a la par de realizar la investigación que trata este documento.
 
 A continuación se detallara de una manera más profunda de lo que trata y como se realizan las radiografías del torax.
+
+== Referencias
+* https://www.radiologyinfo.org/es/info/chestrad
+
+* https://www.mayoclinic.org/es/tests-procedures/chest-x-rays/about/pac-20393494
+
+* https://www.kenhub.com/es/library/anatomia-es/radiografia-de-torax-interpretacion-paso-a-paso
