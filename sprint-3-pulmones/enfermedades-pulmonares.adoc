@@ -54,6 +54,8 @@ De estás herramientas seleccionamos las imágenes generadas mediante radiograf�
 
 A continuación se detallara de una manera más profunda de lo que trata y como se realizan las radiografías del torax.
 
+== Conclusión
+
 == Referencias
 * https://www.radiologyinfo.org/es/info/chestrad
 
