@@ -42,4 +42,5 @@ Las enfermedades más comunes son las siguientes:
 Para fotografiar los pulmones con el propósito de detectar enfermedades, se utilizan varias técnicas de imágenes médicas. Algunas de las herramientas más comunes incluyen:
 
 * *Radiografía de tórax:* La radiografía de tórax es una de las herramientas más utilizadas para examinar los pulmones y el sistema respiratorio. Implica la exposición a rayos X para obtener imágenes bidimensionales de los pulmones y las estructuras circundantes. Es efectiva para detectar una amplia variedad de enfermedades pulmonares, como neumonía, tuberculosis, tumores y fracturas costales.
-    
+
+* *Tomografía computarizada:* La tomografía computarizada, también conocida como tomografía axial computarizada (TAC), proporciona imágenes más detalladas y tridimensionales de los pulmones. Es especialmente útil para detectar enfermedades pulmonares más pequeñas o para evaluar la extensión de enfermedades como el cáncer de pulmón.
