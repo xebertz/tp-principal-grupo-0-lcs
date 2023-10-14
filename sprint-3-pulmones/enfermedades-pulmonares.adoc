@@ -34,4 +34,6 @@ Las enfermedades más comunes son las siguientes:
 
 * *Neumonía:* La Neumonía es una infección pulmonar que puede ser causada por bacterias, virus u hongos. Los síntomas incluyen fiebre, tos, dificultad para respirar y dolor en el pecho.
 
-* *Tuberculosis:* La tuberculosis es una enfermedad infecciosa bacteriana que afecta principalmente los pulmones. Puede provocar síntomas como tos crónica, fiebre, pérdida de peso y debilidad general.
+* *Tuberculosis:* La Tuberculosis es una enfermedad infecciosa bacteriana que afecta principalmente los pulmones. Puede provocar síntomas como tos crónica, fiebre, pérdida de peso y debilidad general.
+
+* *Fibrosis Quística:* La Fibrosis Quística es una enfermedad genética que afecta a las glándulas productoras de secreción nasal en el cuerpo. En los pulmones, esto conduce a la acumulación de secreción nasal espeso y pegajoso, lo que aumenta el riesgo de infecciones pulmonares y dificulta la respiración. También puede afectar otros órganos.
