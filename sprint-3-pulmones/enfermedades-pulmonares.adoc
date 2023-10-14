@@ -13,3 +13,5 @@ v1, {docdate}
 == Introducción
 Los pulmones son órganos fundamentales del sistema respiratorio humano, encargados de proporcionar el oxígeno, eliminar el dióxido de carbono y otros productos de desecho. Sin embargo, a lo largo de la vida, los pulmones pueden verse afectados por diversas afecciones, dando lugar a lo que se conocen como enfermedades pulmonares. Estas enfermedades pueden variar desde temporales hasta enfermedades crónicas.
 
+=== Enfermedades temporales
+Son enfermedades que tienden a desarrollarse repentinamente y tienen una duración limitada. Ejemplos de de estas pueden ser infecciones respiratorias comunes como el resfriado o la gripe, que suelen durar unos días o semanas y luego se resuelven por sí solas.
