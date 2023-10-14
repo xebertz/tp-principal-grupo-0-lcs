@@ -10,3 +10,6 @@ v1, {docdate}
 :nofooter:
 :pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
 
+== Introducción
+Los pulmones son órganos fundamentales del sistema respiratorio humano, encargados de proporcionar el oxígeno, eliminar el dióxido de carbono y otros productos de desecho. Sin embargo, a lo largo de la vida, los pulmones pueden verse afectados por diversas afecciones, dando lugar a lo que se conocen como enfermedades pulmonares. Estas enfermedades pueden variar desde temporales hasta enfermedades crónicas.
+
