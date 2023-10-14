@@ -30,4 +30,6 @@ Las enfermedades más comunes son las siguientes:
 
 * *Cáncer de Pulmón:* El cáncer de pulmón se origina en los tejidos pulmonares y puede ser provocado por la exposición al tabaco y otras exposiciones a elementos carcinógenos. Puede ser agresivo y mortal si no se detecta y trata tempranamente.
 
-* *Bronquitis:* La bronquitis es una inflamación de los bronquios, los conductos que llevan el aire a los pulmones. Puede ser aguda (de corta duración) o crónica (de larga duración) y se caracteriza por tos, producción de esputo y dificultad para respirar.
+* *Bronquitis:* La Bronquitis es una inflamación de los bronquios, los conductos que llevan el aire a los pulmones. Puede ser aguda (de corta duración) o crónica (de larga duración) y se caracteriza por tos, producción de esputo y dificultad para respirar.
+
+* *Neumonía:* La Neumonía es una infección pulmonar que puede ser causada por bacterias, virus u hongos. Los síntomas incluyen fiebre, tos, dificultad para respirar y dolor en el pecho.
