@@ -29,3 +29,5 @@ Las enfermedades más comunes son las siguientes:
 * *Asma:* El Asma es una enfermedad crónica de las vías respiratorias que puede causar sibilancias (sonido agudo, similar a un silbido o un pitido, que se produce cuando una persona respira), dificultad para respirar y opresión en el pecho. Es una reacción exagerada del sistema inmunológico a ciertos desencadenantes, como alérgenos o irritantes.
 
 * *Cáncer de Pulmón:* El cáncer de pulmón se origina en los tejidos pulmonares y puede ser provocado por la exposición al tabaco y otras exposiciones a elementos carcinógenos. Puede ser agresivo y mortal si no se detecta y trata tempranamente.
+
+* *Bronquitis:* La bronquitis es una inflamación de los bronquios, los conductos que llevan el aire a los pulmones. Puede ser aguda (de corta duración) o crónica (de larga duración) y se caracteriza por tos, producción de esputo y dificultad para respirar.
