@@ -48,3 +48,8 @@ Para fotografiar los pulmones con el propósito de detectar enfermedades, se uti
 * *Resonancia magnética (RM):* La resonancia magnética se utiliza en ciertos casos para evaluar los pulmones, especialmente cuando se necesita información detallada sobre estructuras cercanas, como el corazón y los vasos sanguíneos.
 
 * *Ecografía pulmonar:* La ecografía pulmonar utiliza ondas sonoras de alta frecuencia para crear imágenes en tiempo real de los pulmones. Se utiliza principalmente en situaciones de emergencia o para guiar procedimientos invasivos, como la colocación de un tubo de drenaje en el pecho.
+
+// Hice esta reflexión por los datasets que hemos visto. Si está bien digan que les gusta en el grupo.
+De estás herramientas seleccionamos las imágenes generadas mediante radiografías, porque hemos notado que son las más comúnes en los datasets que hemos investigado a la par de realizar la investigación que trata este documento.
+
+A continuación se detallara de una manera más profunda de lo que trata y como se realizan las radiografías del torax.
