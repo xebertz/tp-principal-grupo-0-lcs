@@ -15,3 +15,6 @@ Los pulmones son órganos fundamentales del sistema respiratorio humano, encarga
 
 === Enfermedades temporales
 Son enfermedades que tienden a desarrollarse repentinamente y tienen una duración limitada. Ejemplos de de estas pueden ser infecciones respiratorias comunes como el resfriado o la gripe, que suelen durar unos días o semanas y luego se resuelven por sí solas.
+
+=== Enfermedades Crónicas
+Son enfermedades pulmonares que persisten a lo largo del tiempo y pueden empeorar con el tiempo. A menudo, estas enfermedades no tienen cura y pueden ser debilitantes, lo que significa que afectan significativamente la calidad de vida de una persona. Ejemplos de enfermedades pulmonares crónicas incluyen la enfermedad pulmonar obstructiva crónica (EPOC), el Asma, la Fibrosis pulmonar, etc... Estas enfermedades pueden requerir tratamiento continuo, medicamentos y cambios en el estilo de vida para gestionar los síntomas y ralentizar su progresión.
