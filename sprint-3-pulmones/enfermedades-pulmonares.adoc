@@ -23,3 +23,5 @@ Son enfermedades pulmonares que persisten a lo largo del tiempo y pueden empeora
 Cada una de las enfermedades pulmonares tiene características y causas distintas, y algunas son más graves que otras. La detección temprana, el tratamiento y la prevención son cruciales para abordar estas afecciones de manera efectiva y mantener la salud pulmonar.
 
 Las enfermedades más comunes son las siguientes:
+
+* EPOC (Enfermedad Pulmonar Obstructiva Crónica): La EPOC es una enfermedad pulmonar crónica que limita el flujo de aire en los pulmones. Es comúnmente causada por el tabaquismo y provoca síntomas como dificultad para respirar, tos crónica y producción excesiva de secreción nasal.
