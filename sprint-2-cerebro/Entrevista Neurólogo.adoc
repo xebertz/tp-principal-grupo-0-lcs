@@ -1,0 +1,21 @@
+= Resumen de la entrevista al neurólogo Sergio Kosac
+
+== Antecedentes o síntomas de los distintos tipos de tumores cerebrales
+
+En general, todos los tumores cerebrales pueden causar epilepsias, compromiso de fuerza y sensibilidad, y el síntoma más influyente es la debilidad focal, es decir, la pérdida de control sobre alguna parte en específico del cuerpo. Por otro lado, los tumores cerebrales no suelen causar cefalías (dolor de cabeza) hasta una etapa muy adelantada, si es que el tumor crece mucho. Es importante aclarar que un tumor benigno puede comportarse como maligno si este se encuentra en una sección estratégica del cerebro.
+
+=== Glioma
+
+Un glioma es un tumor maligno que se origina en las glándulas gliales, las cuales se ocupan de sostener y proteger a las neuronas. Si bien estos tumores no suelen causar epilepsias (esto puede variar según la zona del cerebro en la que se encuentra) este tipo de tumores suele causar una decadencia motriz en el paciente, es decir, tiene perdida de control sobre su cuerpo. (puede ser focal o general).
+
+=== Meningioma
+
+Un meningioma es un tumor benigno que se origina en la capa que rodea al cerebro, denominada meninge. Este tipo de tumores se caracteriza por causar epilepsias.
+
+=== Tumor hipofisiario (Pituitary tumor)
+
+Un tumor hipofisiario es aquel que se origina en la hipófisis, la cual es una glándula endócrina que se encuentra en la base del cerebro, este tipo de tumores se caracterizan por causar transtornos visuales, como pérdida de visión y reducción del campo visual, ya que estos suelen afectar los nervios ópticos.
+
+=== Tumores en niños
+
+Los tumores cerebrales en niños suelen ser mucho más agresivos, ya que estos crecen con mayor velocidad y pueden causar síntomas desde etapas muy tempranas de su crecimiento. 
