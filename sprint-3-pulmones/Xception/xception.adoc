@@ -18,6 +18,8 @@ Para utilizarlo, importamos el modelo y le añadimos una capa de _input_, para q
 
 == Entrenamiento
 
+Los entrenamientos se llevan a cabo con nuestro https://www.kaggle.com/datasets/gonzajl/neumona-x-rays-dataset[dataset] para la detección de neumonía en imágenes de rayos X de tórax. Este dataset cuenta con 10.498 imágenes, siendo 5249 de radiografías de pacientes con neumonía, y 5249 de pacientes sin la enfermedad.
+
 === Primer entrenamiento
 
 == Conclusión
