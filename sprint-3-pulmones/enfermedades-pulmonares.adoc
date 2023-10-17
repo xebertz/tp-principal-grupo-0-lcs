@@ -79,6 +79,16 @@ En _proyección antero posterior_, el corazón se presenta de un tamaño mayor, 
 
 Por este motivo, para las radiografías de tórax es recomendado utilizar _proyección postero anterior_ o _proyección lateral_.
 
+== Neumonía
+
+La neumonía es una infección que inflama los sacos aéreos de uno o ambos pulmones, y puede generar que los sacos aéreos se llenen de líquido o pus. Se puede detectar en una radiografía de tórax cuando se observa una opacidad, y se detecta su origen mediante el _signo de la silueta_. Este signo es la representación de dos estructuras de igual densidad, muy próximas entre sí, cuyos bordes no son distinguibles.
+
+En una radiografía de un paciente sin neumonía, ambos pulmones se presentan de color negro, debido a la presencia del aire en ellos. Si el paciente tiene neumonía, se verá una sombra grisácea, debido a la presencia de líquido en el pulmon. Esta sombra es llamada _opacidad_ o _infiltrado_. El signo de la silueta permite encontrar el origen de las opacidades en los pulmones.
+
+La pérdida del contorno normal de una estructura indica que algo anormal está en contacto directo con ella. Por ejemplo, en el caso de una neumonía lobular, donde el tejido pulmonar enfermo tiene una densidad similar a la del corazón, el contorno del corazón puede perderse en la radiografía de tórax, manifestándose el de la signo silueta. Este signo puede ayudar a los médicos a localizar la neumonía en un lóbulo específico del pulmón, ya que la pérdida de los bordes solo ocurrirá donde la neumonía esté en contacto directo con el corazón.
+
+Si este signo se encuentra en las estructuras anteriores, la neumonía se localiza en el lóbulo superior de uno o ambos pulmones. Si se encuentra en el borde del hemidiafragma, la neumonía se localiza en el lóbulo inferior. Si su borde desaparece del lóbulo inferior pero es visible el hemidiafragma, la neumonía se encuentra en el lóbulo medio.
+
 == Conclusión
 
 == Referencias
@@ -92,3 +102,9 @@ Por este motivo, para las radiografías de tórax es recomendado utilizar _proye
 * https://www.mayoclinic.org/es/tests-procedures/x-ray/about/pac-20395303
 
 * https://www.youtube.com/watch?v=uAPYKgJHfKQ&ab_channel=JavierGir%C3%B3n%28Vlog%29
+
+* https://www.elsevier.es/es-revista-nursing-20-articulo-interpretacion-radiografia-torax-algo-mas-S0212538214001587#:~:text=La%20neumon%C3%ADa%20se%20puede%20detectar,cuadro%20Signo%20de%20la%20silueta.
+
+* https://www.youtube.com/watch?v=PuPRfFhoLwU&ab_channel=RayosPedia
+
+//https://www.youtube.com/watch?v=e1b2IPNWp2s&ab_channel=Dr.MijailTapia
