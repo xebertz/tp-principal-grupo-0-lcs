@@ -18,8 +18,91 @@ Para utilizarlo, importamos el modelo y le añadimos una capa de _input_, para q
 
 == Entrenamiento
 
-Los entrenamientos se llevan a cabo con nuestro https://www.kaggle.com/datasets/gonzajl/neumona-x-rays-dataset[dataset] para la detección de neumonía en imágenes de rayos X de tórax. Este dataset cuenta con 10.498 imágenes, siendo 5249 de radiografías de pacientes con neumonía, y 5249 de pacientes sin la enfermedad.
+Los entrenamientos se llevan a cabo con nuestro https://www.kaggle.com/datasets/gonzajl/neumona-x-rays-dataset[dataset] para la detección de neumonía en imágenes de rayos X de tórax. Este dataset cuenta con 10498 imágenes, siendo 5249 de radiografías de pacientes con neumonía, y 5249 de pacientes sin la enfermedad.
 
 === Primer entrenamiento
+
+El primer entrenamiento se llevó a cabo con el siguiente modelo:
+
+[source, python]
+----
+xception = tf.keras.applications.xception.Xception(
+    include_top=False,
+    weights='imagenet',
+    input_shape=(224, 224, 3),
+)
+
+xception.trainable = False
+
+inputs = keras.Input(shape=(224, 224, 3))
+x = xception(inputs, training=False)
+
+x = keras.layers.GlobalAveragePooling2D()(x)
+outputs = keras.layers.Dense(2, activation='softmax')(x)
+model = keras.Model(inputs, outputs)
+----
+
+Y se compiló de la siguiente manera:
+
+----
+model.compile(optimizer='adam',
+              loss='categorical_crossentropy',
+              metrics=['categorical_accuracy'])
+----
+
+Se utilizó el 80% de las imágenes para el entrenamiento del modelo, y el siguiente 20% para las pruebas. Es decir, 8398 imágenes de entrenamiento y 2100 imágenes de prueba. Para diez vueltas de entrenamiento, el resultado fue el siguiente:
+
+[source, console]
+----
+Epoch 1/10
+263/263 [==============================] - 340s 1s/step - loss: 0.2397 - categorical_accuracy: 0.9028 - val_loss: 0.2038 - val_categorical_accuracy: 0.9205
+Epoch 2/10
+263/263 [==============================] - 337s 1s/step - loss: 0.1656 - categorical_accuracy: 0.9382 - val_loss: 0.1410 - val_categorical_accuracy: 0.9476
+Epoch 3/10
+263/263 [==============================] - 338s 1s/step - loss: 0.1456 - categorical_accuracy: 0.9456 - val_loss: 0.1335 - val_categorical_accuracy: 0.9524
+Epoch 4/10
+263/263 [==============================] - 337s 1s/step - loss: 0.1335 - categorical_accuracy: 0.9513 - val_loss: 0.1322 - val_categorical_accuracy: 0.9543
+Epoch 5/10
+263/263 [==============================] - 341s 1s/step - loss: 0.1234 - categorical_accuracy: 0.9551 - val_loss: 0.1161 - val_categorical_accuracy: 0.9600
+Epoch 6/10
+263/263 [==============================] - 339s 1s/step - loss: 0.1179 - categorical_accuracy: 0.9562 - val_loss: 0.1167 - val_categorical_accuracy: 0.9614
+Epoch 7/10
+263/263 [==============================] - 338s 1s/step - loss: 0.1148 - categorical_accuracy: 0.9595 - val_loss: 0.1101 - val_categorical_accuracy: 0.9605
+Epoch 8/10
+263/263 [==============================] - 342s 1s/step - loss: 0.1075 - categorical_accuracy: 0.9612 - val_loss: 0.1068 - val_categorical_accuracy: 0.9605
+Epoch 9/10
+263/263 [==============================] - 333s 1s/step - loss: 0.1079 - categorical_accuracy: 0.9583 - val_loss: 0.1085 - val_categorical_accuracy: 0.9586
+Epoch 10/10
+263/263 [==============================] - 336s 1s/step - loss: 0.1010 - categorical_accuracy: 0.9649 - val_loss: 0.1006 - val_categorical_accuracy: 0.9633
+----
+
+En base a estos datos, se pueden generar gráficos para visualizar la evolución del modelo.
+
+.gráficos del primer entrenamiento
+image::imgs/graficos-primer-entrenamiento.png[200, 700, align="center"]
+
+El modelo alcanzó un nivel de pérdida muy bajo, y una precisión del 96%. Se puede ver que a mayor cantidad de vueltas, la pérdida es menor y la precisión es mayor, tanto en entrenamiento como en validación. Esto es clave, ya que indica que el modelo está prediciendo bien, sin "acostumbrarse" a las imágenes de entrenamiento.
+
+Durante el entrenamiento, se mostró la siguiente advertencia:
+
+[source, console]
+----
+2023-10-17 17:48:17.322703: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 5056536576 exceeds 10% of free system memory.
+----
+
+Esto quiere decir que no se podría entrenar el modelo con más imágenes, por lo que aumentar el dataset para mejorar la predicción no es una opción.
+
+Luego, el modelo fue probado con las 2100 imágenes del conjunto de pruebas, y se obtuvieron los siguientes resultados:
+
+[source, console]
+----
+Cantidad de predicciones: 2100
+Etiquetas:   [T, F]
+Total:       [1051, 1049]
+Correctas:   [1025, 998]
+Incorrectas: [26, 51]
+----
+
+Se obtuvo un 95% de precisión, validando las métricas obtenidas previamente.
 
 == Conclusión
