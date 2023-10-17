@@ -12,6 +12,12 @@ v1, {docdate}
 
 == Modelo
 
+El modelo _Xception_ es un modelo preentrenado con diversos usos. En particular, fue utilizado para la detección y clasificación de tumores cerebrales, obteniendo un nivel de precisión de más del 90%.
+
+Para utilizarlo, importamos el modelo y le añadimos una capa de _input_, para que se adapte a nuestras imágenes, una capa de _pooling_, y una capa de _output_. El modelo fue _freezado_, es decir, se mantuvieron los pesos que obtuvo durante el entrenamiento con el dataset _imagenet_, para utilizar la técnica _transfer learning_.
+
 == Entrenamiento
+
+=== Primer entrenamiento
 
 == Conclusión
