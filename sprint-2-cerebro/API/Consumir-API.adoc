@@ -19,7 +19,7 @@ Los *endpoints* son puntos de acceso o URLs específicas que se utilizan para re
 Los *endpoints* pueden recibir solicitudes, como solicitudes HTTP-GET para obtener información o solicitudes HTTP-POST para enviar datos al servidor. En resumen, los *endpoints* actúan como interfaces que permiten a los clientes (como aplicaciones o usuarios) comunicarse de manera eficiente con la API y acceder a sus recursos o servicios de manera predefinida.
 
 === */ping*
-Mediante una solicitud HTTP-GET se puede solicitar el endpoint, donde si está activo el servicio retorna un 200 y un JSON con el mensaje "API on!". Para acceder al endpoint se debe agregar al dominio donde está la API subida _/ping_. EJ: https://averiapi-4vtuhnxfba-uc.a.run.app/
+Mediante una solicitud HTTP-GET se puede solicitar el endpoint, donde si está activo el servicio retorna un 200 y un JSON con el mensaje "API on!". Para acceder al endpoint se debe agregar al dominio donde está la API subida _/ping_. EJ: https://averiapi-4vtuhnxfba-uc.a.run.app/ping
 
 
 .ejemplo_get.js
@@ -35,7 +35,7 @@ fetch('https://averiapi-4vtuhnxfba-uc.a.run.app/ping')
 ----
 
 === */predict*
-Mediante una solicitud HTTP-POST se puede enviar al endpoint un binario, donde si es una imagen retorna un String. El String puede ser una de las siguientes: "Glioma", "Meningioma", "Pituitary" y "No_tumor". En caso contrario, que no sea un binario aceptado, retorna un _status_code_ 418. Para acceder al endpoint se debe agregar al dominio donde está la API subida _/predict_. EJ: https://averiapi-4vtuhnxfba-uc.a.run.app/predict/brain
+Mediante una solicitud HTTP-POST se puede enviar al endpoint un binario, donde si es una imagen retorna un String. El String puede ser una de las siguientes: "Glioma", "Meningioma", "Pituitary" y "No_tumor". En caso contrario, que no sea un binario aceptado, retorna un _status_code_ 418. Para acceder al endpoint se debe agregar al dominio donde está la API subida _/predict/brain_. EJ: https://averiapi-4vtuhnxfba-uc.a.run.app/predict/brain
 
 .ejemplo_post.js
 [source,javascript]
