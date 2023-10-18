@@ -61,3 +61,14 @@ svm_model = SVC(kernel='linear')
 svm_model.fit(X_train, y_train)
 ----
 ====
+
+== Conclusiones
+
+El entremiento del modelo a resultado eficaz con una precisión del 97%, con 7 minutos de entrenamiento.
+
+A continuación la matriz de confunsión del modelo:
+
+.neumonia o no_neumonia
+image::imgs/matriz_conf_neumonia.png[]
+
+Por lo anteriormente mostrado, el modelo SVM es las opciones más potables para finalmente utilizarlo en el proyecto. 
