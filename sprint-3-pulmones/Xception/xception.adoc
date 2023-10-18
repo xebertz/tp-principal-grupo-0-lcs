@@ -97,12 +97,70 @@ Luego, el modelo fue probado con las 2100 imágenes del conjunto de pruebas, y s
 [source, console]
 ----
 Cantidad de predicciones: 2100
-Etiquetas:   [T, F]
+Etiquetas:   [Neum, No_Neum]
 Total:       [1051, 1049]
 Correctas:   [1025, 998]
 Incorrectas: [26, 51]
 ----
 
 Se obtuvo un 95% de precisión, validando las métricas obtenidas previamente.
+
+=== Segundo entrenamiento
+
+Para mejorar la precisión, se aumentó la cantidad de vueltas de entenamiento a 20. Los resultados parciales son los siguientes:
+
+[source, console]
+----
+Epoch 1/20
+263/263 [==============================] - 344s 1s/step - loss: 0.2395 - categorical_accuracy: 0.9051 - val_loss: 0.1663 - val_categorical_accuracy: 0.9400
+Epoch 2/20
+263/263 [==============================] - 338s 1s/step - loss: 0.1640 - categorical_accuracy: 0.9382 - val_loss: 0.1445 - val_categorical_accuracy: 0.9476
+Epoch 3/20
+263/263 [==============================] - 339s 1s/step - loss: 0.1433 - categorical_accuracy: 0.9471 - val_loss: 0.1317 - val_categorical_accuracy: 0.9510
+Epoch 4/20
+263/263 [==============================] - 337s 1s/step - loss: 0.1353 - categorical_accuracy: 0.9525 - val_loss: 0.1196 - val_categorical_accuracy: 0.9567
+Epoch 5/20
+263/263 [==============================] - 338s 1s/step - loss: 0.1252 - categorical_accuracy: 0.9539 - val_loss: 0.1182 - val_categorical_accuracy: 0.9600
+Epoch 6/20
+263/263 [==============================] - 336s 1s/step - loss: 0.1199 - categorical_accuracy: 0.9561 - val_loss: 0.1197 - val_categorical_accuracy: 0.9595
+Epoch 7/20
+263/263 [==============================] - 336s 1s/step - loss: 0.1136 - categorical_accuracy: 0.9593 - val_loss: 0.1100 - val_categorical_accuracy: 0.9643
+Epoch 8/20
+263/263 [==============================] - 336s 1s/step - loss: 0.1082 - categorical_accuracy: 0.9618 - val_loss: 0.1034 - val_categorical_accuracy: 0.9638
+Epoch 9/20
+263/263 [==============================] - 339s 1s/step - loss: 0.0910 - categorical_accuracy: 0.9687 - val_loss: 0.0971 - val_categorical_accuracy: 0.9619
+Epoch 14/20
+263/263 [==============================] - 342s 1s/step - loss: 0.0905 - categorical_accuracy: 0.9696 - val_loss: 0.0948 - val_categorical_accuracy: 0.9667
+Epoch 15/20
+263/263 [==============================] - 340s 1s/step - loss: 0.0880 - categorical_accuracy: 0.9687 - val_loss: 0.0919 - val_categorical_accuracy: 0.9643
+Epoch 16/20
+263/263 [==============================] - 342s 1s/step - loss: 0.0850 - categorical_accuracy: 0.9712 - val_loss: 0.0889 - val_categorical_accuracy: 0.9671
+Epoch 17/20
+263/263 [==============================] - 343s 1s/step - loss: 0.0800 - categorical_accuracy: 0.9732 - val_loss: 0.0932 - val_categorical_accuracy: 0.9643
+Epoch 18/20
+263/263 [==============================] - 339s 1s/step - loss: 0.0780 - categorical_accuracy: 0.9748 - val_loss: 0.0970 - val_categorical_accuracy: 0.9638
+Epoch 19/20
+263/263 [==============================] - 338s 1s/step - loss: 0.0763 - categorical_accuracy: 0.9765 - val_loss: 0.0923 - val_categorical_accuracy: 0.9733
+Epoch 20/20
+263/263 [==============================] - 336s 1s/step - loss: 0.0738 - categorical_accuracy: 0.9773 - val_loss: 0.0880 - val_categorical_accuracy: 0.9667
+----
+
+.gráficos del segundo entrenamiento
+image::imgs/graficos-segundo-entrenamiento.png[200, 700, align="center"]
+
+Se puede ver que el nivel de pérdida es muy bajo y el nivel de precisión es muy alto. Estos resultados son excelentes, ya que determinan que el aprendizaje del modelo es consistente y eficaz, sin muchos errores.
+
+Las pruebas arrojaron los siguientes resultados:
+
+[source, console]
+----
+Cantidad de predicciones: 2100
+Etiquetas:   [Neum, No_Neum]
+Total:       [1040, 1060]
+Correctas:   [1023, 1007]
+Incorrectas: [17, 53]
+----
+
+Vemos que se producen más errores en las imágenes que no presentan neumonía, pero la cantidad de errores es muy baja con respecto al total de las imágenes.
 
 == Conclusión
