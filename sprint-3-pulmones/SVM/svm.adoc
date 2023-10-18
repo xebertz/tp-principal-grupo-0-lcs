@@ -79,4 +79,4 @@ A continuación la matriz de confunsión del modelo:
 .neumonia o no_neumonia
 image::imgs/matriz_conf_neumonia.png[]
 
-Por lo anteriormente mostrado, el modelo SVM es las opciones más potables para utilizarlo en el proyecto. 
+Por lo anteriormente mostrado, el modelo SVM es de las opciones más potables para utilizarlo en el proyecto. 
