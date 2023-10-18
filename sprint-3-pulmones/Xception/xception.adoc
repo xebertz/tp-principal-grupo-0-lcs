@@ -161,6 +161,36 @@ Correctas:   [1023, 1007]
 Incorrectas: [17, 53]
 ----
 
-Vemos que se producen más errores en las imágenes que no presentan neumonía, pero la cantidad de errores es muy baja con respecto al total de las imágenes.
+Vemos que se producen más errores en las imágenes que no presentan neumonía, pero la cantidad de errores es muy baja con respecto al total de las imágenes. Esto es, aproximadamente, un 95% de precisión.
+
+=== Tercer entrenamiento
+
+Finalmente, como última prueba, se decidió modificar el conjunto de entrenamiento y de prueba, de forma que el conjunto de entrenamiento corresponda al 70% de las imágenes, y el de prueba al 30% restante. Los valores finales de entrenamiento, para la vuelta número 20, fueron los siguientes:
+
+[source, console]
+----
+Epoch 20/20
+230/230 [==============================] - 340s 1s/step - loss: 0.0777 - categorical_accuracy: 0.9765 - val_loss: 0.0883 - val_categorical_accuracy: 0.9692
+----
+
+El rendimiento general se puede ver en los siguientes gráficos:
+
+.gráficos del tercer entrenamiento
+image::imgs/graficos-tercer-entrenamiento.png[200, 700, align="center"]
+
+Para 3150 imágenes de prueba, se obtuvieron los siguientes resultados:
+
+[source, console]
+----
+Cantidad de predicciones: 3150
+Etiquetas:   [Neum, No_Neum]
+Total:       [1595, 1555]
+Correctas:   [1559, 1494]
+Incorrectas: [36, 61]
+----
+
+Esto es, aproximadamente, un 96% de precisión, lo cual es muy bueno para un modelo de IA. Sin embargo, el cambio no arrojó resultados significativos con respecto a la distribución de imágenes anterior.
 
 == Conclusión
+
+El modelo Xception ofrece un alto nivel de precisión y un extremadamente bajo nivel de error para la detección de neumonía en radiografías de tórax. Es una muy buena opción para tener en cuenta en la decisión del modelo final.
