@@ -26,3 +26,38 @@ En nuestro dominio tenemos dos tipos de clases:
 
 * neumonia
 * no_neumonia
+
+====
+[source,python]
+.Ejemplo: Creación del modelo sobre pulmones con posible neumonía.
+----
+.
+.
+.
+# Preparo las imágenes para el modelo SVM de neumonía o no_neumonía
+# Preparo listas para almacenar imágenes y etiquetas
+imagenes = []
+etiquetas = []
+
+# Leer y procesar todas las imágenes
+for i, fila in df.iterrows():
+    if fila['neumonia'] == 1 or fila['no_neumonia'] == 1:
+        ruta_imagen = fila['imagen']
+        # Leer la imagen desde la ruta
+        imagen = cv2.imread(ruta_imagen, cv2.IMREAD_GRAYSCALE)
+        imagen_normalizada = (imagen / 255.0 * 255).astype('uint8')
+        # Etiqueta según la categoría (neumonía o no_neumonía)
+        imagenes.append(imagen_normalizada.flatten())
+        if fila['neumonia'] == 1:
+            etiquetas.append(1)
+        elif fila['no_neumonia'] == 1:
+            etiquetas.append(0)
+
+# Dividir los datos en conjuntos de entrenamiento y prueba
+X_train, X_test, y_train, y_test = train_test_split(imagenes, etiquetas, test_size=0.2, random_state=123)
+
+# Entrenar un modelo SVM
+svm_model = SVC(kernel='linear')
+svm_model.fit(X_train, y_train)
+----
+====
