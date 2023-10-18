@@ -27,7 +27,7 @@ En nuestro dominio tenemos dos tipos de clases:
 * neumonia
 * no_neumonia
 
-En total contamos con 10498 imágenes para el entrenamiento el modelo, donde se componen de x de neumonía y x de no_neumonia.
+En total contamos con 10498 imágenes para el entrenamiento el modelo, donde se componen de 5249 de neumonía y 5249 de no_neumonia, es decir, es un dataset nivelado. Además hay que aclarar que previamente las imágenes fueron modificadas mediante la técnica de aumento de datos para tener aún más imágenes para entrenar el modelo.
 
 ====
 [source,python]
