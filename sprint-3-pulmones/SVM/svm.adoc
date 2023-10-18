@@ -62,6 +62,12 @@ svm_model.fit(X_train, y_train)
 ----
 ====
 
+== Exportación 
+
+Para la exportación del modelo se utiliza la libreria de _Joblib_, que es compatible con _sklearn_.
+
+El modelo exportado tiene un tamaño razonable de 560 mb. No es problema para la plataforma de Google Cloud Run, porque no limita el espacio de disco; ya que el enfoque principal del PaaS de Google es la ejecución de contenedores de manera eficiente y escalable sin preocuparse por la gestión del espacio en disco.
+
 == Conclusiones
 
 El entremiento del modelo a resultado eficaz con una precisión del 97%, con 7 minutos de entrenamiento.
