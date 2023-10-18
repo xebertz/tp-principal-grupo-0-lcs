@@ -72,7 +72,7 @@ El modelo exportado tiene un tamaño razonable de 560 mb. No es problema para la
 
 == Conclusiones
 
-El entremiento del modelo a resultado eficaz con una precisión del 97%, con 7 minutos de entrenamiento.
+El entremiento del modelo a resultado eficaz con una precisión del 97%, con 7 minutos de entrenamiento. A todo esto, se logra esta presición sin necesidad de buscar los mejores parámetros para el modelo, solo con las imágenes resulta muy eficaz.
 
 A continuación la matriz de confunsión del modelo:
 
