@@ -145,16 +145,9 @@ def mostrar_grafico_clases(datos):
     plt.show()
 ----
 
-Se muestra el gráfico de barras que representa la cantidad de imágenes en las clases "neumonía" y "no-neumonía.
-
-[source, python]
-----
-mostrar_grafico_clases(df)
-----
-
 === Nivelación de Clases
 
-En esta sección, se establece un límite en la cantidad de imágenes a mantener en cada clase (cant_imagenes). Luego, se filtran las imágenes de "neumonía" y "no-neumonía" para mantener solo el número deseado de imágenes en cada clase.
+En esta sección, se establece un límite en la cantidad de imágenes a mantener en cada clase (`cant_imagenes`). Luego, se filtran las imágenes de "neumonía" y "no-neumonía" para mantener solo el número deseado de imágenes en cada clase.
 
 [source, python]
 ----
@@ -173,6 +166,11 @@ archivos_a_eliminar = pd.concat([df[df.neumonía == 1][cant_imagenes:], df[df.no
 # Seleccionar solo la columna "imagen" de las imágenes a eliminar
 archivos_a_eliminar = archivos_a_eliminar["imagen"]
 ----
+
+Al llamar a la función `mostrar_grafico_clases(df)`, anteriormente mencionada, podemos observar el siguiente gráfico de clases:
+
+.Gráfico de clases
+image::imgs/grafico-nivelado.png[]
 
 === Exportación de datos
 
