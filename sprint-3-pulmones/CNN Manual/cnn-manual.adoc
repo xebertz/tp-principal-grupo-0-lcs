@@ -93,6 +93,8 @@ Esto es una precisión mayor al 98%.
 
 ==== Función de activación Softmax
 
+Los resultados para este primer entrenamiento con la función Softmax fueron los siguientes:
+
 [source, console]
 ----
 Epoch 1/10
@@ -117,16 +119,25 @@ Epoch 10/10
 263/263 [==============================] - 55s 208ms/step - loss: 0.0314 - categorical_accuracy: 0.9882 - val_loss: 0.1405 - val_categorical_accuracy: 0.9719
 ----
 
+Nuevamente, el nivel de error en las pruebas difiere con el del entrenamiento, pero a escala mayor. El niver de precisión de las pruebas es levemente inferior al anterior.
+
+Los gráficos de estos resultados son los siguientes:
+
+.primer entrenamiento: 10 vueltas, Softmax
+image::imgs/primer-entrenamiento-softmax.png[200, 700, align="center"]
+
+Estos resultados se visualizan en las pruebas, ya que el modelo clasificó mal 59 imágenes.
+
 [source, console]
 ----
+Cantidad de predicciones: 2100
 Etiquetas:   [Neum, No_Neum]
 Total:       [1043, 1057]
 Correctas:   [1030, 1011]
 Incorrectas: [13, 46]
 ----
 
-.primer entrenamiento: 10 vueltas, Softmax
-image::imgs/primer-entrenamiento-softmax.png[200, 700, align="center"]
+Este es un nivel de precisión de, aproximadamente, 97%.
 
 === Segundo entrenamiento
 
@@ -183,9 +194,12 @@ Epoch 20/20
 Cantidad de predicciones: 2100
 Etiquetas:   [Neum, No_Neum]
 Total:       [1047, 1053]
-Correctas:   [1041, 1018]
+Correctas:   [1041, 1018] 
 Incorrectas: [6, 35]
 ----
+
+.segundo entrenamiento: 20 vueltas, Sigmoid
+image::imgs/segundo-entrenamiento-sigmoid.png[200, 700, align="center"]
 
 ==== Función de activación Softmax
 
