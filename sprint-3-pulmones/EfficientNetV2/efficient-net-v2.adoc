@@ -12,40 +12,80 @@ v1, {docdate}
 
 == Modelo
 
-EfficientNetV2 es una versión mejorada y más eficiente del modelo preentrenado EfficientNet...
+El modelo preentrenado _EfficientNetV2_ es una versión mejorada y más eficiente del modelo _EfficientNet_. Aunque _EfficientNetV2_ no está diseñado específicamente para la medicina, su versatilidad y capacidad para procesar imágenes visuales lo hacen adecuado para muchas aplicaciones en este campo.
+
+Utilizaremos el modelo preentrenado _EfficientNetV2S_. Para incorporarlo en nuestra aplicación, importamos el modelo y le agregamos una capa de entrada (input layer) diseñada para adaptarse a nuestras imágenes, una capa de pooling y una capa de salida. Para aprovechar la técnica de _transfer learning_, hemos congelado el modelo, lo que significa que hemos mantenido los pesos que adquirió durante su entrenamiento previo con el conjunto de datos _ImageNet_.
 
 == Entrenamiento
 
-...
+Realizamos los entrenamientos utilizando nuestro https://www.kaggle.com/datasets/gonzajl/neumona-x-rays-dataset[dataset] diseñado para la detección de neumonía en imágenes de rayos X de tórax. Este conjunto de datos consta de un total de 10,498 imágenes, de las cuales 5,249 son radiografías de pacientes diagnosticados con neumonía y las restantes 5,249 corresponden a pacientes que no presentan la enfermedad.
 
-[soruce, console]
+El entrenamiento se realizó utilizando el siguiente modelo:
+
+[source, python]
+----
+base_model = tf.keras.applications.EfficientNetV2S(
+    include_top = False,
+    weights = "imagenet",
+    input_shape = (224, 224, 3),
+)
+
+base_model.trainable = False
+
+num_classes = 2
+x = layers.GlobalAveragePooling2D()(base_model.output)
+output = layers.Dense(num_classes, activation = "softmax")(x)
+model = Model(inputs = base_model.input, outputs = output)
+----
+
+Luego, el modelo se compiló de la siguiente manera:
+
+[source, python]
+----
+model.compile(optimizer = "adam", loss = "categorical_crossentropy", metrics = ["accuracy"])
+----
+
+Se utilizó el 80% de las imágenes para el entrenamiento del modelo y el 20% restante para las pruebas, lo que se traduce en 8,398 imágenes de entrenamiento y 2,100 imágenes de prueba. Durante las diez épocas de entrenamiento, los resultados fueron los siguientes:
+
+[source, console]
 ----
 Epoch 1/10
-263/263 [==============================] - 338s 1s/step - loss: 0.5376 - accuracy: 0.7524 - val_loss: 0.4565 - val_accuracy: 0.8295
+2023-10-19 14:24:52.635791: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 5056536576 exceeds 10% of free system memory.
+263/263 [==============================] - 318s 1s/step - loss: 0.3197 - accuracy: 0.8727 - val_loss: 0.2965 - val_accuracy: 0.8871
 Epoch 2/10
-263/263 [==============================] - 321s 1s/step - loss: 0.4525 - accuracy: 0.8115 - val_loss: 0.4063 - val_accuracy: 0.8486
+263/263 [==============================] - 317s 1s/step - loss: 0.3243 - accuracy: 0.8694 - val_loss: 0.2851 - val_accuracy: 0.8814
 Epoch 3/10
-263/263 [==============================] - 320s 1s/step - loss: 0.4250 - accuracy: 0.8221 - val_loss: 0.3748 - val_accuracy: 0.8619
+263/263 [==============================] - 314s 1s/step - loss: 0.3226 - accuracy: 0.8708 - val_loss: 0.2907 - val_accuracy: 0.8857
 Epoch 4/10
-263/263 [==============================] - 317s 1s/step - loss: 0.4004 - accuracy: 0.8370 - val_loss: 0.3589 - val_accuracy: 0.8667
+263/263 [==============================] - 319s 1s/step - loss: 0.3210 - accuracy: 0.8752 - val_loss: 0.2849 - val_accuracy: 0.8857
 Epoch 5/10
-263/263 [==============================] - 319s 1s/step - loss: 0.3959 - accuracy: 0.8420 - val_loss: 0.3482 - val_accuracy: 0.8705
+263/263 [==============================] - 315s 1s/step - loss: 0.3197 - accuracy: 0.8757 - val_loss: 0.2822 - val_accuracy: 0.8838
 Epoch 6/10
-263/263 [==============================] - 315s 1s/step - loss: 0.3864 - accuracy: 0.8447 - val_loss: 0.3461 - val_accuracy: 0.8714
+263/263 [==============================] - 264s 1s/step - loss: 0.3237 - accuracy: 0.8729 - val_loss: 0.2814 - val_accuracy: 0.8819
 Epoch 7/10
-263/263 [==============================] - 318s 1s/step - loss: 0.3754 - accuracy: 0.8484 - val_loss: 0.3351 - val_accuracy: 0.8729
+263/263 [==============================] - 253s 962ms/step - loss: 0.3158 - accuracy: 0.8766 - val_loss: 0.2821 - val_accuracy: 0.8852
 Epoch 8/10
-263/263 [==============================] - 317s 1s/step - loss: 0.3671 - accuracy: 0.8570 - val_loss: 0.3281 - val_accuracy: 0.8719
+263/263 [==============================] - 251s 956ms/step - loss: 0.3139 - accuracy: 0.8756 - val_loss: 0.2792 - val_accuracy: 0.8862
 Epoch 9/10
-263/263 [==============================] - 314s 1s/step - loss: 0.3683 - accuracy: 0.8500 - val_loss: 0.3283 - val_accuracy: 0.8776
+263/263 [==============================] - 293s 1s/step - loss: 0.3159 - accuracy: 0.8756 - val_loss: 0.2792 - val_accuracy: 0.8843
 Epoch 10/10
-263/263 [==============================] - 314s 1s/step - loss: 0.3581 - accuracy: 0.8563 - val_loss: 0.3234 - val_accuracy: 0.8733
+263/263 [==============================] - 307s 1s/step - loss: 0.3168 - accuracy: 0.8770 - val_loss: 0.2774 - val_accuracy: 0.8862
 ----
 
-...
+Es relevante señalar que la advertencia que se muestra indica que no es factible entrenar el modelo con un conjunto de datos más extenso debido a limitaciones de memoria del sistema, lo que impide considerar la opción de ampliar el conjunto de datos para mejorar la predicción.
 
-image::imgs/graficos-entrenamiento.png[]
+Posteriormente, se procedió a evaluar el modelo utilizando las 2,100 imágenes del conjunto de pruebas, y se registraron los siguientes resultados:
+
+[source, console]
+----
+66/66 [==============================] - 61s 918ms/step
+Cantidad de predicciones: 2100
+Etiquetas:   [neumonia, no-neumonia]
+Total:       [1007, 1093]
+Correctas:   [922, 939]
+Incorrectas: [85, 154]
+----
 
 == Conclusión
 
-...
+El modelo _EfficientNetV2S_ destaca por su sobresaliente nivel de precisión, logrando un 87% en el conjunto de entrenamiento y un notorio 88% en el conjunto de pruebas. Además, presenta un nivel bajo de error en la detección de neumonía en radiografías de tórax. Por lo tanto, si bien lo consideramos en nuestra búsqueda del modelo definitivo, mantenemos abierta la posibilidad de explorar otras alternativas que puedan ofrecer un desempeño aún más óptimo.
