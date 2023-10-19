@@ -137,54 +137,54 @@ image::imgs/primer-entrenamiento-softmax.png[200, 700, align="center"]
 [source, console]
 ----
 Epoch 1/20
-263/263 [==============================] - 56s 210ms/step - loss: 0.2760 - categorical_accuracy: 0.8913 - val_loss: 0.1519 - val_categorical_accuracy: 0.9471
+263/263 [==============================] - 57s 212ms/step - loss: 0.3294 - categorical_accuracy: 0.8506 - val_loss: 0.1606 - val_categorical_accuracy: 0.9390
 Epoch 2/20
-263/263 [==============================] - 54s 206ms/step - loss: 0.1566 - categorical_accuracy: 0.9458 - val_loss: 0.1307 - val_categorical_accuracy: 0.9543
+263/263 [==============================] - 54s 206ms/step - loss: 0.1766 - categorical_accuracy: 0.9361 - val_loss: 0.1278 - val_categorical_accuracy: 0.9452
 Epoch 3/20
-263/263 [==============================] - 54s 205ms/step - loss: 0.1246 - categorical_accuracy: 0.9537 - val_loss: 0.1421 - val_categorical_accuracy: 0.9576
+263/263 [==============================] - 54s 205ms/step - loss: 0.1380 - categorical_accuracy: 0.9462 - val_loss: 0.1255 - val_categorical_accuracy: 0.9586
 Epoch 4/20
-263/263 [==============================] - 54s 204ms/step - loss: 0.0929 - categorical_accuracy: 0.9663 - val_loss: 0.1406 - val_categorical_accuracy: 0.9457
+263/263 [==============================] - 54s 205ms/step - loss: 0.1169 - categorical_accuracy: 0.9568 - val_loss: 0.1042 - val_categorical_accuracy: 0.9590
 Epoch 5/20
-263/263 [==============================] - 53s 203ms/step - loss: 0.0807 - categorical_accuracy: 0.9702 - val_loss: 0.0901 - val_categorical_accuracy: 0.9724
+263/263 [==============================] - 53s 203ms/step - loss: 0.0895 - categorical_accuracy: 0.9667 - val_loss: 0.1463 - val_categorical_accuracy: 0.9590
 Epoch 6/20
-263/263 [==============================] - 53s 203ms/step - loss: 0.0635 - categorical_accuracy: 0.9745 - val_loss: 0.1025 - val_categorical_accuracy: 0.9610
+263/263 [==============================] - 53s 203ms/step - loss: 0.0825 - categorical_accuracy: 0.9689 - val_loss: 0.0978 - val_categorical_accuracy: 0.9700
 Epoch 7/20
-263/263 [==============================] - 53s 203ms/step - loss: 0.0506 - categorical_accuracy: 0.9815 - val_loss: 0.0975 - val_categorical_accuracy: 0.9781
+263/263 [==============================] - 53s 203ms/step - loss: 0.0646 - categorical_accuracy: 0.9770 - val_loss: 0.0961 - val_categorical_accuracy: 0.9695
 Epoch 8/20
-263/263 [==============================] - 54s 205ms/step - loss: 0.0373 - categorical_accuracy: 0.9855 - val_loss: 0.0943 - val_categorical_accuracy: 0.9762
+263/263 [==============================] - 55s 208ms/step - loss: 0.0597 - categorical_accuracy: 0.9789 - val_loss: 0.0824 - val_categorical_accuracy: 0.9743
 Epoch 9/20
-263/263 [==============================] - 54s 204ms/step - loss: 0.0356 - categorical_accuracy: 0.9871 - val_loss: 0.1178 - val_categorical_accuracy: 0.9724
+263/263 [==============================] - 57s 217ms/step - loss: 0.0441 - categorical_accuracy: 0.9823 - val_loss: 0.0788 - val_categorical_accuracy: 0.9767
 Epoch 10/20
-263/263 [==============================] - 54s 204ms/step - loss: 0.0368 - categorical_accuracy: 0.9857 - val_loss: 0.0872 - val_categorical_accuracy: 0.9843
+263/263 [==============================] - 55s 209ms/step - loss: 0.0364 - categorical_accuracy: 0.9879 - val_loss: 0.0787 - val_categorical_accuracy: 0.9771
 Epoch 11/20
-263/263 [==============================] - 54s 204ms/step - loss: 0.0182 - categorical_accuracy: 0.9942 - val_loss: 0.1025 - val_categorical_accuracy: 0.9833
+263/263 [==============================] - 54s 206ms/step - loss: 0.0376 - categorical_accuracy: 0.9867 - val_loss: 0.0987 - val_categorical_accuracy: 0.9781
 Epoch 12/20
-263/263 [==============================] - 53s 202ms/step - loss: 0.0213 - categorical_accuracy: 0.9923 - val_loss: 0.1141 - val_categorical_accuracy: 0.9800
+263/263 [==============================] - 54s 205ms/step - loss: 0.0253 - categorical_accuracy: 0.9915 - val_loss: 0.1214 - val_categorical_accuracy: 0.9752
 Epoch 13/20
-263/263 [==============================] - 53s 202ms/step - loss: 0.0216 - categorical_accuracy: 0.9920 - val_loss: 0.1230 - val_categorical_accuracy: 0.9805
+263/263 [==============================] - 54s 205ms/step - loss: 0.0270 - categorical_accuracy: 0.9900 - val_loss: 0.0942 - val_categorical_accuracy: 0.9790
 Epoch 14/20
-263/263 [==============================] - 54s 205ms/step - loss: 0.0254 - categorical_accuracy: 0.9911 - val_loss: 0.1177 - val_categorical_accuracy: 0.9814
+263/263 [==============================] - 53s 203ms/step - loss: 0.0181 - categorical_accuracy: 0.9940 - val_loss: 0.0895 - val_categorical_accuracy: 0.9805
 Epoch 15/20
-263/263 [==============================] - 53s 202ms/step - loss: 0.0163 - categorical_accuracy: 0.9933 - val_loss: 0.1273 - val_categorical_accuracy: 0.9824
+263/263 [==============================] - 54s 206ms/step - loss: 0.0214 - categorical_accuracy: 0.9924 - val_loss: 0.1214 - val_categorical_accuracy: 0.9790
 Epoch 16/20
-263/263 [==============================] - 53s 203ms/step - loss: 0.0208 - categorical_accuracy: 0.9923 - val_loss: 0.1444 - val_categorical_accuracy: 0.9790
+263/263 [==============================] - 54s 204ms/step - loss: 0.0248 - categorical_accuracy: 0.9906 - val_loss: 0.1042 - val_categorical_accuracy: 0.9810
 Epoch 17/20
-263/263 [==============================] - 54s 204ms/step - loss: 0.0202 - categorical_accuracy: 0.9923 - val_loss: 0.1164 - val_categorical_accuracy: 0.9814
+263/263 [==============================] - 54s 204ms/step - loss: 0.0243 - categorical_accuracy: 0.9919 - val_loss: 0.1458 - val_categorical_accuracy: 0.9748
 Epoch 18/20
-263/263 [==============================] - 54s 206ms/step - loss: 0.0149 - categorical_accuracy: 0.9937 - val_loss: 0.1381 - val_categorical_accuracy: 0.9843
+263/263 [==============================] - 54s 204ms/step - loss: 0.0149 - categorical_accuracy: 0.9948 - val_loss: 0.1164 - val_categorical_accuracy: 0.9800
 Epoch 19/20
-263/263 [==============================] - 54s 205ms/step - loss: 0.0163 - categorical_accuracy: 0.9933 - val_loss: 0.1100 - val_categorical_accuracy: 0.9805
+263/263 [==============================] - 54s 204ms/step - loss: 0.0183 - categorical_accuracy: 0.9935 - val_loss: 0.0973 - val_categorical_accuracy: 0.9814
 Epoch 20/20
-263/263 [==============================] - 55s 207ms/step - loss: 0.0142 - categorical_accuracy: 0.9957 - val_loss: 0.1567 - val_categorical_accuracy: 0.9795
+263/263 [==============================] - 54s 205ms/step - loss: 0.0147 - categorical_accuracy: 0.9946 - val_loss: 0.1260 - val_categorical_accuracy: 0.9805
 ----
 
 [source, console]
 ----
 Cantidad de predicciones: 2100
 Etiquetas:   [Neum, No_Neum]
-Total:       [1049, 1051]
-Correctas:   [1041, 1016]
-Incorrectas: [8, 35]
+Total:       [1047, 1053]
+Correctas:   [1041, 1018]
+Incorrectas: [6, 35]
 ----
 
 ==== Función de activación Softmax
