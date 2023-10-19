@@ -94,6 +94,8 @@ Correctas:   [1035, 1008]
 Incorrectas: [16, 41]
 ----
 
+Estos resultados muestran el desempeño del modelo en la clasificación de las imágenes de prueba, con un desglose de predicciones correctas e incorrectas en las categorías "neumonía" y "no-neumonía".
+
 === Entrenamiento de 20 épocas
 
 De manera similar al entrenamiento anterior, se empleó el 80% de las imágenes para entrenar el modelo, reservando el 20% restante para las pruebas. Durante las veinte épocas de entrenamiento, se obtuvieron los siguientes resultados:
@@ -161,7 +163,6 @@ Correctas:   [1054, 1004]
 Incorrectas: [20, 22]
 ----
 
-Estos resultados muestran el desempeño del modelo en la clasificación de las imágenes de prueba, con un desglose de predicciones correctas e incorrectas en las categorías "neumonía" y "no-neumonía".
-
 == Conclusión
 
+El modelo _ResNet_ arrojó resultados altamente prometedores, lo que lo posiciona como una de las opciones principales para ser seleccionado como el modelo definitivo para la detección de neumonía en radiografías de tórax.
