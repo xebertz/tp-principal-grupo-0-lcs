@@ -41,7 +41,7 @@ Se dividió la totalidad de las imágenes en dos conjuntos, uno de entrenamiento
 
 === Primer entrenamiento
 
-10 vueltas
+El primer entrenamiento se llevó a cabo con 10 vueltas. Como se mencionó, ambas funciones de activación fueron probadas.
 
 ==== Función de activación Sigmoid
 
