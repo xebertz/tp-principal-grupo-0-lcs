@@ -45,6 +45,8 @@ El primer entrenamiento se llevó a cabo con 10 vueltas. Como se mencionó, amba
 
 ==== Función de activación Sigmoid
 
+Los resultados para este primer entrenamiento con la función Sigmoid fueron los siguientes:
+
 [source, console]
 ----
 Epoch 1/10
@@ -69,6 +71,15 @@ Epoch 10/10
 263/263 [==============================] - 53s 203ms/step - loss: 0.0343 - categorical_accuracy: 0.9855 - val_loss: 0.0800 - val_categorical_accuracy: 0.9838
 ----
 
+Si evaluamos las metricas, podemos observar que el nivel de pérdida en el entrenamiento es extremadamente bajo, pero difiere con respecto al nivel de pérdida de las pruebas. Esto genera incertidumbre en cuanto a qué resultado es más preciso. Por otra parte, los niveles de precisión son elevados tanto en el entrenamiento como en las pruebas, y su valor es muy similar. Esto quiere decir que el aprendizaje es consistente.
+
+Los gráficos de estos resultados son los siguientes:
+
+.primer entrenamiento: 10 vueltas, Sigmoid
+image::imgs/primer-entrenamiento-sigmoid.png[200, 700, align="center"]
+
+Con respecto al error del modelo, podemos observar que el nivel de error es muy bajo. De 2100 imágenes sólo clasificó mal 34.
+
 [source, console]
 ----
 Cantidad de predicciones: 2100
@@ -78,8 +89,7 @@ Correctas:   [1060, 1006]
 Incorrectas: [18, 16]
 ----
 
-.primer entrenamiento: 10 vueltas, Sigmoid
-image::imgs/primer-entrenamiento-sigmoid.png[200, 700, align="center"]
+Esto es una precisión mayor al 98%.
 
 ==== Función de activación Softmax
 
