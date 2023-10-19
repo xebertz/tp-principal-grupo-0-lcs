@@ -126,7 +126,7 @@ Los gráficos de estos resultados son los siguientes:
 .primer entrenamiento: 10 vueltas, Softmax
 image::imgs/primer-entrenamiento-softmax.png[200, 700, align="center"]
 
-Estos resultados se visualizan en las pruebas, ya que el modelo clasificó mal 59 imágenes.
+Estos resultados se visualizan en las pruebas, ya que el modelo clasificó erroneamente 59 imágenes.
 
 [source, console]
 ----
@@ -141,9 +141,11 @@ Este es un nivel de precisión de, aproximadamente, 97%.
 
 === Segundo entrenamiento
 
-20 vueltas
+Con la finalidad de mejorar el modelo, se llevó a cabo un segundo entrenamiento con 20 vueltas.
 
 ==== Función de activación Sigmoid
+
+Los resultados para este primer entrenamiento con la función Sigmoid fueron los siguientes:
 
 [source, console]
 ----
@@ -189,6 +191,13 @@ Epoch 20/20
 263/263 [==============================] - 54s 205ms/step - loss: 0.0147 - categorical_accuracy: 0.9946 - val_loss: 0.1260 - val_categorical_accuracy: 0.9805
 ----
 
+Se puede ver que el nivel de pérdida aumentó, siendo éste 0.1260 en el entrenamiento y 0.0147 en las pruebas. El nivel de precisión, sin embargo, aumentó a más de 98%.
+
+.segundo entrenamiento: 20 vueltas, Sigmoid
+image::imgs/segundo-entrenamiento-sigmoid.png[200, 700, align="center"]
+
+En las pruebas, el modelo clasificó erróneamente41 imágenes.
+
 [source, console]
 ----
 Cantidad de predicciones: 2100
@@ -198,8 +207,7 @@ Correctas:   [1041, 1018]
 Incorrectas: [6, 35]
 ----
 
-.segundo entrenamiento: 20 vueltas, Sigmoid
-image::imgs/segundo-entrenamiento-sigmoid.png[200, 700, align="center"]
+Este es un nivel de precisión de, aproximadamente, 98%.
 
 ==== Función de activación Softmax
 
