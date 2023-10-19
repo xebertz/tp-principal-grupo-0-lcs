@@ -14,4 +14,57 @@ v1, {docdate}
 
 == Entrenamiento
 
+=== Primer entrenamiento
+
+=== Segundo entrenamiento
+
+20 vueltas.
+
+Epoch 1/20
+263/263 [==============================] - 56s 210ms/step - loss: 0.2760 - categorical_accuracy: 0.8913 - val_loss: 0.1519 - val_categorical_accuracy: 0.9471
+Epoch 2/20
+263/263 [==============================] - 54s 206ms/step - loss: 0.1566 - categorical_accuracy: 0.9458 - val_loss: 0.1307 - val_categorical_accuracy: 0.9543
+Epoch 3/20
+263/263 [==============================] - 54s 205ms/step - loss: 0.1246 - categorical_accuracy: 0.9537 - val_loss: 0.1421 - val_categorical_accuracy: 0.9576
+Epoch 4/20
+263/263 [==============================] - 54s 204ms/step - loss: 0.0929 - categorical_accuracy: 0.9663 - val_loss: 0.1406 - val_categorical_accuracy: 0.9457
+Epoch 5/20
+263/263 [==============================] - 53s 203ms/step - loss: 0.0807 - categorical_accuracy: 0.9702 - val_loss: 0.0901 - val_categorical_accuracy: 0.9724
+Epoch 6/20
+263/263 [==============================] - 53s 203ms/step - loss: 0.0635 - categorical_accuracy: 0.9745 - val_loss: 0.1025 - val_categorical_accuracy: 0.9610
+Epoch 7/20
+263/263 [==============================] - 53s 203ms/step - loss: 0.0506 - categorical_accuracy: 0.9815 - val_loss: 0.0975 - val_categorical_accuracy: 0.9781
+Epoch 8/20
+263/263 [==============================] - 54s 205ms/step - loss: 0.0373 - categorical_accuracy: 0.9855 - val_loss: 0.0943 - val_categorical_accuracy: 0.9762
+Epoch 9/20
+263/263 [==============================] - 54s 204ms/step - loss: 0.0356 - categorical_accuracy: 0.9871 - val_loss: 0.1178 - val_categorical_accuracy: 0.9724
+Epoch 10/20
+263/263 [==============================] - 54s 204ms/step - loss: 0.0368 - categorical_accuracy: 0.9857 - val_loss: 0.0872 - val_categorical_accuracy: 0.9843
+Epoch 11/20
+263/263 [==============================] - 54s 204ms/step - loss: 0.0182 - categorical_accuracy: 0.9942 - val_loss: 0.1025 - val_categorical_accuracy: 0.9833
+Epoch 12/20
+263/263 [==============================] - 53s 202ms/step - loss: 0.0213 - categorical_accuracy: 0.9923 - val_loss: 0.1141 - val_categorical_accuracy: 0.9800
+Epoch 13/20
+263/263 [==============================] - 53s 202ms/step - loss: 0.0216 - categorical_accuracy: 0.9920 - val_loss: 0.1230 - val_categorical_accuracy: 0.9805
+Epoch 14/20
+263/263 [==============================] - 54s 205ms/step - loss: 0.0254 - categorical_accuracy: 0.9911 - val_loss: 0.1177 - val_categorical_accuracy: 0.9814
+Epoch 15/20
+263/263 [==============================] - 53s 202ms/step - loss: 0.0163 - categorical_accuracy: 0.9933 - val_loss: 0.1273 - val_categorical_accuracy: 0.9824
+Epoch 16/20
+263/263 [==============================] - 53s 203ms/step - loss: 0.0208 - categorical_accuracy: 0.9923 - val_loss: 0.1444 - val_categorical_accuracy: 0.9790
+Epoch 17/20
+263/263 [==============================] - 54s 204ms/step - loss: 0.0202 - categorical_accuracy: 0.9923 - val_loss: 0.1164 - val_categorical_accuracy: 0.9814
+Epoch 18/20
+263/263 [==============================] - 54s 206ms/step - loss: 0.0149 - categorical_accuracy: 0.9937 - val_loss: 0.1381 - val_categorical_accuracy: 0.9843
+Epoch 19/20
+263/263 [==============================] - 54s 205ms/step - loss: 0.0163 - categorical_accuracy: 0.9933 - val_loss: 0.1100 - val_categorical_accuracy: 0.9805
+Epoch 20/20
+263/263 [==============================] - 55s 207ms/step - loss: 0.0142 - categorical_accuracy: 0.9957 - val_loss: 0.1567 - val_categorical_accuracy: 0.9795
+
+Cantidad de predicciones: 2100
+Etiquetas:   [Neum, No_Neum]
+Total:       [1049, 1051]
+Correctas:   [1041, 1016]
+Incorrectas: [8, 35]
+
 == Conclusiones
