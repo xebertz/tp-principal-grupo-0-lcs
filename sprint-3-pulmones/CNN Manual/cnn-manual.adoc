@@ -12,14 +12,76 @@ v1, {docdate}
 
 == Modelo
 
+[source, python]
+----
+modelo_cnn = tf.keras.models.Sequential([
+    tf.keras.layers.Conv2D(16, (3, 3), activation='relu', input_shape=(224, 224, 1)),
+    tf.keras.layers.MaxPooling2D(3, 3),
+    tf.keras.layers.Conv2D(32, (3, 3), activation='relu'),
+    tf.keras.layers.MaxPooling2D(2, 2),
+    tf.keras.layers.Dropout(0.3),
+    tf.keras.layers.Flatten(),
+    tf.keras.layers.Dense(64, activation='relu'),
+    tf.keras.layers.Dropout(0.2),
+    tf.keras.layers.Dense(32, activation='relu'),
+    tf.keras.layers.Dropout(0.3),
+    tf.keras.layers.Dense(2, activation='sigmoid')
+])
+----
+
 == Entrenamiento
 
 === Primer entrenamiento
 
+10 vueltas
+
+==== Función de activación Sigmoid
+
+==== Función de activación Softmax
+
+[source, console]
+----
+Epoch 1/10
+263/263 [==============================] - 56s 210ms/step - loss: 0.3086 - categorical_accuracy: 0.8640 - val_loss: 0.1699 - val_categorical_accuracy: 0.9300
+Epoch 2/10
+263/263 [==============================] - 54s 205ms/step - loss: 0.1589 - categorical_accuracy: 0.9415 - val_loss: 0.1197 - val_categorical_accuracy: 0.9581
+Epoch 3/10
+263/263 [==============================] - 54s 204ms/step - loss: 0.1278 - categorical_accuracy: 0.9542 - val_loss: 0.1097 - val_categorical_accuracy: 0.9605
+Epoch 4/10
+263/263 [==============================] - 54s 204ms/step - loss: 0.1026 - categorical_accuracy: 0.9630 - val_loss: 0.1070 - val_categorical_accuracy: 0.9629
+Epoch 5/10
+263/263 [==============================] - 55s 208ms/step - loss: 0.0852 - categorical_accuracy: 0.9677 - val_loss: 0.0953 - val_categorical_accuracy: 0.9733
+Epoch 6/10
+263/263 [==============================] - 55s 209ms/step - loss: 0.0597 - categorical_accuracy: 0.9776 - val_loss: 0.1152 - val_categorical_accuracy: 0.9695
+Epoch 7/10
+263/263 [==============================] - 53s 203ms/step - loss: 0.0504 - categorical_accuracy: 0.9819 - val_loss: 0.0947 - val_categorical_accuracy: 0.9800
+Epoch 8/10
+263/263 [==============================] - 57s 216ms/step - loss: 0.0515 - categorical_accuracy: 0.9819 - val_loss: 0.0914 - val_categorical_accuracy: 0.9733
+Epoch 9/10
+263/263 [==============================] - 57s 215ms/step - loss: 0.0337 - categorical_accuracy: 0.9886 - val_loss: 0.0773 - val_categorical_accuracy: 0.9829
+Epoch 10/10
+263/263 [==============================] - 55s 208ms/step - loss: 0.0314 - categorical_accuracy: 0.9882 - val_loss: 0.1405 - val_categorical_accuracy: 0.9719
+----
+
+[source, console]
+----
+Etiquetas:   [Neum, No_Neum]
+Total:       [1043, 1057]
+Correctas:   [1030, 1011]
+Incorrectas: [13, 46]
+----
+
+.primer entrenamiento: 10 vueltas, Softmax
+image::imgs/primer-entrenamiento-softmax.png[200, 700, align="center"]
+
 === Segundo entrenamiento
 
-20 vueltas.
+20 vueltas
 
+==== Función de activación Sigmoid
+
+[source, console]
+----
 Epoch 1/20
 263/263 [==============================] - 56s 210ms/step - loss: 0.2760 - categorical_accuracy: 0.8913 - val_loss: 0.1519 - val_categorical_accuracy: 0.9471
 Epoch 2/20
@@ -61,10 +123,15 @@ Epoch 19/20
 Epoch 20/20
 263/263 [==============================] - 55s 207ms/step - loss: 0.0142 - categorical_accuracy: 0.9957 - val_loss: 0.1567 - val_categorical_accuracy: 0.9795
 
+----
+
+[source, console]
+----
 Cantidad de predicciones: 2100
 Etiquetas:   [Neum, No_Neum]
 Total:       [1049, 1051]
 Correctas:   [1041, 1016]
 Incorrectas: [8, 35]
+----
 
 == Conclusiones
