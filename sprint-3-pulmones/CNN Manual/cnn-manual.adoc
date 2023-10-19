@@ -12,6 +12,8 @@ v1, {docdate}
 
 == Modelo
 
+Utilizamos una arquitectura definida manualmente para el entrenamiento un modelo de detección de neumoía a partir de imágenes de rayos X. La arquitectura establecida es la siguiente:
+
 [source, python]
 ----
 modelo_cnn = tf.keras.models.Sequential([
@@ -28,6 +30,8 @@ modelo_cnn = tf.keras.models.Sequential([
     tf.keras.layers.Dense(2, activation='sigmoid')
 ])
 ----
+
+Para nuestro caso, debido a la naturaleza binaria del problema, podemos utilizar dos funciones de activación: _Sigmoid_ y _Softmax_. No está claro cual de las dos puede ser mejor, por lo que entrenamos al modelo con ambas.
 
 == Entrenamiento
 
