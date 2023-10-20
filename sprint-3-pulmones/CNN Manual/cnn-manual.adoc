@@ -276,3 +276,6 @@ Incorrectas: [9, 38]
 El nivel de precisión es de, aproximadamente, 97%.
 
 == Conclusiones
+
+Debido a su alto nivel de precisión en entrenamiento y en las pruebas pruebas, se eligió el modelo entrenado con 20 vueltas utilizando la función Sigmoid como mejor opción.
+Al tener una precisión tan elevada, será considerado para la elección del modelo final. 
