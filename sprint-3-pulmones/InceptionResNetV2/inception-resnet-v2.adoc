@@ -23,3 +23,7 @@ Nuestro modelo trabaja con un dataset creado por nosotros en base a otros datase
 Nuestro modelo se trata de uno binario, es decir, dos clases. En este caso, se trata de clasificar imágenes de los pulmones, generadas por radiografias, para decidir si tienen neumonía o no.
 
 La implementación del modelo en este caso es una aplicación del modelo pre-entrenado llamado InceptionReNetV2. Este modelo es uno de los más pesados computacionalmente, por lo que el entrenamiento del mismo se realizó con una cantidad de imágenes menor a otros modelos y en este dominio, logramos dar 10 vueltas de entrenamiento.
+
+== Entrenamiento
+
+Teniendo en cuenta que el modelo es uno de los más pesados, reducimos la cantidad de imágenes. La cantidad total de imágenes es de 3200, donde cada clase tiene 1600. Se redujo a esa cantidad porque el Kernel de la plataforma Saturn Cloud colapsa. Además, si se aumentaba la cantidad de imágenes, al finalizar las 10 vueltas colapsa el Kernel también. 
