@@ -27,3 +27,20 @@ La implementación del modelo en este caso es una aplicación del modelo pre-ent
 == Entrenamiento
 
 Teniendo en cuenta que el modelo es uno de los más pesados, reducimos la cantidad de imágenes. La cantidad total de imágenes es de 3200, donde cada clase tiene 1600. Se redujo a esa cantidad porque el Kernel de la plataforma Saturn Cloud colapsa. Además, si se aumentaba la cantidad de imágenes, al finalizar las 10 vueltas colapsa el Kernel también. 
+
+====
+[source,python]
+.Ejemplo: Obtener las imágenes para cada clase.
+----
+.
+.
+.
+datos = pd.read_csv('data.csv')
+cant_max = 1600
+
+neumonia_df = datos[datos['neumonia'] == 1].head(cant_max)
+no_neumonia_df = datos[datos['no_neumonia'] == 1].head(cant_max)
+
+datos = pd.concat([neumonia_df, no_neumonia_df], ignore_index=True)
+----
+====
