@@ -100,7 +100,7 @@ Epoch 10/10
 80/80 [==============================] - 437s 5s/step - loss: 0.0212 - accuracy: 0.9934 - val_loss: 0.2223 - val_accuracy: 0.9422
 ----
 
-== Resultados por clase
+=== Resultados por clase
 
 [source, console]
 ----
@@ -110,3 +110,11 @@ Total:           [334, 306]
 Correctas:       [329, 274]
 Incorrectas:     [5, 32]
 ----
+
+=== Gráficos
+
+.Precisión del modelo por vueltas.
+image::imgs/precision_del_modelo.png[]
+
+.Perdida del modelo por vueltas.
+image::imgs/perdida_del_modelo.png[]
