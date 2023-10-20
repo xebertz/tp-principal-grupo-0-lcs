@@ -71,3 +71,42 @@ for i, fila in datos.iterrows():
             etiquetas.append(0)
 ----
 ====
+
+== Resultados obtenidos
+
+Tras dividir las imágenes, entrenamos el modelo y obtuvimos estos resultados:
+
+[source, console]
+----
+Epoch 1/10
+80/80 [==============================] - 469s 5s/step - loss: 0.1710 - accuracy: 0.9320 - val_loss: 0.4518 - val_accuracy: 0.9156
+Epoch 2/10
+80/80 [==============================] - 435s 5s/step - loss: 0.0727 - accuracy: 0.9734 - val_loss: 0.1817 - val_accuracy: 0.9406
+Epoch 3/10
+80/80 [==============================] - 434s 5s/step - loss: 0.0551 - accuracy: 0.9801 - val_loss: 0.2395 - val_accuracy: 0.9141
+Epoch 4/10
+80/80 [==============================] - 431s 5s/step - loss: 0.0282 - accuracy: 0.9895 - val_loss: 0.1527 - val_accuracy: 0.9531
+Epoch 5/10
+80/80 [==============================] - 428s 5s/step - loss: 0.0134 - accuracy: 0.9957 - val_loss: 0.2276 - val_accuracy: 0.9547
+Epoch 6/10
+80/80 [==============================] - 427s 5s/step - loss: 0.0377 - accuracy: 0.9867 - val_loss: 0.2592 - val_accuracy: 0.9359
+Epoch 7/10
+80/80 [==============================] - 426s 5s/step - loss: 0.0152 - accuracy: 0.9945 - val_loss: 0.1225 - val_accuracy: 0.9781
+Epoch 8/10
+80/80 [==============================] - 428s 5s/step - loss: 0.0298 - accuracy: 0.9902 - val_loss: 0.1416 - val_accuracy: 0.9609
+Epoch 9/10
+80/80 [==============================] - 429s 5s/step - loss: 0.0228 - accuracy: 0.9898 - val_loss: 0.4266 - val_accuracy: 0.9109
+Epoch 10/10
+80/80 [==============================] - 437s 5s/step - loss: 0.0212 - accuracy: 0.9934 - val_loss: 0.2223 - val_accuracy: 0.9422
+----
+
+== Resultados por clase
+
+[source, console]
+----
+Cantidad de predicciones: 640
+Etiquetas:       [Neumonía, No_Neumonía]
+Total:           [334, 306]
+Correctas:       [329, 274]
+Incorrectas:     [5, 32]
+----
