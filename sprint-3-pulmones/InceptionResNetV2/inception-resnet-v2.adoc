@@ -1,0 +1,17 @@
+= Modelo InceptionResNetV2 - Pulmones: Entrenamiento y pruebas
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== InceptionResNetV2
+
+Las redes Inception se caracterizan por su capacidad para procesar información a diferentes escalas y resoluciones, utilizando módulos de convolución de diferentes tamaños. Por otro lado, las redes ResNet introdujeron el concepto de conexiones residuales, que ayudan a resolver el problema de la desaparición del gradiente en redes neuronales profundas.
+
+InceptionResNetV2 combina estos dos enfoques, utilizando módulos Inception y conexiones residuales para crear una red profunda y eficiente que puede aprender a representar características de imágenes de manera efectiva. Esto la hace adecuada para tareas como la clasificación de imágenes y la detección de objetos en imágenes.
