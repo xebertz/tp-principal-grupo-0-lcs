@@ -196,7 +196,7 @@ Se puede ver que el nivel de pérdida aumentó, siendo éste 0.1260 en el entren
 .segundo entrenamiento: 20 vueltas, Sigmoid
 image::imgs/segundo-entrenamiento-sigmoid.png[200, 700, align="center"]
 
-En las pruebas, el modelo clasificó erróneamente41 imágenes.
+En las pruebas, el modelo clasificó erróneamente 41 imágenes.
 
 [source, console]
 ----
@@ -257,6 +257,13 @@ Epoch 20/20
 263/263 [==============================] - 54s 205ms/step - loss: 0.0149 - categorical_accuracy: 0.9938 - val_loss: 0.1371 - val_categorical_accuracy: 0.9776
 ----
 
+Se puede ver que la diferencia entre ambos niveles de pérdida es aun mayor que con la función Sigmoid, y también existe una diferencia mayor entre los niveles de precisión.
+
+.segundo entrenamiento: 20 vueltas, Softmax
+image::imgs/segundo-entrenamiento-softmax.png[200, 700, align="center"]
+
+En las pruebas, el modelo clasificó incorrectamente 47 imágenes, superando al modelo anterior.
+
 [source, console]
 ----
 Cantidad de predicciones: 2100
@@ -266,7 +273,6 @@ Correctas:   [1038, 1015]
 Incorrectas: [9, 38]
 ----
 
-.segundo entrenamiento: 20 vueltas, Softmax
-image::imgs/segundo-entrenamiento-softmax.png[200, 700, align="center"]
+El nivel de precisión es de, aproximadamente, 97%.
 
 == Conclusiones
