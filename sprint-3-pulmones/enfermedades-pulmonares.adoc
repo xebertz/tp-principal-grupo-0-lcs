@@ -71,9 +71,15 @@ Existen tres tipos de proyecciones ampliamente utilizadas para la toma de imáge
 
 * _Proyección Postero Anterior:_ el paciente debe estar de espaldas a 1.80m de distancia del tubo de radiografía, apoyando su pecho en la pantalla que genera la placa. Los brazos deben estar separados del cuerpo. Esto genera una imagen de los pulmones de forma frontal.
 
+* _Proyección Antero Posterior:_ funciona de igual manera que la proyección _postero anterior_, pero el paciente debe estar de frente al tubo de radiografía.
+
+.Proyecciónes antero posterior y postero anterior
+image::imgs/ap-vs-pa.jpg[250, 600, align="center"]
+
 * _Proyección Lateral:_ en este caso, se busca que los pulmones se vean superpuestos. El paciente debe estar como mínimo a un metro del tubo de radiografía, y como máximo a un 1.20m. La distancia varía según el tamaño del tórax del paciente. El paciente debe apoyar su lado izquierdo en la pantalla que genera la placa, ya que el pulmón izquierdo es menor que el derecho, y ésto genera una mejor superposición.
 
-* _Proyección Antero Posterior:_ funciona de igual manera que la proyección _postero anterior_, pero el paciente debe estar de frente al tubo de radiografía.
+.Proyección lateral
+image::imgs/lateral.jpg[100, 350, align="center"]
 
 En _proyección antero posterior_, el corazón se presenta de un tamaño mayor, ya que se genera una magnificación del corazón debido a su separación con la pantalla.
 
@@ -87,9 +93,20 @@ En una radiografía de un paciente sin neumonía, ambos pulmones se presentan de
 
 La pérdida del contorno normal de una estructura indica que algo anormal está en contacto directo con ella. Por ejemplo, en el caso de una neumonía lobular, donde el tejido pulmonar enfermo tiene una densidad similar a la del corazón, el contorno del corazón puede perderse en la radiografía de tórax, manifestándose el de la signo silueta. Este signo puede ayudar a los médicos a localizar la neumonía en un lóbulo específico del pulmón, ya que la pérdida de los bordes solo ocurrirá donde la neumonía esté en contacto directo con el corazón.
 
-En el caso de la esta enfermedad, el signo de la silueta se debe a la consolidación alveolar que borra los límites normales entre el parénquima pulmonar y las estructuras mediastínicas o diafragmáticas. Por ejemplo, si la neumonía afecta al lóbulo inferior derecho, se puede perder el contorno del corazón o del hilio derecho. Si afecta al lóbulo superior derecho, se puede perder el contorno de la vena cava superior o de la aorta ascendente. Si afecta a la língula o al lóbulo inferior izquierdo, se puede perder el contorno del corazón izquierdo. Es decir, cuando este signo se encuentra en las estructuras anteriores, la neumonía se localiza en el lóbulo superior de uno o ambos pulmones. Si se encuentra en el borde del hemidiafragma, la neumonía se localiza en el lóbulo inferior. Si su borde desaparece del lóbulo inferior pero es visible el hemidiafragma, la neumonía se encuentra en el lóbulo medio.
+En el caso de la esta enfermedad, el signo de la silueta se debe a la consolidación alveolar que borra los límites normales entre el parénquima pulmonar y las estructuras mediastínicas o diafragmáticas. Si la neumonía afecta al lóbulo inferior derecho, se puede perder el contorno del corazón o del hilio derecho. Si afecta al lóbulo superior derecho, se puede perder el contorno de la vena cava superior o de la aorta ascendente. Si afecta a la língula o al lóbulo inferior izquierdo, se puede perder el contorno del corazón izquierdo. Es decir, cuando este signo se encuentra en las estructuras anteriores, la neumonía se localiza en el lóbulo superior de uno o ambos pulmones. Si se encuentra en el borde del hemidiafragma, la neumonía se localiza en el lóbulo inferior. Si su borde desaparece del lóbulo inferior pero es visible el hemidiafragma, la neumonía se encuentra en el lóbulo medio.
 
-== Conclusión
+En estos casos, estamos ante un signo de la silueta positivo, ya que las estructuras tienen la misma densidad.
+
+.Condensación alveolar que borra la silueta cardiaca y el hemidiafragma izquierdo. Posible neumonía en el lóbulo inferior izquierdo.
+image::imgs/signo-de-la-silueta-positivo.jpg[100, 350, align="center"]
+
+
+Si las estructuras no tienen la misma densidad, no se fusionarán en la imagen y se observará la estructura más densa y una superposición de los bordes de ambas. Esto es considerado un signo de la silueta negativo.
+
+.Condensación alveolar. Signo de la silueta negativo. La imagen postero-anterior nos corrobora que no hay contacto entre los dos hallazgos, estando el espacio entre ellos relleno de aire. Neumonía por Streptococcus pneumoniae.
+image::imgs/signo-de-la-silueta-negativo.jpg[100, 400, align="center"]
+
+En muchos casos, como en este, se solicita una exploración complementaria. Se puede observar en la imagen c que se solicitó una tomografía computarizada para apoyar el diagnóstico.
 
 == Referencias
 
@@ -106,5 +123,7 @@ En el caso de la esta enfermedad, el signo de la silueta se debe a la consolidac
 * https://www.elsevier.es/es-revista-nursing-20-articulo-interpretacion-radiografia-torax-algo-mas-S0212538214001587#:~:text=La%20neumon%C3%ADa%20se%20puede%20detectar,cuadro%20Signo%20de%20la%20silueta.
 
 * https://www.youtube.com/watch?v=PuPRfFhoLwU&ab_channel=RayosPedia
+
+* https://www.livemed.in/es/blog/la-importancia-del-signo-de-la-silueta-para-interpretacion-de-la-radiografia-de-torax/
 
 //https://www.youtube.com/watch?v=e1b2IPNWp2s&ab_channel=Dr.MijailTapia
