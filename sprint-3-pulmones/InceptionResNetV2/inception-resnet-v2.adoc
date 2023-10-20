@@ -44,3 +44,30 @@ no_neumonia_df = datos[datos['no_neumonia'] == 1].head(cant_max)
 datos = pd.concat([neumonia_df, no_neumonia_df], ignore_index=True)
 ----
 ====
+
+Tras obtener las imágenes, las dividimos en 80% de entrenamiento y 20% de test.
+Aclaración: InceptionResNetV2 solo acepta imágenes con colores.
+
+====
+[source,python]
+.Ejemplo: División de las imágenes para el modelo   .
+----
+.
+.
+.
+imagenes = []
+etiquetas = []
+# Leer y procesar todas las imágenes
+for i, fila in datos.iterrows():
+    if fila['neumonia'] == 1 or fila['no_neumonia'] == 1:
+        ruta_imagen = fila['imagen']
+        # Leer la imagen desde la ruta
+        imagen = cv2.imread(ruta_imagen, cv2.IMREAD_COLOR)
+        imagen = cv2.resize(imagen, (224, 224))
+        imagenes.append(imagen)
+        if fila['neumonia'] == 1:
+            etiquetas.append(1)
+        elif fila['no_neumonia'] == 1:
+            etiquetas.append(0)
+----
+====
