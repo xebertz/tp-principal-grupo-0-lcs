@@ -15,3 +15,9 @@ v1, {docdate}
 Las redes Inception se caracterizan por su capacidad para procesar información a diferentes escalas y resoluciones, utilizando módulos de convolución de diferentes tamaños. Por otro lado, las redes ResNet introdujeron el concepto de conexiones residuales, que ayudan a resolver el problema de la desaparición del gradiente en redes neuronales profundas.
 
 InceptionResNetV2 combina estos dos enfoques, utilizando módulos Inception y conexiones residuales para crear una red profunda y eficiente que puede aprender a representar características de imágenes de manera efectiva. Esto la hace adecuada para tareas como la clasificación de imágenes y la detección de objetos en imágenes.
+
+== Modelo Implementado
+
+Nuestro modelo trabaja con un dataset creado por nosotros en base a otros dataset obtenidos de Kaggle. Para obtener nuestro dataset dar click https://www.kaggle.com/datasets/gonzajl/neumona-x-rays-dataset[aquí].
+
+La implementación del modelo en este caso es una aplicación del modelo pre-entrenado llamado InceptionReNetV2. Este modelo es uno de los más pesados computacionalmente, por lo que el entrenamiento del mismo se realizó con una cantidad de imágenes menor a otros modelos y en este dominio, logramos dar 10 vueltas de entrenamiento.
