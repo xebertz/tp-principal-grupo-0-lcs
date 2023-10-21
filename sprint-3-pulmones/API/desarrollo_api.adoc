@@ -1,0 +1,149 @@
+= API : Desarrollo y Testeo
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== Introducción
+
+=== API
+Una API es un conjunto de definiciones y protocolos que se utilizan para diseñar e integrar el software de las aplicaciones. Permiten que los productos y servicios se comuniquen con otros, sin necesidad de saber cómo están implementados.
+ 
+Una API utiliza *endpoints*, que son puntos de acceso o URLs específicas que se utilizan para realizar operaciones o solicitudes a través de la API. Cada endpoint está diseñado para llevar a cabo una función específica y proporciona una forma estructurada y estandarizada de interactuar con la API.
+
+=== Necesidad
+Tras desarrollar el modelo de machine learning sobre clasificación de imágenes con neumonía o no, hemos contemplado la necesidad de realizar una API para el uso de esta misma. En este contexto, hemos tenido el privilegio de desarrollar la API que facilita el acceso y la utilización del modelo.
+
+== Desarrollo
+Para la implementación de la API se utilizó el lenguaje Python con el Framework de Flask, y distintas librerias necesarias para la utilización del modelo y para la manipulación de imágenes.
+
+=== Flask
+Flask nos permite, de una manera rápida y sencilla, crear endpoints para el uso de la API y enlazar funciones a estas mismas. 
+
+Además, para documentar la API y tener un campo de pruebas sin necesida de consumirla bajo código, hemos utilizado *Swagger* mediante la libreria _flask_restx_.
+
+El siguiente ejemplo trata sobre un endpoint que retorna un _status_code_ 200, que significa que la API está activa. 
+
+[source,python]
+----
+from flask_restx import Resource, Namespace
+from .response_generation import response_generation
+
+ns_ping = Namespace("ping")
+
+@ns_ping.route("")
+class Ping(Resource):
+    def get(self):
+        return response_generation({"message" : "API on!"}, 200)
+----
+
+Utilizando la libreria _flask_restx_ generamos un endpoint "ping". Para crear la lógica de la ruta establecemos una clase y dentro de ella se genera una función con el nombre del verbo HTTP que vamos a utilizar, en este caso get. Luego, dentro de la función, se realiza la lógica de lo que va a retornar.
+
+La función realiza un llamado a la función _response_generation_, esta función retorna un objeto response, donde almacena el map y el _status_code_ que recibe como parámetros. Además, se le agrega los permisos de *CORS*.
+
+[source,python]
+----
+def response_generation(response_data, status):
+    response = make_response(jsonify(response_data))
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    response.status_code = status
+    return response
+----
+
+=== Implementación del modelo
+Tras haber realizado el desarrollo del modelo utilizando keras y tensorflow, se exportó en el formato .h5, que un formato de archivo diseñado para almacenar y organizar grandes cantidades de datos de manera eficiente.
+
+Tras obtener el modelo exportado se procedío a implementarlo para el consumo de la API. Para esto mismo primero se debe obtener la imagen mediante un endpoint y un método HTTP-POST.
+
+[source,python]
+----
+@ns_predict.route("/wini")
+class Predict(Resource):
+    @ns_predict.expect(parser_wini)
+    def post(self):
+        args = parser_wini.parse_args()
+        image = args['image']
+        perdida_visual = args['puntada_lateral']
+        fiebre = args['fiebre']
+        dificultad_respiratoria = args['dificultad_respiratoria']
+        if image.filename.lower().endswith(('.png', '.jpg', '.jpeg')):
+            image.save("routes/image.png")
+            response_data = {}
+            class_probabilities = prediction_pneumonia()
+
+            for tumor_type, probability in class_probabilities:
+                response_data[tumor_type.lower()] = probability
+            
+            return response_generation(response_data, 200)
+        else:
+            return response_generation({"message" : "I'm a teapot!"}, 418)
+----
+ 
+Tras obtener la imagen, se tiene que procesar para que corresponda con las utilizadas para el modelo. Para esto se utiliza la libreria Pillow y además se utiliza Numpy para transformar la imagen en una matriz de bits y que lo acepte el modelo.
+
+[source,python]
+----
+def prediction_pneumonia():
+      #Carga el modelo.
+    model = tensorflow.keras.models.load_model("routes/neumonia-resnet.h5")
+# Carga la imagen en formato RGB
+    img = Image.open("routes/image.png").convert("RGB")
+    img = img.resize((224, 224))  # Asegúrate de que la imagen tenga el tamaño adecuado
+    # Convierte la imagen en un arreglo NumPy si es necesario
+    img_array = np.array(img)
+    img_array = img_array / 255
+    # Realiza la predicción
+    class_labels = ["Pneunomia", "No_pneunomia"]
+    predict = model.predict(np.expand_dims(img_array, axis=0))[0]
+    probabilities = [(prob * 100) for prob in predict]
+    return list(zip(class_labels, probabilities))
+----
+
+Como el modelo es uno binario, retorna un map de tamaño 2, donde retorna el % de posibilidad de que sea Pneunomia o No_pneunomia. Ej: {"Pneunomia" : 99.912, "No_pneumonia" : 0.082}.
+
+=== Test
+Para comprobar el correcto funcionamiento de la API se implementó varios tests unitarios para los endpoints, utilizando la libreria *unittest* y *Request* proveniente de Flask.
+
+Los casos que se toman en cuenta son los siguientes:
+
+1. Validar que se ingresó una imagen válida del endpoint predict/wini obteniendo el _status_code_ 200.
+
+2. Validar que se ingresó un binario no valido en el endpoint predict/wini obteniendo el _status_code_ 418.
+
+3. Obtener el _status_code_ 400 del endpoint predict/wini tras no recibir ningún binario.
+
+4. Obtener el _status_code_ 400 del endpoint predict/wini tras recibir un Json vacío.
+
+5. Obtener el _status_code_ 400 del endpoint predict/wini tras recibir un None.
+
+6. Obtener el Json con el % más alto en la variable _Pneumonia_ del endpoint predict/wini tras enviar una imagen de una radiografia de un pulmón con neumonia.
+
+7. Obtener el Json con el % más alto en la variable _No_pneumonia_ del endpoint predict/wini tras enviar una imagen de una radiografia de un pulmón sin neumonia.
+
+== Desplegar
+Ya desarrollado la aplicación y ser probada localmente, procedimos a desplegar la API en la nube. 
+Se utilizó el servidor HTTP gunicorn y el puerto que provee el PaaS por defecto, y en caso que no tenga uno por defecto se utiliza el 8080.
+
+[source,python]
+----
+import os
+.
+.
+.
+if __name__ == '__main__':
+    app.run(debug= False, port=os.getenv("PORT", default=8080))
+----
+
+== Bibliografia
+
+* https://www.redhat.com/es/topics/api/what-are-application-programming-interfaces
+
+* https://pypi.org/project/tensorflow-intel/
+
+* https://www.tensorflow.org/?hl=es-419
