@@ -21,7 +21,9 @@ Con la finalidad de ampliar el sistema y mejorar el desarrollo previo, nos pusim
 
 == Objetivos del documento
 
+Luego de establecer los objetivos realizamos la división de tareas, para iniciar con el desarrollo y lograr el cumplimiento de todas las metas.
 
+En este documento expondremos el trabajo realizado durante el sprint, la división de tareas realizada y los distintos problemas que se presentaron durante estas dos semanas.
 
 == Metodología de trabajo
 
