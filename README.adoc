@@ -114,3 +114,4 @@ Nuevamente, las opciones a elegir para el modelo final fueron *ResNet50V2* y *CN
 
 === MDEP
 
+== Bases de datos
