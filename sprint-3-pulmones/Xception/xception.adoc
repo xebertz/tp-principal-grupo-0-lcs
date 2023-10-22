@@ -1,4 +1,4 @@
-= Modelo Xception: Entrenamiento y pruebas
+= Modelo Xception - Pulmones: Entrenamiento y pruebas
 Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
 v1, {docdate}
 :toc:
@@ -81,7 +81,7 @@ En base a estos datos, se pueden generar gráficos para visualizar la evolución
 .gráficos del primer entrenamiento
 image::imgs/graficos-primer-entrenamiento.png[200, 700, align="center"]
 
-El modelo alcanzó un nivel de pérdida muy bajo, y una precisión del 96%. Se puede ver que a mayor cantidad de vueltas, la pérdida es menor y la precisión es mayor, tanto en entrenamiento como en validación. Esto es clave, ya que indica que el modelo está prediciendo bien, sin "acostumbrarse" a las imágenes de entrenamiento.
+El modelo alcanzó un nivel de pérdida muy bajo, y una precisión del 96%. Se puede ver que a mayor cantidad de vueltas, la pérdida es menor y la precisión es mayor, tanto en entrenamiento como en validación. Esto es clave, ya que indica que el modelo está prediciendo correctamente, sin "acostumbrarse" a las imágenes de entrenamiento.
 
 Durante el entrenamiento, se mostró la siguiente advertencia:
 
