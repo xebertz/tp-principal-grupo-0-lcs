@@ -45,7 +45,12 @@ Mediante una solicitud HTTP-POST se puede enviar al endpoint un Json, cual puede
 
 - perdida_visual: Almacena un booleano.
 
-No es necesario enviar todos los campos, el único esencial es el image.
+Retornara el % de probabilidad de cada clase del dominio. Ej:
+{"glioma" : 0%,
+ "meningioma" : 5%,
+ "pituitary" : 0%,
+ "no_tumor" : 95%}
+
 .ejemplo_post.js
 [source,javascript]
 ----
@@ -86,6 +91,11 @@ Se realiza el mismo procedimiento del modelo fred, pero con distintos campos del
 - fiebre: Almacena un booleano.
 
 - dificultad_respiratoria: Almacena un booleano.
+
+Retornara el % de probabilidad de cada clase del dominio. Ej:
+{"pneumonia" : 1%,
+ "no_pneumonia" : 99%
+}
 
 == Herramientas
 Otras herramientas para realizar pruebas o solicitudes a la API pueden ser Postman, SoapUI, RapidAPI, Rayuela, etc... Además, se puede consumir con diferentes lenguajes de preferencia.
