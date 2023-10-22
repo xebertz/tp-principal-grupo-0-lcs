@@ -26,9 +26,9 @@ Algunos ejemplos de bases de datos relacionales incluyen MySQL, PostgreSQL, Mari
 
 === Bases de datos NoSQL
 
-Las bases de datos NoSQL, que se distinguen por su flexibilidad al carecer de un esquema fijo. En esta categoría, se encuentran diversos tipos de bases de datos, y su enfoque principal radica en la ejecución de consultas más simples. Las bases de datos NoSQL destacan por su velocidad, escalabilidad y disponibilidad.
+Las bases de datos NoSQL se distinguen por su flexibilidad al carecer de un esquema fijo. En esta categoría, se encuentran diversos tipos de bases de datos, y su enfoque principal radica en la ejecución de consultas más simples. Las bases de datos NoSQL destacan por su velocidad, escalabilidad y disponibilidad, lo que las hace apropiadas para una amplia gama de aplicaciones.
 
-Con respecto al modelo de datos, este abarca diversas taxonomías de bases de datos que no siguen el modelo relacional tradicional. Algunas de las principales taxonomías son:
+En cuanto al modelo de datos, esta categoría abarca diversas taxonomías de bases de datos que no siguen el modelo relacional tradicional. Algunas de las principales taxonomías son:
 
 - Bases de datos de documentos: Almacenan datos en formato de documentos (por ejemplo, JSON o XML). Ejemplos incluyen MongoDB y CouchDB.
 
@@ -39,6 +39,8 @@ Con respecto al modelo de datos, este abarca diversas taxonomías de bases de da
 - Bases de datos de grafos: Modelan datos como nodos y relaciones entre ellos, siendo ideales para datos altamente interconectados. Ejemplos incluyen Neo4j y OrientDB.
 
 - Bases de datos de objetos: Almacenan datos como objetos, manteniendo su estructura de programación. Ejemplos incluyen db4o y Versant.
+
+Estas bases de datos NoSQL ofrecen soluciones específicas para diferentes tipos de aplicaciones y estructuras de datos, lo que las convierte en una elección poderosa y versátil en el mundo de la gestión de datos.
 
 === Usos de bases de datos
 
