@@ -70,11 +70,16 @@ En base a esto, establecimos lo siguiente:
 
 == Datos
 
+Determinamos que los siguientes datasets serían útiles para nuestro trabajo:
 
+* Dataset 1: https://www.kaggle.com/datasets/pcbreviglieri/pneumonia-xray-images[pneumonia-xray-images], con 5856 imágenes.
+* Dataset 2: https://www.kaggle.com/datasets/vivek468/beginner-chest-xray-image-classification[beginner-chest-xray-image-classification], con 7944 imágenes.
+
+Como en el sprint previo, creamos un dataset y lo subimos a Kaggle. El dataset se encuentra https://www.kaggle.com/datasets/gonzajl/neumona-x-rays-dataset[acá].
 
 == Modelos probados
 
-* *ResNet:* 
+* *ResNet50V2:* 
 
 * *SVM:* 
 
