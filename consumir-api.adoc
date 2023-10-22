@@ -97,7 +97,7 @@ Retornara el % de probabilidad de cada clase del dominio. Ej:
  "no_pneumonia" : 99%
 }
 
-=== */feedback/fred
+=== */feedback/fred*
 Mediante una solicitud HTTP-POST se puede enviar al endpoint un Json, cual puede recibir los siguientes valores: 
 
 - id_image: Almacena un int.
@@ -118,7 +118,7 @@ Retornara un json con los siguientes posibles mensajes:
 
 Se consume de la misma manera del endpoint predict/fred cambiando los campos y el endpoint.
 
-=== */feedback/wini
+=== */feedback/wini*
 
 Mediante una solicitud HTTP-POST se puede enviar al endpoint un Json, cual puede recibir los siguientes valores: 
 
