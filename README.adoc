@@ -27,16 +27,17 @@ En este documento expondremos el trabajo realizado durante el sprint, la divisi�
 
 == Metodología de trabajo
 
+Debido a la naturaleza divergente de las tareas establecidas como objetivo, dividimos las tareas dependiendo de la semana.
 
 .división de tareas del equipo de trabajo
-[cols="2*", options="header"]
+[cols="3*", options="header"]
 |===
-|Encargado         |Tarea
-|Villalba, Gastón  |
-|Ebertz, Ximena    |
-|López, Gonzalo    |
-|Franco, Leandro   |
-|Venditto, Pedro   |
+|Encargado         |Tareas semana 1 |Tareas semana 2
+|Villalba, Gastón  |Entrevistar experto, gestión|Corregir documentación previa, entrevista con neumonólogra pediátrica, gestión
+|Ebertz, Ximena    |Búsqueda de datasets, entrevistar experto, búsqueda de información del problema, gestión|Creación del dataset, preparación de entorno de trabajo extra, CNN Manual, Xception, Transformada de Hough, gestión
+|López, Gonzalo    |Búsqueda de datasets, búsqueda de información del problema|Creación del dataset, preparación de entorno de trabajo extra, EfficientNetV2, ResNet50V2, investigación sobre bases de datos
+|Franco, Leandro   |Búsqueda de datasets, búsqueda de información del problema|Refinamiento API MDTC, preparación de entorno de trabajo extra, deploy y refinamiento de API MDEP
+|Venditto, Pedro   |Búsqueda de datasets, entrevistar experto, búsqueda de información del problema|Refinamiento API MDTC, preparación de entorno de trabajo extra, entrevista con neumonólogra pediátrica
 |===
 
 == Datos
