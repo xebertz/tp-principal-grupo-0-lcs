@@ -1,0 +1,65 @@
+= TP Principal - Laboratorio de Construcción de Software: Sprint 3
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== Introducción
+
+
+
+== Objetivos del documento
+
+
+
+== Metodología de trabajo
+
+
+.división de tareas del equipo de trabajo
+[cols="2*", options="header"]
+|===
+|Encargado         |Tarea
+|Villalba, Gastón  |
+|Ebertz, Ximena    |
+|López, Gonzalo    |
+|Franco, Leandro   |
+|Venditto, Pedro   |
+|===
+
+== Datos
+
+
+
+== Modelos probados
+
+* *ResNet:* 
+
+* *SVM:* 
+
+* *Xception:* 
+
+* *CNN Manual:* 
+
+* *Inception ResNetV2:* 
+
+* *VGG16:* 
+
+* *Transformada de Hough:* 
+
+== Modelos descartados
+
+
+
+== Modelo seleccionado
+
+
+
+== Deploy
+
+
