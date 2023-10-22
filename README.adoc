@@ -103,4 +103,7 @@ Como en el sprint previo, creamos un dataset y lo subimos a Kaggle. El dataset s
 
 == Deploy
 
+=== MDTC
+
+=== MDEP
 
