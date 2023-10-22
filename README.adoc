@@ -36,7 +36,7 @@ Debido a la naturaleza divergente de las tareas establecidas como objetivo, divi
 |Villalba, Gastón  |Entrevistar experto, gestión|Corregir documentación previa, entrevista con neumonóloga pediátrica, gestión
 |Ebertz, Ximena    |Búsqueda de datasets, entrevistar experto, búsqueda de información del problema, gestión|Creación del dataset, preparación de entorno de trabajo extra, CNN Manual, Xception, Transformada de Hough, gestión
 |López, Gonzalo    |Búsqueda de datasets, búsqueda de información del problema|Creación del dataset, preparación de entorno de trabajo extra, EfficientNetV2, ResNet50V2, investigación sobre bases de datos
-|Franco, Leandro   |Búsqueda de datasets, búsqueda de información del problema|Refinamiento API MDTC, preparación de entorno de trabajo extra, deploy y refinamiento de API MDEP
+|Franco, Leandro   |Búsqueda de datasets, búsqueda de información del problema|Refinamiento API MDTC, preparación de entorno de trabajo extra, deploy de API MDEP, refinamiento de API MDEP
 |Venditto, Pedro   |Búsqueda de datasets, entrevistar experto, búsqueda de información del problema|Refinamiento API MDTC, preparación de entorno de trabajo extra, entrevista con neumonólogra pediátrica
 |===
 
@@ -99,8 +99,7 @@ Esta segunda opción la que utilizamos en modelos multiclase, ya que la cantidad
 
 == Modelos descartados
 
-*VGG16:* *Transformada de Hough:* *Mask R CNN*
-
+Debido a las dificultades encontradas en el sprint anterior, decidimos que el modelo *Mask R CNN* ya no será tomado en cuenta para desarrollos futuros. El modelo *VGG16* fue descartado debido a su lentitud en el entrenamiento. Como consecuencia de la disminución de horas de trabajo en el entorno y debido a que ya teníamos modelos funcionales que realizaban muy buenas predicciones, consideramos que no era necesario entrenarlo, ya que se trata de un modelo lento y, en nuestra experiencia, no alcanza niveles de precisión muy altos. La *Transformada de Hough* fue descartada ya que, en este contexto, no necesitamos detecar circunferencias en las imágenes. 
 
 == Modelo seleccionado
 
