@@ -22,7 +22,7 @@ Las bases de datos relacionales, también conocidas como SQL, se caracterizan po
 
 En el modelo relacional, los datos se organizan en tablas con filas y columnas. Cada tabla tiene un esquema fijo y utiliza el lenguaje SQL para consultas y manipulación de datos. 
 
-Algunos ejemplos de bases de datos relacionales incluyen MySQL, PostgreSQL, MariaDB, Oracle, SQL Server, Sap Hana, entre otras.
+Algunos ejemplos de bases de datos relacionales incluyen MySQL, PostgreSQL, MariaDB, Oracle, SQL Server, y Sap Hana, entre otras. Estas bases de datos son ampliamente utilizadas en entornos empresariales y son ideales para aplicaciones que requieren una estructura de datos altamente organizada y relaciones precisas entre tablas.
 
 === Bases de datos NoSQL
 
