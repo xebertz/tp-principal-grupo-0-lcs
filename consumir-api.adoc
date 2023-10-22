@@ -70,7 +70,7 @@ formData.append('convulsiones', False);
 formData.append('perdida_visual', True); 
 
 // Realizar la solicitud POST a la API
-fetch('https://averiapi-4vtuhnxfba-uc.a.run.app/predict/brain', {
+fetch('https://averiapi-4vtuhnxfba-uc.a.run.app/predict/fred', {
   method: 'POST',
   body: formData
 })
@@ -91,7 +91,7 @@ fetch('https://averiapi-4vtuhnxfba-uc.a.run.app/predict/brain', {
 
 === */predict/wini*
 
-Se realiza el mismo procedimiento del modelo fred, pero con distintos campos del json.
+Se realiza el mismo procedimiento del modelo fred, pero con distintos campos del json y cambiando el dominio por wini: https://averiapi-4vtuhnxfba-uc.a.run.app/predict/wini.
 
 - image: Debe ser un archivo binario (imagen).
 
@@ -107,6 +107,8 @@ Retornara el % de probabilidad de cada clase del dominio. Ej:
 }
 
 === */feedback/fred*
+ruta = https://averiapi-4vtuhnxfba-uc.a.run.app/feedback/fred.
+
 Mediante una solicitud HTTP-POST se puede enviar al endpoint un Json, cual puede recibir los siguientes valores: 
 
 - id_image: Almacena un int.
@@ -128,6 +130,7 @@ Retornara un json con los siguientes posibles mensajes:
 Se consume de la misma manera del endpoint predict/fred cambiando los campos y el endpoint.
 
 === */feedback/wini*
+ruta = https://averiapi-4vtuhnxfba-uc.a.run.app/feedback/wini
 
 Mediante una solicitud HTTP-POST se puede enviar al endpoint un Json, cual puede recibir los siguientes valores: 
 
