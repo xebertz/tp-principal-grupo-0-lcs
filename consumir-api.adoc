@@ -1,4 +1,4 @@
-= API : Consumir mediante código
+= API : Instrucciones de uso
 Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
 v1, {docdate}
 :toc:
@@ -11,24 +11,24 @@ v1, {docdate}
 :pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
 
 == Consumir API
-La API tiene tres endpoints para su uso. Además, al utilizar _swagger_ se puede acceder directamente mediante una interfaz gráfica para su uso manual.
+La API tiene tres _endpoints_ para su uso. Además, al utilizar _swagger_ se puede acceder directamente mediante una interfaz gráfica para su uso manual.
 
 === Endpoints
-Los *endpoints* son puntos de acceso o URLs específicas que se utilizan para realizar operaciones o solicitudes a través de la API. Cada endpoint está diseñado para llevar a cabo una función específica y proporciona una forma estructurada y estandarizada de interactuar con la API.
+Los *_endpoints_* son puntos de acceso o URLs específicas que se utilizan para realizar operaciones o solicitudes a través de la API. Cada _endpoint_ está diseñado para llevar a cabo una función específica y proporciona una forma estructurada y estandarizada de interactuar con la API.
 
-Los *endpoints* pueden recibir solicitudes, como solicitudes HTTP-GET para obtener información o solicitudes HTTP-POST para enviar datos al servidor. En resumen, los *endpoints* actúan como interfaces que permiten a los clientes (como aplicaciones o usuarios) comunicarse de manera eficiente con la API y acceder a sus recursos o servicios de manera predefinida.
+Los *_endpoints_* pueden recibir solicitudes, como solicitudes HTTP-GET para obtener información o solicitudes HTTP-POST para enviar datos al servidor. En resumen, los *_endpoints_* actúan como interfaces que permiten a los clientes (como aplicaciones o usuarios) comunicarse de manera eficiente con la API y acceder a sus recursos o servicios de manera predefinida.
 
+---
+.Aclaración
 [disclaimer]
 ----
-- fred hace referencia al modelo de machine learning que clasifica a las imágenes de tumores cerebrales.
+FRED -> TUMORES CEREBRALES 
 
-- wini hace referencia al modelo de machine learning que clasifica a las imágenes de pulmones con neumonía.
-
+WINI -> NEUMONÍA 
 ----
 
 === */ping*
-Mediante una solicitud HTTP-GET se puede solicitar el endpoint, donde si está activo el servicio retorna un 200 y un JSON con el mensaje "API on!". Para acceder al endpoint se debe agregar al dominio donde está la API subida _/ping_. EJ: https://averiapi-4vtuhnxfba-uc.a.run.app/ping
-
+Mediante una solicitud HTTP-GET se puede solicitar el _endpoint_, donde si está activo el servicio retorna un 200 y un JSON con el mensaje "API on!". Para acceder al _endpoint_ se debe agregar al dominio donde está la API subida _/ping_. EJ: `https://averiapi-4vtuhnxfba-uc.a.run.app/ping`
 
 .ejemplo_get.js
 [source,javascript]
@@ -44,7 +44,7 @@ fetch('https://averiapi-4vtuhnxfba-uc.a.run.app/ping')
 
 === */predict/fred*
 
-Mediante una solicitud HTTP-POST se puede enviar al endpoint un Json, cual puede recibir los siguientes valores: 
+Mediante una solicitud HTTP-POST se puede enviar al _endpoint_ un JSON, cual puede recibir los siguientes valores: 
 
 - image, cual debe ser un archivo binario (imagen).
 
@@ -54,7 +54,7 @@ Mediante una solicitud HTTP-POST se puede enviar al endpoint un Json, cual puede
 
 - perdida_visual: Almacena un booleano.
 
-Retornara el % de probabilidad de cada clase del dominio. Ej:
+Retornará el % de probabilidad de cada clase del dominio. Ej:
 {"glioma" : 0%,
  "meningioma" : 5%,
  "pituitary" : 0%,
@@ -91,7 +91,7 @@ fetch('https://averiapi-4vtuhnxfba-uc.a.run.app/predict/fred', {
 
 === */predict/wini*
 
-Se realiza el mismo procedimiento del modelo fred, pero con distintos campos del json y cambiando el dominio por wini: https://averiapi-4vtuhnxfba-uc.a.run.app/predict/wini.
+Se realiza el mismo procedimiento del modelo **fred**, pero con distintos campos del JSON y cambiando el dominio por **wini**: `https://averiapi-4vtuhnxfba-uc.a.run.app/predict/wini`
 
 - image: Debe ser un archivo binario (imagen).
 
@@ -101,15 +101,15 @@ Se realiza el mismo procedimiento del modelo fred, pero con distintos campos del
 
 - dificultad_respiratoria: Almacena un booleano.
 
-Retornara el % de probabilidad de cada clase del dominio. Ej:
+Retornará el % de probabilidad de cada clase del dominio. Ej:
 {"pneumonia" : 1%,
  "no_pneumonia" : 99%
 }
 
 === */feedback/fred*
-ruta = https://averiapi-4vtuhnxfba-uc.a.run.app/feedback/fred.
+ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/feedback/fred`
 
-Mediante una solicitud HTTP-POST se puede enviar al endpoint un Json, cual puede recibir los siguientes valores: 
+Mediante una solicitud HTTP-POST se puede enviar al _endpoint_ un JSON, cual puede recibir los siguientes valores: 
 
 - id_image: Almacena un int.
 - glioma: Almacena un booleano.
@@ -117,28 +117,28 @@ Mediante una solicitud HTTP-POST se puede enviar al endpoint un Json, cual puede
 - pituitary: Almacena un booleano.
 - no_tumor: Almacena un booleano.
 
-Retornara un json con los siguientes posibles mensajes:
+Retornará un JSON con los siguientes posibles mensajes:
 
-- {"message" : "POST ACCEPTED}: En caso de que los valores del json esten correctos, es decir, que el id_image sea un entero y que haya un solo valor booleano True entre los 4.
+- {"message" : "POST ACCEPTED}: En caso de que los valores del JSON esten correctos, es decir, que el id_image sea un entero y que haya un solo valor booleano True entre los 4.
 
-- {"message" : "ERROR! Values Null"}: En caso de que algún valor del json sea nulo.
+- {"message" : "ERROR! Values Null"}: En caso de que algún valor del JSON sea nulo.
 
-- {"message": "ERROR! all values is false"}: En caso de que todos los campos del json que almacenan booleanos sean false.
+- {"message": "ERROR! all values is false"}: En caso de que todos los campos del JSON que almacenan booleanos sean false.
 
-- {"message": "ERROR! there is more than one true value"}: En caso de que todos los campos del json que almacenan booleanos sean true.
+- {"message": "ERROR! there is more than one true value"}: En caso de que todos los campos del JSON que almacenan booleanos sean true.
 
-Se consume de la misma manera del endpoint predict/fred cambiando los campos y el endpoint.
+Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
 
 === */feedback/wini*
-ruta = https://averiapi-4vtuhnxfba-uc.a.run.app/feedback/wini
+ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/feedback/wini`
 
-Mediante una solicitud HTTP-POST se puede enviar al endpoint un Json, cual puede recibir los siguientes valores: 
+Mediante una solicitud HTTP-POST se puede enviar al _endpoint_ un JSON, cual puede recibir los siguientes valores: 
 
 - id_image: Almacena un int.
 - pneumonia: Almacena un booleano.
 - no_pneumonia: Almacena un booleano.
 
-Retornara un json con los siguientes posibles mensajes:
+Retornará un json con los siguientes posibles mensajes:
 
 - {"message" : "POST ACCEPTED}: En caso de que los valores del json esten correctos, es decir, que el id_image sea un entero y que haya un solo valor booleano True entre los 4.
 
@@ -148,7 +148,7 @@ Retornara un json con los siguientes posibles mensajes:
 
 - {"message": "ERROR! there is more than one true value"}: En caso de que todos los campos del json que almacenan booleanos sean true.
 
-Se consume de la misma manera del endpoint predict/fred cambiando los campos y el endpoint.
+Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
 
 == Herramientas
 Otras herramientas para realizar pruebas o solicitudes a la API pueden ser Postman, SoapUI, RapidAPI, Rayuela, etc... Además, se puede consumir con diferentes lenguajes de preferencia.
