@@ -77,6 +77,13 @@ Determinamos que los siguientes datasets serían útiles para nuestro trabajo:
 
 Como en el sprint previo, creamos un dataset y lo subimos a Kaggle. El dataset se encuentra https://www.kaggle.com/datasets/gonzajl/neumona-x-rays-dataset[acá].
 
+Al ser este un problema binario, existen dos alternativas para gestionar las etiquetas de las clases:
+
+1. Que la etiqueta sea un único número entre 0 y 1. El valor 0 correspondería a una clase, y el valor 1 a otra.
+2. Que la etiqueta sea una array de dos posiciones, en la que cada posición corresponde a la probabilidad de que la imagen pertenezca a la clase correspondiente a esa posición. La suma de ambas posiciones debe ser 1.
+
+Esta segunda opción la que utilizamos en modelos multiclase, ya que la cantidad de elementos del array puede aumentar. Como fue utilizada en el modelo anterior, decidimos utilizarla nuevamente en este sprint, aunque sea menos convencional para modelos de clasificación binaria. Esta decisión se tomó por cuestiones de diseño, para que los demás equipos no deben aprender a interpretar otra forma de mostrar los resultados, ya que es innecesario.
+
 == Modelos probados
 
 * *ResNet50V2:* 
@@ -89,12 +96,10 @@ Como en el sprint previo, creamos un dataset y lo subimos a Kaggle. El dataset s
 
 * *Inception ResNetV2:* 
 
-* *VGG16:* 
-
-* *Transformada de Hough:* 
 
 == Modelos descartados
 
+*VGG16:* *Transformada de Hough:* *Mask R CNN*
 
 
 == Modelo seleccionado
