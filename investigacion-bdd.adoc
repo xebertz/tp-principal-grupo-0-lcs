@@ -1,0 +1,49 @@
+= Investigación sobre bases de datos
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== Introducción
+
+== Desarrollo
+
+En el ámbito de las bases de datos, nos encontramos con una diversidad de tipos y categorizaciones que requieren nuestro análisis.
+
+=== Bases de datos SQL
+
+Las bases de datos relacionales, también conocidas como SQL, se caracterizan por tener un esquema rígido y una única variante dentro de la categoría SQL. Estas bases de datos permiten la ejecución de consultas complejas y ofrecen numerosas funcionalidades.
+
+En el modelo relacional, los datos se organizan en tablas con filas y columnas. Cada tabla tiene un esquema fijo y utiliza el lenguaje SQL para consultas y manipulación de datos. 
+
+Algunos ejemplos de bases de datos relacionales incluyen:
+
+- MySQL
+
+- PostgreSQL
+
+- Oracle
+
+- SQL Server
+
+=== Bases de datos NoSQL
+
+Las bases de datos NoSQL, que se distinguen por su flexibilidad al carecer de un esquema fijo. En esta categoría, se encuentran diversos tipos de bases de datos, y su enfoque principal radica en la ejecución de consultas más simples. Las bases de datos NoSQL destacan por su velocidad, escalabilidad y disponibilidad.
+
+Con respecto al modelo de datos, este abarca diversas taxonomías de bases de datos que no siguen el modelo relacional tradicional. Algunas de las principales taxonomías son:
+
+- Bases de datos de documentos: Almacenan datos en formato de documentos (por ejemplo, JSON o XML). Ejemplos incluyen MongoDB y CouchDB.
+
+- Bases de datos de columnas: Almacenan datos en columnas en lugar de filas, lo que las hace eficientes para consultas analíticas. Ejemplos son Apache Cassandra y HBase.
+
+- Bases de datos clave-valor: Almacenan pares de clave-valor, donde cada clave está asociada a un valor. Ejemplos son Redis y Riak.
+
+- Bases de datos de grafos: Modelan datos como nodos y relaciones entre ellos, siendo ideales para datos altamente interconectados. Ejemplos incluyen Neo4j y OrientDB.
+
+- Bases de datos de objetos: Almacenan datos como objetos, manteniendo su estructura de programación. Ejemplos incluyen db4o y Versant.
