@@ -18,6 +18,14 @@ Los *endpoints* son puntos de acceso o URLs específicas que se utilizan para re
 
 Los *endpoints* pueden recibir solicitudes, como solicitudes HTTP-GET para obtener información o solicitudes HTTP-POST para enviar datos al servidor. En resumen, los *endpoints* actúan como interfaces que permiten a los clientes (como aplicaciones o usuarios) comunicarse de manera eficiente con la API y acceder a sus recursos o servicios de manera predefinida.
 
+[disclaimer]
+----
+- fred hace referencia al modelo de machine learning que clasifica a las imágenes de tumores cerebrales.
+
+- wini hace referencia al modelo de machine learning que clasifica a las imágenes de pulmones con neumonía.
+
+----
+
 === */ping*
 Mediante una solicitud HTTP-GET se puede solicitar el endpoint, donde si está activo el servicio retorna un 200 y un JSON con el mensaje "API on!". Para acceder al endpoint se debe agregar al dominio donde está la API subida _/ping_. EJ: https://averiapi-4vtuhnxfba-uc.a.run.app/ping
 
@@ -35,11 +43,6 @@ fetch('https://averiapi-4vtuhnxfba-uc.a.run.app/ping')
 ----
 
 === */predict/fred*
-
-[disclaimer]
-----
-fred hace referencia al modelo de machine learning que clasifica a las imágenes de tumores cerebrales.
-----
 
 Mediante una solicitud HTTP-POST se puede enviar al endpoint un Json, cual puede recibir los siguientes valores: 
 
