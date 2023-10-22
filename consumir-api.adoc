@@ -35,6 +35,12 @@ fetch('https://averiapi-4vtuhnxfba-uc.a.run.app/ping')
 ----
 
 === */predict/fred*
+
+[disclaimer]
+----
+fred hace referencia al modelo de machine learning que clasifica a las imágenes de tumores cerebrales.
+----
+
 Mediante una solicitud HTTP-POST se puede enviar al endpoint un Json, cual puede recibir los siguientes valores: 
 
 - image, cual debe ser un archivo binario (imagen).
