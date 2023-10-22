@@ -103,7 +103,10 @@ Debido a las dificultades encontradas en el sprint anterior, decidimos que el mo
 
 == Modelo seleccionado
 
+Nuevamente, las opciones a elegir para el modelo final fueron *ResNet50V2* y *CNN Manual*. Ambos modelos tienen niveles de precisión muy parecidos, por lo que la decisión no fue trivial. Finalmente, el modelo elegido fue *ResNet50V2* por dos motivos:
 
+1. Es un modelo que no utilizamos previamente
+2. Los errores que comete son parejos en las clases. CNN Manual comete mas errores en las imágenes de pacientes sin neumonía
 
 == Deploy
 
