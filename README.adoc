@@ -55,6 +55,10 @@ Los riesgos se presentaron en la segunda semana del sprint. Tuvimos un miembro d
 |Pérdida de posibilidad de trabajo en el entorno |1 |3 |3 |Backups periódicos, alternativas de entornos |Cambiar de entorno de trabajo, restablecer backup |GL, XE  
 |===
 
+=== Cambios
+
+Durante el transcurso de la segunda semana, se presentó un cambio de alcance: la necesidad del feedback del médico. Nosotros lo considerabamos como un trabajo a futuro, por lo que nos generó un cambio en la planificación. Esto implica contar con una base de datos propia y generar un nuevo canal de comunicación entre nuestro equipo y el de datos. También, esta cambio implica la modificación de la API, ya que debemos recibir información que no teníamos en cuenta para esta instancia.
+
 == Datos
 
 
