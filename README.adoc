@@ -12,7 +12,12 @@ v1, {docdate}
 
 == Introducción
 
+Con la finalidad de ampliar el sistema y mejorar el desarrollo previo, nos pusimos los siguientes objetivos para este sprint:
 
+1. Entrevistar un profesional para mejorar el modelo de detección de tumores cerebrales
+2. Mejorar la API desarrollada en el sprint anterior
+3. Desarrollar un modelo de detección de neumonía a partir de imágenes de rayos X de tórax
+4. Realizar el deploy del modelo desarrollado
 
 == Objetivos del documento
 
