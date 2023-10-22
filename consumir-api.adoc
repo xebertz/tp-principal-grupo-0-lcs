@@ -118,5 +118,25 @@ Retornara un json con los siguientes posibles mensajes:
 
 Se consume de la misma manera del endpoint predict/fred cambiando los campos y el endpoint.
 
+=== */feedback/wini
+
+Mediante una solicitud HTTP-POST se puede enviar al endpoint un Json, cual puede recibir los siguientes valores: 
+
+- id_image: Almacena un int.
+- pneumonia: Almacena un booleano.
+- no_pneumonia: Almacena un booleano.
+
+Retornara un json con los siguientes posibles mensajes:
+
+- {"message" : "POST ACCEPTED}: En caso de que los valores del json esten correctos, es decir, que el id_image sea un entero y que haya un solo valor booleano True entre los 4.
+
+- {"message" : "ERROR! Values Null"}: En caso de que algún valor del json sea nulo.
+
+- {"message": "ERROR! all values is false"}: En caso de que todos los campos del json que almacenan booleanos sean false.
+
+- {"message": "ERROR! there is more than one true value"}: En caso de que todos los campos del json que almacenan booleanos sean true.
+
+Se consume de la misma manera del endpoint predict/fred cambiando los campos y el endpoint.
+
 == Herramientas
 Otras herramientas para realizar pruebas o solicitudes a la API pueden ser Postman, SoapUI, RapidAPI, Rayuela, etc... Además, se puede consumir con diferentes lenguajes de preferencia.
