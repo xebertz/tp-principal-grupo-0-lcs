@@ -109,6 +109,8 @@ Nuevamente, entre las opciones a elegir para el modelo final estuvieron *ResNet5
 
 == Deploy
 
+Tras haber tenido problemas con el PaaS *RailWay*, se decidió cambiar la plataforma de despliegue a *Google Cloud*. Esta plataforma nos ofrece más recursos, pero entra en un estado de hibernación tras su desuso. Para solucionar el problema de la hibernación se utilizó la página *UptimeRobot*, que nos permite realizar un _ping_ al https://averiapi-4vtuhnxfba-uc.a.run.app/[dominio] de la API. El _ping_ al dominio nos permite mantener "despierta" la API, y que al momento de consumirla no se desperdicie el tiempo en esperar que la API salga de su estado de hibernación.
+
 === MDTC
 
 === MDEP
