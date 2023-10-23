@@ -37,14 +37,14 @@ Debido a la naturaleza divergente de las tareas establecidas como objetivo, divi
 |Ebertz, Ximena    |Búsqueda de datasets, entrevistar experto, búsqueda de información del problema, gestión|Creación del dataset, preparación de entorno de trabajo extra, CNN Manual, Xception, Transformada de Hough, gestión
 |López, Gonzalo    |Búsqueda de datasets, búsqueda de información del problema|Creación del dataset, preparación de entorno de trabajo extra, EfficientNetV2, ResNet50V2, investigación sobre bases de datos
 |Franco, Leandro   |Búsqueda de datasets, búsqueda de información del problema|Refinamiento API MDTC, preparación de entorno de trabajo extra, deploy de API MDEP, refinamiento de API MDEP
-|Venditto, Pedro   |Búsqueda de datasets, entrevistar experto, búsqueda de información del problema|Refinamiento API MDTC, preparación de entorno de trabajo extra, entrevista con neumonólogra pediátrica
+|Venditto, Pedro   |Búsqueda de datasets, entrevistar experto, búsqueda de información del problema|Refinamiento API MDTC, preparación de entorno de trabajo extra, entrevista con neumonóloga pediátrica
 |===
 
 Esta división se realizó teniendo en cuenta distintos *riesgos* y *cambios* a los que nos vimos expuestos.
 
 === Cambios
 
-Durante el transcurso de la segunda semana, se presentó un cambio de alcance: la necesidad del feedback del médico. Nosotros lo considerabamos como un trabajo a futuro, por lo que nos generó un cambio en la planificación. Esto implica contar con una base de datos propia y generar un nuevo canal de comunicación entre nuestro equipo y el de datos. También, esta cambio implica la modificación de la API, ya que debemos recibir información que no teníamos en cuenta para esta instancia.
+Durante el transcurso de la segunda semana, se presentó un cambio de alcance: la necesidad del feedback del médico. Nosotros lo considerábamos como un trabajo a futuro, por lo que nos generó un cambio en la planificación. Esto implica contar con una base de datos propia y generar un nuevo canal de comunicación entre nuestro equipo y el de datos. También, esta cambio implica la modificación de la API, ya que debemos recibir información que no teníamos en cuenta para esta instancia.
 
 === Riesgos
 
@@ -64,7 +64,7 @@ Los riesgos se presentaron en la segunda semana del sprint. Tuvimos un miembro d
 En base a esto, establecimos lo siguiente:
 
 * Ausencia de miembros del equipo: Ximena Ebertz sería el reemplazo de Pedro Venditto
-* Dificultades en la integración con otros grupos del proyecto: el equipo tendría una reunión con los otros equipos, para definir nuevamente la arquitectura y preveer problemas de integración
+* Dificultades en la integración con otros grupos del proyecto: el equipo tendría una reunión con los otros equipos, para definir nuevamente la arquitectura y prever problemas de integración
 * Pérdida de posibilidad de trabajo en el entorno: el equipo crearía entornos de trabajo extra, para su utilización en caso de agote de horas del entorno principal
 * Feedback del médico: Gonzalo López investigaría sobre bases de datos a utilizar para nuestra infraestructura
 
@@ -96,10 +96,9 @@ Esta segunda opción la que utilizamos en modelos multiclase, ya que la cantidad
 
 * *Inception ResNetV2:* 
 
-
 == Modelos descartados
 
-Debido a las dificultades encontradas en el sprint anterior, decidimos que el modelo *Mask R CNN* ya no será tomado en cuenta para desarrollos futuros. El modelo *VGG16* fue descartado debido a su lentitud en el entrenamiento. Como consecuencia de la disminución de horas de trabajo en el entorno y debido a que ya teníamos modelos funcionales que realizaban muy buenas predicciones, consideramos que no era necesario entrenarlo, ya que se trata de un modelo lento y, en nuestra experiencia, no alcanza niveles de precisión muy altos. La *Transformada de Hough* fue descartada ya que, en este contexto, no necesitamos detecar circunferencias en las imágenes. 
+Debido a las dificultades encontradas en el sprint anterior, decidimos que el modelo *Mask R CNN* ya no será tomado en cuenta para desarrollos futuros. El modelo *VGG16* fue descartado debido a su lentitud en el entrenamiento. Como consecuencia de la disminución de horas de trabajo en el entorno y debido a que ya teníamos modelos funcionales que realizaban muy buenas predicciones, consideramos que no era necesario entrenarlo, ya que se trata de un modelo lento y, en nuestra experiencia, no alcanza niveles de precisión muy altos. La *Transformada de Hough* fue descartada ya que, en este contexto, no necesitamos detectar circunferencias en las imágenes.
 
 == Modelo seleccionado
 

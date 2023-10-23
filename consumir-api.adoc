@@ -119,7 +119,7 @@ Mediante una solicitud HTTP-POST se puede enviar al _endpoint_ un JSON, cual pue
 
 Retornará un JSON con los siguientes posibles mensajes:
 
-- {"message" : "POST ACCEPTED}: En caso de que los valores del JSON esten correctos, es decir, que el id_image sea un entero y que haya un solo valor booleano True entre los 4.
+- {"message" : "POST ACCEPTED}: En caso de que los valores del JSON estén correctos, es decir, que el id_image sea un entero y que haya un solo valor booleano True entre los 4.
 
 - {"message" : "ERROR! Values Null"}: En caso de que algún valor del JSON sea nulo.
 
@@ -140,7 +140,7 @@ Mediante una solicitud HTTP-POST se puede enviar al _endpoint_ un JSON, cual pue
 
 Retornará un json con los siguientes posibles mensajes:
 
-- {"message" : "POST ACCEPTED}: En caso de que los valores del json esten correctos, es decir, que el id_image sea un entero y que haya un solo valor booleano True entre los 4.
+- {"message" : "POST ACCEPTED}: En caso de que los valores del json estén correctos, es decir, que el id_image sea un entero y que haya un solo valor booleano True entre los 4.
 
 - {"message" : "ERROR! Values Null"}: En caso de que algún valor del json sea nulo.
 
