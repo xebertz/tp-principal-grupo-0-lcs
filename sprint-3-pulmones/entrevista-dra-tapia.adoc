@@ -1,0 +1,29 @@
+= Enfermedades Pulmonares: Detección y Diagnóstico
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== Antecedentes o síntomas
+En general, la neumonía suele tener síntomas que son muy similares a un resfriado o una gripe normal como pueden ser fiebre o tos. Pero también tiene un síntoma que es representativo, *dolor de puntadas en el costado*, en caso de que este síntoma este presente, se saca una radiografía de tórax y se realiza el diagnóstico. Es decir, según la doctora, un paciente que padece de dolor de puntadas en el costado del tórax tiene 99% de posibilidades de tener alguna variante de la enfermedad, sin importar la edad que tenga.
+
+== Neumonía en niños y adultos
+Todos podemos contraer la enfermedad, pero la forma de llegar a un diagnóstico es distinto según si el paciente es un niño o un adulto. Si bien los síntomas son los mismos, los niños tiene un nivel de comunicación menor al de un adulto, por lo que suelen tener problemas para explicar sus síntomas y molestias, lo que lleva a que se tengan que realizar una mayor cantidad de estudios complementarios para poder realizar un diagnóstico preciso. Estos exámenes complementarios suelen incluir estudios de rayos X (como las radiografías) y exámenes físicos.
+
+== Tipos de neumonía
+Existen dos tipos de neumonía:
+
+=== Viral
+La neumonía viral es causada por un virus, en estos casos los pacientes suelen retomar su vida normal luego de 1 a 3 semanas de la aparición de los primeros síntomas, sin ningún tipo de tratamiento.
+
+=== Bacteriana
+En estos casos, la enfermedad es causada por colonias de bacterias, las cuales se asientan en un pulmón (o ambos) y pueden causar los síntomas que se mencionaron anteriormente y también se le puede agregar un compromiso del estado general del paciente, lo que significa que puede causar una diversa cantidad de síntomas que pueden variar según el paciente. Este caso es más complejo y requiere un tratamiento a base de antibióticos. 
+
+== Alcance del proyecto
+En nuestro proyecto no diferenciaremos entre los tipos mencionados de neumonía, ya que los _datasets_ definidos no tienen etiquetas que nos permitan hacerlo. 

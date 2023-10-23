@@ -55,15 +55,15 @@ Para fotografiar los pulmones con el propósito de detectar enfermedades, se uti
 * *Ecografía pulmonar:* La ecografía pulmonar utiliza ondas sonoras de alta frecuencia para crear imágenes en tiempo real de los pulmones. Se utiliza principalmente en situaciones de emergencia o para guiar procedimientos invasivos, como la colocación de un tubo de drenaje en el pecho.
 
 // Hice esta reflexión por los datasets que hemos visto. Si está bien digan que les gusta en el grupo.
-De estás herramientas seleccionamos las imágenes generadas mediante radiografías, porque hemos notado que son las más comúnes en los datasets que hemos investigado a la par de realizar la investigación que trata este documento.
+De estás herramientas seleccionamos las imágenes generadas mediante radiografías, porque hemos notado que son las más comunes en los datasets que hemos investigado a la par de realizar la investigación que trata este documento.
 
-A continuación se detallara de una manera más profunda de lo que trata y cómo se realizan las radiografías del torax.
+A continuación se detallara de una manera más profunda de lo que trata y cómo se realizan las radiografías del tórax.
 
 == Radiografía de tórax
 
-Las radiografías son generadas por una máquina que emite rayos X. Esta máquina contiene electrodos cátodo y ánodo. El cátodo genera energía en forma de electrones, que son atraidos por el ánodo, ya que está construido con Tungsteno. Cuando los electrones entran en contacto con el Tungsteno, se genera energía mediante fotones y se utiliza para crear el haz de rayos X. Los rayos X son dirigidos al cuerpo del paciente.
+Las radiografías son generadas por una máquina que emite rayos X. Esta máquina contiene electrodos cátodo y ánodo. El cátodo genera energía en forma de electrones, que son atraídos por el ánodo, ya que está construido con Tungsteno. Cuando los electrones entran en contacto con el Tungsteno, se genera energía mediante fotones y se utiliza para crear el haz de rayos X. Los rayos X son dirigidos al cuerpo del paciente.
 
-La imagen se obtiene mediante una placa tras el paciente en la zona a analizar, en la que se graban los resultados. La radiación es absorbida por el cuerpo en diferentes cantidades según la densidad del material. Los huesos se visualizan de color blanco, ya que su densidad absorbe de manera muy eficiente esta raciación. El aire, en cambio, se muestra de color negro, debido a su baja densidad. La grasa y los músculos se muestran en tonos grisáceos. Es decir, la placa muestra en color negro las zonas donde los rayos X pasaron, y en gris y blanco las zonas donde se absorbieron. A mayor absorción, más blanco.
+La imagen se obtiene mediante una placa tras el paciente en la zona a analizar, en la que se graban los resultados. La radiación es absorbida por el cuerpo en diferentes cantidades según la densidad del material. Los huesos se visualizan de color blanco, ya que su densidad absorbe de manera muy eficiente esta radiación. El aire, en cambio, se muestra de color negro, debido a su baja densidad. La grasa y los músculos se muestran en tonos grisáceos. Es decir, la placa muestra en color negro las zonas donde los rayos X pasaron, y en gris y blanco las zonas donde se absorbieron. A mayor absorción, más blanco.
 
 Muchas veces, es necesario introducir un medio de contraste en el paciente, ya que genera mayor diferencia entre tonos claros y oscuros, y permite observar más detalles.
 
@@ -74,12 +74,12 @@ Existen tres tipos de proyecciones ampliamente utilizadas para la toma de imáge
 * _Proyección Antero Posterior:_ funciona de igual manera que la proyección _postero anterior_, pero el paciente debe estar de frente al tubo de radiografía.
 
 .Proyecciónes antero posterior y postero anterior
-image::imgs/ap-vs-pa.jpg[250, 600, align="center"]
+image::.img/ap-vs-pa.jpg[250, 600, align="center"]
 
 * _Proyección Lateral:_ en este caso, se busca que los pulmones se vean superpuestos. El paciente debe estar como mínimo a un metro del tubo de radiografía, y como máximo a un 1.20m. La distancia varía según el tamaño del tórax del paciente. El paciente debe apoyar su lado izquierdo en la pantalla que genera la placa, ya que el pulmón izquierdo es menor que el derecho, y ésto genera una mejor superposición.
 
 .Proyección lateral
-image::imgs/lateral.jpg[100, 350, align="center"]
+image::.img/lateral.jpg[100, 350, align="center"]
 
 En _proyección antero posterior_, el corazón se presenta de un tamaño mayor, ya que se genera una magnificación del corazón debido a su separación con la pantalla.
 
@@ -89,7 +89,7 @@ Por este motivo, para las radiografías de tórax es recomendado utilizar _proye
 
 La neumonía es una infección que inflama los sacos aéreos de uno o ambos pulmones, y puede generar que los sacos aéreos se llenen de líquido o pus. Se puede detectar en una radiografía de tórax cuando se observa una opacidad, y se detecta su origen mediante el _signo de la silueta_. Este signo es la representación de dos estructuras de igual densidad, muy próximas entre sí, cuyos bordes no son distinguibles.
 
-En una radiografía de un paciente sin neumonía, ambos pulmones se presentan de color negro, debido a la presencia del aire en ellos. Si el paciente tiene neumonía, se verá una sombra grisácea, debido a la presencia de líquido en el pulmon. Esta sombra es llamada _opacidad_ o _infiltrado_. El signo de la silueta permite encontrar el origen de las opacidades en los pulmones.
+En una radiografía de un paciente sin neumonía, ambos pulmones se presentan de color negro, debido a la presencia del aire en ellos. Si el paciente tiene neumonía, se verá una sombra grisácea, debido a la presencia de líquido en el pulmón. Esta sombra es llamada _opacidad_ o _infiltrado_. El signo de la silueta permite encontrar el origen de las opacidades en los pulmones.
 
 La pérdida del contorno normal de una estructura indica que algo anormal está en contacto directo con ella. Por ejemplo, en el caso de una neumonía lobular, donde el tejido pulmonar enfermo tiene una densidad similar a la del corazón, el contorno del corazón puede perderse en la radiografía de tórax, manifestándose el de la signo silueta. Este signo puede ayudar a los médicos a localizar la neumonía en un lóbulo específico del pulmón, ya que la pérdida de los bordes solo ocurrirá donde la neumonía esté en contacto directo con el corazón.
 
@@ -97,14 +97,14 @@ En el caso de la esta enfermedad, el signo de la silueta se debe a la consolidac
 
 En estos casos, estamos ante un signo de la silueta positivo, ya que las estructuras tienen la misma densidad.
 
-.Condensación alveolar que borra la silueta cardiaca y el hemidiafragma izquierdo. Posible neumonía en el lóbulo inferior izquierdo.
-image::imgs/signo-de-la-silueta-positivo.jpg[100, 350, align="center"]
+.Condensación alveolar que borra la silueta cardíaca y el hemidiafragma izquierdo. Posible neumonía en el lóbulo inferior izquierdo.
+image::.img/signo-de-la-silueta-positivo.jpg[100, 350, align="center"]
 
 
 Si las estructuras no tienen la misma densidad, no se fusionarán en la imagen y se observará la estructura más densa y una superposición de los bordes de ambas. Esto es considerado un signo de la silueta negativo.
 
 .Condensación alveolar. Signo de la silueta negativo. La imagen postero-anterior nos corrobora que no hay contacto entre los dos hallazgos, estando el espacio entre ellos relleno de aire. Neumonía por Streptococcus pneumoniae.
-image::imgs/signo-de-la-silueta-negativo.jpg[100, 400, align="center"]
+image::.img/signo-de-la-silueta-negativo.jpg[100, 400, align="center"]
 
 En muchos casos, como en este, se solicita una exploración complementaria. Se puede observar en la imagen c que se solicitó una tomografía computarizada para apoyar el diagnóstico.
 

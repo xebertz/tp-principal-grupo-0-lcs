@@ -18,7 +18,7 @@ Una API es un conjunto de definiciones y protocolos que se utilizan para diseña
 Una API utiliza *endpoints*, que son puntos de acceso o URLs específicas que se utilizan para realizar operaciones o solicitudes a través de la API. Cada endpoint está diseñado para llevar a cabo una función específica y proporciona una forma estructurada y estandarizada de interactuar con la API.
 
 === Necesidad
-Tras desarrollar el modelo de machine learning sobre clasificación de imágenes con neumonía o no, hemos contemplado la necesidad de realizar una API para el uso de esta misma. En este contexto, hemos tenido el privilegio de desarrollar la API que facilita el acceso y la utilización del modelo.
+Tras desarrollar el modelo de Machine Learning sobre clasificación de imágenes con neumonía o no, hemos contemplado la necesidad de realizar una API para el uso de esta misma. En este contexto, hemos tenido el privilegio de desarrollar la API que facilita el acceso y la utilización del modelo.
 
 == Desarrollo
 Para la implementación de la API se utilizó el lenguaje Python con el Framework de Flask, y distintas librerias necesarias para la utilización del modelo y para la manipulación de imágenes.
@@ -26,7 +26,7 @@ Para la implementación de la API se utilizó el lenguaje Python con el Framewor
 === Flask
 Flask nos permite, de una manera rápida y sencilla, crear endpoints para el uso de la API y enlazar funciones a estas mismas. 
 
-Además, para documentar la API y tener un campo de pruebas sin necesida de consumirla bajo código, hemos utilizado *Swagger* mediante la libreria _flask_restx_.
+Además, para documentar la API y tener un campo de pruebas sin necesidad de consumirla bajo código, hemos utilizado *Swagger* mediante la librería _flask_restx_.
 
 El siguiente ejemplo trata sobre un endpoint que retorna un _status_code_ 200, que significa que la API está activa. 
 
@@ -43,7 +43,7 @@ class Ping(Resource):
         return response_generation({"message" : "API on!"}, 200)
 ----
 
-Utilizando la libreria _flask_restx_ generamos un endpoint "ping". Para crear la lógica de la ruta establecemos una clase y dentro de ella se genera una función con el nombre del verbo HTTP que vamos a utilizar, en este caso get. Luego, dentro de la función, se realiza la lógica de lo que va a retornar.
+Utilizando la librería _flask_restx_ generamos un endpoint "ping". Para crear la lógica de la ruta establecemos una clase y dentro de ella se genera una función con el nombre del verbo HTTP que vamos a utilizar, en este caso get. Luego, dentro de la función, se realiza la lógica de lo que va a retornar.
 
 La función realiza un llamado a la función _response_generation_, esta función retorna un objeto response, donde almacena el map y el _status_code_ que recibe como parámetros. Además, se le agrega los permisos de *CORS*.
 
@@ -59,7 +59,7 @@ def response_generation(response_data, status):
 === Implementación del modelo
 Tras haber realizado el desarrollo del modelo utilizando keras y tensorflow, se exportó en el formato .h5, que un formato de archivo diseñado para almacenar y organizar grandes cantidades de datos de manera eficiente.
 
-Tras obtener el modelo exportado se procedío a implementarlo para el consumo de la API. Para esto mismo primero se debe obtener la imagen mediante un endpoint y un método HTTP-POST.
+Tras obtener el modelo exportado se procedió a implementarlo para el consumo de la API. Para esto mismo primero se debe obtener la imagen mediante un endpoint y un método HTTP-POST.
 
 [source,python]
 ----
@@ -108,7 +108,7 @@ def prediction_pneumonia():
 Como el modelo es uno binario, retorna un map de tamaño 2, donde retorna el % de posibilidad de que sea Pneunomia o No_pneunomia. Ej: {"Pneunomia" : 99.912, "No_pneumonia" : 0.082}.
 
 === Test
-Para comprobar el correcto funcionamiento de la API se implementó varios tests unitarios para los endpoints, utilizando la libreria *unittest* y *Request* proveniente de Flask.
+Para comprobar el correcto funcionamiento de la API se implementó varios tests unitarios para los endpoints, utilizando la librería *unittest* y *Request* proveniente de Flask.
 
 Los casos que se toman en cuenta son los siguientes:
 
@@ -122,9 +122,9 @@ Los casos que se toman en cuenta son los siguientes:
 
 5. Obtener el _status_code_ 400 del endpoint predict/wini tras recibir un None.
 
-6. Obtener el Json con el % más alto en la variable _Pneumonia_ del endpoint predict/wini tras enviar una imagen de una radiografia de un pulmón con neumonia.
+6. Obtener el Json con el % más alto en la variable _Pneumonia_ del endpoint predict/wini tras enviar una imagen de una radiografía de un pulmón con neumonía.
 
-7. Obtener el Json con el % más alto en la variable _No_pneumonia_ del endpoint predict/wini tras enviar una imagen de una radiografia de un pulmón sin neumonia.
+7. Obtener el Json con el % más alto en la variable _No_pneumonia_ del endpoint predict/wini tras enviar una imagen de una radiografía de un pulmón sin neumonía.
 
 == Desplegar
 Ya desarrollado la aplicación y ser probada localmente, procedimos a desplegar la API en la nube.

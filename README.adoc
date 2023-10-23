@@ -1,4 +1,4 @@
-= TP Principal - Laboratorio de Construcción de Software: Sprint 2
+= TP Principal - Laboratorio de Construcción de Software: Sprint 3
 Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
 v1, {docdate}
 :toc:
@@ -12,81 +12,105 @@ v1, {docdate}
 
 == Introducción
 
-Como ya se mencionó, el objetivo del proyecto es desarrollar un software que permita diagnosticar enfermedades de distintas partes del cuerpo a través de imágenes. El software está dirigido a todos profesionales de la salud que requieran utilizarlo.
+Con la finalidad de ampliar el sistema y mejorar el desarrollo previo, nos pusimos los siguientes objetivos para este sprint:
 
-Para este sprint, nuestro objetivo es desarrollar y hacer el deploy de un modelo que determine si un paciente tiene o no un tumor, y de qué tipo, a través de imágenes de resonancia magnética.
+1. Entrevistar un profesional para mejorar el modelo de detección de tumores cerebrales
+2. Mejorar la API desarrollada en el sprint anterior
+3. Desarrollar un modelo de detección de neumonía a partir de imágenes de rayos X de tórax
+4. Realizar el deploy del modelo desarrollado
 
 == Objetivos del documento
 
-Una vez establecido el objetivo del trabajo, procedimos a realizar las tareas necesarias para el preprocesamiento de datos y el entrenamiento de distintos modelos, tantos preentrenados como manuales.
+Luego de establecer los objetivos realizamos la división de tareas, para iniciar con el desarrollo y lograr el cumplimiento de todas las metas.
 
-En este documento expondremos cómo preparamos los datos, qué modelos entrenamos y cuál es el elegido para nuestro problema. También explicaremos las distintas decisiones tomadas durante el desarrollo.
+En este documento expondremos el trabajo realizado durante el sprint, la división de tareas realizada y los distintos problemas que se presentaron durante estas dos semanas.
 
 == Metodología de trabajo
 
-Debido a la necesidad de entrenar distintos modelos, fueron divididos por miembros del equipo. Cada miembro trabajó en su entorno de Saturn Cloud de manera autónoma, y al finalizar los entrenamientos elegimos un modelo para realizar el deploy.
-
-También fueron necesarias tareas de preparación de datos, deploy y gestión, las cuales fueron asignadas a miembros específicos del equipo de trabajo.
+Debido a la naturaleza divergente de las tareas establecidas como objetivo, dividimos las tareas dependiendo de la semana.
 
 .división de tareas del equipo de trabajo
-[cols="2*", options="header"]
+[cols="3*", options="header"]
 |===
-|Encargado         |Tarea
-|Villalba, Gastón  |Gestión
-|Ebertz, Ximena    |Desarrollo de modelos VGG16, VGG19, Xception y Transformada de Hough, gestión
-|López, Gonzalo    |Preparación de datos y desarrollo de modelos ResNet y EfficientNetV2
-|Franco, Leandro   |Deploy y desarrollo de modelo SVM, preparación de entorno
-|Venditto, Pedro   |Desarrollo de modelos CNN Manual, InceptionResNet y Mask R - CNN, preparación de entorno
+|Encargado         |Tareas semana 1 |Tareas semana 2
+|Villalba, Gastón  |Entrevistar experto, gestión|Corregir documentación previa, entrevista con neumonóloga pediátrica, gestión
+|Ebertz, Ximena    |Búsqueda de datasets, entrevistar experto, búsqueda de información del problema, gestión|Creación del dataset, preparación de entorno de trabajo extra, CNN Manual, Xception, Transformada de Hough, gestión
+|López, Gonzalo    |Búsqueda de datasets, búsqueda de información del problema|Creación del dataset, preparación de entorno de trabajo extra, EfficientNetV2, ResNet50V2, investigación sobre bases de datos
+|Franco, Leandro   |Búsqueda de datasets, búsqueda de información del problema|Refinamiento API MDTC, preparación de entorno de trabajo extra, deploy de API MDEP, refinamiento de API MDEP
+|Venditto, Pedro   |Búsqueda de datasets, entrevistar experto, búsqueda de información del problema|Refinamiento API MDTC, preparación de entorno de trabajo extra, entrevista con neumonóloga pediátrica
 |===
+
+Esta división se realizó teniendo en cuenta distintos *riesgos* y *cambios* a los que nos vimos expuestos.
+
+=== Cambios
+
+Durante el transcurso de la segunda semana, se presentó un cambio de alcance: la necesidad del feedback del médico. Nosotros lo considerábamos como un trabajo a futuro, por lo que nos generó un cambio en la planificación. Esto implica contar con una base de datos propia y generar un nuevo canal de comunicación entre nuestro equipo y el de datos. También, esta cambio implica la modificación de la API, ya que debemos recibir información que no teníamos en cuenta para esta instancia.
+
+=== Riesgos
+
+Los riesgos se presentaron en la segunda semana del sprint. Tuvimos un miembro del equipo ausente dos días por motivos de estudio. A parte, nos encontramos con que el servidor con el cual trabajamos nos limitó la cantidad de horas mensuales a 30, siendo que antes contábamos con 150.
+
+.riesgos enfrentados
+[cols="8*", options="header"]
+|===
+|Riesgo        |Prob |Sev |Exp |Mitigación |Contingencia   |Resp |Sem
+|Ausencia de miembros del equipo el 2023-10-18 y 2023-10-19 por motivos de estudio |3 |3 |9 |Definir reemplazantes, planificar ausencias |Reemplazos |GV, XE |2
+|Dificultades en la integración con otros grupos del proyecto |2 |3 |6 |Establecer estándares de comunicación entre APIs |Comunicar por los medios acordados los inconvenientes surgidos |GV, XE |2
+|Pérdida de posibilidad de trabajo en el entorno |1 |3 |3 |Backups periódicos, alternativas de entornos |Cambiar de entorno de trabajo, restablecer backup |GL, XE  |2
+|===
+
+=== Soluciones
+
+En base a esto, establecimos lo siguiente:
+
+* Ausencia de miembros del equipo: Ximena Ebertz sería el reemplazo de Pedro Venditto
+* Dificultades en la integración con otros grupos del proyecto: el equipo tendría una reunión con los otros equipos, para definir nuevamente la arquitectura y prever problemas de integración
+* Pérdida de posibilidad de trabajo en el entorno: el equipo crearía entornos de trabajo extra, para su utilización en caso de agote de horas del entorno principal
+* Feedback del médico: Gonzalo López investigaría sobre bases de datos a utilizar para nuestra infraestructura
 
 == Datos
 
-Determinamos que los siguientes _datasets_ serían útiles para nuestro trabajo:
+Determinamos que los siguientes datasets serían útiles para nuestro trabajo:
 
-- Dataset 1: https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset[brain-tumor-mri-dataset] con 7022 imágenes.
-- Dataset 2: https://www.kaggle.com/datasets/mohammadhossein77/brain-tumors-dataset[brain-tumors-dataset] con 21672 imágenes.
+* Dataset 1: https://www.kaggle.com/datasets/pcbreviglieri/pneumonia-xray-images[pneumonia-xray-images], con 5856 imágenes.
+* Dataset 2: https://www.kaggle.com/datasets/vivek468/beginner-chest-xray-image-classification[beginner-chest-xray-image-classification], con 7944 imágenes.
 
-Decidimos que la mejor opción sería combinarlos y subirlos a Kaggle, ya que, de esta forma, todos los miembros pueden utilizarlo, sin realizar demasiadas tareas de preprocesamiento por código.
+Como en el sprint previo, creamos un dataset y lo subimos a Kaggle. El dataset se encuentra https://www.kaggle.com/datasets/gonzajl/neumona-x-rays-dataset[acá].
 
-El dataset generado se encuentra https://www.kaggle.com/datasets/gonzajl/tumores-cerebrales-mri-dataset/data[acá].
+Al ser este un problema binario, existen dos alternativas para gestionar las etiquetas de las clases:
+
+1. Que la etiqueta sea un único número entre 0 y 1. El valor 0 correspondería a una clase, y el valor 1 a otra.
+2. Que la etiqueta sea una array de dos posiciones, en la que cada posición corresponde a la probabilidad de que la imagen pertenezca a la clase correspondiente a esa posición. La suma de ambas posiciones debe ser 1.
+
+Esta segunda opción la que utilizamos en modelos multiclase, ya que la cantidad de elementos del array puede aumentar. Como fue utilizada en el modelo anterior, decidimos utilizarla nuevamente en este sprint, aunque sea menos convencional para modelos de clasificación binaria. Esta decisión se tomó por cuestiones de diseño, para que los demás equipos no deben aprender a interpretar otra forma de mostrar los resultados, ya que es innecesario.
 
 == Modelos probados
 
-Decidimos que la mejor opción era probar diversos modelos, para utilizar el mejor en el desarrollo final, y reutilizar los otros en caso que sea necesario.
+* *ResNet50V2:* 
 
-Probamos distintos modelos, algunos preentrenados y otros manuales:
+* *SVM:* 
 
-* *ResNet:* La aquitectura ResNet tiene diversas variantes, entre las cuales están ResNet50, ResNet50V2, ResNet152, ResNet152V2. De estas, la que mejor resultados arrojó fue ResNet50V2, con un 93% de precisión en las pruebas para 2200 imágenes.
+* *Xception:* 
 
-* *SVM:* Este modelo es binario. Llevando nuestro problema a un problema binario, obtuvimos un 96% de precisión en las pruebas. Sin embargo, no será utilizado por no ser multiclase.
+* *CNN Manual:* 
 
-* *Xception:* Este modelo alcanzó un porcentaje superior al 90% de precisión en las pruebas, para 3200 imágenes.
-
-* *CNN Manual:* Este modelo fue el más liviano y rápido de todos, y obtuvo resultados sorprendentes: 96% de precisión en las pruebas, para 7600 imágenes.
-
-* *Inception ResNetV2:* Este modelo alcanzó un porcentaje superior al 86% de precisión en las pruebas, para 2600 imágenes. Sin embargo, fue entrenado en una sola vuelta por su complejidad.
-
-* *VGG16:* Este modelo, al ser pesado, no permitió muchas imágenes de entrenamiento ni de prueba. Obtuvo un 83% de precisión en las pruebas, para 800 imágenes.
-
-* *Transformada de Hough:* Esta técnica fue utilizada para encontrar círculos en imagenes de resonancia magnética, pero no dio los resultados esperados.
+* *Inception ResNetV2:* 
 
 == Modelos descartados
 
-Durante el proceso de entrenamiento se determinó que ciertos modelos no valían la pena ser entrenados. Estos son *Mask R CNN* y *VGG19*. El primero se descartó por problemas de compatibilidad entre versiones de kernel y Tenserflow necesarias para la implementación de este modelo. Solucionar este problema sería muy costoso y no valía la pena debido a los buenos resultados obtenidos en otros modelos. El segundo se descartó debido a que es similar a *VGG16*, y es uno de los que demostró peor performance y resultados más pobres. Entrenarlo llevaría mucho tiempo y tampoco es necesario.
+Debido a las dificultades encontradas en el sprint anterior, decidimos que el modelo *Mask R CNN* ya no será tomado en cuenta para desarrollos futuros. El modelo *VGG16* fue descartado debido a su lentitud en el entrenamiento. Como consecuencia de la disminución de horas de trabajo en el entorno y debido a que ya teníamos modelos funcionales que realizaban muy buenas predicciones, consideramos que no era necesario entrenarlo, ya que se trata de un modelo lento y, en nuestra experiencia, no alcanza niveles de precisión muy altos. La *Transformada de Hough* fue descartada ya que, en este contexto, no necesitamos detectar circunferencias en las imágenes.
 
 == Modelo seleccionado
 
-El modelo elegido fue *CNN Manual*, debido a su alto nivel de precisión y su performance. *ResNet50V2* quedó como segunda opción, ya que a pesar de tener un muy buen nivel de precisión, fue entrenado con menos imágenes y cuenta con una performance inferior.
+Nuevamente, entre las opciones a elegir para el modelo final estuvieron *ResNet50V2* y *CNN Manual*. En este caso, añadimos a *SVM* como una alternativa, aunque fue descartado debido a su tamaño. Ambos modelos restantes tienen niveles de precisión muy parecidos, por lo que la decisión no fue trivial. Finalmente, el modelo elegido fue *ResNet50V2* por dos motivos:
+
+1. Es un modelo que no utilizamos previamente
+2. Los errores que comete son parejos en las clases. CNN Manual comete más errores en las imágenes de pacientes sin neumonía
 
 == Deploy
-Tras haber exportado el modelo seleccionado se empezó con el desarrollo de una API para facilitar el uso del modelo.
-Se utilizó Python junto el Framework de Flask para desarrollar la API. Tras haber desarrollado la API, se procedió a desplegar la aplicación utilizando el PaaS de Railway, aunque en primer lugar se decidió por FL0, últimamente la plataforma tiene mal funcionamiento.
 
-La API cuenta con 2 endpoints:
+=== MDTC
 
-* /ping: Mediante una solicitud HTTP-GET retorna un JSON con el siguiente mensaje: "API on!", y un _status_code_ 200.
+=== MDEP
 
-* /predict: Mediante una solicitud HTTP-POST se le debe envíar un binario (Imagen) y retorna un JSON con los siguientes posibles mensajes: "Glioma", "Meningioma", "Pituitary" y "No_tumor". En caso contrario de no ser un binario aceptado, retorna un _status_code_ 418.
-
-La API se puede ingresar desde: https://tumorapi-production.up.railway.app/
-. En la misma se puede encontrar un pequeño resumen de como consumir la API.
+== Bases de datos

@@ -20,7 +20,7 @@ Las SVM son inherentemente para dominios binarios, es decir, problemas de clasif
 
 Para su uso se utiliza la librería _sklearn_.
 
-Como nuestro problema entra en el dominio de la multiclases, SVM no es precisamente la mejor solución. Pero decidimos utilizar el método de *Dividir y conquistar*, o sea, dividir el dominio en sub-dominios para conseguir una predicción multiclase utilizando SVM que es inherentemente binario. 
+Como nuestro problema entra en el dominio de las multiclases, SVM no es precisamente la mejor solución. Pero decidimos utilizar el método de *Dividir y conquistar*, o sea, dividir el dominio en sub-dominios para conseguir una predicción multiclase utilizando SVM que es inherentemente binario. 
 
 En nuestro dominio tenemos dos tipos de clases:
 
@@ -66,13 +66,13 @@ svm_model.fit(X_train, y_train)
 
 == Exportación 
 
-Para la exportación del modelo se utiliza la libreria de _Joblib_, que es compatible con _sklearn_.
+Para la exportación del modelo se utiliza la librería de _Joblib_, que es compatible con _sklearn_.
 
 El modelo exportado tiene un tamaño razonable de 560 mb. No es problema para la plataforma de Google Cloud Run, porque no limita el espacio de disco; ya que el enfoque principal del PaaS de Google es la ejecución de contenedores de manera eficiente y escalable sin preocuparse por la gestión del espacio en disco.
 
 == Conclusiones
 
-El entremiento del modelo a resultado eficaz con una precisión del 97%, con 7 minutos de entrenamiento. A todo esto, se logra esta presición sin necesidad de buscar los mejores parámetros para el modelo, solo con las imágenes resulta muy eficaz.
+El entrenamiento del modelo a resultado eficaz con una precisión del 97%, con 7 minutos de entrenamiento. A todo esto, se logra esta precisión sin necesidad de buscar los mejores parámetros para el modelo, solo con las imágenes resulta muy eficaz.
 
 A continuación la matriz de confunsión del modelo:
 

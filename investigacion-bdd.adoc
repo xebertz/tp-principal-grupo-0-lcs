@@ -1,0 +1,66 @@
+= Investigación sobre bases de datos
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== Introducción
+
+== Desarrollo
+
+En el ámbito de las bases de datos, nos encontramos con una diversidad de tipos y categorizaciones que requieren nuestro análisis.
+
+=== Bases de datos relacionales
+
+Las bases de datos relacionales, también conocidas como SQL, se caracterizan por tener un esquema rígido y una única variante dentro de la categoría SQL. Estas bases de datos permiten la ejecución de consultas complejas y ofrecen numerosas funcionalidades.
+
+En el modelo relacional, los datos se organizan en tablas con filas y columnas. Cada tabla tiene un esquema fijo y utiliza el lenguaje SQL para consultas y manipulación de datos. 
+
+Algunos ejemplos de bases de datos relacionales incluyen MySQL, PostgreSQL, MariaDB, Oracle, SQL Server, y Sap Hana, entre otras. Estas bases de datos son ampliamente utilizadas en entornos empresariales y son ideales para aplicaciones que requieren una estructura de datos altamente organizada y relaciones precisas entre tablas.
+
+=== Bases de datos no relacionales
+
+Las bases de datos no relacionales, también llamadas NoSQL, se distinguen por su flexibilidad al carecer de un esquema fijo. En esta categoría, se encuentran diversos tipos de bases de datos, y su enfoque principal radica en la ejecución de consultas más simples. Las bases de datos NoSQL destacan por su velocidad, escalabilidad y disponibilidad, lo que las hace apropiadas para una amplia gama de aplicaciones.
+
+En cuanto al modelo de datos, esta categoría abarca diversas taxonomías de bases de datos que no siguen el modelo relacional tradicional. Algunas de las principales taxonomías son:
+
+- Bases de datos de documentos: Almacenan datos en formato de documentos (por ejemplo, JSON o XML). Ejemplos incluyen MongoDB y CouchDB.
+
+- Bases de datos de columnas: Almacenan datos en columnas en lugar de filas, lo que las hace eficientes para consultas analíticas. Ejemplos son Apache Cassandra y HBase.
+
+- Bases de datos clave-valor: Almacenan pares de clave-valor, donde cada clave está asociada a un valor. Ejemplos son Redis y Riak.
+
+- Bases de datos de grafos: Modelan datos como nodos y relaciones entre ellos, siendo ideales para datos altamente interconectados. Ejemplos incluyen Neo4j y OrientDB.
+
+- Bases de datos de objetos: Almacenan datos como objetos, manteniendo su estructura de programación. Ejemplos incluyen db4o y Versant.
+
+Estas bases de datos NoSQL ofrecen soluciones específicas para diferentes tipos de aplicaciones y estructuras de datos, lo que las convierte en una elección poderosa y versátil en el mundo de la gestión de datos.
+
+=== Usos de bases de datos
+
+Las bases de datos desempeñan un papel fundamental en la gestión de información en una amplia variedad de aplicaciones y entornos. La elección de la base de datos adecuada depende en gran medida de las necesidades específicas de cada proyecto o empresa. A continuación, se describen algunos ejemplos de bases de datos y sus usos más comunes:
+
+- SQL Server, Oracle y SAP HANA: Estas bases de datos son excelentes opciones para empresas que manejan grandes conjuntos de datos. Ofrecen una gestión sólida y escalabilidad, lo que las hace ideales para organizaciones que requieren un alto rendimiento y confiabilidad en sus sistemas de gestión de datos.
+
+- MySQL, PostgreSQL y MariaDB: Son ampliamente utilizados en aplicaciones web y proyectos de código abierto. Estas bases de datos son conocidas por su rendimiento confiable y son ideales para proyectos de tamaño mediano, donde la eficiencia y la facilidad de uso son prioritarias.
+
+- SQLite: Esta base de datos se enfoca en aplicaciones móviles y sitios web más pequeños que no necesitan manejar enormes cantidades de datos. SQLite es perfecto para almacenar datos localmente en dispositivos, lo que mejora la velocidad y la eficiencia en aplicaciones que no dependen de recursos masivos.
+
+- DynamoDB: Como parte de los servicios de AWS, DynamoDB ofrece escalabilidad masiva y es óptimo para aplicaciones en la nube que requieren un rendimiento rápido y confiable. Es especialmente útil para aplicaciones que deben manejar grandes cargas de trabajo y demandas variables.
+
+- MongoDB: Esta base de datos NoSQL documental es ideal para aplicaciones que gestionan grandes volúmenes de datos no estructurados. Permite una gran flexibilidad en el almacenamiento y las consultas, lo que es esencial en escenarios donde los datos pueden variar en estructura y formato.
+
+- Redis: Conocida por su velocidad, Redis es comúnmente utilizada para caché o almacenamiento en tiempo real en aplicaciones que requieren respuestas instantáneas. Su capacidad para almacenar datos en memoria la convierte en una excelente opción para aplicaciones que necesitan acceder a datos de manera eficiente.
+
+- Cassandra: Cassandra es una base de datos que gestiona vastas cantidades de datos distribuidos en múltiples ubicaciones geográficas. Es ideal para aplicaciones donde la escalabilidad y la disponibilidad son cruciales, como las redes sociales y aplicaciones de seguimiento en tiempo real.
+
+- Neo4j: Esta base de datos de grafos es valiosa para modelar conexiones complejas y relaciones basadas en gráficos. Es ideal para aplicaciones que dependen de conexiones de datos efectivas, como redes sociales, recomendaciones personalizadas y análisis de redes.
+
+- Bases de datos modernas como Fauna, Firebase, Supabase y Hasura: Estas bases de datos simplifican el desarrollo de aplicaciones web y móviles. Ofrecen soluciones sin servidor y herramientas que facilitan la creación y gestión en la nube, lo que las hace ideales para proyectos que buscan una rápida implementación y escalabilidad sin preocuparse por la administración de la infraestructura.
+
