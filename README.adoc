@@ -86,15 +86,15 @@ Esta segunda opción la que utilizamos en modelos multiclase, ya que la cantidad
 
 == Modelos probados
 
-* *ResNet50V2:* 
+* *ResNet50V2:* Este modelo alcanzó un porcentaje de precisión de 98% en las pruebas, para 2100 imágenes.
 
-* *SVM:* 
+* *SVM:* Este modelo alcanzó un porcentaje de precisión superior al 97% en las pruebas, 2100 para  imágenes.
 
-* *Xception:* 
+* *Xception:* Este modelo alcanzó un porcentaje de precisión de 96% en las pruebas, para 3150 imágenes.
 
-* *CNN Manual:* 
+* *CNN Manual:* Este modelo alcanzó un porcentaje de precisión superior al 97% en las pruebas, para 2100 imágenes.
 
-* *Inception ResNetV2:* 
+* *Inception ResNetV2:* Este modelo alcanzó un porcentaje de precisión de 94% en las pruebas, para 640 imágenes.
 
 == Modelos descartados
 
