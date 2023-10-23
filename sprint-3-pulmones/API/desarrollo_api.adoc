@@ -17,6 +17,8 @@ Una API es un conjunto de definiciones y protocolos que se utilizan para diseña
  
 Una API utiliza *endpoints*, que son puntos de acceso o URLs específicas que se utilizan para realizar operaciones o solicitudes a través de la API. Cada endpoint está diseñado para llevar a cabo una función específica y proporciona una forma estructurada y estandarizada de interactuar con la API.
 
+La API esta alojada en un repositorio de GitHub: https://github.com/Leandr0Fr/averia[API]
+
 === Necesidad
 Tras desarrollar el modelo de Machine Learning sobre clasificación de imágenes con neumonía o no, hemos contemplado la necesidad de realizar una API para el uso de esta misma. En este contexto, hemos tenido el privilegio de desarrollar la API que facilita el acceso y la utilización del modelo.
 
