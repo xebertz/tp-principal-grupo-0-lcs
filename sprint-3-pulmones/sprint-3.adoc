@@ -218,17 +218,9 @@ image::.img/wbs-s3.svg[]
 image::.img/precedencia.svg[]
 
 === Calendario
-==== Estimado
 
-.Calendario 
-image::.img/calendario.svg[]
-
-Consideramos como **hito** definir la arquitectura del modelo de IA y el despliegue del mismo para su consumo mediante API.
-
-==== Comparativa estimado vs real
-
-.Comparativa
-image::.img/comparativa.png[]
+.Calendario Sprint 3
+image::.img/calendario.png[]
 
 .Referencia de color
 image:../sprint-2-cerebro/.img/comparativa-color.png[120,120, align="center"]
