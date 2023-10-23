@@ -127,7 +127,10 @@ Los casos que se toman en cuenta son los siguientes:
 7. Obtener el Json con el % más alto en la variable _No_pneumonia_ del endpoint predict/wini tras enviar una imagen de una radiografia de un pulmón sin neumonia.
 
 == Desplegar
-Ya desarrollado la aplicación y ser probada localmente, procedimos a desplegar la API en la nube. 
+Ya desarrollado la aplicación y ser probada localmente, procedimos a desplegar la API en la nube.
+
+Se utilizó el PaaS de Google Cloud para realizar el deploy. Porque nos ofrecía más recursos, que los necesitabamos porque los modelos de IA lo precisaban para su correcto funcionamiento.
+
 Se utilizó el servidor HTTP gunicorn y el puerto que provee el PaaS por defecto, y en caso que no tenga uno por defecto se utiliza el 8080.
 
 [source,python]
