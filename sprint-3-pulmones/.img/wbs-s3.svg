@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   contentStyleType="text/css"
+   height="765"
+   preserveAspectRatio="none"
+   version="1.1"
+   viewBox="0 0 2080 765"
+   width="2080"
+   zoomAndPan="magnify"
+   id="svg240"
+   sodipodi:docname="BIOS-s3.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview242"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false" />
+  <defs
+     id="defs2" />
+  <g
+     id="g238">
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="58.5"
+       x2="58.5"
+       y1="63.9688"
+       y2="83.968803"
+       id="line4" />
+    <rect
+       fill="#ffa500"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="97"
+       x="10"
+       y="83.968803"
+       id="rect6" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="77"
+       x="20"
+       y="105.1074"
+       id="text8">1.0 - Gestión</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="58.5"
+       x2="68.5"
+       y1="149.92191"
+       y2="149.92191"
+       id="line10" />
+    <rect
+       fill="#d8bfd8"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="109"
+       x="68.5"
+       y="132.9375"
+       id="rect12" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="89"
+       x="78.5"
+       y="154.0762"
+       id="text14">1.0.3 - Sprint 3</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="123"
+       x2="133"
+       y1="198.89059"
+       y2="198.89059"
+       id="line16" />
+    <rect
+       fill="#32cd32"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="120"
+       x="133"
+       y="181.9063"
+       id="rect18" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="100"
+       x="143"
+       y="203.04491"
+       id="text20">1.0.3.1 - Riesgos</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="123"
+       x2="133"
+       y1="247.85941"
+       y2="247.85941"
+       id="line22" />
+    <rect
+       fill="#32cd32"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="125"
+       x="133"
+       y="230.875"
+       id="rect24" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="105"
+       x="143"
+       y="252.0137"
+       id="text26">1.0.3.2 - Cambios</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="123"
+       x2="133"
+       y1="296.82809"
+       y2="296.82809"
+       id="line28" />
+    <rect
+       fill="#32cd32"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="210"
+       x="133"
+       y="279.84381"
+       id="rect30" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="190"
+       x="143"
+       y="300.98239"
+       id="text32">1.0.3.A - Refinar documentación</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="123"
+       x2="133"
+       y1="345.79691"
+       y2="345.79691"
+       id="line34" />
+    <rect
+       fill="#32cd32"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="119"
+       x="133"
+       y="328.8125"
+       id="rect36" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="99"
+       x="143"
+       y="349.9512"
+       id="text38">1.0.3.B - Informe</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="123"
+       x2="123"
+       y1="166.9063"
+       y2="345.79691"
+       id="line40" />
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="58.5"
+       x2="68.5"
+       y1="394.76559"
+       y2="394.76559"
+       id="line42" />
+    <rect
+       fill="#f0e68c"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="227"
+       x="68.5"
+       y="377.78131"
+       id="rect44" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="207"
+       x="78.5"
+       y="398.91989"
+       id="text46">II - Corregir documentación previa</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="58.5"
+       x2="58.5"
+       y1="117.9375"
+       y2="394.76559"
+       id="line48" />
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="427.5"
+       x2="427.5"
+       y1="63.9688"
+       y2="83.968803"
+       id="line50" />
+    <rect
+       fill="#ffa500"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="129"
+       x="363"
+       y="83.968803"
+       id="rect52" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="109"
+       x="373"
+       y="105.1074"
+       id="text54">1.1 - Investigación</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="427.5"
+       x2="437.5"
+       y1="149.92191"
+       y2="149.92191"
+       id="line56" />
+    <rect
+       fill="#d8bfd8"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="434"
+       x="437.5"
+       y="132.9375"
+       id="rect58" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="414"
+       x="447.5"
+       y="154.0762"
+       id="text60">1.1.2 - Lectura relacionada con la clasificación de imágenes médicas</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="654.5"
+       x2="664.5"
+       y1="198.89059"
+       y2="198.89059"
+       id="line62" />
+    <rect
+       fill="#32cd32"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="334"
+       x="664.5"
+       y="181.9063"
+       id="rect64" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="314"
+       x="674.5"
+       y="203.04491"
+       id="text66">1.1.2.B - Clasificación de enfermedades pulmonares</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="654.5"
+       x2="654.5"
+       y1="166.9063"
+       y2="198.89059"
+       id="line68" />
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="427.5"
+       x2="437.5"
+       y1="247.85941"
+       y2="247.85941"
+       id="line70" />
+    <rect
+       fill="#d8bfd8"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="184"
+       x="437.5"
+       y="230.875"
+       id="rect72" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="164"
+       x="447.5"
+       y="252.0137"
+       id="text74">1.1.3 - Entrevistar expertos</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="529.5"
+       x2="539.5"
+       y1="296.82809"
+       y2="296.82809"
+       id="line76" />
+    <rect
+       fill="#32cd32"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="204"
+       x="539.5"
+       y="279.84381"
+       id="rect78" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="184"
+       x="549.5"
+       y="300.98239"
+       id="text80">1.1.3.A - Profesional neurólogo</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="529.5"
+       x2="539.5"
+       y1="345.79691"
+       y2="345.79691"
+       id="line82" />
+    <rect
+       fill="#32cd32"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="219"
+       x="539.5"
+       y="328.8125"
+       id="rect84" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="199"
+       x="549.5"
+       y="349.9512"
+       id="text86">1.1.3.B - Neumonóloga pediátrica</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="529.5"
+       x2="529.5"
+       y1="264.84381"
+       y2="345.79691"
+       id="line88" />
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="427.5"
+       x2="437.5"
+       y1="394.76559"
+       y2="394.76559"
+       id="line90" />
+    <rect
+       fill="#d8bfd8"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="195"
+       x="437.5"
+       y="377.78131"
+       id="rect92" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="175"
+       x="447.5"
+       y="398.91989"
+       id="text94">1.1.4 - Recopilación de datos</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="535"
+       x2="545"
+       y1="443.73441"
+       y2="443.73441"
+       id="line96" />
+    <rect
+       fill="#32cd32"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="286"
+       x="545"
+       y="426.75"
+       id="rect98" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="266"
+       x="555"
+       y="447.8887"
+       id="text100">1.1.4.B - Dataset enfermedades pulmonares</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="535"
+       x2="535"
+       y1="411.75"
+       y2="443.73441"
+       id="line102" />
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="427.5"
+       x2="427.5"
+       y1="117.9375"
+       y2="394.76559"
+       id="line104" />
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1087.5"
+       x2="1087.5"
+       y1="63.9688"
+       y2="83.968803"
+       id="line106" />
+    <rect
+       fill="#ffa500"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="138"
+       x="1018.5"
+       y="83.968803"
+       id="rect108" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="118"
+       x="1028.5"
+       y="105.1074"
+       id="text110">1.2 - Modelos de IA</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1087.5"
+       x2="1097.5"
+       y1="149.92191"
+       y2="149.92191"
+       id="line112" />
+    <rect
+       fill="#d8bfd8"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="233"
+       x="1097.5"
+       y="132.9375"
+       id="rect114" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="213"
+       x="1107.5"
+       y="154.0762"
+       id="text116">1.2.1 - Procesamiento de imágenes</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1214"
+       x2="1224"
+       y1="198.89059"
+       y2="198.89059"
+       id="line118" />
+    <rect
+       fill="#87ceeb"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="207"
+       x="1224"
+       y="181.9063"
+       id="rect120" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="187"
+       x="1234"
+       y="203.04491"
+       id="text122">1.2.1.2 - Refinamiento de datos</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1327.5"
+       x2="1337.5"
+       y1="247.85941"
+       y2="247.85941"
+       id="line124" />
+    <rect
+       fill="#32cd32"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="168"
+       x="1337.5"
+       y="230.875"
+       id="rect126" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="148"
+       x="1347.5"
+       y="252.0137"
+       id="text128">1.2.1.2.B - Ref. pulmones</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1327.5"
+       x2="1327.5"
+       y1="215.875"
+       y2="247.85941"
+       id="line130" />
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1214"
+       x2="1224"
+       y1="296.82809"
+       y2="296.82809"
+       id="line132" />
+    <rect
+       fill="#87ceeb"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="196"
+       x="1224"
+       y="279.84381"
+       id="rect134" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="176"
+       x="1234"
+       y="300.98239"
+       id="text136">1.2.1.3 - Nivelación de clases</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1322"
+       x2="1332"
+       y1="345.79691"
+       y2="345.79691"
+       id="line138" />
+    <rect
+       fill="#32cd32"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="167"
+       x="1332"
+       y="328.8125"
+       id="rect140" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="147"
+       x="1342"
+       y="349.9512"
+       id="text142">1.2.1.3.B - Niv. pulmones</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1322"
+       x2="1322"
+       y1="313.8125"
+       y2="345.79691"
+       id="line144" />
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1214"
+       x2="1224"
+       y1="394.76559"
+       y2="394.76559"
+       id="line146" />
+    <rect
+       fill="#32cd32"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="188"
+       x="1224"
+       y="377.78131"
+       id="rect148" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="168"
+       x="1234"
+       y="398.91989"
+       id="text150">1.2.1.B - Subir dataset MDEP</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1214"
+       x2="1214"
+       y1="166.9063"
+       y2="394.76559"
+       id="line152" />
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1087.5"
+       x2="1097.5"
+       y1="443.73441"
+       y2="443.73441"
+       id="line154" />
+    <rect
+       fill="#d8bfd8"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="234"
+       x="1097.5"
+       y="426.75"
+       id="rect156" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="214"
+       x="1107.5"
+       y="447.8887"
+       id="text158">1.2.2 - Implementación de modelos</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1214.5"
+       x2="1224.5"
+       y1="492.70309"
+       y2="492.70309"
+       id="line160" />
+    <rect
+       fill="#87ceeb"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="213"
+       x="1224.5"
+       y="475.71881"
+       id="rect162" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="193"
+       x="1234.5"
+       y="496.85739"
+       id="text164">1.2.2.2 - Desarrollo de modelos</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1331"
+       x2="1341"
+       y1="541.67188"
+       y2="541.67188"
+       id="line166" />
+    <rect
+       fill="#32cd32"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="399"
+       x="1341"
+       y="524.6875"
+       id="rect168" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="379"
+       x="1351"
+       y="545.82617"
+       id="text170">1.2.2.2.B - Modelo de Detección de Enfermedades Pulmonares</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1331"
+       x2="1341"
+       y1="590.64062"
+       y2="590.64062"
+       id="line172" />
+    <rect
+       fill="#32cd32"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="274"
+       x="1341"
+       y="573.65631"
+       id="rect174" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="254"
+       x="1351"
+       y="594.79492"
+       id="text176">1.2.2.2.Y - Definición de arquitectura MDEP</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1331"
+       x2="1331"
+       y1="509.6875"
+       y2="590.64062"
+       id="line178" />
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1214.5"
+       x2="1224.5"
+       y1="639.60938"
+       y2="639.60938"
+       id="line180" />
+    <rect
+       fill="#f0e68c"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="285"
+       x="1224.5"
+       y="622.625"
+       id="rect182" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="265"
+       x="1234.5"
+       y="643.76367"
+       id="text184">III - Preparación de entorno de trabajo extra</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1214.5"
+       x2="1214.5"
+       y1="460.71881"
+       y2="639.60938"
+       id="line186" />
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1087.5"
+       x2="1097.5"
+       y1="688.57812"
+       y2="688.57812"
+       id="line188" />
+    <rect
+       fill="#d8bfd8"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="208"
+       x="1097.5"
+       y="671.59381"
+       id="rect190" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="188"
+       x="1107.5"
+       y="692.73242"
+       id="text192">1.2.3 - Despliegue de modelos</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1201.5"
+       x2="1211.5"
+       y1="737.54688"
+       y2="737.54688"
+       id="line194" />
+    <rect
+       fill="#32cd32"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="435"
+       x="1211.5"
+       y="720.5625"
+       id="rect196" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="415"
+       x="1221.5"
+       y="741.70117"
+       id="text198">1.2.3.B - Deploy Modelo de Detección de Enfermedades Pulmonares</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1201.5"
+       x2="1201.5"
+       y1="705.5625"
+       y2="737.54688"
+       id="line200" />
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1087.5"
+       x2="1087.5"
+       y1="117.9375"
+       y2="688.57812"
+       id="line202" />
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1816"
+       x2="1816"
+       y1="63.9688"
+       y2="83.968803"
+       id="line204" />
+    <rect
+       fill="#ffa500"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="112"
+       x="1760"
+       y="83.968803"
+       id="rect206" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="92"
+       x="1770"
+       y="105.1074"
+       id="text208">1.3 - Validación</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1816"
+       x2="1826"
+       y1="149.92191"
+       y2="149.92191"
+       id="line210" />
+    <rect
+       fill="#32cd32"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="243"
+       x="1826"
+       y="132.9375"
+       id="rect212" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="223"
+       x="1836"
+       y="154.0762"
+       id="text214">1.3.1 - Integración con otros equipos</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1816"
+       x2="1826"
+       y1="198.89059"
+       y2="198.89059"
+       id="line216" />
+    <rect
+       fill="#32cd32"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="218"
+       x="1826"
+       y="181.9063"
+       id="rect218" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="198"
+       x="1836"
+       y="203.04491"
+       id="text220">1.3.A - Refinamiento de API MDTC</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1816"
+       x2="1826"
+       y1="247.85941"
+       y2="247.85941"
+       id="line222" />
+    <rect
+       fill="#32cd32"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="216"
+       x="1826"
+       y="230.875"
+       id="rect224" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="196"
+       x="1836"
+       y="252.0137"
+       id="text226">1.3.B - Refinamiento de API MDEP</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="1816"
+       x2="1816"
+       y1="117.9375"
+       y2="247.85941"
+       id="line228" />
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="58.5"
+       x2="1816"
+       y1="63.9688"
+       y2="63.9688"
+       id="line230" />
+    <rect
+       fill="#ffc0cb"
+       height="33.9688"
+       style="stroke:#181818;stroke-width:1.5"
+       width="69"
+       x="902.75"
+       y="10"
+       id="rect232" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="12px"
+       lengthAdjust="spacing"
+       textLength="49"
+       x="912.75"
+       y="31.1387"
+       id="text234">1 - BIOS</text>
+    <line
+       style="stroke:#181818;stroke-width:1.5"
+       x1="937.25"
+       x2="937.25"
+       y1="43.9688"
+       y2="63.9688"
+       id="line236" />
+    <!--SRC=[fLNDRjD04BxxAUROLcfeVa1GAaIJb9AIq8YKIXmtziGiNU-QyJfG8Hw68sSU8I_6xAwRnaqCIFWIP-URcM- -cHs_BAmW-sLUG7zqEJiikj59OMyLleZuR2X5IYA3Rn7mqygblWclxkcB-2ObK-faO9GXcBBL6xy_3t13GgVOx73fxJMNfJGARRFBrKTPM8LGSvghyWzPPZUtVGRKF592rCqkOvdXkOFKd3H-WMQVDn_5ZGpuY3rE7bKgHWVGXaClBfoSE0LVk4C-RHtn-JaMLgv-QRO5kTXw4AojBjjdEKbjeSlse4smLu2M2_rEOf6QWX6-h3gWmu21oEQo2N3g8k12Qa6GcBZCK5iHLvHsuFkC7-c5eGmt09xpQEII6I9CvLQmd70f1RkmZ6i5sZxOqccGhfC-qA7jQnXZR4iIGAWOQBH81CH6W-8V9Ggva74L846GsUf7YXeBo5O_4xOKE-JZkBwOmPOxwWLoUOb8E49UgepJ4HOFotKXN8lEj7MrkNi4-3L7icPtlY3sbCm22rU20eqbhNufavfjiTkLs6-nP08U9I37HAv-M6Awk-ZqV3DZaqjrNquYcWZrV8AXiA90-szbGsZ7n2IeE2g77vrkzgoYql6jvL9ZB4GcUGnClJ7RT3fLfyCmtllSqNUtl4AluPu_ExGglbjDkaEwFhsLIzoGnOqDDWIkb9VBlmPsk5avT_DUoJWPdastUzFnjOsoNE76fM0QMQNaBa62qv0b939AcJf-YtUd4YGqnu67Q35UfphRRF1qLuFhiJxuvDmDkGuXw7CfRNKN7rHw47R0o3SUSq6RDyeQqfwI9J4NdmpV57xRN0SXRpSKd2k9QOb_4oZqQOYvChV_KNQOQvVwMYYPD6sYRhMlBAPtjRaLP2mnFMHXyeTB5jgr3Ni_rAVJ4SjtDTW1xpV2wtCLlKITy3SwYgPAQFj-CeObabiiJfgZ3hFjxBqY2PUnXSuHjBl7lMV7ZtlmdjCw-twqTpuTGs5AYbbfNc0avwNb0FlHXLWAU5Tgor_2Ot3_zguc-p0xkpjaLPUIZ7R375rSJm88NXixoutru2UzmxwqC4DYNd0zYNYMHAaikyOcaJezPYgl3fz6OrQv52aduY_kW3-fbcxPDliD]-->
+  </g>
+</svg>
