@@ -136,6 +136,11 @@ image::.img/wbs-s3.svg[]
 |Muestra del avance del equipo al **Product Owner**.
 |Realizar el informe de avance y presentación para la Reunión Formal.
 |5
+|II
+|Corregir documentación previa
+|Luego del segundo sprint review se informó que la documentación no se encuentra completa.
+|Completar la documentación referida a los informes de avance.
+|15
 |1.1.2.B
 |Clasificación de enfermedades pulmonares
 |Conocer las formas en la que se analizan las imágenes de los pulmones.
