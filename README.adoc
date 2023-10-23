@@ -112,3 +112,7 @@ Nuevamente, entre las opciones a elegir para el modelo final estuvieron *ResNet5
 Tras haber tenido problemas con el PaaS *RailWay*, se decidió cambiar la plataforma de despliegue a *Google Cloud*. Esta plataforma nos ofrece más recursos, pero entra en un estado de hibernación tras su desuso. Para solucionar el problema de la hibernación se utilizó la página *UptimeRobot*, que nos permite realizar un _ping_ al https://averiapi-4vtuhnxfba-uc.a.run.app/[dominio] de la API. El _ping_ al dominio nos permite mantener "despierta" la API, y que al momento de consumirla no se desperdicie el tiempo en esperar que la API salga de su estado de hibernación.
 
 == Bases de datos
+
+Iniciamos una investigación de diferentes tipos de bases de datos para determinar la mejor base de datos a utilizar en el próximo sprint.
+
+También, nos contactamos con el equipo de datos para definir detalles de nuestras dependencias, y compartir documentación para facilitar el proceso de elección y desarrollo de la base de datos.
