@@ -98,7 +98,7 @@ Esta segunda opción la que utilizamos en modelos multiclase, ya que la cantidad
 
 == Modelos descartados
 
-Debido a las dificultades encontradas en el sprint anterior, decidimos que el modelo *Mask R CNN* ya no será tomado en cuenta para desarrollos futuros. El modelo *VGG16* fue descartado debido a su lentitud en el entrenamiento. Como consecuencia de la disminución de horas de trabajo en el entorno y debido a que ya teníamos modelos funcionales que realizaban muy buenas predicciones, consideramos que no era necesario entrenarlo, ya que se trata de un modelo lento y, en nuestra experiencia, no alcanza niveles de precisión muy altos. La *Transformada de Hough* fue descartada ya que, en este contexto, no necesitamos detectar circunferencias en las imágenes.
+Debido a las dificultades encontradas en el sprint anterior, decidimos que los modelos *VGG19* y *Mask R CNN* ya no serán tomados en cuenta para desarrollos futuros. El modelo *VGG16* fue descartado debido a su lentitud en el entrenamiento. Como consecuencia de la disminución de horas de trabajo en el entorno y debido a que ya teníamos modelos funcionales que realizaban muy buenas predicciones, consideramos que no era necesario entrenarlo, ya que se trata de un modelo lento y, en nuestra experiencia, no alcanza niveles de precisión muy altos. La *Transformada de Hough* fue descartada ya que, en este contexto, no necesitamos detectar circunferencias en las imágenes.
 
 == Modelo seleccionado
 
