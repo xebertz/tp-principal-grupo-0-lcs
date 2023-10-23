@@ -37,7 +37,7 @@ Debido a la naturaleza divergente de las tareas establecidas como objetivo, divi
 |Ebertz, Ximena    |Búsqueda de datasets, entrevistar experto, búsqueda de información del problema, gestión|Creación del dataset, preparación de entorno de trabajo extra, CNN Manual, Xception, Transformada de Hough, gestión
 |López, Gonzalo    |Búsqueda de datasets, búsqueda de información del problema|Creación del dataset, preparación de entorno de trabajo extra, EfficientNetV2, ResNet50V2, investigación sobre bases de datos
 |Franco, Leandro   |Búsqueda de datasets, búsqueda de información del problema|Refinamiento API MDTC, preparación de entorno de trabajo extra, deploy de API MDEP, refinamiento de API MDEP
-|Venditto, Pedro   |Búsqueda de datasets, entrevistar experto, búsqueda de información del problema|Refinamiento API MDTC, preparación de entorno de trabajo extra, entrevista con neumonóloga pediátrica
+|Venditto, Pedro   |Búsqueda de datasets, entrevistar experto, búsqueda de información del problema|Deploy de API MDEP, refinamiento API MDTC, preparación de entorno de trabajo extra, entrevista con neumonóloga pediátrica
 |===
 
 Esta división se realizó teniendo en cuenta distintos *riesgos* y *cambios* a los que nos vimos expuestos.
