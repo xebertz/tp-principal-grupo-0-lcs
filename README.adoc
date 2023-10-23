@@ -107,6 +107,11 @@ Nuevamente, entre las opciones a elegir para el modelo final estuvieron *ResNet5
 1. Es un modelo que no utilizamos previamente
 2. Los errores que comete son parejos en las clases. CNN Manual comete más errores en las imágenes de pacientes sin neumonía
 
+== Entrevistas
+
+Realizamos dos entrevistas. La primera fue con el doctor Kosac, neurólogo. Fue llevada a cabo en su consultorio en Recoleta, el 11 de octubre de 2023. El doctor definió distintos aspectos a tener en cuenta para la detección de tumores cerebrales, previo a la resonancia magnética.
+La segunda entrevista se realizó a la doctora Tapia, neumonóloga especialista en niños. Fue llevada a cabo de forma virtual, el 21 de octubre de 2023. La doctora explicó los distintos tipos de neumonía y sus síntomas.
+
 == Deploy
 
 Tras haber tenido problemas con el PaaS *RailWay*, se decidió cambiar la plataforma de despliegue a *Google Cloud*. Esta plataforma nos ofrece más recursos, pero entra en un estado de hibernación tras su desuso. Para solucionar el problema de la hibernación se utilizó la página *UptimeRobot*, que nos permite realizar un _ping_ al https://averiapi-4vtuhnxfba-uc.a.run.app/[dominio] de la API. El _ping_ al dominio nos permite mantener "despierta" la API, y que al momento de consumirla no se desperdicie el tiempo en esperar que la API salga de su estado de hibernación.
