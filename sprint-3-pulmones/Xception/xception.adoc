@@ -107,7 +107,7 @@ Se obtuvo un 95% de precisión, validando las métricas obtenidas previamente.
 
 === Segundo entrenamiento
 
-Para mejorar la precisión, se aumentó la cantidad de vueltas de entenamiento a 20. Los resultados parciales son los siguientes:
+Para mejorar la precisión, se aumentó la cantidad de vueltas de entrenamiento a 20. Los resultados parciales son los siguientes:
 
 [source, console]
 ----

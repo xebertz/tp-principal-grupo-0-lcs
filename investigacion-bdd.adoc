@@ -1,0 +1,63 @@
+= Investigación sobre bases de datos
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== Introducción
+
+== Desarrollo
+
+En el ámbito de las bases de datos, nos encontramos con una diversidad de tipos y categorizaciones que requieren nuestro análisis.
+
+=== Bases de datos SQL
+
+Las bases de datos relacionales, también conocidas como SQL, se caracterizan por tener un esquema rígido y una única variante dentro de la categoría SQL. Estas bases de datos permiten la ejecución de consultas complejas y ofrecen numerosas funcionalidades.
+
+En el modelo relacional, los datos se organizan en tablas con filas y columnas. Cada tabla tiene un esquema fijo y utiliza el lenguaje SQL para consultas y manipulación de datos. 
+
+Algunos ejemplos de bases de datos relacionales incluyen MySQL, PostgreSQL, MariaDB, Oracle, SQL Server, y Sap Hana, entre otras. Estas bases de datos son ampliamente utilizadas en entornos empresariales y son ideales para aplicaciones que requieren una estructura de datos altamente organizada y relaciones precisas entre tablas.
+
+=== Bases de datos NoSQL
+
+Las bases de datos NoSQL se distinguen por su flexibilidad al carecer de un esquema fijo. En esta categoría, se encuentran diversos tipos de bases de datos, y su enfoque principal radica en la ejecución de consultas más simples. Las bases de datos NoSQL destacan por su velocidad, escalabilidad y disponibilidad, lo que las hace apropiadas para una amplia gama de aplicaciones.
+
+En cuanto al modelo de datos, esta categoría abarca diversas taxonomías de bases de datos que no siguen el modelo relacional tradicional. Algunas de las principales taxonomías son:
+
+- Bases de datos de documentos: Almacenan datos en formato de documentos (por ejemplo, JSON o XML). Ejemplos incluyen MongoDB y CouchDB.
+
+- Bases de datos de columnas: Almacenan datos en columnas en lugar de filas, lo que las hace eficientes para consultas analíticas. Ejemplos son Apache Cassandra y HBase.
+
+- Bases de datos clave-valor: Almacenan pares de clave-valor, donde cada clave está asociada a un valor. Ejemplos son Redis y Riak.
+
+- Bases de datos de grafos: Modelan datos como nodos y relaciones entre ellos, siendo ideales para datos altamente interconectados. Ejemplos incluyen Neo4j y OrientDB.
+
+- Bases de datos de objetos: Almacenan datos como objetos, manteniendo su estructura de programación. Ejemplos incluyen db4o y Versant.
+
+Estas bases de datos NoSQL ofrecen soluciones específicas para diferentes tipos de aplicaciones y estructuras de datos, lo que las convierte en una elección poderosa y versátil en el mundo de la gestión de datos.
+
+=== Usos de bases de datos
+
+Las bases de datos SQL Server, Oracle, y SAP HANA, entre otras, están diseñadas para gestionar grandes conjuntos de datos en entornos empresariales. Son ideales para aplicaciones que requieren una gestión robusta y escalabilidad.
+
+Por otro lado, las bases de datos MySQL, PostgreSQL y MariaDB son soluciones populares para aplicaciones web y sistemas de gestión de bases de datos de código abierto. Estas plataformas son conocidas por su rendimiento confiable y son una excelente opción para proyectos de tamaño mediano.
+
+SQLite, por su parte, se enfoca en aplicaciones móviles y sitios web más pequeños que no requieren un escalado de recursos significativo. Es la elección perfecta para almacenar información localmente en dispositivos.
+
+DynamoDB es una base de datos en la nube que forma parte de los servicios de AWS. Ofrece una escalabilidad masiva y es ideal para aplicaciones en la nube que requieren un rendimiento rápido y confiable.
+
+MongoDB, una base de datos NoSQL de tipo documental, es excelente para aplicaciones que manejan grandes volúmenes de datos no estructurados. Permite una flexibilidad significativa en la forma en que se almacenan y consultan los datos.
+
+Redis, conocida por su velocidad, es una base de datos en memoria que se utiliza comúnmente como caché o almacenamiento en tiempo real para aplicaciones que necesitan respuestas instantáneas.
+
+Cassandra es una base de datos diseñada para gestionar grandes cantidades de información distribuida en múltiples ubicaciones geográficas. Es especialmente útil en aplicaciones donde la disponibilidad y la escalabilidad son esenciales.
+
+Neo4j es una base de datos de grafos que resulta valiosa cuando se buscan crear relaciones basadas en gráficos y dependencias complejas de una manera efectiva. Es una elección destacada para aplicaciones que requieren modelar conexiones entre datos.
+
+Por último, las bases de datos modernas como Fauna, Firebase, Supabase y Hasura están diseñadas para facilitar el desarrollo de aplicaciones web y móviles, ofreciendo soluciones sin servidor y herramientas que simplifican la creación y gestión de aplicaciones en la nube.

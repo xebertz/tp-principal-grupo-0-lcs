@@ -23,7 +23,7 @@ Existen dos tipos de neumonía:
 La neumonía viral es causada por un virus, en estos casos los pacientes suelen retomar su vida normal luego de 1 a 3 semanas de la aparición de los primeros síntomas, sin ningún tipo de tratamiento.
 
 === Bacteriana
-En estos casos, la enfermedad es causada por colonias de bacterias, las cuales se asientan en un pulmón (o ambos) y pueden causar los síntomas que se mencionaron anteriormente y también se le puede agregar un compromiso del estado general del paciente, lo que significa que puede causar una diversa cantidad de síntomas que pueden variar según el paciente. Este caso es más complejo y requiere un tratamiento a base de antibioticos. 
+En estos casos, la enfermedad es causada por colonias de bacterias, las cuales se asientan en un pulmón (o ambos) y pueden causar los síntomas que se mencionaron anteriormente y también se le puede agregar un compromiso del estado general del paciente, lo que significa que puede causar una diversa cantidad de síntomas que pueden variar según el paciente. Este caso es más complejo y requiere un tratamiento a base de antibióticos. 
 
 == Alcance del proyecto
 En nuestro proyecto no diferenciaremos entre los tipos mencionados de neumonía, ya que los _datasets_ definidos no tienen etiquetas que nos permitan hacerlo. 

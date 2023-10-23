@@ -20,7 +20,7 @@ InceptionResNetV2 combina estos dos enfoques, utilizando módulos Inception y co
 
 Nuestro modelo trabaja con un dataset creado por nosotros en base a otros dataset obtenidos de Kaggle. Para obtener nuestro dataset dar click https://www.kaggle.com/datasets/gonzajl/neumona-x-rays-dataset[aquí].
 
-Nuestro modelo se trata de uno binario, es decir, dos clases. En este caso, se trata de clasificar imágenes de los pulmones, generadas por radiografias, para decidir si tienen neumonía o no.
+Nuestro modelo se trata de uno binario, es decir, dos clases. En este caso, se trata de clasificar imágenes de los pulmones, generadas por radiografías, para decidir si tienen neumonía o no.
 
 La implementación del modelo en este caso es una aplicación del modelo pre-entrenado llamado InceptionReNetV2. Este modelo es uno de los más pesados computacionalmente, por lo que el entrenamiento del mismo se realizó con una cantidad de imágenes menor a otros modelos y en este dominio, logramos dar 10 vueltas de entrenamiento.
 

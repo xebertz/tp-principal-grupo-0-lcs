@@ -71,7 +71,7 @@ Epoch 10/10
 263/263 [==============================] - 53s 203ms/step - loss: 0.0343 - categorical_accuracy: 0.9855 - val_loss: 0.0800 - val_categorical_accuracy: 0.9838
 ----
 
-Si evaluamos las metricas, podemos observar que el nivel de pérdida en el entrenamiento es extremadamente bajo, pero difiere con respecto al nivel de pérdida de las pruebas. Esto genera incertidumbre en cuanto a qué resultado es más preciso. Por otra parte, los niveles de precisión son elevados tanto en el entrenamiento como en las pruebas, y su valor es muy similar. Esto quiere decir que el aprendizaje es consistente.
+Si evaluamos las métricas, podemos observar que el nivel de pérdida en el entrenamiento es extremadamente bajo, pero difiere con respecto al nivel de pérdida de las pruebas. Esto genera incertidumbre en cuanto a qué resultado es más preciso. Por otra parte, los niveles de precisión son elevados tanto en el entrenamiento como en las pruebas, y su valor es muy similar. Esto quiere decir que el aprendizaje es consistente.
 
 Los gráficos de estos resultados son los siguientes:
 
@@ -119,7 +119,7 @@ Epoch 10/10
 263/263 [==============================] - 55s 208ms/step - loss: 0.0314 - categorical_accuracy: 0.9882 - val_loss: 0.1405 - val_categorical_accuracy: 0.9719
 ----
 
-Nuevamente, el nivel de error en las pruebas difiere con el del entrenamiento, pero a escala mayor. El niver de precisión de las pruebas es levemente inferior al anterior.
+Nuevamente, el nivel de error en las pruebas difiere con el del entrenamiento, pero a escala mayor. El nivel de precisión de las pruebas es levemente inferior al anterior.
 
 Los gráficos de estos resultados son los siguientes:
 
