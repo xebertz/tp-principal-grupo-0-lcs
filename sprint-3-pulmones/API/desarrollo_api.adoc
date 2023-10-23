@@ -73,7 +73,7 @@ class Predict(Resource):
         fiebre = args['fiebre']
         dificultad_respiratoria = args['dificultad_respiratoria']
         if image.filename.lower().endswith(('.png', '.jpg', '.jpeg')):
-            image.save("routes/image.png")
+            image.save("images/image.png")
             response_data = {}
             class_probabilities = prediction_pneumonia()
 
@@ -91,9 +91,9 @@ Tras obtener la imagen, se tiene que procesar para que corresponda con las utili
 ----
 def prediction_pneumonia():
       #Carga el modelo.
-    model = tensorflow.keras.models.load_model("routes/neumonia-resnet.h5")
+    model = tensorflow.keras.models.load_model("models_ia/neumonia-resnet.h5")
 # Carga la imagen en formato RGB
-    img = Image.open("routes/image.png").convert("RGB")
+    img = Image.open("images/image.png").convert("RGB")
     img = img.resize((224, 224))  # Asegúrate de que la imagen tenga el tamaño adecuado
     # Convierte la imagen en un arreglo NumPy si es necesario
     img_array = np.array(img)
@@ -139,6 +139,10 @@ import os
 if __name__ == '__main__':
     app.run(debug= False, port=os.getenv("PORT", default=8080))
 ----
+
+== Problemas encontrados
+
+1. Al momento de desplegar la API en Google Cloud, la carpeta _images_ no la reconocia porque estaba vacía. Para solucionarlo se le agregó un archivo _placeholder.txt_ para que reconozca la carpeta, de esta manera al momento de guardar la imagen que recibe del POST lo almacena en la carpeta _images_.  
 
 == Bibliografia
 
