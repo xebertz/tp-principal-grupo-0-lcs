@@ -12,9 +12,7 @@ v1, {docdate}
 
 == Introducción
 
-== Desarrollo
-
-En el ámbito de las bases de datos, nos encontramos con una diversidad de tipos y categorizaciones que requieren nuestro análisis.
+En el ámbito de las bases de datos, se distinguen dos categorías principales: las bases de datos relacionales (SQL) y las bases de datos no relacionales (NoSQL). Las primeras se caracterizan por su estructura rígida y son ideales para entornos empresariales que requieren organización y relaciones precisas. Por otro lado, las bases de datos NoSQL destacan por su flexibilidad, velocidad y escalabilidad, adaptándose a diversas aplicaciones. A lo largo de este artículo, exploraremos estos dos tipos de bases de datos y sus usos en diferentes contextos.
 
 === Bases de datos relacionales
 
@@ -63,4 +61,3 @@ Las bases de datos desempeñan un papel fundamental en la gestión de informaci�
 - Neo4j: Esta base de datos de grafos es valiosa para modelar conexiones complejas y relaciones basadas en gráficos. Es ideal para aplicaciones que dependen de conexiones de datos efectivas, como redes sociales, recomendaciones personalizadas y análisis de redes.
 
 - Bases de datos modernas como Fauna, Firebase, Supabase y Hasura: Estas bases de datos simplifican el desarrollo de aplicaciones web y móviles. Ofrecen soluciones sin servidor y herramientas que facilitan la creación y gestión en la nube, lo que las hace ideales para proyectos que buscan una rápida implementación y escalabilidad sin preocuparse por la administración de la infraestructura.
-
