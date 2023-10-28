@@ -74,7 +74,7 @@ Existen dos funciones (y posiblemente tres) que almacenan en su CSV correspondie
 
 Lee el archivo CSV correspondiente al modelo y añade los datos en las columnas que están vacías.
 
-.append_predict_wini
+.append_feedback_wini
 [source,python]
 ----
 def append_feedback_wini(id, pneumonia, no_pneumonia):
