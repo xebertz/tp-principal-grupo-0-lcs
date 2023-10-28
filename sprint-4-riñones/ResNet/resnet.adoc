@@ -1,0 +1,122 @@
+= Modelo ResNet: Entrenamiento y pruebas
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== Modelo
+
+_ResNet_, que es la abreviatura de "Redes Residuales" (en inglés, "Residual Networks"), es un modelo preentrenado que ha demostrado ser muy efectivo en tareas de clasificación de imágenes, detección de objetos, segmentación semántica y otras tareas relacionadas con el procesamiento de imágenes. Ha establecido récords en varios conjuntos de datos de referencia y se ha convertido en una base importante para muchas aplicaciones de visión por computadora.
+
+Utilizamos la variante _ResNet50V2_ de dicho modelo preentrenado. Para incorporarlo en nuestra aplicación, importamos el modelo y le agregamos una capa de entrada (input layer) diseñada para adaptarse a nuestras imágenes, una capa de pooling y una capa de salida. Para aprovechar la técnica de _transfer learning_, hemos congelado el modelo, lo que significa que hemos mantenido los pesos que adquirió durante su entrenamiento previo con el conjunto de datos _ImageNet_.
+
+== Entrenamiento
+
+Realizamos los entrenamientos utilizando nuestro https://www.kaggle.com/datasets/gonzajl/riones-cyst-stone-tumor-normal-dataset[dataset] diseñado para la detección de... Este conjunto de datos consta de un total de 11,498 imágenes, de las cuales 5,249 son radiografías de pacientes diagnosticados con neumonía y las restantes 5,249 corresponden a pacientes que no presentan la enfermedad.
+
+El entrenamiento se realizó utilizando el siguiente modelo:
+
+[source, python]
+----
+base_model = tf.keras.applications.ResNet50V2(
+    include_top=False,
+    weights="imagenet",
+    input_shape=(224, 224, 3),
+)
+
+base_model.trainable = False
+
+num_classes = 4
+x = layers.GlobalAveragePooling2D()(base_model.output)
+output = layers.Dense(num_classes, activation="softmax")(x)
+model = Model(inputs=base_model.input, outputs=output)
+----
+
+Luego, el modelo se compiló de la siguiente manera:
+
+[source, python]
+----
+model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["categorical_accuracy"])
+----
+
+=== Entrenamiento de 10 épocas
+
+Se utilizó el 80% de las imágenes para el entrenamiento del modelo y el 20% restante para las pruebas, lo que se traduce en 9404 imágenes de entrenamiento y 2352 imágenes de prueba. Durante las diez épocas de entrenamiento, los resultados fueron los siguientes:
+
+[source, console]
+----
+Epoch 1/10
+2023-10-28 16:35:58.405225: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 5662261248 exceeds 10% of free system memory.
+294/294 [==============================] - 289s 975ms/step - loss: 0.6310 - categorical_accuracy: 0.7516 - val_loss: 0.4226 - val_categorical_accuracy: 0.8376
+Epoch 2/10
+294/294 [==============================] - 285s 970ms/step - loss: 0.3377 - categorical_accuracy: 0.8806 - val_loss: 0.3133 - val_categorical_accuracy: 0.8882
+Epoch 3/10
+294/294 [==============================] - 281s 955ms/step - loss: 0.2588 - categorical_accuracy: 0.9111 - val_loss: 0.2644 - val_categorical_accuracy: 0.9090
+Epoch 4/10
+294/294 [==============================] - 281s 958ms/step - loss: 0.2143 - categorical_accuracy: 0.9312 - val_loss: 0.2414 - val_categorical_accuracy: 0.9205
+Epoch 5/10
+294/294 [==============================] - 281s 957ms/step - loss: 0.1870 - categorical_accuracy: 0.9395 - val_loss: 0.2232 - val_categorical_accuracy: 0.9269
+Epoch 6/10
+294/294 [==============================] - 282s 961ms/step - loss: 0.1672 - categorical_accuracy: 0.9453 - val_loss: 0.1997 - val_categorical_accuracy: 0.9294
+Epoch 7/10
+294/294 [==============================] - 281s 956ms/step - loss: 0.1461 - categorical_accuracy: 0.9544 - val_loss: 0.1851 - val_categorical_accuracy: 0.9328
+Epoch 8/10
+294/294 [==============================] - 282s 960ms/step - loss: 0.1302 - categorical_accuracy: 0.9623 - val_loss: 0.1693 - val_categorical_accuracy: 0.9401
+Epoch 9/10
+294/294 [==============================] - 281s 958ms/step - loss: 0.1189 - categorical_accuracy: 0.9638 - val_loss: 0.1584 - val_categorical_accuracy: 0.9460
+Epoch 10/10
+294/294 [==============================] - 287s 977ms/step - loss: 0.1088 - categorical_accuracy: 0.9686 - val_loss: 0.1503 - val_categorical_accuracy: 0.9503
+----
+
+Es relevante señalar que la advertencia que se muestra al principio indica que no es factible entrenar el modelo con un conjunto de datos más extenso debido a limitaciones de memoria del sistema, lo que impide considerar la opción de ampliar el conjunto de datos para mejorar la predicción.
+
+Con los datos obtenidos del entrenamiento, es posible generar gráficos que permitan una visualización más clara de la evolución del modelo a lo largo de su entrenamiento.
+
+image::imgs/graficos-resultados-1.png[]
+
+Como se puede apreciar, se logró una precisión del 96% en el conjunto de entrenamiento y una precisión del 95% en el conjunto de pruebas.
+
+Posteriormente, se procedió a evaluar el modelo utilizando las 2352 imágenes del conjunto de pruebas, y se registraron los siguientes resultados:
+
+[source, console]
+----
+74/74 [==============================] - 57s 758ms/step
+Cantidad de predicciones: 2352
+Etiquetas:   [C,  S,  T,  N]
+Total:       [555, 641, 598, 558]
+Correctas:   [549, 573, 594, 519]
+Incorrectas: [6, 68, 4, 39]
+----
+
+Estos resultados muestran el desempeño del modelo en la clasificación de las imágenes de prueba, con un desglose de predicciones correctas e incorrectas en las categorías "cyst", "stone", "tumor" y "normal".
+
+=== Entrenamiento de 20 épocas
+
+De manera similar al entrenamiento anterior, se empleó el 80% de las imágenes para entrenar el modelo, reservando el 20% restante para las pruebas. Durante las veinte épocas de entrenamiento, se obtuvieron los siguientes resultados:
+
+[source, console]
+----
+
+----
+
+Para visualizar estos resultados, se generaron los siguientes gráficos:
+
+image::imgs/graficos-resultados-2.png[]
+
+Los resultados reflejan una impresionante precisión del ... en el conjunto de entrenamiento y un sólido ... en el conjunto de pruebas, además de una pérdida excepcionalmente baja.
+
+Al evaluar el modelo con las ... imágenes del conjunto de pruebas, se obtuvieron los siguientes resultados:
+
+[source, console]
+----
+
+----
+
+== Conclusión
+
