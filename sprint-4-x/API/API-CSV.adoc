@@ -1,0 +1,25 @@
+= API-CSV : Implementación de CSV con nuevos datos
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== CSV
+
+Un archivo CSV (Comma-Separated Values) es un formato de archivo utilizado para almacenar datos tabulares en forma de texto plano. En un archivo CSV, los datos se organizan en filas y columnas, y cada fila representa un registro o una entrada de datos, mientras que las columnas representan campos o atributos. Ej:
+
+---
+.Ejemplo CSV
+[disclaimer]
+----
+id,nombre,apellido
+1,carlos,menem
+2,ricardo,fort
+3,leandro,franco
+----
