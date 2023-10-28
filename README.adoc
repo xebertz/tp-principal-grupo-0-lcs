@@ -33,11 +33,11 @@ Debido a la naturaleza divergente de las tareas establecidas como objetivo, divi
 [cols="3*", options="header"]
 |===
 |Encargado         |Tareas semana 1 |Tareas semana 2
-|Villalba, Gastón  |Entrevistar experto, gestión|Corregir documentación previa, entrevista con neumonóloga pediátrica, gestión
-|Ebertz, Ximena    |Búsqueda de datasets, entrevistar experto, búsqueda de información del problema, gestión|Creación del dataset, preparación de entorno de trabajo extra, CNN Manual, Xception, Transformada de Hough, gestión
+|Villalba, Gastón  |Entrevistar neurólogo, gestión|Corregir documentación previa, entrevista con neumonóloga pediátrica, gestión
+|Ebertz, Ximena    |Búsqueda de datasets, entrevistar neurólogo, búsqueda de información del problema, gestión|Creación del dataset, preparación de entorno de trabajo extra, CNN Manual, Xception, Transformada de Hough, gestión
 |López, Gonzalo    |Búsqueda de datasets, búsqueda de información del problema|Creación del dataset, preparación de entorno de trabajo extra, EfficientNetV2, ResNet50V2, investigación sobre bases de datos
 |Franco, Leandro   |Búsqueda de datasets, búsqueda de información del problema|Refinamiento API MDTC, preparación de entorno de trabajo extra, deploy de API MDEP, refinamiento de API MDEP
-|Venditto, Pedro   |Búsqueda de datasets, entrevistar experto, búsqueda de información del problema|Refinamiento API MDTC, preparación de entorno de trabajo extra, entrevista con neumonóloga pediátrica
+|Venditto, Pedro   |Búsqueda de datasets, entrevistar neurólogo, búsqueda de información del problema|Deploy de API MDEP, refinamiento API MDTC, preparación de entorno de trabajo extra, entrevista con neumonóloga pediátrica
 |===
 
 Esta división se realizó teniendo en cuenta distintos *riesgos* y *cambios* a los que nos vimos expuestos.
@@ -86,19 +86,19 @@ Esta segunda opción la que utilizamos en modelos multiclase, ya que la cantidad
 
 == Modelos probados
 
-* *ResNet50V2:* 
+* *ResNet50V2:* Este modelo alcanzó un porcentaje de precisión de 98% en las pruebas, para 2100 imágenes.
 
-* *SVM:* 
+* *SVM:* Este modelo alcanzó un porcentaje de precisión superior al 97% en las pruebas, 2100 para  imágenes.
 
-* *Xception:* 
+* *Xception:* Este modelo alcanzó un porcentaje de precisión de 96% en las pruebas, para 3150 imágenes.
 
-* *CNN Manual:* 
+* *CNN Manual:* Este modelo alcanzó un porcentaje de precisión superior al 97% en las pruebas, para 2100 imágenes.
 
-* *Inception ResNetV2:* 
+* *Inception ResNetV2:* Este modelo alcanzó un porcentaje de precisión de 94% en las pruebas, para 640 imágenes.
 
 == Modelos descartados
 
-Debido a las dificultades encontradas en el sprint anterior, decidimos que el modelo *Mask R CNN* ya no será tomado en cuenta para desarrollos futuros. El modelo *VGG16* fue descartado debido a su lentitud en el entrenamiento. Como consecuencia de la disminución de horas de trabajo en el entorno y debido a que ya teníamos modelos funcionales que realizaban muy buenas predicciones, consideramos que no era necesario entrenarlo, ya que se trata de un modelo lento y, en nuestra experiencia, no alcanza niveles de precisión muy altos. La *Transformada de Hough* fue descartada ya que, en este contexto, no necesitamos detectar circunferencias en las imágenes.
+Debido a las dificultades encontradas en el sprint anterior, decidimos que los modelos *VGG19* y *Mask R CNN* ya no serán tomados en cuenta para desarrollos futuros. El modelo *VGG16* fue descartado debido a su lentitud en el entrenamiento. Como consecuencia de la disminución de horas de trabajo en el entorno y debido a que ya teníamos modelos funcionales que realizaban muy buenas predicciones, consideramos que no era necesario entrenarlo, ya que se trata de un modelo lento y, en nuestra experiencia, no alcanza niveles de precisión muy altos. La *Transformada de Hough* fue descartada ya que, en este contexto, no necesitamos detectar circunferencias en las imágenes.
 
 == Modelo seleccionado
 
@@ -107,10 +107,17 @@ Nuevamente, entre las opciones a elegir para el modelo final estuvieron *ResNet5
 1. Es un modelo que no utilizamos previamente
 2. Los errores que comete son parejos en las clases. CNN Manual comete más errores en las imágenes de pacientes sin neumonía
 
+== Entrevistas
+
+Realizamos dos entrevistas. La primera fue con el doctor Kosac, neurólogo. Fue llevada a cabo en su consultorio en Recoleta, el 11 de octubre de 2023. El doctor definió distintos aspectos a tener en cuenta para la detección de tumores cerebrales, previo a la resonancia magnética.
+La segunda entrevista se realizó a la doctora Tapia, neumonóloga especialista en niños. Fue llevada a cabo de forma virtual, el 21 de octubre de 2023. La doctora explicó los distintos tipos de neumonía y sus síntomas.
+
 == Deploy
 
-=== MDTC
-
-=== MDEP
+Tras haber tenido problemas con el PaaS *RailWay*, se decidió cambiar la plataforma de despliegue a *Google Cloud*. Esta plataforma nos ofrece más recursos, pero entra en un estado de hibernación tras su desuso. Para solucionar el problema de la hibernación se utilizó la página *UptimeRobot*, que nos permite realizar un _ping_ al https://averiapi-4vtuhnxfba-uc.a.run.app/[dominio] de la API. El _ping_ al dominio nos permite mantener "despierta" la API, y que al momento de consumirla no se desperdicie el tiempo en esperar que la API salga de su estado de hibernación.
 
 == Bases de datos
+
+Iniciamos una investigación de diferentes tipos de bases de datos para determinar la mejor base de datos a utilizar en el próximo sprint.
+
+También, nos contactamos con el equipo de datos para definir detalles de nuestras dependencias, y compartir documentación para facilitar el proceso de elección y desarrollo de la base de datos.

@@ -17,6 +17,8 @@ Una API es un conjunto de definiciones y protocolos que se utilizan para diseña
  
 Una API utiliza *endpoints*, que son puntos de acceso o URLs específicas que se utilizan para realizar operaciones o solicitudes a través de la API. Cada endpoint está diseñado para llevar a cabo una función específica y proporciona una forma estructurada y estandarizada de interactuar con la API.
 
+La API esta alojada en un repositorio de GitHub: https://github.com/Leandr0Fr/averia[API]
+
 === Necesidad
 Tras desarrollar el modelo de Machine Learning sobre clasificación de imágenes con neumonía o no, hemos contemplado la necesidad de realizar una API para el uso de esta misma. En este contexto, hemos tenido el privilegio de desarrollar la API que facilita el acceso y la utilización del modelo.
 
@@ -73,7 +75,7 @@ class Predict(Resource):
         fiebre = args['fiebre']
         dificultad_respiratoria = args['dificultad_respiratoria']
         if image.filename.lower().endswith(('.png', '.jpg', '.jpeg')):
-            image.save("routes/image.png")
+            image.save("images/image.png")
             response_data = {}
             class_probabilities = prediction_pneumonia()
 
@@ -91,9 +93,9 @@ Tras obtener la imagen, se tiene que procesar para que corresponda con las utili
 ----
 def prediction_pneumonia():
       #Carga el modelo.
-    model = tensorflow.keras.models.load_model("routes/neumonia-resnet.h5")
+    model = tensorflow.keras.models.load_model("models_ia/neumonia-resnet.h5")
 # Carga la imagen en formato RGB
-    img = Image.open("routes/image.png").convert("RGB")
+    img = Image.open("images/image.png").convert("RGB")
     img = img.resize((224, 224))  # Asegúrate de que la imagen tenga el tamaño adecuado
     # Convierte la imagen en un arreglo NumPy si es necesario
     img_array = np.array(img)
@@ -127,7 +129,10 @@ Los casos que se toman en cuenta son los siguientes:
 7. Obtener el Json con el % más alto en la variable _No_pneumonia_ del endpoint predict/wini tras enviar una imagen de una radiografía de un pulmón sin neumonía.
 
 == Desplegar
-Ya desarrollado la aplicación y ser probada localmente, procedimos a desplegar la API en la nube. 
+Ya desarrollado la aplicación y ser probada localmente, procedimos a desplegar la API en la nube.
+
+Se utilizó el PaaS de Google Cloud para realizar el deploy. Porque nos ofrecía más recursos, que los necesitabamos porque los modelos de IA lo precisaban para su correcto funcionamiento.
+
 Se utilizó el servidor HTTP gunicorn y el puerto que provee el PaaS por defecto, y en caso que no tenga uno por defecto se utiliza el 8080.
 
 [source,python]
@@ -139,6 +144,10 @@ import os
 if __name__ == '__main__':
     app.run(debug= False, port=os.getenv("PORT", default=8080))
 ----
+
+== Problemas encontrados
+
+1. Al momento de desplegar la API en Google Cloud, la carpeta _images_ no la reconocia porque estaba vacía. Para solucionarlo se le agregó un archivo _placeholder.txt_ para que reconozca la carpeta, de esta manera al momento de guardar la imagen que recibe del POST lo almacena en la carpeta _images_.  
 
 == Bibliografia
 
