@@ -67,3 +67,21 @@ def append_predict_wini(id, imagen, puntada_lateral, fiebre, dificultad_respirat
 ----
 
 De alguna forma, al momento de pasarle un entero a la función, lo transforma en float. Entonces, con _`float_format = '%.0f'_, lo convertimos a entero para mejor entendimiento.
+
+=== Agregar datos del feedback
+
+Existen dos funciones (y posiblemente tres) que almacenan en su CSV correspondiente los datos del Feedback. Se buscan los espacios en blanco en la fila que corresponde al ID pasado como parámetro y se reemplazan por los datos ingresados en el endpoint de feedback.
+
+Lee el archivo CSV correspondiente al modelo y añade los datos en las columnas que están vacías.
+
+.append_predict_wini
+[source,python]
+----
+def append_feedback_wini(id, pneumonia, no_pneumonia):
+    df = pd.read_csv("csv/wini.csv")
+
+    df.loc[df['id'] == id, 'pneumonia'] = pneumonia
+    df.loc[df['id'] == id, 'no_pneumonia'] = no_pneumonia
+
+    df.to_csv("csv/wini.csv", index=False, float_format='%.0f')
+----
