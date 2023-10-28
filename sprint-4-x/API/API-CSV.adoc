@@ -28,3 +28,16 @@ id,nombre,apellido
 
 Se decidió utilizar CSV como medio para almacenar los datos ingresados en los endpoints de predict y feedback porque los datos que planeamos almacenar no son de gran volumen. El CSV nos permite, en caso de ser necesario, migrar los datos a una base de datos de una manera sencilla.
 
+=== ID existente
+
+Existe una función booleana que busca si el ID pasado como parámetro existe o no. Esta fue creada porque necesitábamos saber si existía una fila para evitar sobrescribir datos anteriores, lo que nos permite no borrar datos por error.
+
+.exists_id
+[source,python]
+----
+def exists_id(csv, id):
+    df = pd.read_csv(csv)
+    list_id = df['id'].tolist()
+    return id in list_id
+
+----
