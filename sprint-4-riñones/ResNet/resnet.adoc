@@ -18,7 +18,7 @@ Utilizamos la variante _ResNet50V2_ de dicho modelo preentrenado. Para incorpora
 
 == Entrenamiento
 
-Realizamos los entrenamientos utilizando nuestro https://www.kaggle.com/datasets/gonzajl/riones-cyst-stone-tumor-normal-dataset[dataset] diseñado para la detección de... Este conjunto de datos consta de un total de 11,498 imágenes, de las cuales 5,249 son radiografías de pacientes diagnosticados con neumonía y las restantes 5,249 corresponden a pacientes que no presentan la enfermedad.
+Llevamos a cabo los entrenamientos utilizando nuestro https://www.kaggle.com/datasets/gonzajl/riones-cyst-stone-tumor-normal-dataset[dataset] disponible en Kaggle, el cual hemos diseñado para la clasificación de imágenes de riñones. Este dataset incluye un total de 11756 imágenes, distribuidas equitativamente en cuatro clases: "cyst", "stone", "tumor" y "normal", con 2939 imágenes en cada categoría.
 
 El entrenamiento se realizó utilizando el siguiente modelo:
 
@@ -165,3 +165,4 @@ Incorrectas: [9, 62, 0, 43]
 
 == Conclusión
 
+El modelo _ResNet_ ha demostrado resultados sumamente prometedores, como era de esperar. Es indudablemente una opción destacada para la selección del modelo definitivo destinado a la clasificación de imágenes de riñones.
