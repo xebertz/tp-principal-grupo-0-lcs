@@ -102,20 +102,65 @@ De manera similar al entrenamiento anterior, se empleó el 80% de las imágenes 
 
 [source, console]
 ----
-
+Epoch 1/20
+2023-10-28 17:50:32.081035: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 5662261248 exceeds 10% of free system memory.
+294/294 [==============================] - 281s 948ms/step - loss: 0.6695 - categorical_accuracy: 0.7399 - val_loss: 0.4412 - val_categorical_accuracy: 0.8346
+Epoch 2/20
+294/294 [==============================] - 275s 937ms/step - loss: 0.3469 - categorical_accuracy: 0.8778 - val_loss: 0.3071 - val_categorical_accuracy: 0.9026
+Epoch 3/20
+294/294 [==============================] - 276s 939ms/step - loss: 0.2678 - categorical_accuracy: 0.9071 - val_loss: 0.2844 - val_categorical_accuracy: 0.9026
+Epoch 4/20
+294/294 [==============================] - 277s 941ms/step - loss: 0.2222 - categorical_accuracy: 0.9240 - val_loss: 0.2306 - val_categorical_accuracy: 0.9247
+Epoch 5/20
+294/294 [==============================] - 278s 946ms/step - loss: 0.1924 - categorical_accuracy: 0.9370 - val_loss: 0.2092 - val_categorical_accuracy: 0.9290
+Epoch 6/20
+294/294 [==============================] - 276s 940ms/step - loss: 0.1653 - categorical_accuracy: 0.9489 - val_loss: 0.2021 - val_categorical_accuracy: 0.9328
+Epoch 7/20
+294/294 [==============================] - 276s 940ms/step - loss: 0.1491 - categorical_accuracy: 0.9537 - val_loss: 0.2310 - val_categorical_accuracy: 0.9218
+Epoch 8/20
+294/294 [==============================] - 277s 942ms/step - loss: 0.1340 - categorical_accuracy: 0.9580 - val_loss: 0.1893 - val_categorical_accuracy: 0.9371
+Epoch 9/20
+294/294 [==============================] - 275s 936ms/step - loss: 0.1236 - categorical_accuracy: 0.9627 - val_loss: 0.1600 - val_categorical_accuracy: 0.9435
+Epoch 10/20
+294/294 [==============================] - 275s 937ms/step - loss: 0.1126 - categorical_accuracy: 0.9655 - val_loss: 0.1655 - val_categorical_accuracy: 0.9366
+Epoch 11/20
+294/294 [==============================] - 272s 926ms/step - loss: 0.1058 - categorical_accuracy: 0.9694 - val_loss: 0.1527 - val_categorical_accuracy: 0.9405
+Epoch 12/20
+294/294 [==============================] - 273s 929ms/step - loss: 0.1002 - categorical_accuracy: 0.9707 - val_loss: 0.1452 - val_categorical_accuracy: 0.9464
+Epoch 13/20
+294/294 [==============================] - 272s 925ms/step - loss: 0.0890 - categorical_accuracy: 0.9742 - val_loss: 0.1469 - val_categorical_accuracy: 0.9473
+Epoch 14/20
+294/294 [==============================] - 276s 940ms/step - loss: 0.0843 - categorical_accuracy: 0.9777 - val_loss: 0.1407 - val_categorical_accuracy: 0.9498
+Epoch 15/20
+294/294 [==============================] - 277s 943ms/step - loss: 0.0772 - categorical_accuracy: 0.9810 - val_loss: 0.1443 - val_categorical_accuracy: 0.9494
+Epoch 16/20
+294/294 [==============================] - 275s 936ms/step - loss: 0.0734 - categorical_accuracy: 0.9801 - val_loss: 0.1398 - val_categorical_accuracy: 0.9473
+Epoch 17/20
+294/294 [==============================] - 277s 942ms/step - loss: 0.0715 - categorical_accuracy: 0.9785 - val_loss: 0.1280 - val_categorical_accuracy: 0.9498
+Epoch 18/20
+294/294 [==============================] - 277s 944ms/step - loss: 0.0692 - categorical_accuracy: 0.9806 - val_loss: 0.1363 - val_categorical_accuracy: 0.9460
+Epoch 19/20
+294/294 [==============================] - 275s 936ms/step - loss: 0.0630 - categorical_accuracy: 0.9828 - val_loss: 0.1311 - val_categorical_accuracy: 0.9507
+Epoch 20/20
+294/294 [==============================] - 276s 938ms/step - loss: 0.0619 - categorical_accuracy: 0.9827 - val_loss: 0.1303 - val_categorical_accuracy: 0.9515
 ----
 
 Para visualizar estos resultados, se generaron los siguientes gráficos:
 
 image::imgs/graficos-resultados-2.png[]
 
-Los resultados reflejan una impresionante precisión del ... en el conjunto de entrenamiento y un sólido ... en el conjunto de pruebas, además de una pérdida excepcionalmente baja.
+Los resultados reflejan una impresionante precisión del 98% en el conjunto de entrenamiento y un sólido 95% en el conjunto de pruebas, además de una pérdida excepcionalmente baja.
 
-Al evaluar el modelo con las ... imágenes del conjunto de pruebas, se obtuvieron los siguientes resultados:
+Al evaluar el modelo con las 2352 imágenes del conjunto de pruebas, se obtuvieron los siguientes resultados:
 
 [source, console]
 ----
-
+74/74 [==============================] - 55s 738ms/step
+Cantidad de predicciones: 2352
+Etiquetas:   [C,  S,  T,  N]
+Total:       [563, 631, 589, 569]
+Correctas:   [554, 569, 589, 526]
+Incorrectas: [9, 62, 0, 43]
 ----
 
 == Conclusión
