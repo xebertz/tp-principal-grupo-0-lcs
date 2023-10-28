@@ -35,9 +35,35 @@ Existe una función booleana que busca si el ID pasado como parámetro existe o 
 .exists_id
 [source,python]
 ----
+
 def exists_id(csv, id):
     df = pd.read_csv(csv)
     list_id = df['id'].tolist()
     return id in list_id
 
 ----
+
+=== Agregar datos del predict
+
+Existen dos funciones (y posiblemente tres) que almacenan en un su CSV correspondiente los datos del predict. Se deja los espacios en blanco los datos que se le ingresaran durante el feedback.
+
+Lee el archivo CSV correspondiente al modelo y crea una nueva fila con los datos pasados por parámetros.
+
+El parámetro 'imagen' es la ruta donde está almacenada, en el proyecto, la imagen que fue ingresada para predecir. Los demás parámetros son todos valores enteros. Cada valor entero representa un valor booleano, es decir, si es 1 se interpreta como verdadero y si es 0, falso. Esto se hace de esta manera para facilitar el entrenamiento del modelo en caso de realizarse con este CSV.
+
+.append_predict_wini
+[source,python]
+----
+
+def append_predict_wini(id, imagen, puntada_lateral, fiebre, dificultad_respiratoria):
+    df = pd.read_csv("csv/wini.csv")
+    new_row = pd.DataFrame({'id': [id], 'imagen': [imagen], 'puntada_lateral': [puntada_lateral],
+                            'fiebre': [fiebre], 'dificultad_respiratoria': [dificultad_respiratoria],
+                            'pneumonia': [''], 'no_pneumonia': ['']})
+
+    df = pd.concat([df, new_row], ignore_index=True)
+    df.to_csv('csv/wini.csv', index=False, float_format='%.0f')
+
+----
+
+De alguna forma, al momento de pasarle un entero a la función, lo transforma en float. Entonces, con _`float_format = '%.0f'_, lo convertimos a entero para mejor entendimiento.
