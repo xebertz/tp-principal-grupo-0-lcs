@@ -1,0 +1,51 @@
+= Preparación de datos
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== Introducción
+
+== Dependencias
+
+* OpenDatasets (opendatasets)
+* OpenCV (cv2)
+* Matplotlib (matplotlib.pyplot)
+* NumPy (numpy)
+* PIL (Pillow)
+* Pandas (pandas)
+
+== Descripción
+
+=== Descarga de datasets
+
+=== Organización de imágenes
+
+=== Redimensionamiento de imágenes
+
+=== Creación de DataFrame
+
+=== Visualización de gráfico de clases
+
+=== Nivelación de Clases
+
+=== Exportación de datos
+
+=== Eliminación de imágenes no deseadas
+
+En esta parte del código, se eliminan las imágenes que exceden el límite establecido, manteniendo así el número deseado de imágenes en cada clase.
+
+[source, python]
+----
+for archivo in archivos_a_eliminar:
+    os.remove(archivo)
+----
+
+== Conclusión
+
