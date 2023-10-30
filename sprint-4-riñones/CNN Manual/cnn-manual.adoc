@@ -31,11 +31,10 @@ modelo_cnn = tf.keras.models.Sequential([
 ])
 ----
 
-
 == Entrenamiento
 
 Los entrenamientos se llevan a cabo con nuestro https://www.kaggle.com/datasets/gonzajl/riones-cyst-stone-tumor-normal-dataset[dataset] para la detección de enfermedades renales a partir de imágenes de tomografías computarizadas. Este dataset cuenta con 11756 imágenes, balanceado a 2939 imágenes por clase. Las clases son: _cyst_, _stone_, _tumor_ y _normal_.
 
-Se dividió la totalidad de las imágenes en dos conjuntos, uno de entrenamiento y otro de prueba; con una relación de 80-20%.
+Se dividió la totalidad de las imágenes en dos conjuntos, uno de entrenamiento y otro de prueba; con una relación de 80-20%. En total, se utilizaron 9404 imágenes para el entrenamiento, y 2352 imágenes para pruebas.
 
 == Conclusiones
