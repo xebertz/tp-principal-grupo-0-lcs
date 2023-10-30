@@ -105,7 +105,7 @@ Epoch 10/10
 
 Si graficamos estos resultados, vemos que el nivel de error bajó y el de precisión aumentó.
 
-.primer entrenamiento: 10 vueltas
+.segundo entrenamiento: 10 vueltas
 image::imgs/[200, 700, align="center"]
 
 Pero, nuevamente, en los resultados de prueba obtuvimos una tendencia a error en la clase _stone_.
@@ -117,6 +117,29 @@ Etiquetas:   [C, S, T, N]
 Total:       [554, 634, 599, 565]
 Correctas:   [554, 606, 599, 559]
 Incorrectas: [0, 28, 0, 6]
+----
+
+=== Tercer entrenamiento
+
+Para tercer entrenamiento, aumentamos la cantidad de vueltas a 20 y vimos que el modelo no mejoraba.
+
+[source, console]
+----
+294/294 [==============================] - 59s 202ms/step - loss: 0.0098 - categorical_accuracy: 0.9966 - val_loss: 0.0658 - val_categorical_accuracy: 0.9843
+----
+
+.tercer entrenamiento: 20 vueltas
+image::imgs/[200, 700, align="center"]
+
+A pesar de obtener un nivel de precisión del 99%, los errores estaban muy desbalanceados.
+
+[source, console]
+----
+Cantidad de predicciones: 2352
+Etiquetas:   [C, S, T, N]
+Total:       [556, 636, 594, 566]
+Correctas:   [554, 608, 594, 559]
+Incorrectas: [2, 28, 0, 7]
 ----
 
 == Conclusiones
