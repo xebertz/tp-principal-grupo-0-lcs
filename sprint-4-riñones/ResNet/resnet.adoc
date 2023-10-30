@@ -163,6 +163,104 @@ Correctas:   [554, 569, 589, 526]
 Incorrectas: [9, 62, 0, 43]
 ----
 
+=== Tercer entrenamiento
+
+[source, console]
+----
+Epoch 1/10
+2023-10-29 18:21:16.575880: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 5662261248 exceeds 10% of free system memory.
+294/294 [==============================] - 284s 958ms/step - loss: 0.6595 - categorical_accuracy: 0.7430 - val_loss: 0.4276 - val_categorical_accuracy: 0.8406
+Epoch 2/10
+294/294 [==============================] - 277s 942ms/step - loss: 0.3449 - categorical_accuracy: 0.8823 - val_loss: 0.3397 - val_categorical_accuracy: 0.8835
+Epoch 3/10
+294/294 [==============================] - 276s 940ms/step - loss: 0.2629 - categorical_accuracy: 0.9108 - val_loss: 0.2596 - val_categorical_accuracy: 0.9137
+Epoch 4/10
+294/294 [==============================] - 277s 942ms/step - loss: 0.2167 - categorical_accuracy: 0.9303 - val_loss: 0.2262 - val_categorical_accuracy: 0.9243
+Epoch 5/10
+294/294 [==============================] - 280s 952ms/step - loss: 0.1880 - categorical_accuracy: 0.9390 - val_loss: 0.2174 - val_categorical_accuracy: 0.9260
+Epoch 6/10
+294/294 [==============================] - 280s 951ms/step - loss: 0.1670 - categorical_accuracy: 0.9462 - val_loss: 0.2109 - val_categorical_accuracy: 0.9277
+Epoch 7/10
+294/294 [==============================] - 280s 955ms/step - loss: 0.1470 - categorical_accuracy: 0.9554 - val_loss: 0.1935 - val_categorical_accuracy: 0.9294
+Epoch 8/10
+294/294 [==============================] - 280s 952ms/step - loss: 0.1333 - categorical_accuracy: 0.9601 - val_loss: 0.1789 - val_categorical_accuracy: 0.9392
+Epoch 9/10
+294/294 [==============================] - 279s 950ms/step - loss: 0.1226 - categorical_accuracy: 0.9660 - val_loss: 0.1691 - val_categorical_accuracy: 0.9443
+Epoch 10/10
+294/294 [==============================] - 282s 958ms/step - loss: 0.1116 - categorical_accuracy: 0.9661 - val_loss: 0.1597 - val_categorical_accuracy: 0.9384
+----
+
+image::imgs/graficos-resultados-3.png[]
+
+[source, console]
+----
+74/74 [==============================] - 57s 753ms/step
+Cantidad de predicciones: 2352
+Etiquetas:   [C,  S,  T,  N]
+Total:       [559, 623, 590, 580]
+Correctas:   [550, 554, 586, 517]
+Incorrectas: [9, 69, 4, 63]
+----
+
+=== Cuarto entrenamiento
+
+[source, console]
+----
+Epoch 1/20
+2023-10-29 19:28:30.893918: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 5662261248 exceeds 10% of free system memory.
+294/294 [==============================] - 286s 967ms/step - loss: 0.6402 - categorical_accuracy: 0.7483 - val_loss: 0.4306 - val_categorical_accuracy: 0.8414
+Epoch 2/20
+294/294 [==============================] - 282s 959ms/step - loss: 0.3439 - categorical_accuracy: 0.8773 - val_loss: 0.3167 - val_categorical_accuracy: 0.8958
+Epoch 3/20
+294/294 [==============================] - 279s 951ms/step - loss: 0.2611 - categorical_accuracy: 0.9108 - val_loss: 0.2574 - val_categorical_accuracy: 0.9175
+Epoch 4/20
+294/294 [==============================] - 282s 959ms/step - loss: 0.2180 - categorical_accuracy: 0.9263 - val_loss: 0.2270 - val_categorical_accuracy: 0.9162
+Epoch 5/20
+294/294 [==============================] - 282s 961ms/step - loss: 0.1875 - categorical_accuracy: 0.9398 - val_loss: 0.2059 - val_categorical_accuracy: 0.9286
+Epoch 6/20
+294/294 [==============================] - 281s 955ms/step - loss: 0.1629 - categorical_accuracy: 0.9477 - val_loss: 0.2017 - val_categorical_accuracy: 0.9379
+Epoch 7/20
+294/294 [==============================] - 282s 959ms/step - loss: 0.1454 - categorical_accuracy: 0.9554 - val_loss: 0.1815 - val_categorical_accuracy: 0.9401
+Epoch 8/20
+294/294 [==============================] - 279s 950ms/step - loss: 0.1328 - categorical_accuracy: 0.9590 - val_loss: 0.1719 - val_categorical_accuracy: 0.9405
+Epoch 9/20
+294/294 [==============================] - 277s 943ms/step - loss: 0.1233 - categorical_accuracy: 0.9616 - val_loss: 0.1636 - val_categorical_accuracy: 0.9409
+Epoch 10/20
+294/294 [==============================] - 278s 946ms/step - loss: 0.1124 - categorical_accuracy: 0.9669 - val_loss: 0.1706 - val_categorical_accuracy: 0.9328
+Epoch 11/20
+294/294 [==============================] - 281s 958ms/step - loss: 0.1041 - categorical_accuracy: 0.9680 - val_loss: 0.1544 - val_categorical_accuracy: 0.9452
+Epoch 12/20
+294/294 [==============================] - 283s 962ms/step - loss: 0.0943 - categorical_accuracy: 0.9731 - val_loss: 0.1493 - val_categorical_accuracy: 0.9469
+Epoch 13/20
+294/294 [==============================] - 283s 964ms/step - loss: 0.0886 - categorical_accuracy: 0.9751 - val_loss: 0.1609 - val_categorical_accuracy: 0.9456
+Epoch 14/20
+294/294 [==============================] - 280s 954ms/step - loss: 0.0815 - categorical_accuracy: 0.9778 - val_loss: 0.1377 - val_categorical_accuracy: 0.9494
+Epoch 15/20
+294/294 [==============================] - 279s 948ms/step - loss: 0.0790 - categorical_accuracy: 0.9774 - val_loss: 0.1418 - val_categorical_accuracy: 0.9452
+Epoch 16/20
+294/294 [==============================] - 279s 951ms/step - loss: 0.0773 - categorical_accuracy: 0.9783 - val_loss: 0.1308 - val_categorical_accuracy: 0.9503
+Epoch 17/20
+294/294 [==============================] - 281s 957ms/step - loss: 0.0709 - categorical_accuracy: 0.9798 - val_loss: 0.1484 - val_categorical_accuracy: 0.9481
+Epoch 18/20
+294/294 [==============================] - 281s 955ms/step - loss: 0.0642 - categorical_accuracy: 0.9829 - val_loss: 0.1368 - val_categorical_accuracy: 0.9481
+Epoch 19/20
+294/294 [==============================] - 280s 954ms/step - loss: 0.0621 - categorical_accuracy: 0.9830 - val_loss: 0.1567 - val_categorical_accuracy: 0.9494
+Epoch 20/20
+294/294 [==============================] - 282s 960ms/step - loss: 0.0607 - categorical_accuracy: 0.9840 - val_loss: 0.1243 - val_categorical_accuracy: 0.9549
+----
+
+image::imgs/graficos-resultados-4.png[]
+
+[source, console]
+----
+74/74 [==============================] - 56s 751ms/step
+Cantidad de predicciones: 2352
+Etiquetas:   [C,  S,  T,  N]
+Total:       [558, 645, 594, 555]
+Correctas:   [554, 578, 593, 521]
+Incorrectas: [4, 67, 1, 34]
+----
+
 == Conclusión
 
 El modelo _ResNet_ ha demostrado resultados sumamente prometedores, como era de esperar. Es indudablemente una opción destacada para la selección del modelo definitivo destinado a la clasificación de imágenes de riñones.

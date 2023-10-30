@@ -12,40 +12,54 @@ v1, {docdate}
 
 == Introducción
 
-== Dependencias
+El código realiza diversas tareas relacionadas con la preparación de datos para un proyecto de clasificación de imágenes médicas. Aquí se detalla el propósito y funcionamiento de cada sección del código.
 
-* OpenDatasets (opendatasets)
-* OpenCV (cv2)
-* Matplotlib (matplotlib.pyplot)
-* NumPy (numpy)
-* PIL (Pillow)
-* Pandas (pandas)
+== Descarga de datasets
 
-== Descripción
+Se utilizan las bibliotecas `opendatasets` y `os` para descargar múltiples conjuntos de datos desde Kaggle relacionados con imágenes médicas.
 
-=== Descarga de datasets
+== Organización de Directorios
 
-=== Organización de imágenes
+Se crean directorios para organizar las imágenes descargadas en subdirectorios según sus categorías, como "cyst", "stone", "tumor" y "normal".
 
-=== Redimensionamiento de imágenes
+== Movimiento de Imágenes a los Directorios Correspondientes
 
-=== Creación de DataFrame
+Las imágenes descargadas se mueven a los directorios correspondientes de acuerdo a sus categorías utilizando comandos `mv`.
 
-=== Visualización de gráfico de clases
+== Análisis de Cantidad de Imágenes
 
-=== Nivelación de Clases
+Se cuentan la cantidad de imágenes en cada uno de los directorios de categorías y se imprime el número de imágenes en cada categoría.
 
-=== Exportación de datos
+== Creación de un DataFrame
 
-=== Eliminación de imágenes no deseadas
+Se define una función `agregar_filas` para crear filas de datos con etiquetas y se utiliza para agregar filas al DataFrame `df`. Cada fila representa una imagen con etiquetas de categoría.
 
-En esta parte del código, se eliminan las imágenes que exceden el límite establecido, manteniendo así el número deseado de imágenes en cada clase.
+== Visualización de la Distribución de Clases
 
-[source, python]
-----
-for archivo in archivos_a_eliminar:
-    os.remove(archivo)
-----
+Se crea una función `mostrar_grafico_clases` que genera un gráfico de barras para visualizar la distribución de imágenes en cada clase. Esto se hace para verificar el equilibrio de clases.
+
+== Filtrado y Exportación de Datos
+
+Se crea un nuevo DataFrame `dataFrame` que contiene una cantidad igual de imágenes de cada clase. Luego, se aleatoriza el orden de las filas y se exporta el DataFrame a un archivo CSV llamado 'datos.csv'.
+
+Se crea otro DataFrame `df_eliminar` para almacenar las imágenes que no se utilizarán y se eliminan los archivos correspondientes.
+
+Se imprime nuevamente la cantidad de imágenes en cada categoría para verificar que ahora estén equilibradas.
+
+== Refinamiento de Imágenes
+
+Se define una función `refinar_imagenes` que cambia el tamaño de las imágenes en un directorio al tamaño especificado (224x224) y las renombra para incluir información sobre su tipo.
+
+La función `refinar_imagenes` se aplica a cada uno de los directorios de categorías ('cyst', 'stone', 'tumor' y 'normal') para cambiar el tamaño y renombrar las imágenes.
+
+== Creación del DataFrame Final
+
+Se vuelven a agregar filas al DataFrame `df` después de haber refinado las imágenes.
+
+Se exporta el DataFrame `df` nuevamente a un archivo CSV llamado 'datos.csv', que ahora contiene imágenes refinadas y etiquetas.
 
 == Conclusión
+
+Este código está diseñado para preparar un conjunto de datos de imágenes médicas para su uso en la construcción y entrenamiento de modelos de aprendizaje automático de clasificación. Las imágenes se organizan, filtran y refinan para garantizar que sean adecuadas para su uso en tareas de clasificación.
+
 
