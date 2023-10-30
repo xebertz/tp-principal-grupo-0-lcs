@@ -142,4 +142,79 @@ Correctas:   [554, 608, 594, 559]
 Incorrectas: [2, 28, 0, 7]
 ----
 
+Vemos que para la etiqueta _stone_ el nivel de error es de 4.5%.
+
+=== Cuarto entrenamiento
+
+Con la finalidad de mejorar el modelo lo más posible, modificamos la arquitectura del modelo. 
+
+.nueva arquitectura
+[source, python]
+----
+modelo_cnn = tf.keras.models.Sequential([
+    tf.keras.layers.Conv2D(16, (3, 3), activation='relu', input_shape=(224, 224, 1)),
+    tf.keras.layers.MaxPooling2D(3, 3),
+    tf.keras.layers.Conv2D(32, (3, 3), activation='relu'),
+    tf.keras.layers.MaxPooling2D(2, 2),
+    tf.keras.layers.Dropout(0.3),
+    tf.keras.layers.Flatten(),
+    tf.keras.layers.Dense(128, activation='relu'),
+    tf.keras.layers.Dropout(0.2),
+    tf.keras.layers.Dense(64, activation='relu'),
+    tf.keras.layers.Dropout(0.3),
+    tf.keras.layers.Dense(4, activation='sigmoid')
+])
+----
+
+Aumentamos la cantidad de neuronas en las capas densas para que la clasificación final sea más precisa. Esto aumenta el tiempo de ejecución, pero puede mejorar la precisión final. Para diez vueltas, los resultados fueron los siguientes:
+
+[source, console]
+----
+Epoch 1/10
+294/294 [==============================] - 65s 219ms/step - loss: 0.6464 - categorical_accuracy: 0.7267 - val_loss: 0.1692 - val_categorical_accuracy: 0.9332
+Epoch 2/10
+294/294 [==============================] - 62s 212ms/step - loss: 0.1597 - categorical_accuracy: 0.9366 - val_loss: 0.0861 - val_categorical_accuracy: 0.9592
+Epoch 3/10
+294/294 [==============================] - 62s 212ms/step - loss: 0.0877 - categorical_accuracy: 0.9676 - val_loss: 0.0561 - val_categorical_accuracy: 0.9775
+Epoch 4/10
+294/294 [==============================] - 62s 212ms/step - loss: 0.0602 - categorical_accuracy: 0.9775 - val_loss: 0.0379 - val_categorical_accuracy: 0.9860
+Epoch 5/10
+294/294 [==============================] - 62s 211ms/step - loss: 0.0481 - categorical_accuracy: 0.9840 - val_loss: 0.0602 - val_categorical_accuracy: 0.9813
+Epoch 6/10
+294/294 [==============================] - 62s 211ms/step - loss: 0.0312 - categorical_accuracy: 0.9900 - val_loss: 0.0396 - val_categorical_accuracy: 0.9881
+Epoch 7/10
+294/294 [==============================] - 63s 214ms/step - loss: 0.0219 - categorical_accuracy: 0.9927 - val_loss: 0.0332 - val_categorical_accuracy: 0.9898
+Epoch 8/10
+294/294 [==============================] - 62s 211ms/step - loss: 0.0248 - categorical_accuracy: 0.9913 - val_loss: 0.0387 - val_categorical_accuracy: 0.9868
+Epoch 9/10
+294/294 [==============================] - 62s 212ms/step - loss: 0.0244 - categorical_accuracy: 0.9919 - val_loss: 0.0284 - val_categorical_accuracy: 0.9906
+Epoch 10/10
+294/294 [==============================] - 62s 212ms/step - loss: 0.0238 - categorical_accuracy: 0.9920 - val_loss: 0.0417 - val_categorical_accuracy: 0.9881
+----
+
+.cuarto entrenamiento: 10 vueltas
+image::imgs/cuarto-entrenamiento.png[200, 700, align="center"]
+
+Si comparamos estos resultados con los de la arquitectura previa, vemos que hay una leve mejoría en cuanto a métricas.
+
+----
+# arquitectura previa
+294/294 [==============================] - 59s 201ms/step - loss: 0.0305 - categorical_accuracy: 0.9909 - val_loss: 0.0437 - val_categorical_accuracy: 0.9855
+
+# arquitectura nueva
+294/294 [==============================] - 62s 212ms/step - loss: 0.0238 - categorical_accuracy: 0.9920 - val_loss: 0.0417 - val_categorical_accuracy: 0.9881
+----
+
+En las pruebas, obtuvimos los siguientes resultados:
+
+----
+Cantidad de predicciones: 2352
+Etiquetas:   [C, S, T, N]
+Total:       [557, 621, 593, 581]
+Correctas:   [554, 605, 593, 572]
+Incorrectas: [3, 16, 0, 9]
+----
+
+Podemos ver un error de 2.6% en la etiqueta _stone_, una notable mejoría en cuanto an 4.5% previo.
+
 == Conclusiones
