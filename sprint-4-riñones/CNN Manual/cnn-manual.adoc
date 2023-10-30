@@ -1,0 +1,41 @@
+= Modelo CNN Manual - Pulmones: Entrenamiento y pruebas
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== Modelo
+
+Utilizamos una arquitectura definida manualmente para el entrenamiento un modelo de detección de enfermedades renales a partir de imágenes de tomografía computarizada. La arquitectura establecida es la siguiente:
+
+[source, python]
+----
+modelo_cnn = tf.keras.models.Sequential([
+    tf.keras.layers.Conv2D(16, (3, 3), activation='relu', input_shape=(224, 224, 1)),
+    tf.keras.layers.MaxPooling2D(3, 3),
+    tf.keras.layers.Conv2D(32, (3, 3), activation='relu'),
+    tf.keras.layers.MaxPooling2D(2, 2),
+    tf.keras.layers.Dropout(0.3),
+    tf.keras.layers.Flatten(),
+    tf.keras.layers.Dense(64, activation='relu'),
+    tf.keras.layers.Dropout(0.2),
+    tf.keras.layers.Dense(32, activation='relu'),
+    tf.keras.layers.Dropout(0.3),
+    tf.keras.layers.Dense(2, activation='sigmoid')
+])
+----
+
+
+== Entrenamiento
+
+Los entrenamientos se llevan a cabo con nuestro https://www.kaggle.com/datasets/gonzajl/riones-cyst-stone-tumor-normal-dataset[dataset] para la detección de enfermedades renales a partir de imágenes de tomografías computarizadas. Este dataset cuenta con 11756 imágenes, balanceado a 2939 imágenes por clase. Las clases son: _cyst_, _stone_, _tumor_ y _normal_.
+
+Se dividió la totalidad de las imágenes en dos conjuntos, uno de entrenamiento y otro de prueba; con una relación de 80-20%.
+
+== Conclusiones
