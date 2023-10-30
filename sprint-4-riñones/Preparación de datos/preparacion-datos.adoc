@@ -5,61 +5,185 @@ v1, {docdate}
 :title-page:
 :toc-title: Secciones
 :numbered:
-:source-highlighter: highlight.js
+:source-highlighter: coderay
 :tabsize: 4
 :nofooter:
 :pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
 
-== Introducción
+== Descripción
 
-El código realiza diversas tareas relacionadas con la preparación de datos para un proyecto de clasificación de imágenes médicas. Aquí se detalla el propósito y funcionamiento de cada sección del código.
+El código en Python que se proporciona realiza varias tareas relacionadas con la gestión de datos de imágenes médicas, específicamente imágenes de riñones clasificadas de diferentes formas: "cist", "stone", "tumor" y "normal". El código descarga conjuntos de datos desde Kaggle, organiza las imágenes en directorios específicos, crea un DataFrame de Pandas con información sobre las imágenes y sus etiquetas, muestra un gráfico de la distribución de clases, guarda un archivo CSV con la información del DataFrame y realiza algunas operaciones adicionales en las imágenes, como cambiar su tamaño y renombrarlas.
+
+== Importación de librerías
+
+El código comienza importando las siguientes bibliotecas:
+
+- os: Para realizar operaciones de sistema de archivos.
+- cv2 (OpenCV): Para el procesamiento de imágenes.
+- matplotlib.pyplot: Para generar gráficos.
+- numpy: Para operaciones matemáticas y numéricas.
+- opendatasets as od: Para descargar conjuntos de datos de Kaggle.
+- PIL (Image): Para manipulación de imágenes.
+- pandas as pd: Para trabajar con DataFrames.
 
 == Descarga de datasets
 
-Se utilizan las bibliotecas `opendatasets` y `os` para descargar múltiples conjuntos de datos desde Kaggle relacionados con imágenes médicas.
+El código descarga cuatro datasets diferentes desde Kaggle utilizando la función `od.download`. Los datasets descargados son:
 
-== Organización de Directorios
+1. https://www.kaggle.com/datasets/nazmul0087/ct-kidney-dataset-normal-cyst-tumor-and-stone[CT KIDNEY DATASET: Normal-Cyst-Tumor and Stone]
+2. https://www.kaggle.com/datasets/mohammedrizwanmalik/kidney-stones-mri-and-ct-scans[Kidney Stones Mri and CT scans]
+3. https://www.kaggle.com/datasets/raagbhutani/kidneystone[KidneyStone]
+4. https://www.kaggle.com/datasets/arjunbasandrai/medical-scan-classification-dataset[Medical Scan Classification Dataset]
 
-Se crean directorios para organizar las imágenes descargadas en subdirectorios según sus categorías, como "cyst", "stone", "tumor" y "normal".
+== Organización de imágenes
 
-== Movimiento de Imágenes a los Directorios Correspondientes
+Luego, el código crea directorios para organizar las imágenes descargadas. Se crean directorios para cada una de las cuatro clases: "cyst," "stone," "tumor," y "normal."
 
-Las imágenes descargadas se mueven a los directorios correspondientes de acuerdo a sus categorías utilizando comandos `mv`.
+Las imágenes se mueven a sus respectivos directorios utilizando comandos `mv` para organizar las imágenes descargadas en los directorios apropiados.
 
-== Análisis de Cantidad de Imágenes
+[source, python]
+----
+!mkdir dataset
+!mkdir dataset/cyst
+!mkdir dataset/stone
+!mkdir dataset/tumor
+!mkdir dataset/normal
 
-Se cuentan la cantidad de imágenes en cada uno de los directorios de categorías y se imprime el número de imágenes en cada categoría.
+!mv ct-kidney-dataset-normal-cyst-tumor-and-stone/CT-KIDNEY-DATASET-Normal-Cyst-Tumor-Stone/CT-KIDNEY-DATASET-Normal-Cyst-Tumor-Stone/Cyst/* dataset/cyst
+!mv ct-kidney-dataset-normal-cyst-tumor-and-stone/CT-KIDNEY-DATASET-Normal-Cyst-Tumor-Stone/CT-KIDNEY-DATASET-Normal-Cyst-Tumor-Stone/Stone/* dataset/stone
+!mv ct-kidney-dataset-normal-cyst-tumor-and-stone/CT-KIDNEY-DATASET-Normal-Cyst-Tumor-Stone/CT-KIDNEY-DATASET-Normal-Cyst-Tumor-Stone/Tumor/* dataset/tumor
+!mv ct-kidney-dataset-normal-cyst-tumor-and-stone/CT-KIDNEY-DATASET-Normal-Cyst-Tumor-Stone/CT-KIDNEY-DATASET-Normal-Cyst-Tumor-Stone/Normal/* dataset/normal
 
-== Creación de un DataFrame
+!mv kidney-stones-mri-and-ct-scans/Dataset/Test/Kidney_stone/* dataset/stone
+!mv kidney-stones-mri-and-ct-scans/Dataset/Test/Normal/* dataset/normal
 
-Se define una función `agregar_filas` para crear filas de datos con etiquetas y se utiliza para agregar filas al DataFrame `df`. Cada fila representa una imagen con etiquetas de categoría.
+!mv kidney-stones-mri-and-ct-scans/Dataset/Train/Kidney_stone/* dataset/stone
+!mv kidney-stones-mri-and-ct-scans/Dataset/Train/Normal/* dataset/normal
 
-== Visualización de la Distribución de Clases
+!mv kidneystone/CT_SCAN/Kidney_stone/* dataset/stone
+!mv kidneystone/CT_SCAN/Normal/* dataset/normal
 
-Se crea una función `mostrar_grafico_clases` que genera un gráfico de barras para visualizar la distribución de imágenes en cada clase. Esto se hace para verificar el equilibrio de clases.
+!mv medical-scan-classification-dataset/'Kidney Cancer'/'Kidney Cancer'/Tumor/* dataset/tumor
+----
 
-== Filtrado y Exportación de Datos
+== Creación de un DataFrame de Pandas
 
-Se crea un nuevo DataFrame `dataFrame` que contiene una cantidad igual de imágenes de cada clase. Luego, se aleatoriza el orden de las filas y se exporta el DataFrame a un archivo CSV llamado 'datos.csv'.
+Se crea un DataFrame de Pandas llamado `df` que almacenará información sobre las imágenes y sus etiquetas. Se define una función `agregar_filas` que toma como entrada una lista de filas, la ruta de la carpeta de imágenes y etiquetas. Esta función procesa las imágenes en la carpeta y agrega una fila al DataFrame para cada imagen con etiquetas que indican si la imagen pertenece a una de las cuatro clases.
 
-Se crea otro DataFrame `df_eliminar` para almacenar las imágenes que no se utilizarán y se eliminan los archivos correspondientes.
+[source, python]
+----
+def agregar_filas(filas, ruta_carpeta, etiquetas):
+    for archivo in os.listdir(ruta_carpeta):
+        if es_imagen(archivo):
+            ruta_imagen = os.path.join(ruta_carpeta, archivo)
+            fila = {"imagen": ruta_imagen, 
+                    "cyst": etiquetas[0], 
+                    "stone": etiquetas[1],
+                    "tumor": etiquetas[2],
+                    "normal": etiquetas[3]
+                   }
+            filas.append(fila)
 
-Se imprime nuevamente la cantidad de imágenes en cada categoría para verificar que ahora estén equilibradas.
+filas = []
+agregar_filas(filas, "dataset/cyst", [1, 0, 0, 0])
+agregar_filas(filas, "dataset/stone", [0, 1, 0, 0])
+agregar_filas(filas, "dataset/tumor", [0, 0, 1, 0])
+agregar_filas(filas, "dataset/normal", [0, 0, 0, 1])
 
-== Refinamiento de Imágenes
+columnas = ["imagen", "cyst", "stone", "tumor", "normal"]
 
-Se define una función `refinar_imagenes` que cambia el tamaño de las imágenes en un directorio al tamaño especificado (224x224) y las renombra para incluir información sobre su tipo.
+# Crea el DataFrame con las filas y nombres de columnas
+df = pd.DataFrame(filas, columns=columnas)
+----
 
-La función `refinar_imagenes` se aplica a cada uno de los directorios de categorías ('cyst', 'stone', 'tumor' y 'normal') para cambiar el tamaño y renombrar las imágenes.
+== Visualización de la distribución de clases
 
-== Creación del DataFrame Final
+El código define una función `mostrar_grafico_clases` que toma el DataFrame `df` y las categorías como entrada. Esta función crea un gráfico de barras que muestra la cantidad de imágenes por clase y etiqueta el número de imágenes en cada barra.
 
-Se vuelven a agregar filas al DataFrame `df` después de haber refinado las imágenes.
+== Filtrado y exportación de datos
 
-Se exporta el DataFrame `df` nuevamente a un archivo CSV llamado 'datos.csv', que ahora contiene imágenes refinadas y etiquetas.
+El código realiza las siguientes operaciones:
+
+- Filtra el DataFrame para obtener un subconjunto de imágenes para cada clase. El número máximo de imágenes por clase está definido en la variable `cant_imagenes`.
+
+[source, python]
+----
+cant_imagenes = 2939
+
+dataFrame = pd.DataFrame()
+
+for i in range(1, 5):
+    dataFrame = pd.concat([dataFrame, df.query(columnas[i] + "== 1")[:cant_imagenes]])
+----
+
+- Mezcla el DataFrame para aleatorizar el orden de las imágenes.
+
+[source, python]
+----
+dataFrame = dataFrame.sample(frac=1)
+----
+
+- Exporta el DataFrame a un archivo CSV llamado "datos.csv" en la carpeta "dataset."
+
+[source, python]
+----
+dataFrame.to_csv("./dataset/datos.csv", index=False)
+----
+
+== Eliminación de imágenes redundantes
+
+El código elimina imágenes redundantes que no se incluyeron en el conjunto de datos filtrado. Se obtienen las rutas de archivo de las imágenes redundantes del DataFrame `df_eliminar` y se eliminan los archivos correspondientes.
+
+[source, python]
+----
+df_eliminar = pd.DataFrame()
+
+for i in range(1, 5):
+    df_eliminar = pd.concat([df_eliminar, df.query(columnas[i] + "== 1")[cant_imagenes:]])
+    
+archivos_a_eliminar = df_eliminar["imagen"]
+
+for archivo in archivos_a_eliminar:
+    os.remove(archivo)
+----
+
+== Refinamiento de imágenes
+
+El código define una función `refinar_imagenes` que cambia el tamaño de las imágenes en las carpetas "cyst," "stone," "tumor," y "normal" a un tamaño de 224x224 píxeles. También renombra las imágenes para seguir un formato específico.
+
+[source, python]
+----
+def refinar_imagenes(ruta_carpeta, tamaño_imagenes, tipo):
+    num_imagen = 0
+    archivos = os.listdir(ruta_carpeta)
+    for archivo in archivos:
+        if es_imagen(archivo):
+
+            # Leemos la imagen
+            ruta_imagen = os.path.join(ruta_carpeta, archivo)
+            imagen = cv2.imread(ruta_imagen)
+            
+            # Le cambiamos el tamaño
+            imagen = cv2.resize(imagen, (tamaño_imagenes, tamaño_imagenes))
+            imagen = imagen.reshape(tamaño_imagenes, tamaño_imagenes, 3)
+
+            # Guardamos la imagen
+            cv2.imwrite(ruta_imagen, imagen)
+            
+            # Renombramos la imagen
+            os.rename(ruta_imagen, ruta_carpeta + "/kidney-" + tipo + "-" + "0" * (4 - len(str(num_imagen))) + str(num_imagen) + archivo[-4:])
+            num_imagen += 1
+
+refinar_imagenes("./dataset/cyst", 224, "cyst")
+refinar_imagenes("./dataset/stone", 224, "stone")
+refinar_imagenes("./dataset/tumor", 224, "tumor")
+refinar_imagenes("./dataset/normal", 224, "normal")
+----
+
+== Actualización del DataFrame y exportación a CSV
+
+Se procede a reejecutar los bloques de código correspondientes a las secciones 5 y 7 con el fin de actualizar el DataFrame y crear una nueva versión del archivo CSV que contenga los nombres de las imágenes actualizados.
 
 == Conclusión
 
-Este código está diseñado para preparar un conjunto de datos de imágenes médicas para su uso en la construcción y entrenamiento de modelos de aprendizaje automático de clasificación. Las imágenes se organizan, filtran y refinan para garantizar que sean adecuadas para su uso en tareas de clasificación.
-
-
+La preparación de estas imágenes se realizó con el fin de que puedan ser subidas a la plataforma Kaggle y compartidas con todos los miembros del equipo. Esto asegura que todos estén trabajando con el mismo conjunto de imágenes, que han sido previamente refinadas y niveladas. Esta estrategia evita que cada miembro tenga que llevar a cabo las mismas tareas de procesamiento de manera individual, lo que optimiza significativamente la eficiencia del equipo. Además, contribuye a eliminar duplicaciones y garantiza un dataset coherente y listo para ser utilizado de manera colaborativa.
