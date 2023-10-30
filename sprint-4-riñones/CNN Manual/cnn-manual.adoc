@@ -1,4 +1,4 @@
-= Modelo CNN Manual - Pulmones: Entrenamiento y pruebas
+= Modelo CNN Manual - Riñones: Entrenamiento y pruebas
 Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
 v1, {docdate}
 :toc:
@@ -36,5 +36,43 @@ modelo_cnn = tf.keras.models.Sequential([
 Los entrenamientos se llevan a cabo con nuestro https://www.kaggle.com/datasets/gonzajl/riones-cyst-stone-tumor-normal-dataset[dataset] para la detección de enfermedades renales a partir de imágenes de tomografías computarizadas. Este dataset cuenta con 11756 imágenes, balanceado a 2939 imágenes por clase. Las clases son: _cyst_, _stone_, _tumor_ y _normal_.
 
 Se dividió la totalidad de las imágenes en dos conjuntos, uno de entrenamiento y otro de prueba; con una relación de 80-20%. En total, se utilizaron 9404 imágenes para el entrenamiento, y 2352 imágenes para pruebas.
+
+=== Primer entrenamiento
+
+El primer entrenamiento se llevó a cabo con cinco _epochs_, para realizar una primer aproximación a la performance del modelo.
+
+Para la última vuelta, se obtuvo un nivel de precisión de 97% y un nivel de error de 0.06%.
+
+[source, console]
+----
+Epoch 1/5
+294/294 [==============================] - 62s 207ms/step - loss: 0.6536 - categorical_accuracy: 0.7306 - val_loss: 0.1927 - val_categorical_accuracy: 0.9218
+Epoch 2/5
+294/294 [==============================] - 59s 202ms/step - loss: 0.2065 - categorical_accuracy: 0.9172 - val_loss: 0.1118 - val_categorical_accuracy: 0.9469
+Epoch 3/5
+294/294 [==============================] - 59s 201ms/step - loss: 0.1369 - categorical_accuracy: 0.9447 - val_loss: 0.0770 - val_categorical_accuracy: 0.9668
+Epoch 4/5
+294/294 [==============================] - 59s 201ms/step - loss: 0.0911 - categorical_accuracy: 0.9640 - val_loss: 0.0499 - val_categorical_accuracy: 0.9826
+Epoch 5/5
+294/294 [==============================] - 59s 201ms/step - loss: 0.0677 - categorical_accuracy: 0.9728 - val_loss: 0.0682 - val_categorical_accuracy: 0.9766
+----
+
+Estos resultados son excelentes en cuanto a métricas, lo que insinúa que el modelo puede ser muy potable para el problema.
+
+.primer entrenamiento: 5 vueltas
+image::imgs/[200, 700, align="center"]
+
+Sin embargo, en las pruebas podemos observar que tiene una tendencia a cometer errores en la detección de piedras en los riñones.
+
+[source, console]
+----
+Cantidad de predicciones: 2352
+Etiquetas:   [C, S, T, N]
+Total:       [553, 651, 599, 549]
+Correctas:   [553, 604, 599, 541]
+Incorrectas: [0, 47, 0, 8]
+----
+
+Para mejorar esto, realizamos un segundo entrenamiento.
 
 == Conclusiones
