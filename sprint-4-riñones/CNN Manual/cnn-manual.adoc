@@ -215,6 +215,6 @@ Correctas:   [554, 605, 593, 572]
 Incorrectas: [3, 16, 0, 9]
 ----
 
-Podemos ver un error de 2.6% en la etiqueta _stone_, una notable mejoría en cuanto an 4.5% previo.
+Podemos ver un error de 2.6% en la etiqueta _stone_, una notable mejoría en cuanto an 4.5% previo. También, se ve que aumentó el nivel de error en las etiquetas _cyst_ y _normal_, pero el aumento fue mínimo.
 
 == Conclusiones
