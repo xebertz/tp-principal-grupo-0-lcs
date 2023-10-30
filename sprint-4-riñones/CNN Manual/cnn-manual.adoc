@@ -244,3 +244,5 @@ Incorrectas: [4, 4, 0, 9]
 ----
 
 == Conclusiones
+
+Este modelo, en su quinta versión, mostró resultados sorprendentes en cuanto a la clasificación de enfermedades de riñón. No cabe duda que al aumentar la cantidad de vueltas de entrenamiento, el modelo mejoraría cada vez más. Por lo pronto es un modelo excelente, con un nivel de precisión de más del 99%, altamente útil para nuestro problema.
