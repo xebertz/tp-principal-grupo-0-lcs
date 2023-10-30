@@ -66,7 +66,7 @@ Las imágenes se mueven a sus respectivos directorios utilizando comandos `mv` p
 !mv medical-scan-classification-dataset/'Kidney Cancer'/'Kidney Cancer'/Tumor/* dataset/tumor
 ----
 
-== Creación de un DataFrame de Pandas
+== Creación de DataFrame
 
 Se crea un DataFrame de Pandas llamado `df` que almacenará información sobre las imágenes y sus etiquetas. Se define una función `agregar_filas` que toma como entrada una lista de filas, la ruta de la carpeta de imágenes y etiquetas. Esta función procesa las imágenes en la carpeta y agrega una fila al DataFrame para cada imagen con etiquetas que indican si la imagen pertenece a una de las cuatro clases.
 
@@ -80,8 +80,7 @@ def agregar_filas(filas, ruta_carpeta, etiquetas):
                     "cyst": etiquetas[0], 
                     "stone": etiquetas[1],
                     "tumor": etiquetas[2],
-                    "normal": etiquetas[3]
-                   }
+                    "normal": etiquetas[3]}
             filas.append(fila)
 
 filas = []
