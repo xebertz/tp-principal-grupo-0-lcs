@@ -217,4 +217,30 @@ Incorrectas: [3, 16, 0, 9]
 
 Podemos ver un error de 2.6% en la etiqueta _stone_, una notable mejoría en cuanto an 4.5% previo. También, se ve que aumentó el nivel de error en las etiquetas _cyst_ y _normal_, pero el aumento fue mínimo.
 
+=== Quinto entrenamiento
+
+Para el último entrenamiento, utilizamos la misma arquitectura que en el entrenamiento anterior, aumentando la cantidad de vueltas a 25. Al finalizar las 25 vueltas, el nivel de error fue de 0.0048, y el de precisión fue de 0.9987.
+
+[source, console]
+----
+Epoch 25/25
+294/294 [==============================] - 62s 212ms/step - loss: 0.0048 - categorical_accuracy: 0.9987 - val_loss: 0.0377 - val_categorical_accuracy: 0.9928
+----
+
+Vemos en los gráficos como el modelo mejoró de forma muy acelerada, llegando casi al 100% de precisión y bajando sus niveles de error a niveles muy cercanos al 0%.
+
+.quinto entrenamiento: 25 vueltas
+image::imgs/cuarto-entrenamiento.png[200, 700, align="center"]
+
+En las pruebas, el modelo mostró resultados extraordinarios: de 2352 imágenes, sólo clasificó erróneamente 17, mostrando un resultado mucho más balanceado que los previos.
+
+[source, console]
+----
+Cantidad de predicciones: 2352
+Etiquetas:   [C, S, T, N]
+Total:       [558, 606, 596, 592]
+Correctas:   [554, 602, 596, 583]
+Incorrectas: [4, 4, 0, 9]
+----
+
 == Conclusiones
