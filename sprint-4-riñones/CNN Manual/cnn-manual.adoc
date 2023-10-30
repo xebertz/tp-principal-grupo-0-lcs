@@ -60,7 +60,7 @@ Epoch 5/5
 Estos resultados son excelentes en cuanto a métricas, lo que insinúa que el modelo puede ser muy potable para el problema.
 
 .primer entrenamiento: 5 vueltas
-image::imgs/[200, 700, align="center"]
+image::imgs/primer-entrenamiento.png[200, 700, align="center"]
 
 Sin embargo, en las pruebas podemos observar que tiene una tendencia a cometer errores en la detección de piedras en los riñones.
 
@@ -106,7 +106,7 @@ Epoch 10/10
 Si graficamos estos resultados, vemos que el nivel de error bajó y el de precisión aumentó.
 
 .segundo entrenamiento: 10 vueltas
-image::imgs/[200, 700, align="center"]
+image::imgs/segundo-entrenamiento.png[200, 700, align="center"]
 
 Pero, nuevamente, en los resultados de prueba obtuvimos una tendencia a error en la clase _stone_.
 
@@ -129,7 +129,7 @@ Para tercer entrenamiento, aumentamos la cantidad de vueltas a 20 y vimos que el
 ----
 
 .tercer entrenamiento: 20 vueltas
-image::imgs/[200, 700, align="center"]
+image::imgs/tercer-entrenamiento.png[200, 700, align="center"]
 
 A pesar de obtener un nivel de precisión del 99%, los errores estaban muy desbalanceados.
 
