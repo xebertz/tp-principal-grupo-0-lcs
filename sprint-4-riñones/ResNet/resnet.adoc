@@ -5,7 +5,7 @@ v1, {docdate}
 :title-page:
 :toc-title: Secciones
 :numbered:
-:source-highlighter: highlight.js
+:source-highlighter: coderay
 :tabsize: 4
 :nofooter:
 :pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
@@ -45,9 +45,11 @@ Luego, el modelo se compiló de la siguiente manera:
 model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["categorical_accuracy"])
 ----
 
-=== Entrenamiento de 10 épocas
+=== Primer entrenamiento
 
-Se utilizó el 80% de las imágenes para el entrenamiento del modelo y el 20% restante para las pruebas, lo que se traduce en 9404 imágenes de entrenamiento y 2352 imágenes de prueba. Durante las diez épocas de entrenamiento, los resultados fueron los siguientes:
+Se utilizó el 80% de las imágenes para el entrenamiento del modelo y el 20% restante para las pruebas, lo que se traduce en 9404 imágenes de entrenamiento y 2352 imágenes de prueba. 
+
+Durante las diez épocas de entrenamiento, los resultados fueron los siguientes:
 
 [source, console]
 ----
@@ -96,9 +98,11 @@ Incorrectas: [6, 68, 4, 39]
 
 Estos resultados muestran el desempeño del modelo en la clasificación de las imágenes de prueba, con un desglose de predicciones correctas e incorrectas en las categorías "cyst", "stone", "tumor" y "normal".
 
-=== Entrenamiento de 20 épocas
+=== Segundo entrenamiento
 
-De manera similar al entrenamiento anterior, se empleó el 80% de las imágenes para entrenar el modelo, reservando el 20% restante para las pruebas. Durante las veinte épocas de entrenamiento, se obtuvieron los siguientes resultados:
+De igual forma al entrenamiento anterior, se empleó el 80% de las imágenes para entrenar el modelo, reservando el 20% restante para las pruebas.
+
+Durante las veinte épocas de entrenamiento, se obtuvieron los siguientes resultados:
 
 [source, console]
 ----
@@ -165,6 +169,10 @@ Incorrectas: [9, 62, 0, 43]
 
 === Tercer entrenamiento
 
+En este entrenamiento, se optó por reemplazar la función de activación "softmax" por la función "sigmoid". Esta modificación se llevó a cabo con el objetivo de explorar diferentes enfoques y evaluar cómo afectaría el rendimiento del modelo.
+
+A lo largo de las diez épocas de entrenamiento, se recopilaron los siguientes resultados:
+
 [source, console]
 ----
 Epoch 1/10
@@ -190,7 +198,13 @@ Epoch 10/10
 294/294 [==============================] - 282s 958ms/step - loss: 0.1116 - categorical_accuracy: 0.9661 - val_loss: 0.1597 - val_categorical_accuracy: 0.9384
 ----
 
+Con el propósito de representar de manera más efectiva estos resultados, se crearon los gráficos que se muestran a continuación:
+
 image::imgs/graficos-resultados-3.png[]
+
+Los resultados demuestran una impresionante precisión del 96% en el conjunto de entrenamiento, mientras que la máxima precisión lograda en el conjunto de pruebas alcanzó un notable 94%.
+
+Al llevar a cabo la evaluación del modelo utilizando las 2352 imágenes del conjunto de pruebas, se obtuvieron los siguientes resultados:
 
 [source, console]
 ----
@@ -203,6 +217,10 @@ Incorrectas: [9, 69, 4, 63]
 ----
 
 === Cuarto entrenamiento
+
+Al igual que en el entrenamiento anterior se modificó la función de activación, cambiando "softmax" por "sigmoid".
+
+A lo largo de las veinte épocas de entrenamiento, se registraron los siguientes resultados:
 
 [source, console]
 ----
@@ -250,6 +268,10 @@ Epoch 20/20
 ----
 
 image::imgs/graficos-resultados-4.png[]
+
+Los resultados destacan una precisión sobresaliente del 98% en el conjunto de entrenamiento, junto con una respetable precisión del 95% en el conjunto de pruebas.
+
+Al llevar a cabo la evaluación del modelo utilizando las 2352 imágenes del conjunto de pruebas, los resultados obtenidos son los siguientes:
 
 [source, console]
 ----
