@@ -28,11 +28,13 @@ Los cálculos se pueden generar por diversos motivos. Entre ellos están el dese
 
 Los síntomas de esta enfermedad son diversos. Entre los más comunes, ordenados de más común a menos común, se encuentran los siguientes:
 
-1. Dolor en la zona lumbar: El dolor intenso en la parte baja de la espalda, que puede irradiar hacia el abdomen o la ingle, es un síntoma común. Esto puede causar náuseas y vómitos.
+1. Dolor en la zona lumbar: El dolor intenso en la parte baja de la espalda es un síntoma común. Esto puede causar náuseas y vómitos.
 
-2. Sangre en la orina: La presencia de sangre en la orina es un signo característico.
+2. Dolor en la zona abdominal: El dolor intenso que se propaga hacia la parte baja del abdomen y la ingle es un síntoma muy común.
 
-3. Dificultad para orinar: La obstrucción del flujo de orina puede llevar a dificultades al orinar y a una sensación constante de necesidad de orinar.
+3. Sangre en la orina: La presencia de sangre en la orina es un signo característico.
+
+4. Dificultad para orinar: La obstrucción del flujo de orina puede llevar a dificultades al orinar y a una sensación constante de necesidad de orinar.
 
 == Quistes
 
@@ -42,13 +44,15 @@ Las causas de los quistes renales no están claras. Con frecuencia, aparece un q
 
 Los quistes renales, en su mayoría, son asintomáticos y no causan molestias ni síntomas perceptibles. Por lo general, se descubren de manera incidental durante exámenes médicos de rutina o estudios de imagen realizados por otras razones. Esto significa que muchas personas que tienen quistes renales simples no experimentan síntomas relacionados con los quistes. Sin embargo, en casos excepcionales o en situaciones específicas, los quistes renales pueden generar síntomas o complicaciones. Los síntomas más comunes relacionados con los quistes renales incluyen:
 
-1. Dolor abdominal o en la zona lumbar: Algunas personas pueden experimentar dolor en la parte baja de la espalda o en la región abdominal. Este dolor generalmente es sordo y constante, pero puede volverse agudo si un quiste se rompe o sangra.
+1. Dolor abdominal o en la zona lumbar: Algunas personas pueden experimentar dolor en la parte baja de la espalda o en la región superior abdominal. Este dolor generalmente es sordo y constante, pero puede volverse agudo si un quiste se rompe o sangra.
 
 2. Hematuria: Los quistes renales, especialmente los quistes complejos, pueden sangrar y causar la presencia de sangre en la orina (hematuria). Esto puede dar lugar a cambios en el color de la orina, que puede volverse rosada, roja o marrón.
 
 3. Infecciones del tracto urinario: Los quistes renales pueden aumentar el riesgo de infecciones del tracto urinario si interfieren con el flujo normal de la orina o proporcionan un lugar para que las bacterias se desarrollen.
 
 4. Aumento de la presión arterial: En algunas situaciones, los quistes renales pueden afectar la función renal y causar un aumento de la presión arterial.
+
+5. Fiebre.
 
 == Tumores
 
@@ -67,3 +71,11 @@ Por lo general, los tumores renales no manifiestan síntomas, aunque en ocasione
 5. Fiebre persistente que no puede atribuirse a un resfriado u otra causa evidente.
 
 El diagnóstico de los tumores renales se basa en una combinación de estudios de imagenología, como la tomografía computarizada (TC) o la resonancia magnética (RM), así como en la realización de una biopsia para determinar la naturaleza benigna o maligna del tumor.
+
+== Fuentes
+
+* https://www.mayoclinic.org/es/diseases-conditions/kidney-stones/symptoms-causes/syc-20355755[Cálculos renales - Síntomas y causas - Mayo Clinic]
+
+* https://www.mayoclinic.org/es/diseases-conditions/kidney-cysts/symptoms-causes/syc-20374134[Quistes renales - Síntomas y causas - Mayo Clinic]
+
+* https://www.mayoclinic.org/es/diseases-conditions/kidney-cancer/symptoms-causes/syc-20352664[Cáncer de riñón - Síntomas y causas]
