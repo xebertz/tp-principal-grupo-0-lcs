@@ -90,6 +90,8 @@ def append_feedback_wini(id, pneumonia, no_pneumonia):
 
 Elimina la fila del csv que corresponda con el ID pasada por parámetro. Además, se elimina la imagen correspondiente en la columna _imagen_ de la fila que se elimina.
 
+Se elimina la fila del csv pasada por parámetro (ruta del csv).
+
 .delete_id
 [source,python]
 ----
@@ -106,4 +108,25 @@ def delete_id(id, route_csv, model):
     df = df[df['id'] != id]
 
     df.to_csv(route_csv, index=False, float_format='%.0f')
+----
+
+=== Eliminar todas las filas del csv
+
+Elimina todos las filas del csv pasado por parámetro. También se eliminan todas las imagenes de la carpeta _images_ correspondiente al modelo.
+
+.delete_all
+[source,python]
+----
+def delete_all(route_csv, name):
+    route_images = f"csv/{name}/images"
+    df = pd.read_csv(route_csv)
+    df = pd.DataFrame(columns=df.columns)
+    for filename in os.listdir(route_images):
+        if filename.endswith('.txt'):
+            continue
+        file_path = os.path.join(route_images, filename)
+        if os.path.isfile(file_path):
+            os.remove(file_path)
+
+    df.to_csv(route_csv, index=False)
 ----
