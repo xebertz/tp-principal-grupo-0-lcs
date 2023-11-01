@@ -12,6 +12,10 @@ v1, {docdate}
 
 == Introducción
 
-Los riñones pueden verse afectados por distintas enfermedades o patologías, siendo las más comunes las piedras, quistes o tumores. En este documento, explicaremos cómo se pueden detectar estas enfermedades, qué síntomas pueden tener y en qué tipo de imagen médica se pueden ver.
+Los riñones pueden verse afectados por distintas enfermedades o patologías, siendo las más comunes las piedras o cálculos, quistes o tumores. En este documento, explicaremos cómo se pueden detectar estas enfermedades, qué síntomas pueden tener y en qué tipo de imagen médica se pueden ver.
 
-==
+== Tipos de imágenes
+
+Existen dos tipos de imagen altamente utilizado para la detección de estas enfermedades: la _tomografía computarizada_ o _TC_, y la _resonancia magnética_ o _RM_. La primera tiene una gran ventaja: Alta resolución espacial. La tomografía computarizada proporciona imágenes detalladas y nítidas de las estructuras renales, lo que la hace eficaz en la detección de piedras y tumores pequeños. Por otra parte, la resonancia magnética es especialmente efectiva para diferenciar entre tejidos blandos, lo que la hace útil en la detección y caracterización de tumores renales. Sin embargo, La este tipo de imagen puede no ser tan detallada como la tomografía computarizada en la detección de piedras pequeñas, y puede ser menos sensible en la identificación de calcificaciones.
+
+En general, para detectar cálculos en los riñones, la tomografía computarizada es la técnica de imagen más utilizada y efectiva. La TC es altamente sensible para detectar cálculos renales, incluso cálculos muy pequeños, debido a su excelente resolución espacial y capacidad para identificar calcificaciones. Para detectar quistes renales, tanto la TC como la resonancia magnética se utilizan con frecuencia. En cuanto a la detección de tumores renales, tanto la TC como la RM son valiosas y se utilizan según la situación clínica. La TC a menudo se utiliza como una herramienta inicial para evaluar la presencia de tumores debido a su alta resolución espacial y su capacidad para detectar anormalidades en la densidad del tejido. Sin embargo, la RM puede ser especialmente útil para caracterizar la naturaleza de los tumores, diferenciar entre tumores benignos y malignos, y evaluar la extensión de la enfermedad.
