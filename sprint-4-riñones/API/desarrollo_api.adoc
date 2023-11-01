@@ -57,3 +57,41 @@ def response_generation(response_data, status):
     response.status_code = status
     return response
 ----
+
+=== Implementación del modelo
+.
+.
+.
+
+=== Implementación endpoint Download
+
+Tras haber realizado los modelos de inteligencia artificial, notamos que los modelos son estáticos, es decir, los modelos no son entrenan con los datos nuevos. 
+
+Entonces, se decidió descargar las imágenes ingresadas en los diferentes modelos adjuntando un csv con el feedback del médico para un futuro entrenamiento de un nuevo modelo con los nuevos datos.
+
+Existen 3 endpoints HTTP-GET para descargar un _.zip_ correspondiente a cada modelo.
+
+.download_fred
+[source,python]
+----
+@ns_download.route("/fred")
+class Download(Resource):
+    def get(self):
+        to_zip(FOLDER_FRED, "fred")
+        file = DOWNLOAD_FRED_ROUTE
+        return send_file(file, as_attachment=True, download_name="fred.zip")
+----
+
+Se genera un archivo _.zip_ de la carpeta correspondiente al modelo seleccionado. La carpeta contiene el csv con los datos de las imágenes y una carpeta con las imagenes correspondiente. 
+
+Para generar el _.zip_ se busca la ruta de la carpeta y utilizando la libreria *shutil* se lo convierte a _.zip_. Luego, se mueve a la carpeta _download_.
+
+.to_zip
+[source,python]
+----
+def to_zip(route, name):
+    folder = route
+    name_zip = name
+    route_save = "download/"
+    shutil.make_archive(os.path.join(route_save, name_zip), 'zip', folder)
+----
