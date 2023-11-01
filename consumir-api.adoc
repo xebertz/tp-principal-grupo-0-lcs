@@ -48,7 +48,9 @@ fetch('https://averiapi-4vtuhnxfba-uc.a.run.app/ping')
 
 Mediante una solicitud HTTP-POST se puede enviar al _endpoint_ un JSON, cual puede recibir los siguientes valores: 
 
-- image, cual debe ser un archivo binario (imagen).
+- image: Cual debe ser un archivo binario (imagen).
+
+- id: Almacena un id.
 
 - debilidad_focal: Almacena un booleano.
 
@@ -56,11 +58,22 @@ Mediante una solicitud HTTP-POST se puede enviar al _endpoint_ un JSON, cual pue
 
 - perdida_visual: Almacena un booleano.
 
-Retornará el % de probabilidad de cada clase del dominio. Ej:
+- En caso de que no se le pase una imagen se retorna el mensaje : "message": "ERROR! image not found". Adjunto con el código de estado 404.
+
+- En caso de que se le pase un id ya utilizado anteriormente se retorna el mensaje : "message": "ERROR! existing ID". Adjunto con el código de estado 400.
+
+- En caso de que el id pasado no sea un entero retorna el mensaje: "message": "ERROR! ID is not int". Adjunto con el código de estado 400.
+
+- En caso de que se le haya pasado un archivo que no sea .png, .jpg o .jpeg, retorna el mensaje: "message": "I'm a teapot!". con el código de estado 418.
+
+- En caso de que haya sido correcto el consumo del modelo y los parámetros sean correctos, retorna el mensaje con los % de cada clase del dominio. Ej:
+
 {"glioma" : 0%,
  "meningioma" : 5%,
  "pituitary" : 0%,
  "no_tumor" : 95%}
+
+Adjuntando el código de estado 200.
 
 .ejemplo_post.js
 [source,javascript]
