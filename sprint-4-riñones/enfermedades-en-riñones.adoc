@@ -20,7 +20,7 @@ Existen dos tipos de imagen altamente utilizado para la detección de estas enfe
 
 En general, para detectar cálculos en los riñones, la tomografía computarizada es la técnica de imagen más utilizada y efectiva. La TC es altamente sensible para detectar cálculos renales, incluso cálculos muy pequeños, debido a su excelente resolución espacial y capacidad para identificar calcificaciones. Para detectar quistes renales, tanto la TC como la resonancia magnética se utilizan con frecuencia. En cuanto a la detección de tumores renales, tanto la TC como la RM son valiosas y se utilizan según la situación clínica. La TC a menudo se utiliza como una herramienta inicial para evaluar la presencia de tumores debido a su alta resolución espacial y su capacidad para detectar anormalidades en la densidad del tejido. Sin embargo, la RM puede ser especialmente útil para caracterizar la naturaleza de los tumores, diferenciar entre tumores benignos y malignos, y evaluar la extensión de la enfermedad.
 
-== Cálculos o piedrass
+== Cálculos o piedras
 
 Las piedras en los riñones, también conocidas como cálculos renales o litiasis renal, son masas sólidas que se forman a partir de sustancias minerales en los riñones o en el tracto urinario. Estas piedras pueden variar en tamaño y pueden causar una serie de síntomas y complicaciones, como dolor intenso, obstrucción del flujo de orina y, en casos graves, daño renal.
 
