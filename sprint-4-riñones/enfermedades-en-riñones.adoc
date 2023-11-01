@@ -50,3 +50,20 @@ Los quistes renales, en su mayoría, son asintomáticos y no causan molestias ni
 
 4. Aumento de la presión arterial: En algunas situaciones, los quistes renales pueden afectar la función renal y causar un aumento de la presión arterial.
 
+== Tumores
+
+Los tumores renales, o tumores en los riñones, se refieren a crecimientos anormales de células en los tejidos renales. Estos tumores pueden clasificarse en dos categorías: benignos (no cancerosos) y malignos (cancerosos). El tipo más prevalente de tumor renal maligno es el carcinoma de células renales (RCC, por sus siglas en inglés), el cual constituye la gran mayoría de los casos. Existen diversos subtipos de carcinoma de células renales, siendo el carcinoma de células renales de células claras el más común.
+
+Por lo general, los tumores renales no manifiestan síntomas, aunque en ocasiones pueden producir señales que deben ser motivo de preocupación. Algunos de los síntomas que pueden estar relacionados con tumores renales incluyen:
+
+1. Hematuria: presencia de sangre en la orina.
+
+2. Dolor en la región lumbar: molestias o dolores en la parte baja de la espalda, específicamente en la zona de los riñones.
+
+3. Masa palpable en el costado o la región lumbar.
+
+4. Pérdida de peso no intencionada.
+
+5. Fiebre persistente que no puede atribuirse a un resfriado u otra causa evidente.
+
+El diagnóstico de los tumores renales se basa en una combinación de estudios de imagenología, como la tomografía computarizada (TC) o la resonancia magnética (RM), así como en la realización de una biopsia para determinar la naturaleza benigna o maligna del tumor.
