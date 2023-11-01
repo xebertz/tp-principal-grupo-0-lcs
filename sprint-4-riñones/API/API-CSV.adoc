@@ -45,7 +45,7 @@ def exists_id(csv, id):
 
 === Agregar datos del predict
 
-Existen dos funciones (y posiblemente tres) que almacenan en un su CSV correspondiente los datos del predict. Se deja los espacios en blanco los datos que se le ingresaran durante el feedback.
+Existen tres funciones que almacenan en un su CSV correspondiente los datos del predict. Se deja los espacios en blanco los datos que se le ingresaran durante el feedback.
 
 Lee el archivo CSV correspondiente al modelo y crea una nueva fila con los datos pasados por parámetros.
 
@@ -70,7 +70,7 @@ De alguna forma, al momento de pasarle un entero a la función, lo transforma en
 
 === Agregar datos del feedback
 
-Existen dos funciones (y posiblemente tres) que almacenan en su CSV correspondiente los datos del Feedback. Se buscan los espacios en blanco en la fila que corresponde al ID pasado como parámetro y se reemplazan por los datos ingresados en el endpoint de feedback.
+Existen tres funciones que almacenan en su CSV correspondiente los datos del Feedback. Se buscan los espacios en blanco en la fila que corresponde al ID pasado como parámetro y se reemplazan por los datos ingresados en el endpoint de feedback.
 
 Lee el archivo CSV correspondiente al modelo y añade los datos en las columnas que están vacías.
 
@@ -84,4 +84,26 @@ def append_feedback_wini(id, pneumonia, no_pneumonia):
     df.loc[df['id'] == id, 'no_pneumonia'] = no_pneumonia
 
     df.to_csv("csv/wini.csv", index=False, float_format='%.0f')
+----
+
+=== Eliminar fila del csv vía ID
+
+Elimina la fila del csv que corresponda con el ID pasada por parámetro. Además, se elimina la imagen correspondiente en la columna _imagen_ de la fila que se elimina.
+
+.delete_id
+[source,python]
+----
+def delete_id(id, route_csv, model):
+    df = pd.read_csv(route_csv)
+    
+    row = df[df['id'] == id]
+
+    if not row.empty:
+        image = row['imagen'].values[0]
+        route = f"csv/{model}/{image}"
+        if os.path.exists(route):
+            os.remove(route)
+    df = df[df['id'] != id]
+
+    df.to_csv(route_csv, index=False, float_format='%.0f')
 ----
