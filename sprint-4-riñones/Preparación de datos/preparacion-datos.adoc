@@ -16,7 +16,7 @@ El código en Python que se proporciona realiza varias tareas relacionadas con l
 
 == Importación de librerías
 
-El código comienza importando las siguientes bibliotecas:
+El código comienza importando las siguientes librerías:
 
 - os: Para realizar operaciones de sistema de archivos.
 - cv2 (OpenCV): Para el procesamiento de imágenes.
