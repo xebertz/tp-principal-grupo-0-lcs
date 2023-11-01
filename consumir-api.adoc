@@ -25,6 +25,8 @@ Los *_endpoints_* pueden recibir solicitudes, como solicitudes HTTP-GET para obt
 FRED -> TUMORES CEREBRALES 
 
 WINI -> NEUMONÍA 
+
+LYSO -> RIÑONES
 ----
 
 === */ping*
