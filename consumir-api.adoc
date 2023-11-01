@@ -121,6 +121,30 @@ Retornará el % de probabilidad de cada clase del dominio. Ej:
  "no_pneumonia" : 99%
 }
 
+=== */predict/lyso*
+
+Se realiza el mismo procedimiento del modelo **fred**, pero con distintos campos del JSON y cambiando el dominio por **lyso**: `https://averiapi-4vtuhnxfba-uc.a.run.app/predict/lyso`
+
+- image: Cual debe ser un archivo binario (imagen).
+
+- id: Almacena un id.
+
+- hermaturia: Almacena un booleano.
+
+- dolor_lumbar: Almacena un booleano.
+
+- dolor_abdominal: Almacena un booleano.
+
+- fiebre: Almacena un booleano.
+
+- perdida_peso: Almacena un booleano.
+
+Retornará el % de probabilidad de cada clase del dominio. Ej:
+{"quiste" : 5%,
+ "piedra" : 5%,
+ "tumor" : 0%,
+ "normal" : 90%}
+
 === */feedback/fred*
 ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/feedback/fred`
 
@@ -155,7 +179,7 @@ Mediante una solicitud HTTP-POST se puede enviar al _endpoint_ un JSON, cual pue
 
 Retornará un json con los siguientes posibles mensajes:
 
-- {"message" : "POST ACCEPTED}: En caso de que los valores del json estén correctos, es decir, que el id_image sea un entero y que haya un solo valor booleano True entre los 4.
+- {"message" : "POST ACCEPTED"}: En caso de que los valores del json estén correctos, es decir, que el id_image sea un entero y que haya un solo valor booleano True entre los 4.
 
 - {"message" : "ERROR! Values Null"}: En caso de que algún valor del json sea nulo.
 
@@ -163,7 +187,30 @@ Retornará un json con los siguientes posibles mensajes:
 
 - {"message": "ERROR! there is more than one true value"}: En caso de que todos los campos del json que almacenan booleanos sean true.
 
-Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
+Se consume de la misma manera del _endpoint_ `predict/wini` cambiando los campos y el _endpoint_.
+
+=== */feedback/lyso*
+ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/feedback/lyso`
+
+Mediante una solicitud HTTP-POST se puede enviar al _endpoint_ un JSON, cual puede recibir los siguientes valores: 
+
+- id_image: Almacena un int.
+- quiste: Almacena un booleano.
+- piedra: Almacena un booleano.
+- tumor: Almacena un booleano.
+- normal: Almacena un booleano.
+
+Retornará un JSON con los siguientes posibles mensajes:
+
+- {"message" : "POST ACCEPTED"}: En caso de que los valores del JSON estén correctos, es decir, que el id_image sea un entero y que haya un solo valor booleano True entre los 4.
+
+- {"message" : "ERROR! Values Null"}: En caso de que algún valor del JSON sea nulo.
+
+- {"message": "ERROR! all values is false"}: En caso de que todos los campos del JSON que almacenan booleanos sean false.
+
+- {"message": "ERROR! there is more than one true value"}: En caso de que todos los campos del JSON que almacenan booleanos sean true.
+
+Se consume de la misma manera del _endpoint_ `predict/lyso` cambiando los campos y el _endpoint_.
 
 == Herramientas
 Otras herramientas para realizar pruebas o solicitudes a la API pueden ser Postman, SoapUI, RapidAPI, Rayuela, etc... Además, se puede consumir con diferentes lenguajes de preferencia.
