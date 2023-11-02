@@ -59,9 +59,71 @@ def response_generation(response_data, status):
 ----
 
 === Implementación del modelo
-.
-.
-.
+
+Luego del desarrollo del modelo pre-entrenado mediante la utilización de las bibliotecas Keras y Tenserflow, se procedió a exportar los modelos ya entrenados y almacenarlos en un archivo de tipo .h5. Luego, como se vió anteriormente, un archivo de tipo .h5 tiene la caracterísica de ser capaz de almacenar grandes cantidades de información de forma eficiente, por lo cual es el indicado para almacenar modelos que ya fueron entrenados.
+
+Al obtener el archivo que contiene al modelo listo para ser usado, queda implementar una forma para poder adaptarlo al contexto que necesitamos dentro de nuestra API. Para esto, primero se debe obtener la imágen que será procesada por el modelo mediante un endpoint y un método HTTP-POST.
+
+[source,python]
+----
+@ns_predict.route("/lyso")
+class Predict(Resource):
+    @ns_predict.expect(parser_lyso)
+    def post(self):
+        args = parser_lyso.parse_args()
+        hermaturia = 1 if args['hermaturia'] else 0
+        dolor_lumbar = 1 if args['dolor_lumbar'] else 0
+        dolor_abdominal = 1 if args['dolor_abdominal'] else 0
+        fiebre = 1 if args['fiebre'] else 0
+        perdida_peso = 1 if args['perdida_peso'] else 0
+
+        image = args['image']
+        id = args['id_image']
+
+        if image == None:
+            return response_generation({"message": "ERROR! image not found"}, 404)
+        if exists_id(CSV_LYSO, id):
+            return response_generation({"message": "ERROR! existing ID"}, 400)
+        is_int = isinstance(id, int)
+        if not is_int:
+            return response_generation({"message": "ERROR! ID is not int"}, 400)
+        if image.filename.lower().endswith(('.png', '.jpg', '.jpeg')):
+            name = get_millsec()
+
+            image.save(f"{IMAGES_LYSO}/{name}.png")
+            response_data = {}
+            class_probabilities = prediction_kidney(name) 
+
+            for class_type, probability in class_probabilities:
+                response_data[class_type.lower()] = probability
+
+            append_predict_lyso(id, f"images/{name}.png", hermaturia,
+                                dolor_lumbar, dolor_abdominal, fiebre, perdida_peso)
+            return response_generation(response_data, 200)
+        else:
+            return response_generation({"message": "I'm a teapot!"}, 418)
+----
+
+Este código contiene toda la lógica que se obtiene mediante el consumo de la API. Es decir, contiene la obtención de la imágen (a la cual se le asigna un ID) y los datos del paciente ingresados.
+
+[source,python]
+----
+def prediction_kidney(name):
+    # Carga el modelo.
+    model = tensorflow.keras.models.load_model(MODEL_LYSO)
+    # Transforma la imagen para que coincidan con el modelo.
+    img = Image.open(f"{IMAGES_LYSO}/{name}.png").convert("L")
+    img = img.resize((224, 224))
+    img_array = np.array(img)
+    img_array = img_array / 255
+    # Realiza la predicción
+    class_labels = ["quiste", "piedra", "tumor", "normal"]
+    predict = model.predict(np.expand_dims(img_array, axis=0))[0]
+    probabilities = [(prob * 100) for prob in predict]
+    return list(zip(class_labels, probabilities))
+----
+
+Como el modelo implementado es multiclase, es decir, que puede clasificar la imágen en más de 2 clases (en particular 4), este retorna un arreglo de tamaño 4. Dentro de dicho arreglo, se guardarán los resultados que obtuvo el modelo en cada una de las clases. La primera posición del arreglo representa las posibilidades de que la imágen procesada represente un quiste, mientras que el resto de las posiciones representan la probabilidad de que el diagnóstico sea piedra, tumor o un riñon normal, en ese orden.
 
 === Implementación endpoint Download
 
