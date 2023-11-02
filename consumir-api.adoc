@@ -48,6 +48,8 @@ fetch('https://averiapi-4vtuhnxfba-uc.a.run.app/ping')
 
 == Predict
 
+Mediante la imagen que se la pasa por parámetro y los datos extras, se realiza una predicción con el modelo seleccionado. Si todos los datos son válidos, se retorna un JSON con los % de la posible enfermedad. Posteriormente, se almacenan los datos ingresados, junto la imagen, para entrenar un nuevo modelo.
+
 === */predict/fred*
 
 Mediante una solicitud HTTP-POST se puede enviar al _endpoint_ un JSON, cual puede recibir los siguientes valores: 
