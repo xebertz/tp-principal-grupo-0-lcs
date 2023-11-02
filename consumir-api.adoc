@@ -284,6 +284,10 @@ Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos
 
 == Delete
 
+Elimina los datos de una imagen y la misma imagen de la base de datos. Se le debe pasar un id existente. Se elimina solo la imagen del id correspondiente al modelo seleccionado.
+
+Por otro lado también se puede eliminar todos los datos del modelo seleccionado, en el caso de consumir */delete/all*.
+
 === */delete/fred*
 ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/delete/fred`
 
