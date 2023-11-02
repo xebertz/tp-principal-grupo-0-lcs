@@ -27,6 +27,8 @@ FRED -> TUMORES CEREBRALES
 WINI -> NEUMONÍA 
 
 LYSO -> RIÑONES
+
+EN CASO DE PASARLE UN VALOR DISTINTO A *TRUE* EN LOS PARÁMETROS BOOLEANOS, SE LE ASIGNARÁ *FALSE* DE MANERA PREDETERMINADA. INCLUYENDO EN LOS CASOS DE ASIGNARLES VACÍO O NONE/NULL.
 ----
 
 === */ping*
@@ -57,6 +59,8 @@ Mediante una solicitud HTTP-POST se puede enviar al _endpoint_ un JSON, cual pue
 - convulsiones: Almacena un booleano.
 
 - perdida_visual: Almacena un booleano.
+
+Retornará un JSON con los siguientes posibles mensajes:
 
 - En caso de que no se le pase una imagen se retorna el mensaje : "message": "ERROR! image not found". Adjunto con el código de estado 404.
 
@@ -118,6 +122,8 @@ Se realiza el mismo procedimiento del modelo **fred**, pero con distintos campos
 
 - dificultad_respiratoria: Almacena un booleano.
 
+Retornará un JSON con los siguientes posibles mensajes:
+
 - En caso de que no se le pase una imagen se retorna el mensaje : "message": "ERROR! image not found". Adjunto con el código de estado 404.
 
 - En caso de que se le pase un id ya utilizado anteriormente se retorna el mensaje : "message": "ERROR! existing ID". Adjunto con el código de estado 400.
@@ -152,6 +158,8 @@ Se realiza el mismo procedimiento del modelo **fred** y **wini**, pero con disti
 
 - perdida_peso: Almacena un booleano.
 
+Retornará un JSON con los siguientes posibles mensajes:
+
 - En caso de que no se le pase una imagen se retorna el mensaje : "message": "ERROR! image not found". Adjunto con el código de estado 404.
 
 - En caso de que se le pase un id ya utilizado anteriormente se retorna el mensaje : "message": "ERROR! existing ID". Adjunto con el código de estado 400.
@@ -181,16 +189,17 @@ Mediante una solicitud HTTP-POST se puede enviar al _endpoint_ un JSON, cual pue
 - meningioma: Almacena un booleano.
 - pituitary: Almacena un booleano.
 - no_tumor: Almacena un booleano.
-
+- comment: Almacena un string.
+ 
 Retornará un JSON con los siguientes posibles mensajes:
 
-- {"message" : "POST ACCEPTED}: En caso de que los valores del JSON estén correctos, es decir, que el id_image sea un entero y que haya un solo valor booleano True entre los 4.
+- {"message" : "POST ACCEPTED"}: En caso de que los valores del JSON estén correctos, es decir, que el id_image sea un entero y que haya un solo valor booleano True entre los 4. Adjunto con el código de estado 200.
 
-- {"message" : "ERROR! Values Null"}: En caso de que algún valor del JSON sea nulo.
+- {"message": "ERROR! there is more than one true value"}: En caso de que todos los campos del JSON que almacenan booleanos sean true. Adjunto con el código de estado 400.
 
-- {"message": "ERROR! all values is false"}: En caso de que todos los campos del JSON que almacenan booleanos sean false.
+- {"message": "ERROR! no exists ID"}: En caso de que el id no exista dentro de nuestra base de datos, es decir, que no se haya realizado un predict con ese id o se haya eliminado anteriormente. Adjunto con el código de estado 404.
 
-- {"message": "ERROR! there is more than one true value"}: En caso de que todos los campos del JSON que almacenan booleanos sean true.
+- {"message": "ERROR! ID is not int"}: En caso de que el parámetro pasado en el campo de id no sea un entero. Adjunto con el código de estado 400.
 
 Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
 
@@ -202,16 +211,41 @@ Mediante una solicitud HTTP-POST se puede enviar al _endpoint_ un JSON, cual pue
 - id_image: Almacena un int.
 - pneumonia: Almacena un booleano.
 - no_pneumonia: Almacena un booleano.
+- comment: Almacena un string.
 
 Retornará un json con los siguientes posibles mensajes:
 
-- {"message" : "POST ACCEPTED}: En caso de que los valores del json estén correctos, es decir, que el id_image sea un entero y que haya un solo valor booleano True entre los 4.
+- {"message" : "POST ACCEPTED"}: En caso de que los valores del JSON estén correctos, es decir, que el id_image sea un entero y que haya un solo valor booleano True entre los 4. Adjunto con el código de estado 200.
 
-- {"message" : "ERROR! Values Null"}: En caso de que algún valor del json sea nulo.
+- {"message": "ERROR! there is more than one true value"}: En caso de que todos los campos del JSON que almacenan booleanos sean true. Adjunto con el código de estado 400.
 
-- {"message": "ERROR! all values is false"}: En caso de que todos los campos del json que almacenan booleanos sean false.
+- {"message": "ERROR! no exists ID"}: En caso de que el id no exista dentro de nuestra base de datos, es decir, que no se haya realizado un predict con ese id o se haya eliminado anteriormente. Adjunto con el código de estado 404.
 
-- {"message": "ERROR! there is more than one true value"}: En caso de que todos los campos del json que almacenan booleanos sean true.
+- {"message": "ERROR! ID is not int"}: En caso de que el parámetro pasado en el campo de id no sea un entero. Adjunto con el código de estado 400.
+
+Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
+
+=== */feedback/lyso*
+ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/feedback/lyso`
+
+Mediante una solicitud HTTP-POST se puede enviar al _endpoint_ un JSON, cual puede recibir los siguientes valores: 
+
+- id_image: Almacena un int.
+- quiste: Almacena un booleano.
+- piedra: Almacena un booleano.
+- tumor: Almacena un booleano.
+- normal: Almacena un booleano.
+- comment: Almacena un string.
+
+Retornará un json con los siguientes posibles mensajes:
+
+- {"message" : "POST ACCEPTED"}: En caso de que los valores del JSON estén correctos, es decir, que el id_image sea un entero y que haya un solo valor booleano True entre los 4. Adjunto con el código de estado 200.
+
+- {"message": "ERROR! there is more than one true value"}: En caso de que todos los campos del JSON que almacenan booleanos sean true. Adjunto con el código de estado 400.
+
+- {"message": "ERROR! no exists ID"}: En caso de que el id no exista dentro de nuestra base de datos, es decir, que no se haya realizado un predict con ese id o se haya eliminado anteriormente. Adjunto con el código de estado 404.
+
+- {"message": "ERROR! ID is not int"}: En caso de que el parámetro pasado en el campo de id no sea un entero. Adjunto con el código de estado 400.
 
 Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
 
