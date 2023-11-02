@@ -358,6 +358,8 @@ Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos
 
 == Download
 
+Descarga un archivo _.zip_ del modelo seleccionado. El _.zip_ contiene un csv y una carpeta images. El csv contiene los datos ingresados en los _endpoints_ de  *predict* y *feedback*, con la correspondiente imagen en la carpeta _images_.
+
 === */download/fred*
 ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/download/fred`
 
