@@ -74,7 +74,7 @@ Retornará un JSON con los siguientes posibles mensajes:
 
 - En caso de que se le haya pasado un archivo que no sea .png, .jpg o .jpeg, retorna el mensaje: "message": "I'm a teapot!". con el código de estado 418.
 
-- En caso de que haya sido correcto el consumo del modelo y los parámetros sean correctos, retorna el mensaje con los % de cada clase del dominio. Ej:
+- En caso de que haya sido correcto el consumo del modelo y los parámetros sean correctos, retorna el JSON con los % de cada clase del dominio. Ej:
 
 {"glioma" : 0%,
  "meningioma" : 5%,
@@ -136,7 +136,7 @@ Retornará un JSON con los siguientes posibles mensajes:
 
 - En caso de que se le haya pasado un archivo que no sea .png, .jpg o .jpeg, retorna el mensaje: "message": "I'm a teapot!". con el código de estado 418.
 
-- En caso de que haya sido correcto el consumo del modelo y los parámetros sean correctos, retorna el mensaje con los % de cada clase del dominio. Ej:
+- En caso de que haya sido correcto el consumo del modelo y los parámetros sean correctos, retorna el JSON con los % de cada clase del dominio. Ej:
 
 {"pneumonia" : 1%,
  "no_pneumonia" : 99%
@@ -172,7 +172,7 @@ Retornará un JSON con los siguientes posibles mensajes:
 
 - En caso de que se le haya pasado un archivo que no sea .png, .jpg o .jpeg, retorna el mensaje: "message": "I'm a teapot!". con el código de estado 418.
 
-- En caso de que haya sido correcto el consumo del modelo y los parámetros sean correctos, retorna el mensaje con los % de cada clase del dominio. Ej:
+- En caso de que haya sido correcto el consumo del modelo y los parámetros sean correctos, retorna el JSON con los % de cada clase del dominio. Ej:
 
 {
  "quiste" : 2%,
@@ -184,6 +184,10 @@ Retornará un JSON con los siguientes posibles mensajes:
 Adjuntando el código de estado 200.
 
 == Feedback
+
+Al realizar una predicción mediante el _endpoint_ *Predict* se almacenaba la imagen y sus datos adicionales. En estos _endpoints_ de *Feedback* se le agregan datos nuevos a esa imagen. Esto se realiza vía la id sujeta a la imagen que se le asignó en *Predict*. 
+
+El feedback se añade a la base de datos, adjuntandolo a la imagen con el mismo id.
 
 === */feedback/fred*
 ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/feedback/fred`
