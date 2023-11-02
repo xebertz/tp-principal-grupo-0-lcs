@@ -233,30 +233,7 @@ Retornará un json con los siguientes posibles mensajes:
 
 - {"message": "ERROR! ID is not int"}: En caso de que el parámetro pasado en el campo de id no sea un entero. Adjunto con el código de estado 400.
 
-Se consume de la misma manera del _endpoint_ `predict/wini` cambiando los campos y el _endpoint_.
-
-=== */feedback/lyso*
-ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/feedback/lyso`
-
-Mediante una solicitud HTTP-POST se puede enviar al _endpoint_ un JSON, cual puede recibir los siguientes valores: 
-
-- id_image: Almacena un int.
-- quiste: Almacena un booleano.
-- piedra: Almacena un booleano.
-- tumor: Almacena un booleano.
-- normal: Almacena un booleano.
-
-Retornará un JSON con los siguientes posibles mensajes:
-
-- {"message" : "POST ACCEPTED"}: En caso de que los valores del JSON estén correctos, es decir, que el id_image sea un entero y que haya un solo valor booleano True entre los 4.
-
-- {"message" : "ERROR! Values Null"}: En caso de que algún valor del JSON sea nulo.
-
-- {"message": "ERROR! all values is false"}: En caso de que todos los campos del JSON que almacenan booleanos sean false.
-
-- {"message": "ERROR! there is more than one true value"}: En caso de que todos los campos del JSON que almacenan booleanos sean true.
-
-Se consume de la misma manera del _endpoint_ `predict/lyso` cambiando los campos y el _endpoint_.
+Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
 
 === */feedback/lyso*
 ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/feedback/lyso`
