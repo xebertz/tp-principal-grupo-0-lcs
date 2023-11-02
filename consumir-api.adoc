@@ -31,7 +31,7 @@ LYSO -> RIÑONES
 EN CASO DE PASARLE UN VALOR DISTINTO A *TRUE* EN LOS PARÁMETROS BOOLEANOS, SE LE ASIGNARÁ *FALSE* DE MANERA PREDETERMINADA. INCLUYENDO EN LOS CASOS DE ASIGNARLES VACÍO O NONE/NULL.
 ----
 
-=== */ping*
+== Ping
 Mediante una solicitud HTTP-GET se puede solicitar el _endpoint_, donde si está activo el servicio retorna un 200 y un JSON con el mensaje "API on!". Para acceder al _endpoint_ se debe agregar al dominio donde está la API subida _/ping_. EJ: `https://averiapi-4vtuhnxfba-uc.a.run.app/ping`
 
 .ejemplo_get.js
@@ -45,6 +45,8 @@ fetch('https://averiapi-4vtuhnxfba-uc.a.run.app/ping')
       return response.json();
     }
 ----
+
+== Predict
 
 === */predict/fred*
 
@@ -179,6 +181,8 @@ Retornará un JSON con los siguientes posibles mensajes:
 
 Adjuntando el código de estado 200.
 
+== Feedback
+
 === */feedback/fred*
 ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/feedback/fred`
 
@@ -249,5 +253,74 @@ Retornará un json con los siguientes posibles mensajes:
 
 Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
 
+== Delete
+
+=== */delete/fred*
+ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/delete/fred`
+
+Mediante una solicitud HTTP-DELETE se puede enviar al _endpoint_ un JSON, cual puede recibir los siguientes valores: 
+
+id: Almacena un entero.
+
+Retornará un json con los siguientes posibles mensajes:
+
+- {"message": "DELETE ID: id"}, 200: En caso de que los valores del JSON estén correctos, es decir, que el id sea un entero y que haya encontrado el id en la base de datos. Adjunto con el código de estado 200.
+
+- {"message": "ERROR! no exists ID"}: En caso de que el id no exista dentro de nuestra base de datos, es decir, que no se haya realizado un predict con ese id o se haya eliminado anteriormente. Adjunto con el código de estado 404.
+
+- {"message": "ERROR! ID is not int"}: En caso de que el parámetro pasado en el campo de id no sea un entero. Adjunto con el código de estado 400.
+
+Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
+
+=== */delete/wini*
+ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/delete/wini`
+
+Mediante una solicitud HTTP-DELETE se puede enviar al _endpoint_ un JSON, cual puede recibir los siguientes valores: 
+
+id: Almacena un entero.
+
+Retornará un json con los siguientes posibles mensajes:
+
+- {"message": "DELETE ID: id"}, 200: En caso de que los valores del JSON estén correctos, es decir, que el id sea un entero y que haya encontrado el id en la base de datos. Adjunto con el código de estado 200.
+
+- {"message": "ERROR! no exists ID"}: En caso de que el id no exista dentro de nuestra base de datos, es decir, que no se haya realizado un predict con ese id o se haya eliminado anteriormente. Adjunto con el código de estado 404.
+
+- {"message": "ERROR! ID is not int"}: En caso de que el parámetro pasado en el campo de id no sea un entero. Adjunto con el código de estado 400.
+
+Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
+
+=== */delete/lyso*
+ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/delete/lyso`
+
+Mediante una solicitud HTTP-DELETE se puede enviar al _endpoint_ un JSON, cual puede recibir los siguientes valores: 
+
+id: Almacena un entero.
+
+Retornará un json con los siguientes posibles mensajes:
+
+- {"message": "DELETE ID: id"}, 200: En caso de que los valores del JSON estén correctos, es decir, que el id sea un entero y que haya encontrado el id en la base de datos. Adjunto con el código de estado 200.
+
+- {"message": "ERROR! no exists ID"}: En caso de que el id no exista dentro de nuestra base de datos, es decir, que no se haya realizado un predict con ese id o se haya eliminado anteriormente. Adjunto con el código de estado 404.
+
+- {"message": "ERROR! ID is not int"}: En caso de que el parámetro pasado en el campo de id no sea un entero. Adjunto con el código de estado 400.
+
+Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
+
+=== */delete/all*
+ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/delete/all`
+
+Mediante una solicitud HTTP-DELETE se puede enviar al _endpoint_ un JSON, cual puede recibir los siguientes valores: 
+
+model: Almacena un string.
+
+Retornará un json con los siguientes posibles mensajes:
+
+- {"message": "ERROR! name is not string"}: En caso de que el parámetro model no sea un string. Adjunto con el código de estado 400.
+
+- {"message": "ERROR! name model not exists"}:En caso de que el parámetro model no coincida con los nombres de los modelos "fred", "wini" o "lyso". Adjunto con el código de estado 404.
+
+- {"message": "DELETE ALL ROW: model"}: En caso de que el parámetro model sea "fred", "wini" o "lyso". Adjunt con el código de estado 200.
+
+Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
 == Herramientas
 Otras herramientas para realizar pruebas o solicitudes a la API pueden ser Postman, SoapUI, RapidAPI, Rayuela, etc... Además, se puede consumir con diferentes lenguajes de preferencia.
