@@ -322,5 +322,6 @@ Retornará un json con los siguientes posibles mensajes:
 - {"message": "DELETE ALL ROW: model"}: En caso de que el parámetro model sea "fred", "wini" o "lyso". Adjunt con el código de estado 200.
 
 Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
+
 == Herramientas
 Otras herramientas para realizar pruebas o solicitudes a la API pueden ser Postman, SoapUI, RapidAPI, Rayuela, etc... Además, se puede consumir con diferentes lenguajes de preferencia.
