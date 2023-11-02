@@ -323,5 +323,28 @@ Retornará un json con los siguientes posibles mensajes:
 
 Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
 
+== Download
+
+=== */download/fred*
+ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/download/fred`
+
+Mediante una solicitud HTTP-GET se puede descargar un _zip_ con las imágenes almacenadas de los predict de fred. Además, adjunto con un csv con datos para un posible entrenamiento de un nuevo modelo.
+
+Se consume de la misma manera del _endpoint_ `predict/fred` sin campos, cambiando el _endpoint_.
+
+=== */download/wini*
+ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/download/wini`
+
+Mediante una solicitud HTTP-GET se puede descargar un _.zip_ con las imágenes almacenadas de los predict de wini. Además, adjunto con un csv con datos para un posible entrenamiento de un nuevo modelo.
+
+Se consume de la misma manera del _endpoint_ `predict/fred` sin campos, cambiando el _endpoint_.
+
+=== */download/lyso*
+ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/download/lyso`
+
+Mediante una solicitud HTTP-GET se puede descargar un _.zip_ con las imágenes almacenadas de los predict de lyso. Además, adjunto con un csv con datos para un posible entrenamiento de un nuevo modelo.
+
+Se consume de la misma manera del _endpoint_ `predict/fred` sin campos, cambiando el _endpoint_.
+
 == Herramientas
 Otras herramientas para realizar pruebas o solicitudes a la API pueden ser Postman, SoapUI, RapidAPI, Rayuela, etc... Además, se puede consumir con diferentes lenguajes de preferencia.
