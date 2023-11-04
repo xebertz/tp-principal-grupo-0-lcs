@@ -27,14 +27,14 @@ En este documento expondremos el trabajo realizado durante el sprint, la divisi�
 == Metodología de trabajo
 
 .división de tareas del equipo de trabajo
-[cols="3*", options="header"]
+[cols="2*", options="header"]
 |===
-|Encargado         |Tareas semana 1 |Tareas semana 2
-|Villalba, Gastón  |A|B
-|Ebertz, Ximena    |A|B
-|López, Gonzalo    |A|B
-|Franco, Leandro   |Aa|B
-|Venditto, Pedro   |A|B
+|Encargado         |Tareas
+|Villalba, Gastón  |Corregir documentación previa, gestión
+|Ebertz, Ximena    |Búsqueda de datasets, búsqueda de información del problema, creación del dataset, CNN Manual, Xception, Definición de arquitectura MDER, Conexión con equipo de datos
+|López, Gonzalo    |Investigación sobre BBDD, búsqueda de datasets, búsqueda de información del problema, creación del dataset, subir dataset de Riñones a Kaggle, ResNet50V2, SVM
+|Franco, Leandro   |Investigación sobre BBDD, Capacitación en bases de datos, Implementación de BBDD con API, Deploy Modelo de Enfermedades Renales, Refinamiento API, Conexión con equipo de datos
+|Venditto, Pedro   |Capacitación en bases de datos, Implementación de BBDD con API, Investigación FileServer, implementación FileServer, Deploy Modelo de Enfermedades Renales, Refinamiento API, Conexión con equipo de datos
 |===
 
 == Datos
