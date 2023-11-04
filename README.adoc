@@ -15,8 +15,9 @@ v1, {docdate}
 Con la finalidad de cumplir los objetivos núcleo del sistema, ampliarlo y mejorar el desarrollo previo, nos pusimos los siguientes objetivos para este sprint:
 
 1. Implementar la base de datos requerida para el reentrenamiento del modelo.
-2. Integrar las soluciones del equipo con las del proyecto.
-3. Desarrollar un modelo de detección de enfermedades renales.
+2. Desarrollar un modelo de detección de enfermedades renales.
+3. Integrar las soluciones del equipo con las del proyecto.
+
 
 == Objetivos del documento
 
@@ -25,6 +26,8 @@ Luego de establecer los objetivos realizamos la división de tareas, para inicia
 En este documento expondremos el trabajo realizado durante el sprint, la división de tareas realizada y los distintos problemas que se presentaron durante estas dos semanas.
 
 == Metodología de trabajo
+
+Como se puede ver en la división de tareas, el equipo trabajó en dos grupos.
 
 .división de tareas del equipo de trabajo
 [cols="2*", options="header"]
@@ -36,6 +39,8 @@ En este documento expondremos el trabajo realizado durante el sprint, la divisi�
 |Franco, Leandro   |Investigación sobre BBDD, capacitación en bases de datos, implementación de BBDD con API, deploy modelo de enfermedades renales, refinamiento API, conexión con equipo de datos
 |Venditto, Pedro   |Capacitación en bases de datos, implementación de BBDD con API, investigación FileServer, implementación FileServer, deploy Modelo de Enfermedades Renales, refinamiento API, conexión con equipo de datos
 |===
+
+Se definió que Franco, Leandro y Venditto, Pedro trabajarían desarrollando la base de datos y actualizando la API para cumplir con el primer objetivo. Por otra parte, Ebertz, Ximena y López, Gonzalo trabajarían principalmente desarrollando el modelo, para cumplir con el segundo objetivo. Luego, se trabajaría en conjunto para la integración de nuestra API con el resto del proyecto, y así cumplir con el tercer objetivo.
 
 == Datos
 
