@@ -12,19 +12,19 @@ v1, {docdate}
 
 == Descripción
 
-El código en Python que se proporciona realiza varias tareas relacionadas con la gestión de datos de imágenes médicas, específicamente imágenes de riñones clasificadas de diferentes formas: "cist", "stone", "tumor" y "normal". El código descarga conjuntos de datos desde Kaggle, organiza las imágenes en directorios específicos, crea un DataFrame de Pandas con información sobre las imágenes y sus etiquetas, muestra un gráfico de la distribución de clases, guarda un archivo CSV con la información del DataFrame y realiza algunas operaciones adicionales en las imágenes, como cambiar su tamaño y renombrarlas.
+El código en Python que se proporciona realiza diversas tareas relacionadas con la gestión de datos de imágenes médicas, específicamente imágenes de riñones clasificadas de diferentes formas: "cist", "stone", "tumor" y "normal". El código descarga conjuntos de datos desde Kaggle, organiza las imágenes en directorios específicos, crea un `DataFrame` de Pandas con información sobre las imágenes y sus etiquetas, muestra un gráfico de la distribución de clases, guarda un archivo CSV con la información del DataFrame y realiza algunas operaciones adicionales en las imágenes, como cambiar su tamaño y renombrarlas.
 
 == Importación de librerías
 
 El código comienza importando las siguientes librerías:
 
-- os: Para realizar operaciones de sistema de archivos.
-- cv2 (OpenCV): Para el procesamiento de imágenes.
-- matplotlib.pyplot: Para generar gráficos.
-- numpy: Para operaciones matemáticas y numéricas.
-- opendatasets as od: Para descargar conjuntos de datos de Kaggle.
-- PIL (Image): Para manipulación de imágenes.
-- pandas as pd: Para trabajar con DataFrames.
+- `os`: Para realizar operaciones de sistema de archivos.
+- `cv2` (OpenCV): Para el procesamiento de imágenes.
+- `matplotlib.pyplot`: Para generar gráficos.
+- `numpy`: Para operaciones matemáticas y numéricas.
+- `opendatasets as od`: Para descargar conjuntos de datos de Kaggle.
+- `PIL` (Image): Para manipulación de imágenes.
+- `pandas as pd`: Para trabajar con DataFrames.
 
 == Descarga de datasets
 
@@ -103,7 +103,7 @@ El código define una función `mostrar_grafico_clases` que toma el DataFrame `d
 
 El código realiza las siguientes operaciones:
 
-- Filtra el DataFrame para obtener un subconjunto de imágenes para cada clase. El número máximo de imágenes por clase está definido en la variable `cant_imagenes`.
+- Filtra el DataFrame para obtener un subconjunto de imágenes para cada clase. El número máximo de imágenes por clase está definido en la variable `cant_imagenes`. Este número se definió a partir de la distribución de clases, y corresponde a la cantidad de imágenes que contiene la clase con menor cantidad de elementos.
 
 [source, python]
 ----
@@ -182,6 +182,10 @@ refinar_imagenes("./dataset/normal", 224, "normal")
 == Actualización del DataFrame y exportación a CSV
 
 Se procede a reejecutar los bloques de código correspondientes a las secciones 5 y 7 con el fin de actualizar el DataFrame y crear una nueva versión del archivo CSV que contenga los nombres de las imágenes actualizados.
+
+== Carga de datos en Kaggle
+
+Finalmente, las imágenes y el archivo CSV se exportaron a un archivo `zip` y se cargaron en la plataforma Kaggle. El dataset se encuentra https://www.kaggle.com/datasets/gonzajl/riones-cyst-stone-tumor-normal-dataset[aquí].
 
 == Conclusión
 
