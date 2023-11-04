@@ -23,7 +23,7 @@ La API esta alojada en un repositorio de GitHub: https://github.com/Leandr0Fr/av
 Tras desarrollar el modelo de Machine Learning sobre clasificación de imágenes con neumonía o no, hemos contemplado la necesidad de realizar una API para el uso de esta misma. En este contexto, hemos tenido el privilegio de desarrollar la API que facilita el acceso y la utilización del modelo.
 
 == Desarrollo
-Para la implementación de la API se utilizó el lenguaje Python con el Framework de Flask, y distintas librerias necesarias para la utilización del modelo y para la manipulación de imágenes.
+Para la implementación de la API se utilizó el lenguaje Python con el Framework de Flask, y distintas librerías necesarias para la utilización del modelo y para la manipulación de imágenes.
 
 === Flask
 Flask nos permite, de una manera rápida y sencilla, crear endpoints para el uso de la API y enlazar funciones a estas mismas. 
@@ -60,7 +60,7 @@ def response_generation(response_data, status):
 
 === Implementación del modelo
 
-Luego del desarrollo del modelo pre-entrenado mediante la utilización de las bibliotecas Keras y Tenserflow, se procedió a exportar los modelos ya entrenados y almacenarlos en un archivo de tipo .h5. Luego, como se vió anteriormente, un archivo de tipo .h5 tiene la caracterísica de ser capaz de almacenar grandes cantidades de información de forma eficiente, por lo cual es el indicado para almacenar modelos que ya fueron entrenados.
+Luego del desarrollo del modelo pre-entrenado mediante la utilización de las bibliotecas Keras y Tenserflow, se procedió a exportar los modelos ya entrenados y almacenarlos en un archivo de tipo .h5. Luego, como se vio anteriormente, un archivo de tipo .h5 tiene la característica de ser capaz de almacenar grandes cantidades de información de forma eficiente, por lo cual es el indicado para almacenar modelos que ya fueron entrenados.
 
 Al obtener el archivo que contiene al modelo listo para ser usado, queda implementar una forma para poder adaptarlo al contexto que necesitamos dentro de nuestra API. Para esto, primero se debe obtener la imágen que será procesada por el modelo mediante un endpoint y un método HTTP-POST.
 
@@ -104,7 +104,7 @@ class Predict(Resource):
             return response_generation({"message": "I'm a teapot!"}, 418)
 ----
 
-Este código contiene toda la lógica que se obtiene mediante el consumo de la API. Es decir, contiene la obtención de la imágen (a la cual se le asigna un ID) y los datos del paciente ingresados.
+Este código contiene toda la lógica que se obtiene mediante el consumo de la API. Es decir, contiene la obtención de la imagen (a la cual se le asigna un ID) y los datos del paciente ingresados.
 
 [source,python]
 ----
@@ -123,7 +123,7 @@ def prediction_kidney(name):
     return list(zip(class_labels, probabilities))
 ----
 
-Como el modelo implementado es multiclase, es decir, que puede clasificar la imágen en más de 2 clases (en particular 4), este retorna un arreglo de tamaño 4. Dentro de dicho arreglo, se guardarán los resultados que obtuvo el modelo en cada una de las clases. La primera posición del arreglo representa las posibilidades de que la imágen procesada represente un quiste, mientras que el resto de las posiciones representan la probabilidad de que el diagnóstico sea piedra, tumor o un riñon normal, en ese orden.
+Como el modelo implementado es multiclase, es decir, que puede clasificar la imagen en más de 2 clases (en particular 4), este retorna un arreglo de tamaño 4. Dentro de dicho arreglo, se guardarán los resultados que obtuvo el modelo en cada una de las clases. La primera posición del arreglo representa las posibilidades de que la imagen procesada represente un quiste, mientras que el resto de las posiciones representan la probabilidad de que el diagnóstico sea piedra, tumor o un riñón normal, en ese orden.
 
 === Implementación endpoint Download
 
@@ -144,9 +144,9 @@ class Download(Resource):
         return send_file(file, as_attachment=True, download_name="fred.zip")
 ----
 
-Se genera un archivo _.zip_ de la carpeta correspondiente al modelo seleccionado. La carpeta contiene el csv con los datos de las imágenes y una carpeta con las imagenes correspondiente. 
+Se genera un archivo _.zip_ de la carpeta correspondiente al modelo seleccionado. La carpeta contiene el csv con los datos de las imágenes y una carpeta con las imágenes correspondiente. 
 
-Para generar el _.zip_ se busca la ruta de la carpeta y utilizando la libreria *shutil* se lo convierte a _.zip_. Luego, se mueve a la carpeta _download_.
+Para generar el _.zip_ se busca la ruta de la carpeta y utilizando la librería *shutil* se lo convierte a _.zip_. Luego, se mueve a la carpeta _download_.
 
 .to_zip
 [source,python]

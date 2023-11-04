@@ -28,12 +28,12 @@ El código comienza importando las siguientes librerías:
 
 == Descarga de datasets
 
-El código descarga cuatro datasets diferentes desde Kaggle utilizando la función `od.download`. Los datasets descargados son:
+El código descarga cuatro datasets diferentes desde Kaggle utilizando la función `od.download`. Los datasets descargados son los siguientes:
 
-1. https://www.kaggle.com/datasets/nazmul0087/ct-kidney-dataset-normal-cyst-tumor-and-stone[CT KIDNEY DATASET: Normal-Cyst-Tumor and Stone]
-2. https://www.kaggle.com/datasets/mohammedrizwanmalik/kidney-stones-mri-and-ct-scans[Kidney Stones Mri and CT scans]
-3. https://www.kaggle.com/datasets/raagbhutani/kidneystone[KidneyStone]
-4. https://www.kaggle.com/datasets/arjunbasandrai/medical-scan-classification-dataset[Medical Scan Classification Dataset]
+- Dataset 1: https://www.kaggle.com/datasets/nazmul0087/ct-kidney-dataset-normal-cyst-tumor-and-stone[CT KIDNEY DATASET: Normal-Cyst-Tumor and Stone]
+- Dataset 2: https://www.kaggle.com/datasets/mohammedrizwanmalik/kidney-stones-mri-and-ct-scans[Kidney Stones Mri and CT scans]
+- Dataset 3: https://www.kaggle.com/datasets/raagbhutani/kidneystone[KidneyStone]
+- Dataset 4: https://www.kaggle.com/datasets/arjunbasandrai/medical-scan-classification-dataset[Medical Scan Classification Dataset]
 
 == Organización de imágenes
 
