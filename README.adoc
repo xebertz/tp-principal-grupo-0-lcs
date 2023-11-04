@@ -1,0 +1,61 @@
+= TP Principal - Laboratorio de Construcción de Software: Sprint 4
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== Introducción
+
+Con la finalidad de ampliar el sistema y mejorar el desarrollo previo, nos pusimos los siguientes objetivos para este sprint:
+
+1. 
+
+== Objetivos del documento
+
+Luego de establecer los objetivos realizamos la división de tareas, para iniciar con el desarrollo y lograr el cumplimiento de todas las metas.
+
+En este documento expondremos el trabajo realizado durante el sprint, la división de tareas realizada y los distintos problemas que se presentaron durante estas dos semanas.
+
+== Metodología de trabajo
+
+.división de tareas del equipo de trabajo
+[cols="3*", options="header"]
+|===
+|Encargado         |Tareas semana 1 |Tareas semana 2
+|Villalba, Gastón  |A|B
+|Ebertz, Ximena    |A|B
+|López, Gonzalo    |A|B
+|Franco, Leandro   |Aa|B
+|Venditto, Pedro   |A|B
+|===
+
+== Datos
+
+Determinamos que los siguientes datasets serían útiles para nuestro trabajo:
+
+* Dataset 1: 
+* Dataset 2: 
+
+Como en el sprint previo, creamos un dataset y lo subimos a Kaggle. El dataset se encuentra [acá].
+
+== Modelos probados
+
+* *ResNet50V2:* Este modelo alcanzó un porcentaje de precisión A en las pruebas, para X imágenes.
+
+* *CNN Manual:* Este modelo alcanzó un porcentaje de precisión A en las pruebas, para X imágenes.
+
+== Modelos descartados
+
+== Modelo seleccionado
+
+== Entrevistas
+
+== Deploy
+
+== Bases de datos
