@@ -18,7 +18,6 @@ Con la finalidad de cumplir los objetivos núcleo del sistema, ampliarlo y mejor
 2. Desarrollar un modelo de detección de enfermedades renales.
 3. Integrar las soluciones del equipo con las del proyecto.
 
-
 == Objetivos del documento
 
 Luego de establecer los objetivos realizamos la división de tareas, para iniciar con el desarrollo y lograr el cumplimiento de todas las metas.
@@ -46,10 +45,12 @@ Se definió que Franco, Leandro y Venditto, Pedro trabajarían desarrollando la 
 
 Determinamos que los siguientes datasets serían útiles para nuestro trabajo:
 
-* Dataset 1: 
-* Dataset 2: 
+* Dataset 1: https://www.kaggle.com/datasets/nazmul0087/ct-kidney-dataset-normal-cyst-tumor-and-stone[CT KIDNEY DATASET: Normal-Cyst-Tumor and Stone]
+* Dataset 2: https://www.kaggle.com/datasets/mohammedrizwanmalik/kidney-stones-mri-and-ct-scans[Kidney Stones Mri and CT scans]
+* Dataset 3: https://www.kaggle.com/datasets/raagbhutani/kidneystone[KidneyStone]
+* Dataset 4: https://www.kaggle.com/datasets/arjunbasandrai/medical-scan-classification-dataset[Medical Scan Classification Dataset]
 
-Como en el sprint previo, creamos un dataset y lo subimos a Kaggle. El dataset se encuentra [acá].
+Como en el sprint previo, creamos un dataset y lo subimos a Kaggle. El dataset se encuentra https://www.kaggle.com/datasets/gonzajl/riones-cyst-stone-tumor-normal-dataset[acá].
 
 == Modelos probados
 
@@ -65,4 +66,4 @@ Como en el sprint previo, creamos un dataset y lo subimos a Kaggle. El dataset s
 
 == Deploy
 
-== Bases de datos
+== Base de datos
