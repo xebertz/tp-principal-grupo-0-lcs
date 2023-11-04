@@ -29,7 +29,7 @@ En este documento expondremos el trabajo realizado durante el sprint, la divisi�
 Como se puede ver en la división de tareas, el equipo trabajó en dos grupos.
 
 .división de tareas del equipo de trabajo
-[cols="2*", options="header"]
+[cols="1,3", options="header"]
 |===
 |Encargado         |Tareas
 |Villalba, Gastón  |Corregir documentación previa, gestión
@@ -73,16 +73,16 @@ También, calculamos el tiempo que tarda cada modelo en entrenar en el mejor cas
 
 En base a esta información, generamos la siguiente tabla:
 
-[cols="3*", options="header"]
+[cols="^50,^30,^20", options="header"]
 |===
-|Modelo             |Tiempo mínimo de entrenamiento     |Calidad
-|CNN Manual         |00:19:23                           |1
-|EfficientNetV2     |1:03:45                            |3
-|InceptionResNetV2  |1:25:23                            |2
-|ResNet50V2         |0:44:51                            |1
-|SVM                |0:17:23                            |1
-|VGG16              |1:02:23                            |3
-|Xception           |1:10:23                            |2
+|Modelo             |Tiempo mínimo  |Calidad
+|CNN Manual         |00:19:23       |1
+|EfficientNetV2     |1:03:45        |3
+|InceptionResNetV2  |1:25:23        |2
+|ResNet50V2         |0:44:51        |1
+|SVM                |0:17:23        |1
+|VGG16              |1:02:23        |3
+|Xception           |1:10:23        |2
 |===
 
 Luego, priorizamos el entrenamiento de los modelos con mayor calidad y menor tiempo de entrenamiento. Estos fueron, por orden de prioridad, *SVM*, *CNN Manual* y *ResNet50V2*. Como *SVM* es un modelo binario y nuestro problema no lo es, fue descartado y *Xception* tomó su lugar, quedando el siguiente orden: *CNN Manual*, *ResNet50V2* y *Xception*. Sin embargo, este último modelo no fue entrenado debido a los excelentes resultados de los modelos entrenados previamente a él.
