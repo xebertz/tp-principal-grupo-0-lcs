@@ -31,10 +31,10 @@ En este documento expondremos el trabajo realizado durante el sprint, la divisi�
 |===
 |Encargado         |Tareas
 |Villalba, Gastón  |Corregir documentación previa, gestión
-|Ebertz, Ximena    |Búsqueda de datasets, búsqueda de información del problema, creación del dataset, CNN Manual, Xception, Definición de arquitectura MDER, Conexión con equipo de datos
-|López, Gonzalo    |Investigación sobre BBDD, búsqueda de datasets, búsqueda de información del problema, creación del dataset, subir dataset de Riñones a Kaggle, ResNet50V2, SVM
-|Franco, Leandro   |Investigación sobre BBDD, Capacitación en bases de datos, Implementación de BBDD con API, Deploy Modelo de Enfermedades Renales, Refinamiento API, Conexión con equipo de datos
-|Venditto, Pedro   |Capacitación en bases de datos, Implementación de BBDD con API, Investigación FileServer, implementación FileServer, Deploy Modelo de Enfermedades Renales, Refinamiento API, Conexión con equipo de datos
+|Ebertz, Ximena    |Búsqueda de datasets, búsqueda de información del problema, creación del dataset, CNN Manual, Xception, definición de arquitectura MDER, conexión con equipo de datos, refinamiento de modelo, gestión
+|López, Gonzalo    |Investigación sobre BBDD, búsqueda de datasets, búsqueda de información del problema, creación del dataset, subir dataset de riñones a Kaggle, ResNet50V2, SVM
+|Franco, Leandro   |Investigación sobre BBDD, capacitación en bases de datos, implementación de BBDD con API, deploy modelo de enfermedades renales, refinamiento API, conexión con equipo de datos
+|Venditto, Pedro   |Capacitación en bases de datos, implementación de BBDD con API, investigación FileServer, implementación FileServer, deploy Modelo de Enfermedades Renales, refinamiento API, conexión con equipo de datos
 |===
 
 == Datos
