@@ -52,15 +52,42 @@ Determinamos que los siguientes datasets serían útiles para nuestro trabajo:
 
 Como en el sprint previo, creamos un dataset y lo subimos a Kaggle. El dataset se encuentra https://www.kaggle.com/datasets/gonzajl/riones-cyst-stone-tumor-normal-dataset[acá].
 
-== Modelos probados
+== Modelos
 
-* *ResNet50V2:* Este modelo alcanzó un porcentaje de precisión A en las pruebas, para X imágenes.
+De los diversos modelos seleccionados para el proyecto, entrenamos sólo dos. Estos fueron:
 
-* *CNN Manual:* Este modelo alcanzó un porcentaje de precisión A en las pruebas, para X imágenes.
+* *ResNet50V2:* alcanzó un porcentaje de precisión del 95% en las pruebas, para 2352 imágenes.
 
-== Modelos descartados
+* *CNN Manual:* alcanzó un porcentaje de precisión del 99.9% en las pruebas, para 2352 imágenes.
 
-== Modelo seleccionado
+La elección de entrenar únicamente estos modelos no fue trivial.
+
+Debido al ajustado tiempo para realizar tareas tan importantes, nuestra primer acción fue dividir el equipo para cumplir con lo requerido. No obstante, esto implica una menor cantidad de tiempo para entrenar un modelo y que sea lo suficientemente bueno para el proyecto. Por este motivo, definimos una calidad para cada modelo, basándonos en su eficacia en los sprints previos. Esta calidad corresponde a un valor entre 1 y 4, siendo:
+
+* *1*: Modelo muy bueno, con 95% o más de precisión en promedio.
+* *2*: Modelo bueno, con 90% o más de precisión en promedio.
+* *3*: Modelo regular, con 80% o más de precisión en promedio.
+* *4*: Modelo malo, con menos de 80% de precisión en promedio.
+
+También, calculamos el tiempo que tarda cada modelo en entrenar en el mejor caso, para diez vueltas de entrenamiento.
+
+En base a esta información, generamos la siguiente tabla:
+
+[cols="3*", options="header"]
+|===
+|Modelo             |Tiempo mínimo de entrenamiento     |Calidad
+|CNN Manual         |00:19:23                           |1
+|EfficientNetV2     |1:03:45                            |3
+|InceptionResNetV2  |1:25:23                            |2
+|ResNet50V2         |0:44:51                            |1
+|SVM                |0:17:23                            |1
+|VGG16              |1:02:23                            |3
+|Xception           |1:10:23                            |2
+|===
+
+Luego, priorizamos el entrenamiento de los modelos con mayor calidad y menor tiempo de entrenamiento. Estos fueron, por orden de prioridad, *SVM*, *CNN Manual* y *ResNet50V2*. Como *SVM* es un modelo binario y nuestro problema no lo es, fue descartado y *Xception* tomó su lugar, quedando el siguiente orden: *CNN Manual*, *ResNet50V2* y *Xception*. Sin embargo, este último modelo no fue entrenado debido a los excelentes resultados de los modelos entrenados previamente a él.
+
+El modelo seleccionado para ser utilizado en el proyecto fue *CNN Manual*, debido a sus excepcionales resultados. Este modelo es el resultado de una modificación en la arquitectura de nuestro modelo manual previo, añadiéndole capas con mayor cantidad de neuronas. También se utilizó la función "Sigmoid" para la capa final, que determina un peso para cada clase en relación con las demás, lo que genera que la suma de todas las predicciones sea distinta de uno (como sucede con la función "Softmax"). Se determinó, durante el refinamiento del modelo, que Sigmoid es la mejor opción para nuestro modelo debido a que mejora las predicciones, obteniendo resultados más certeros.
 
 == Entrevistas
 
