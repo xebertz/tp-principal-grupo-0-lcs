@@ -1,0 +1,144 @@
+@startuml precedencia
+digraph G {
+    graph [rankdir=TB,splines=ortho, style=filled, pencolor="#FAFAFA", fillcolor="#FAFAFA"]
+    node [shape=box, style=filled, fillcolor="#CCCCCC",fontname="arial"];
+    edge [arrowhead=lnormal, fontname="consolas"];
+
+subgraph cluster_0 {
+    rankdir=LR;
+    "Sprint 1"[style=filled,fillcolor=SkyBlue]
+    "Sprint 2"[style=filled,fillcolor=LightGreen]
+    "Sprint 3"[style=filled,fillcolor=LightYellow]
+    "Sprint 4"[style=filled,fillcolor="#FDE5F2"]
+    "Sprint 5"[style=filled,fillcolor=LightSalmon]
+    "Sprint 1"-> "Sprint 2"[label=6]
+    "Sprint 2"-> "Sprint 3"[label=14]
+    "Sprint 3"-> "Sprint 4"[label=14]
+    "Sprint 4"-> "Sprint 5"[label=14]
+    "Sprint 5"-> "Fin"[label=9]
+}
+
+subgraph cluster_1{
+    clusterrank=local;
+    rankdir=BT;
+    node [fillcolor=LightSkyBlue]
+    {"1.0.0 - Capacitacion en herramientas de gestion"
+    "1.0.1.1 - Riesgos"
+    "1.0.1.2 - Cambios"
+    "1.1.4.A - Dataset tumores cerebrales"
+    "1.2.2.1 - Investigacion de modelos preentrenados"} ->
+    "1.0.1.A - Informe"
+    "1.1.1 - Generar documentacion de capacitacion interna"
+    "1.1.2.A - Clasificacion de tumores cerebrales"->
+    "1.1.4.A - Dataset tumores cerebrales"
+    "1.1.3.A - Profesional neurologo"[rank=out]
+    "1.2.1.1 - Investigacion de tecnicas de procesamiento"
+    "1.2.2.0 - Determinar plataforma de computo"
+    "1.1.0 - Comprender los requerimientos" ->
+    "1.2.2.1 - Investigacion de modelos preentrenados"
+}
+
+subgraph cluster_2{
+    rankdir=TB;
+    node [fillcolor=LightGreen];
+    {"1.0.2.1 - Riesgos"
+    "1.0.2.2 - Cambios"
+    "1.0.2.A - Refinar documentacion"
+    "1.0.1.A - Informe"}->
+    "1.0.2.B - Informe"
+    "1.2.3.A - Deploy Modelo de Deteccion de Tumores Cerebrales"->
+    "1.0.2.A - Refinar documentacion"
+    "1.2.1.1 - Investigacion de tecnicas de procesamiento"->
+    "1.2.1.2.A - Refinamiento de tumores cerebrales"
+    "1.2.2.0 - Determinar plataforma de computo"
+    "1.1.4.A - Dataset tumores cerebrales"->
+    "1.2.1.2.A - Refinamiento de tumores cerebrales"->
+    "1.2.1.3.A - Nivelacion de tumores cerebrales"->
+    "1.2.1.A - Subir dataset de tumores cerebrales a Kaggle"->
+    "1.2.2.2.A - Modelo de Deteccion de Tumores Cerebrales"->
+    "1.2.2.2.X - Definicion de arquitectura MDTC"
+    {"1.1.1 - Generar documentacion de capacitacion interna"
+    "1.2.2.0 - Determinar plataforma de computo"}->
+    "1.2.2.2.A - Modelo de Deteccion de Tumores Cerebrales"
+    {"1.2.2.2.X - Definicion de arquitectura MDTC"
+    "1.2.3.1 - Determinar plataforma de despliegue"}->
+    "1.2.3.A - Deploy Modelo de Deteccion de Tumores Cerebrales"->
+    "1.3.A - Refinamiento API MDTC"
+    "1.2.3.1 - Determinar plataforma de despliegue"->
+    "1.2.3.D - Generar API de prueba"
+    "1.1.3.A - Profesional neurologo"->
+    "1.3.A - Refinamiento API MDTC"
+}
+
+subgraph cluster_3{
+    node [fillcolor=LightYellow];
+    {"1.0.3.1 - Riesgos"
+    "1.0.3.2 - Cambios"
+    "1.0.3.A - Refinar documentacion"
+    "1.0.2.B - Informe"}->
+    "1.0.3.B - Informe"
+    {"1.3.1 - Integracion con otros equipos"
+    "1.3.B - Refinamiento API MDEP"}->
+    "1.0.3.A - Refinar documentacion"
+    "1.1.4.B - Dataset enfermedades pulmonares"->
+    {"1.1.2.B - Clasificacion de enfermedades pulmonares"
+    "1.2.1.2.B - Refinamiento de pulmones"}
+    "1.2.1.2.B - Refinamiento de pulmones"->
+    "1.2.1.3.B - Nivelacion de pulmones"->
+    "1.2.1.B - Subir dataset de \nenfermedades pulmonares a Kaggle"->
+    "1.2.2.2.B - Modelo de Deteccion de Enfermedades Pulmonares"->
+    "1.2.2.2.Y - Definicion de arquitectura MDEP"->
+    "1.2.3.B - Deploy Modelo de Deteccion de Enfermedades Pulmonares"->
+    {"1.3.1 - Integracion con otros equipos"
+    "1.3.B - Refinamiento API MDEP"}
+    "1.1.2.B - Clasificacion de enfermedades pulmonares"->
+    "1.1.3.B - Neumonologa pediatrica"->
+    "1.3.B - Refinamiento API MDEP"
+}
+
+subgraph cluster_4 {
+    node [fillcolor="#FDE5F2"]
+    {"1.0.4.1 - Riesgos"
+    "1.0.4.2 - Cambios"
+    "1.0.4.A - Refinar documentacion"
+    "1.0.3.B - Informe"}->
+    "1.0.4.B - Informe"
+    "1.3.C - Refinamiento API MS4"->
+    "1.0.4.A - Refinar documentacion"
+    "1.1.4.C - Dataset sprint 4"->
+    {"1.1.2.C - Clasificacion de sprint 4"
+    "1.2.1.2.C - Refinamiento de sprint 4"}
+    "1.2.1.2.C - Refinamiento de sprint 4"->
+    "1.2.1.3.C - Nivelacion de sprint 4"->
+    "1.2.1.C - Subir dataset de sprint 4 a Kaggle"->
+    "1.2.2.2.C - Modelo Sprint 4"->
+    "1.2.2.2.Z - Definicion de arquitectura MS4"->
+    "1.2.3.C - Deploy Modelo de Sprint 4"->
+    "1.3.C - Refinamiento API MS4"
+    "1.1.2.C - Clasificacion de sprint 4"->
+    "1.1.3.C - Profesional sprint 4"->
+    "1.3.C - Refinamiento API MS4"
+
+    "1.4.1 - Investigacion sobre bases de datos"->
+    "1.4.2 - Capacitacion en bases de datos"->
+    "1.4.3 - Integracion de BBDD con API"->
+    "1.4.4 - Conexion con equipo de datos"
+
+    {"1.3.A - Refinamiento API MDTC"
+    "1.3.B - Refinamiento API MDEP"
+    "1.3.C - Refinamiento API MS4"}->
+    "1.4.3 - Integracion de BBDD con API" 
+}
+
+subgraph cluster_5 {
+    node [fillcolor=LightSalmon];
+    {"1.0.5.1 - Riesgos"
+    "1.0.5.2 - Cambios"
+    "1.0.5.A - Refinar documentacion"
+    "1.0.4.B - Informe"}->
+    "1.0.5.B - Informe"
+}
+
+
+}
+@enduml
