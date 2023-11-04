@@ -12,9 +12,11 @@ v1, {docdate}
 
 == Introducción
 
-Con la finalidad de ampliar el sistema y mejorar el desarrollo previo, nos pusimos los siguientes objetivos para este sprint:
+Con la finalidad de cumplir los objetivos núcleo del sistema, ampliarlo y mejorar el desarrollo previo, nos pusimos los siguientes objetivos para este sprint:
 
-1. 
+1. Implementar la base de datos requerida para el reentrenamiento del modelo.
+2. Integrar las soluciones del equipo con las del proyecto.
+3. Desarrollar un modelo de detección de enfermedades renales.
 
 == Objetivos del documento
 
