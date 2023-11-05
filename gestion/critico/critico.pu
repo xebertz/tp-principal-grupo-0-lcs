@@ -1,4 +1,4 @@
-@startuml critico-fin
+@startuml critico
 digraph G {
     graph [rankdir=LR,splines=ortho, style=filled, pencolor="#FAFAFA", fillcolor="#FAFAFA"]
     node [shape=box, style=filled, fillcolor="#CCCCCC",fontname="arial"];
@@ -148,43 +148,41 @@ subgraph cluster_3{
 
 subgraph cluster_4 {
     node [fillcolor="#FDE5F2"]
-    "1.0.4.1 - Riesgos"[fillcolor=lightgray]
-    "1.0.4.2 - Cambios"[fillcolor=lightgray]
+    "1.0.4.1 - Cambios"[fillcolor=lightgray]
 
-    {"1.0.4.1 - Riesgos"
-    "1.0.4.2 - Cambios"}->
+    {"1.0.4.1 - Cambios"} ->
     "1.0.4.B - Informe"[taillabel=12]
 
     "1.0.4.A - Refinar documentacion"->
     "1.0.4.B - Informe"[taillabel=2]
 
     {"1.0.3.B - Informe"->
-    "1.3.C - Refinamiento API MS4"}->
+    "1.3.C - Refinamiento API MDER"}->
     "1.0.4.B - Informe"[taillabel=1]
 
-    "1.1.2.C - Clasificacion de sprint 4"[fillcolor=lightgray]
-    "1.1.3.C - Profesional sprint 4"[fillcolor=lightgray]
+    "1.1.2.C - Clasificacion de enfermedades renales"[fillcolor=lightgray]
+    "1.1.3.C - Profesional urologo"[fillcolor=lightgray]
 
-    "1.1.4.C - Dataset sprint 4"->
-    {"1.1.2.C - Clasificacion de sprint 4"
-    "1.2.1.2.C - Refinamiento de sprint 4"}[taillabel=1]
+    "1.1.4.C - Dataset enfermedades renales"->
+    {"1.1.2.C - Clasificacion de enfermedades renales"
+    "1.2.1.2.C - Refinamiento de enfermedades renales"}[taillabel=1]
 
-    "1.2.1.2.C - Refinamiento de sprint 4"->
-    "1.2.1.3.C - Nivelacion de sprint 4"->
-    "1.2.1.C - Subir dataset de sprint 4 a Kaggle"->
-    "1.2.2.2.C - Modelo Sprint 4"[taillabel=1]
+    "1.2.1.2.C - Refinamiento de rinones"->
+    "1.2.1.3.C - Nivelacion de rinones"->
+    "1.2.1.C - Subir dataset de enfermedades renales a Kaggle"->
+    "1.2.2.2.C - Modelo de Deteccion de Enfermedades Renales"[taillabel=1]
 
-    "1.2.2.2.C - Modelo Sprint 4"->
-    "1.2.2.2.Z - Definicion de arquitectura MS4"[taillabel=6]
+    "1.2.2.2.C - Modelo de Deteccion de Enfermedades Renales"->
+    "1.2.2.2.Z - Definicion de arquitectura MDER"[taillabel=6]
 
-    "1.2.2.2.Z - Definicion de arquitectura MS4"->
-    "1.2.3.C - Deploy Modelo de Sprint 4"->
-    "1.3.C - Refinamiento API MS4"[taillabel=1]
+    "1.2.2.2.Z - Definicion de arquitectura MDER"->
+    "1.2.3.C - Deploy Modelo de Enfermedades Renales"->
+    "1.3.C - Refinamiento API MDER"[taillabel=1]
 
-    "1.1.2.C - Clasificacion de sprint 4"->
-    "1.1.3.C - Profesional sprint 4"[taillabel=2]
-    "1.1.3.C - Profesional sprint 4"->
-    "1.3.C - Refinamiento API MS4"[taillabel=5]
+    "1.1.2.C - Clasificacion de enfermedades renales"->
+    "1.1.3.C - Profesional urologo"[taillabel=2]
+    "1.1.3.C - Profesional urologo"->
+    "1.3.C - Refinamiento API MDER"[taillabel=5]
 
     "1.4.1 - Investigacion sobre bases de datos"[fillcolor=lightgray]
     "1.4.2 - Capacitacion en bases de datos"[fillcolor=lightgray]
@@ -198,19 +196,25 @@ subgraph cluster_4 {
 
     {"1.3.A - Refinamiento API MDTC"
     "1.3.B - Refinamiento API MDEP"
-    "1.3.C - Refinamiento API MS4"}->
+    "1.3.C - Refinamiento API MDER"}->
     "1.4.3 - Integracion de BBDD con API" [taillabel=1]
+
+    "1.4.5 - Investigacion FileServer"[fillcolor=lightgray]
+    "1.4.6 - Implementacion FileServer"[fillcolor=lightgray]
+    "1.4.5 - Investigacion FileServer" ->
+    "1.4.6 - Implementacion FileServer" [taillabel=1]
 }
 
 subgraph cluster_5 {
     node [fillcolor=LightSalmon];
-    {"1.0.5.1 - Riesgos"
-    "1.0.5.2 - Cambios"
+    {"1.0.5.2 - Cambios"
     "1.0.5.A - Refinar documentacion"}->
     "1.0.5.B - Informe"[taillabel=6]
 
+
     "1.0.4.B - Informe"->
-    "1.0.5.B - Informe"[taillabel=1]
+    {"FINN - Presentacion Final"
+    "1.0.5.B - Informe"}[taillabel=1]
 }
 
 }
