@@ -105,6 +105,8 @@ Realizamos la implementación de los endpoints que reciben el feedback del médi
 
 === Download
 
+La esencia del feedback es utilizarlo para reentrenar los modelos, con la finalidad de mejorarlos en base a la opinión de profesionales como lo son los médicos. Para entrenar el modelo, es necesario descargar las imágenes almacenadas, con sus etiquetas correspondientes. Por este motiuvo, realizamos tres endpoints de descarga de datos, uno por modelo. Esto descarga las imágenes y las etiquetas en un archivo `.zip`.
+
 === Delete
 
 == Base de datos
