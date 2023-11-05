@@ -93,12 +93,18 @@ El modelo seleccionado para ser utilizado en el proyecto fue *CNN Manual*, debid
 
 Para este sprint decidimos no realizar entrevistas. El motivo de esta elección fue el tiempo limitado con respecto a las tareas a realizar. La importancia de la integración es mayor, por lo que decidimos utilizar nuestra investigación para complementar el desarrollo del modelo, sabiendo que esto no reemplaza la entrevista con un profesional, pero para este dominio con la investigación fue suficiente. Luego, el modelo se puede refinar con el feedback del médico.
 
-== Deploy
+== API
+
+=== Deploy del modelo
 
 Como en los sprints previos, realizamos el deploy del modelo en nuestra https://averiapi-4vtuhnxfba-uc.a.run.app/[API]. El endpoint del modelo correspondiente a este sprint, denominado _lyso_, recibe la imagen, el ID de la misma, y cinco booleanos como información extra, correspondientes a síntomas de las enfermedades. Estos son: _hematuria_, _dolor_lumbar_, _dolor_abdominal_, _fiebre_ y _perdida_peso_. El modelo devuelve un JSON con las clases y la probabilidad correspondiente a cada una de ellas, de 0 al 100. El valor máximo es el correspondiente a la clase predecida.
 
-== Feedback
+=== Feedback
 
-Realizamos la implementación del endpoint que recibe el feedback del médico. Para cada modelo, recibe el ID de la imagen, las clases del modelo, cada una siendo un booleano, siendo la clase con valor `true` correspondiente a la clase correcta, y un `String` de comentarios, en caso de que el médico decida agregar información.
+Realizamos la implementación de los endpoints que reciben el feedback del médico. Para cada modelo, recibe el ID de la imagen, las clases del modelo, cada una siendo un booleano, siendo la clase con valor `true` correspondiente a la clase correcta, y un `String` de comentarios, en caso de que el médico decida agregar información.
+
+=== Download
+
+=== Delete
 
 == Base de datos
