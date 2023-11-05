@@ -109,4 +109,6 @@ La esencia del feedback es utilizarlo para reentrenar los modelos, con la finali
 
 === Delete
 
+Desde el equipo de datos, se nos requirió generar endpoints para eliminar una imagen a partir de su ID, o todas las imágenes del modelo. Este requerimiento surgió debido a la necesidad de mantener la consistencia de la información de datos con la nuestra. Entonces, generamos un endpoint por modelo para eliminar la imagen según su identificador, y otro endpoint para eliminar todas las imágenes de un modelo, a partir del nombre del mismo.
+
 == Base de datos
