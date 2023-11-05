@@ -1,10 +1,16 @@
 @startgantt
 Project starts 2023-09-20
 --Sprint 1--
+[1.A.1] starts 2023-09-26 and lasts 1 day
+[1.A.6] starts 2023-09-22 and lasts 1 day
+[1.A.18] starts 2023-09-20 and lasts 1 day
+[1.A.24] ends at [1.A.1]'s end and lasts 1 day
 [1.0.0] starts  2023-09-20 and lasts 1 day
 [1.0.1.1] starts 2023-09-21 and lasts 3 days
 [1.0.1.2] starts 2023-09-21 and lasts 3 days
 [1.0.1.A] starts 2023-09-24 and lasts 2 days
+[1.0.1.B] starts 2023-09-20 and lasts 6 days
+[1.0.1.C] starts 2023-09-20 and lasts 4 days
 [1.1.0] starts 2023-09-20 and lasts 1 days
 [1.1.1] starts 2023-09-20 and lasts 2 days
 [1.1.2.A] starts 2023-09-21 and lasts 2 days
@@ -14,11 +20,18 @@ Project starts 2023-09-20
 [1.2.2.1] starts 2023-09-22 and lasts 2 days
 
 --Sprint 2--
-
+[1.A.2] starts at 2023-10-10 and lasts 1 day
+[1.A.7] starts 2023-09-29 and lasts 1 day
+[1.A.8] starts 2023-10-03 and lasts 1 day
+[1.A.9] starts 2023-10-06 and lasts 1 day
+[1.A.19] starts 2023-09-27 and lasts 1 day
+[1.A.25] ends at [1.A.2]'s end and lasts 1 day
 [1.0.2.1] starts 2023-09-27 and lasts 10 days
 [1.0.2.2] starts 2023-09-27 and lasts 11 days
 [1.0.2.A] starts 2023-10-06 and lasts 1 day
 [1.0.2.B] starts at [1.0.2.A]'s end and ends 2023-10-09
+[1.0.2.C] starts 2023-09-27 and lasts 13 days
+[1.0.2.D] starts 2023-09-27 and lasts 12 days
 
 [1.1.3.A] starts 2023-10-02 and lasts 5 days
 [1.2.1.2.A] starts 2023-09-27 and lasts 1 days
@@ -38,10 +51,18 @@ Project starts 2023-09-20
 
 --Sprint 3--
 
+[1.A.3] starts at 2023-10-24 and lasts 1 day
+[1.A.10] starts 2023-10-13 and lasts 1 day
+[1.A.11] starts 2023-10-17 and lasts 1 day
+[1.A.12] starts 2023-10-20 and lasts 1 day
+[1.A.20] starts 2023-10-11 and lasts 1 day
+[1.A.26] ends at [1.A.3]'s end and lasts 1 day
 [1.0.3.1] starts 2023-10-12 and lasts 11 days
 [1.0.3.2] starts 2023-10-12 and lasts 11 days
 [1.0.3.A] starts 2023-10-21 and lasts 2 days
 [1.0.3.B] starts at [1.0.3.A]'s end and ends 2023-10-23
+[1.0.3.C] starts 2023-10-11 and lasts 13 days
+[1.0.3.D] starts 2023-10-11 and lasts 12 days
 
 [1.1.4.B] starts at 2023-10-12 and lasts 1 days
 [1.1.2.B] starts at [1.1.4.B]'s end and lasts 2 days
@@ -62,10 +83,18 @@ Project starts 2023-09-20
 
 --Sprint 4--
 
+[1.A.4] starts at 2023-11-07 and lasts 1 day
+[1.A.11] starts 2023-10-27 and lasts 1 day
+[1.A.12] starts 2023-10-31 and lasts 1 day
+[1.A.13] starts 2023-11-03 and lasts 1 day
+[1.A.21] starts 2023-10-25 and lasts 1 day
+[1.A.27] ends at [1.A.4]'s end and lasts 1 day
 [1.0.4.1] starts 2023-10-25 and lasts 12 days
 [1.0.4.2] starts 2023-10-25 and lasts 12 days
 [1.0.4.A] starts 2023-11-04 and lasts 2 days
 [1.0.4.B] starts at [1.0.4.A]'s end and ends 2023-11-06
+[1.0.4.C] starts 2023-10-25 and lasts 13 days
+[1.0.4.D] starts 2023-10-25 and lasts 12 days
 
 [1.1.4.C] starts 2023-10-25 and lasts 2 days
 [1.1.2.C] starts at [1.1.4.C]'s end and lasts 2 days
@@ -77,20 +106,33 @@ Project starts 2023-09-20
 
 [1.2.2.2.C] lasts 6 days and starts at [1.2.1.C]'s end 
 [1.2.2.2.Z] lasts 1 days and ends at [1.2.2.2.C]'s end
-[NAME] happens at [1.2.2.2.Z]'s end
+[LYSO] happens at [1.2.2.2.Z]'s end
 [1.2.3.C] lasts 1 days and starts at [1.2.2.2.Z]'s end
 [API3] happens at [1.2.3.C]'s end
-
 [1.3.C] lasts 1 days and starts at [1.2.3.C]'s end
+
+[1.4.1] starts 2023-10-26 and lasts 1 day
+[1.4.2] starts at [1.4.1]'s end and lasts 1 day
+[1.4.3] starts at [1.4.2]'s end and lasts 1 day
+[1.4.4] starts 5 days after [1.4.3]'s end and lasts 2 day
+[1.4.5] starts 2023-11-03 and lasts 1 day
+[1.4.6] starts at [1.4.5]'s end and lasts 1 day
 
 --Sprint 5--
 
+[1.A.5] starts 2023-11-17 and lasts 1 day
+[1.A.16] starts 2023-11-10 and lasts 1 day
+[1.A.17] starts 2023-11-14 and lasts 1 day
+[1.A.22] starts 2023-11-08 and lasts 1 day
+[1.A.28] starts 2023-11-17 and lasts 1 day
 [1.0.5.1] starts 2023-11-08 and lasts 6 days
 [1.0.5.2] starts 2023-11-08 and lasts 6 days
 [1.0.5.A] starts 2023-11-08 and lasts 6 days
 [1.0.5.B] starts at [1.0.5.A]'s end and lasts 3 days
-[END] happens at [1.0.5.B]'s end
-
+[1.0.5.C] starts 2023-11-08 and lasts 9 days
+[1.0.5.D] starts 2023-11-08 and lasts 8 days
+[FINN] starts 2023-11-08 and lasts 8 days
+[END] happens at [1.A.5]'s end
 
 2023-09-26 is colored in pink
 2023-10-10 is colored in pink
