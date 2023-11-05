@@ -66,6 +66,7 @@ wbsDiagram {
 **** 1.0.5.D - Gestión técnica <<green>>
 
 *** II - Corregir documentación previa <<new>>
+*** FINN - Presentación Final <<new>>
 
 ** 1.1 - Investigación <<orange>>
 *** 1.1.0 - Comprender los requerimientos <<green>>
@@ -77,13 +78,13 @@ wbsDiagram {
 
 *** 1.1.3 - Entrevistar expertos <<violet>>
 **** 1.1.3.A - Profesional neurólogo <<green>>
-**** 1.1.3.B - Profesional clínico (pulmón) <<green>>
-**** 1.1.3.C - Profesional sprint 4 <<green>>
+**** 1.1.3.B - Neunomóloga pediátrica <<green>>
+**** 1.1.3.C - Profesional urólogo <<green>>
 
 *** 1.1.4 - Recopilación de datos <<violet>>
 **** 1.1.4.A - Dataset tumores cerebrales <<green>>
 **** 1.1.4.B - Dataset enfermedades pulmonares <<green>>
-**** 1.1.4.C - Dataset sprint 4 <<green>>
+**** 1.1.4.C - Dataset enfermedades renales <<green>>
 
 ** 1.2 - Modelos de IA <<orange>>
 
@@ -92,16 +93,16 @@ wbsDiagram {
 **** 1.2.1.2 - Refinamiento de datos <<blue>>
 ***** 1.2.1.2.A - Ref. tumores cerebrales <<green>>
 ***** 1.2.1.2.B - Ref. pulmones <<green>>
-***** 1.2.1.2.C - Ref. sprint 4 <<green>>
+***** 1.2.1.2.C - Ref. riñones <<green>>
 
 **** 1.2.1.3 - Nivelación de clases <<blue>>
 ***** 1.2.1.3.A - Niv. tumores cerebrales <<green>>
 ***** 1.2.1.3.B - Niv. pulmones <<green>>
-***** 1.2.1.3.C - Niv. sprint 4 <<green>>
+***** 1.2.1.3.C - Niv. riñones <<green>>
 
 **** 1.2.1.A - Subir dataset MDTC <<green>>
 **** 1.2.1.B - Subir dataset MDEP <<green>>
-**** 1.2.1.C - Subir dataset MS4 <<green>>
+**** 1.2.1.C - Subir dataset MDER <<green>>
 
 *** 1.2.2 - Implementación de modelos <<violet>>
 **** 1.2.2.0 - Determinar plataforma de cómputo <<green>>
@@ -111,15 +112,15 @@ wbsDiagram {
 ***** 1.2.2.2.X - Definición de arquitectura MDTC <<green>>
 ***** 1.2.2.2.B - Modelo de Detección de Enfermedades Pulmonares <<green>>
 ***** 1.2.2.2.Y - Definición de arquitectura MDEP <<green>>
-***** 1.2.2.2.C - Modelo Sprint 4 <<green>>
-***** 1.2.2.2.Z - Definición de arquitectura MS4 <<green>>
+***** 1.2.2.2.C - Modelo de Detección de Enfermedades Renales <<green>>
+***** 1.2.2.2.Z - Definición de arquitectura MDER <<green>>
 **** III - Preparación de entorno de trabajo extra <<new>>
 
 *** 1.2.3 - Despliegue de modelos <<violet>>
 **** 1.2.3.1 - Determinar plataforma de deploy <<green>>
 **** 1.2.3.A - Deploy Modelo de Detección de Tumores Cerebrales <<green>>
 **** 1.2.3.B - Deploy Modelo de Detección de Enfermedades Pulmonares <<green>>
-**** 1.2.3.C - Deploy Modelo Sprint 4 <<green>>
+**** 1.2.3.C - Deploy Modelo de Detección de Enfermedades Renales <<green>>
 **** 1.2.3.D - Generar API de prueba <<green>>
 **** I - Documentación API <<new>>
 
@@ -127,7 +128,7 @@ wbsDiagram {
 *** 1.3.1 - Integración con otros equipos <<green>>
 *** 1.3.A - Refinamiento de API MDTC <<green>>
 *** 1.3.B - Refinamiento de API MDEP <<green>>
-*** 1.3.C - Refinamiento de API MS4 <<green>>
+*** 1.3.C - Refinamiento de API MDER <<green>>
 
 ** 1.4 - Reentrenamiento <<orange>>
 *** 1.4.1 - Investigación sobre bases de datos <<green>>
