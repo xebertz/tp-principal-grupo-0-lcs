@@ -26,8 +26,17 @@ subgraph cluster_1{
     "1.0.1.1 - Riesgos"
     "1.0.1.2 - Cambios"
     "1.1.4.A - Dataset tumores cerebrales"
-    "1.2.2.1 - Investigacion de modelos preentrenados"} ->
-    "1.0.1.A - Informe"
+    "1.2.2.1 - Investigacion de modelos preentrenados"
+    "1.0.1.B - Comunicacion"
+    "1.0.1.C - Gestion tecnica"} ->
+    "1.0.1.A - Informe" ->
+    "1.A.1 - Reunion Formal 1"->
+    "1.A.24 - Restrospective 1"
+
+    "1.A.18 - Sprint 1 Planning"
+    "1.A.23.1 - Dailies Sprint 1"
+    "1.A.6 - Clase de consultas 1"
+
     "1.1.1 - Generar documentacion de capacitacion interna"
     "1.1.2.A - Clasificacion de tumores cerebrales"->
     "1.1.4.A - Dataset tumores cerebrales"
@@ -44,8 +53,21 @@ subgraph cluster_2{
     {"1.0.2.1 - Riesgos"
     "1.0.2.2 - Cambios"
     "1.0.2.A - Refinar documentacion"
-    "1.0.1.A - Informe"}->
-    "1.0.2.B - Informe"
+    "1.0.1.A - Informe"
+    "1.0.2.C - Comunicacion"
+    "1.0.2.D - Gestion tecnica"
+    "1.3.A - Refinamiento API MDTC"}->
+    "1.0.2.B - Informe"->
+    "1.A.2 - Reunion Formal 2"->
+    "1.A.25 - Retrospective 2"
+
+    "1.A.19 - Sprint 2 Planning"
+    "1.A.23.2 - Dailies Sprint 2"
+    "1.A.6 - Clase de consultas 1"->
+    "1.A.7 - Clase de consultas 2"->
+    "1.A.8 - Clase de consultas 3"->
+    "1.A.9 - Clase de consultas 4"
+
     "1.2.3.A - Deploy Modelo de Deteccion de Tumores Cerebrales"->
     "1.0.2.A - Refinar documentacion"
     "1.2.1.1 - Investigacion de tecnicas de procesamiento"->
@@ -75,8 +97,14 @@ subgraph cluster_3{
     {"1.0.3.1 - Riesgos"
     "1.0.3.2 - Cambios"
     "1.0.3.A - Refinar documentacion"
-    "1.0.2.B - Informe"}->
-    "1.0.3.B - Informe"
+    "1.0.2.B - Informe"
+    "1.0.3.C - Comunicacion"
+    "1.0.3.D - Gestion tecnica"
+    "1.3.B - Refinamiento API MDEP"}->
+    "1.0.3.B - Informe"->
+    "1.A.3 - Reunion Formal 3"->
+    "1.A.26 - Retrospective 3"
+
     {"1.3.1 - Integracion con otros equipos"
     "1.3.B - Refinamiento API MDEP"}->
     "1.0.3.A - Refinar documentacion"
@@ -94,6 +122,13 @@ subgraph cluster_3{
     "1.1.2.B - Clasificacion de enfermedades pulmonares"->
     "1.1.3.B - Neumonologa pediatrica"->
     "1.3.B - Refinamiento API MDEP"
+
+    "1.A.20 - Sprint 3 Planning"
+    "1.A.23.3 - Dailies Sprint 3"
+    "1.A.9 - Clase de consultas 4"->
+    "1.A.10 - Clase de consultas 5"->
+    "1.A.11 - Clase de consultas 6"->
+    "1.A.12 - Clase de consultas 7"
 }
 
 subgraph cluster_4 {
@@ -101,33 +136,49 @@ subgraph cluster_4 {
     {"1.0.4.1 - Riesgos"
     "1.0.4.2 - Cambios"
     "1.0.4.A - Refinar documentacion"
-    "1.0.3.B - Informe"}->
-    "1.0.4.B - Informe"
-    "1.3.C - Refinamiento API MS4"->
+    "1.0.3.B - Informe"
+    "1.0.4.C - Comunicacion"
+    "1.0.4.D - Gestion tecnica"
+}->
+    "1.0.4.B - Informe"->
+    "1.A.4 - Reunion Formal 4"->
+    "1.A.27 - Retrospective 4"
+
+    "1.3.C - Refinamiento API MDER"->
     "1.0.4.A - Refinar documentacion"
     "1.1.4.C - Dataset sprint 4"->
-    {"1.1.2.C - Clasificacion de sprint 4"
-    "1.2.1.2.C - Refinamiento de sprint 4"}
-    "1.2.1.2.C - Refinamiento de sprint 4"->
-    "1.2.1.3.C - Nivelacion de sprint 4"->
-    "1.2.1.C - Subir dataset de sprint 4 a Kaggle"->
-    "1.2.2.2.C - Modelo Sprint 4"->
-    "1.2.2.2.Z - Definicion de arquitectura MS4"->
-    "1.2.3.C - Deploy Modelo de Sprint 4"->
-    "1.3.C - Refinamiento API MS4"
-    "1.1.2.C - Clasificacion de sprint 4"->
-    "1.1.3.C - Profesional sprint 4"->
-    "1.3.C - Refinamiento API MS4"
+    {"1.1.2.C - Clasificacion de riñones"
+    "1.2.1.2.C - Refinamiento de riñones"}
+    "1.2.1.2.C - Refinamiento de riñones"->
+    "1.2.1.3.C - Nivelacion de riñones"->
+    "1.2.1.C - Subir dataset de riñones a Kaggle"->
+    "1.2.2.2.C - Modelo de Deteccion de Enfermedades Renales"->
+    "1.2.2.2.Z - Definicion de arquitectura MDER"->
+    "1.2.3.C - Deploy MDER"->
+    "1.3.C - Refinamiento API MDER"
+    "1.1.2.C - Clasificacion de riñones"->
+    "1.1.3.C - Profesional urologo"->
+    "1.3.C - Refinamiento API MDER"
 
     "1.4.1 - Investigacion sobre bases de datos"->
     "1.4.2 - Capacitacion en bases de datos"->
-    "1.4.3 - Integracion de BBDD con API"->
+    "1.4.3 - Implementacion de BBDD con API"->
     "1.4.4 - Conexion con equipo de datos"
 
     {"1.3.A - Refinamiento API MDTC"
     "1.3.B - Refinamiento API MDEP"
-    "1.3.C - Refinamiento API MS4"}->
-    "1.4.3 - Integracion de BBDD con API" 
+    "1.3.C - Refinamiento API MDER"}->
+    "1.4.3 - Implementacion de BBDD con API" 
+
+    "1.4.5 - Investigacion FileServer"->
+    "1.4.6 - Implementacion FileServer"
+
+    "1.A.21 - Sprint 4 Planning"
+    "1.A.23.4 - Dailies Sprint 4"
+    "1.A.12 - Clase de consultas 7"->
+    "1.A.13 - Clase de consultas 8"->
+    "1.A.14 - Clase de consultas 9"->
+    "1.A.15 - Clase de consultas 10"
 }
 
 subgraph cluster_5 {
@@ -135,8 +186,18 @@ subgraph cluster_5 {
     {"1.0.5.1 - Riesgos"
     "1.0.5.2 - Cambios"
     "1.0.5.A - Refinar documentacion"
-    "1.0.4.B - Informe"}->
-    "1.0.5.B - Informe"
+    "1.0.4.B - Informe"
+    "1.0.5.C - Comunicacion"
+    "1.0.5.C - Gestion tecnica"}->
+    "1.0.5.B - Informe"->
+    "1.A.5 - Reunion Formal 5"->
+    "1.A.28 - Retrospective 5"
+
+    "1.A.22 - Sprint 5 Planning"
+    "1.A.23.5 - Dailies Sprint 5"
+    "1.A.15 - Clase de consultas 10"->
+    "1.A.16 - Clase de consultas 11"->
+    "1.A.17 - Clase de consultas 12"
 }
 
 
