@@ -12,7 +12,7 @@ v1, {docdate}
 
 == Descripción
 
-El código en Python que se proporciona realiza diversas tareas relacionadas con la gestión de datos de imágenes médicas, específicamente imágenes de riñones clasificadas de diferentes formas: "cist", "stone", "tumor" y "normal". El código descarga conjuntos de datos desde Kaggle, organiza las imágenes en directorios específicos, crea un `DataFrame` de Pandas con información sobre las imágenes y sus etiquetas, muestra un gráfico de la distribución de clases, guarda un archivo CSV con la información del DataFrame y realiza algunas operaciones adicionales en las imágenes, como cambiar su tamaño y renombrarlas.
+El código en Python que se proporciona realiza diversas tareas relacionadas con la gestión de datos de imágenes médicas, específicamente imágenes de riñones clasificadas de diferentes formas: "cyst", "stone", "tumor" y "normal". El código descarga conjuntos de datos desde Kaggle, organiza las imágenes en directorios específicos, crea un `DataFrame` de Pandas con información sobre las imágenes y sus etiquetas, muestra un gráfico de la distribución de clases, guarda un archivo CSV con la información del DataFrame y realiza algunas operaciones adicionales en las imágenes, como cambiar su tamaño y renombrarlas.
 
 == Importación de librerías
 
