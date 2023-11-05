@@ -91,6 +91,8 @@ El modelo seleccionado para ser utilizado en el proyecto fue *CNN Manual*, debid
 
 == Entrevistas
 
+Para este sprint decidimos no realizar entrevistas. El motivo de esta elección fue el tiempo limitado con respecto a las tareas a realizar. La importancia de la integración es mayor, por lo que decidimos utilizar nuestra investigación para complementar el desarrollo del modelo, sabiendo que esto no reemplaza la entrevista con un profesional, pero para este dominio con la investigación fue suficiente. Luego, el modelo se puede refinar con el feedback del médico.
+
 == Deploy
 
 == Base de datos
