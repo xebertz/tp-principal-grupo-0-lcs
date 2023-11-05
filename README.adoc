@@ -95,4 +95,6 @@ Para este sprint decidimos no realizar entrevistas. El motivo de esta elección 
 
 == Deploy
 
+Como en los sprints previos, realizamos el deploy del modelo en nuestra https://averiapi-4vtuhnxfba-uc.a.run.app/[API]. El endpoint del modelo correspondiente a este sprint, denominado _lyso_, recibe la imagen, el ID de la misma, y cinco booleanos como información extra, correspondientes a síntomas de las enfermedades. Estos son: _hematuria_, _dolor_lumbar_, _dolor_abdominal_, _fiebre_ y _perdida_peso_. El modelo devuelve un JSON con las clases y la probabilidad correspondiente a cada una de ellas, de 0 al 100. El valor máximo es el correspondiente a la clase predecida.
+
 == Base de datos
