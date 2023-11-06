@@ -405,6 +405,20 @@ El día 28/10/2023 se asignó un nuevo modelo para sustituir al ya descartado *S
 
 Se puede notar que los _story points_ restantes son 137 y no 122 como se tenía previsto, esto se debe a que, en el gráfico, se contempla la reuión formal y la _retrospective_ del equipo, sumando así los **15 _story points_** restantes.
 
+== User Stories Finalizadas
+
+.USF hasta _sprint_ 4
+image::.img/usf.png[]
+
+El aumento de 3 a 4 tareas críticas se debe a las tareas de integración surgidas en el _sprint_ 4 que necesitan su mantenimiento para el correcto funcionamiento del proyecto.
+
+Se tiene estimado que las tareas críticas disminuyan a **1** siendo este la preparación de la presentación final.
+
+== Horas Imputadas
+
+.Horas imputadas de cada rol en el proyecto
+image::.img/horas-imputadas.png[]
+
 == Tecnologías
 
 Las tecnologías a utilizar serán las siguientes:
