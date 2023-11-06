@@ -416,8 +416,21 @@ Se tiene estimado que las tareas críticas disminuyan a **1** siendo este la pre
 
 == Horas Imputadas
 
-.Horas imputadas de cada rol en el proyecto
+.Horas imputadas de cada rol por _sprint_ 
 image::.img/horas-imputadas.png[]
+
+.Participación de cada rol en el proyecto 
+image::.img/costo-rol.png[]
+
+=== Salario Argentina
+
+.Horas imputadas de cada rol por _sprint_ | Arg
+image::.img/horas-imputadas-arg.png[]
+
+.Participación de cada rol en el proyecto | Arg
+image::.img/costo-rol-arg.png[]
+
+Fuente: https://sueldos.openqube.io/encuesta-sueldos-2023.02/[encuesta openqube]
 
 == Tecnologías
 
