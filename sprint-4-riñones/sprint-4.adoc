@@ -1,4 +1,4 @@
-= TP Principal - Laboratorio de Construcción de Software - Sprint 3
+= TP Principal - Laboratorio de Construcción de Software - Sprint 4
 Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Franco Leandro <leandro00fr@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>; Venditto Pedro <pedrovenditto41@gmail.com>; Villalba Gastón <gastonleovillalba@gmail.com>;
 v1, {docdate}
 :toc:
@@ -72,7 +72,7 @@ Desarrollo y Entrenamiento del Modelo de IA:
 - Implementación y entrenamiento del modelo utilizando el conjunto de datos previamente preparado.
 - Optimización y validación del modelo para asegurar su eficacia y precisión en la clasificación de las imágenes médicas.
 - Se considerará la posibilidad de mejorar el modelo de inteligencia artificial si es necesario.
-- Despliegue del modelo de IA. Recibe como inputs una imagen y determiados datos y devuelve un resultado.
+- Despliegue del modelo de IA. Recibe como inputs una imagen y determinados datos y devuelve un resultado.
 - Almacenar imágenes y sus etiquetas para un posterior reentrenamiento de los modelos de IA.
 
 === Requerimientos
@@ -403,7 +403,7 @@ image::.img/burndown-chart.png[]
 
 El día 28/10/2023 se asignó un nuevo modelo para sustituir al ya descartado *SVM*, agregando **16 _story points_** los cuales, también serían descartados.
 
-Se puede notar que los _story points_ restantes son 137 y no 122 como se tenía previsto, esto se debe a que, en el gráfico, se contempla la reuión formal y la _retrospective_ del equipo, sumando así los **15 _story points_** restantes.
+Se puede notar que los _story points_ restantes son 137 y no 122 como se tenía previsto, esto se debe a que, en el gráfico, se contempla la reunión formal y la _retrospective_ del equipo, sumando así los **15 _story points_** restantes.
 
 == User Stories Finalizadas
 
