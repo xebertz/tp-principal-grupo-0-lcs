@@ -72,7 +72,7 @@ Desarrollo y Entrenamiento del Modelo de IA:
 - Implementación y entrenamiento del modelo utilizando el conjunto de datos previamente preparado.
 - Optimización y validación del modelo para asegurar su eficacia y precisión en la clasificación de las imágenes médicas.
 - Se considerará la posibilidad de mejorar el modelo de inteligencia artificial si es necesario.
-- Despliegue del modelo de IA. Recibe como inputs una imagen y determiados datos y devuelve un resultado.
+- Despliegue del modelo de IA. Recibe como inputs una imagen y determinados datos y devuelve un resultado.
 - Almacenar imágenes y sus etiquetas para un posterior reentrenamiento de los modelos de IA.
 
 === Requerimientos
