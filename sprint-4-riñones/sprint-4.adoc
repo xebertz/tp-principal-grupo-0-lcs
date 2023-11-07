@@ -403,7 +403,7 @@ image::.img/burndown-chart.png[]
 
 El día 28/10/2023 se asignó un nuevo modelo para sustituir al ya descartado *SVM*, agregando **16 _story points_** los cuales, también serían descartados.
 
-Se puede notar que los _story points_ restantes son 137 y no 122 como se tenía previsto, esto se debe a que, en el gráfico, se contempla la reuión formal y la _retrospective_ del equipo, sumando así los **15 _story points_** restantes.
+Se puede notar que los _story points_ restantes son 137 y no 122 como se tenía previsto, esto se debe a que, en el gráfico, se contempla la reunión formal y la _retrospective_ del equipo, sumando así los **15 _story points_** restantes.
 
 == User Stories Finalizadas
 
