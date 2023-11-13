@@ -358,5 +358,41 @@ Mediante una solicitud HTTP-GET se puede descargar un _.zip_ con las imágenes a
 
 Se consume de la misma manera del _endpoint_ `predict/fred` sin campos, cambiando el _endpoint_.
 
+== Retrieve
+
+Mediante el id asociada a una imagen/prediccion se obtienen los datos de la predicción y feedback en formato JSON. 
+
+ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/retrieve`
+
+Mediante una solicitud HTTP-GET se puede enviar al _endpoint_ un JSON, cual puede recibir los siguientes valores: 
+
+id: Almacena un entero.
+
+Retornará un JSON con los siguientes posibles mensajes:
+
+- En caso de que exista el id en alguno de los 3 modelos, retorna el JSON con los datos del id asociado. Ej:
+
+{
+  "comment": "no tengo comentarios",
+  "convulsiones": 0,
+  "debilidad_focal": 1,
+  "glioma": 1,
+  "id": 7,
+  "imagen": "images/7.png",
+  "meningioma": 0,
+  "model": "fred",
+  "no_tumor": 0,
+  "perdida_visual": 0,
+  "pituitary": 0
+}
+
+Adjuntando el código de estado 200.
+
+- {"message": "ERROR! ID not exists"}: En caso de que el id no exista dentro de nuestra base de datos, es decir, que no se haya realizado un predict con ese id o se haya eliminado anteriormente. Adjunto con el código de estado 204.
+
+- {"message": "ERROR! ID is not int"}: En caso de que el parámetro pasado en el campo de id no sea un entero. Adjunto con el código de estado 400.
+
+Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
+
 == Herramientas
 Otras herramientas para realizar pruebas o solicitudes a la API pueden ser Postman, SoapUI, RapidAPI, Rayuela, etc... Además, se puede consumir con diferentes lenguajes de preferencia.
