@@ -207,7 +207,7 @@ Retornará un JSON con los siguientes posibles mensajes:
 
 - {"message": "ERROR! there is more than one true value"}: En caso de que todos los campos del JSON que almacenan booleanos sean true. Adjunto con el código de estado 400.
 
-- {"message": "ERROR! no exists ID"}: En caso de que el id no exista dentro de nuestra base de datos, es decir, que no se haya realizado un predict con ese id o se haya eliminado anteriormente. Adjunto con el código de estado 404.
+- {"message": "ERROR! ID not exists"}: En caso de que el id no exista dentro de nuestra base de datos, es decir, que no se haya realizado un predict con ese id o se haya eliminado anteriormente. Adjunto con el código de estado 204.
 
 - {"message": "ERROR! ID is not int"}: En caso de que el parámetro pasado en el campo de id no sea un entero. Adjunto con el código de estado 400.
 
@@ -229,7 +229,7 @@ Retornará un json con los siguientes posibles mensajes:
 
 - {"message": "ERROR! there is more than one true value"}: En caso de que todos los campos del JSON que almacenan booleanos sean true. Adjunto con el código de estado 400.
 
-- {"message": "ERROR! no exists ID"}: En caso de que el id no exista dentro de nuestra base de datos, es decir, que no se haya realizado un predict con ese id o se haya eliminado anteriormente. Adjunto con el código de estado 404.
+- {"message": "ERROR! ID not exists"}: En caso de que el id no exista dentro de nuestra base de datos, es decir, que no se haya realizado un predict con ese id o se haya eliminado anteriormente. Adjunto con el código de estado 204.
 
 - {"message": "ERROR! ID is not int"}: En caso de que el parámetro pasado en el campo de id no sea un entero. Adjunto con el código de estado 400.
 
@@ -253,7 +253,7 @@ Retornará un json con los siguientes posibles mensajes:
 
 - {"message": "ERROR! there is more than one true value"}: En caso de que todos los campos del JSON que almacenan booleanos sean true. Adjunto con el código de estado 400.
 
-- {"message": "ERROR! no exists ID"}: En caso de que el id no exista dentro de nuestra base de datos, es decir, que no se haya realizado un predict con ese id o se haya eliminado anteriormente. Adjunto con el código de estado 404.
+- {"message": "ERROR! ID not exists"}: En caso de que el id no exista dentro de nuestra base de datos, es decir, que no se haya realizado un predict con ese id o se haya eliminado anteriormente. Adjunto con el código de estado 204.
 
 - {"message": "ERROR! ID is not int"}: En caso de que el parámetro pasado en el campo de id no sea un entero. Adjunto con el código de estado 400.
 
@@ -274,9 +274,9 @@ id: Almacena un entero.
 
 Retornará un json con los siguientes posibles mensajes:
 
-- {"message": "DELETE ID: id"}, 200: En caso de que los valores del JSON estén correctos, es decir, que el id sea un entero y que haya encontrado el id en la base de datos. Adjunto con el código de estado 200.
+- {"message": "ID DELETED: id"}, 200: En caso de que los valores del JSON estén correctos, es decir, que el id sea un entero y que haya encontrado el id en la base de datos. Adjunto con el código de estado 200.
 
-- {"message": "ERROR! no exists ID"}: En caso de que el id no exista dentro de nuestra base de datos, es decir, que no se haya realizado un predict con ese id o se haya eliminado anteriormente. Adjunto con el código de estado 404.
+- {"message": "ERROR! ID not exists"}: En caso de que el id no exista dentro de nuestra base de datos, es decir, que no se haya realizado un predict con ese id o se haya eliminado anteriormente. Adjunto con el código de estado 204.
 
 - {"message": "ERROR! ID is not int"}: En caso de que el parámetro pasado en el campo de id no sea un entero. Adjunto con el código de estado 400.
 
@@ -291,9 +291,9 @@ id: Almacena un entero.
 
 Retornará un json con los siguientes posibles mensajes:
 
-- {"message": "DELETE ID: id"}, 200: En caso de que los valores del JSON estén correctos, es decir, que el id sea un entero y que haya encontrado el id en la base de datos. Adjunto con el código de estado 200.
+- {"message": "DELETED ID: id"}, 200: En caso de que los valores del JSON estén correctos, es decir, que el id sea un entero y que haya encontrado el id en la base de datos. Adjunto con el código de estado 200.
 
-- {"message": "ERROR! no exists ID"}: En caso de que el id no exista dentro de nuestra base de datos, es decir, que no se haya realizado un predict con ese id o se haya eliminado anteriormente. Adjunto con el código de estado 404.
+- {"message": "ERROR! ID not exists"}: En caso de que el id no exista dentro de nuestra base de datos, es decir, que no se haya realizado un predict con ese id o se haya eliminado anteriormente. Adjunto con el código de estado 204.
 
 - {"message": "ERROR! ID is not int"}: En caso de que el parámetro pasado en el campo de id no sea un entero. Adjunto con el código de estado 400.
 
@@ -308,9 +308,9 @@ id: Almacena un entero.
 
 Retornará un json con los siguientes posibles mensajes:
 
-- {"message": "DELETE ID: id"}, 200: En caso de que los valores del JSON estén correctos, es decir, que el id sea un entero y que haya encontrado el id en la base de datos. Adjunto con el código de estado 200.
+- {"message": "DELETED ID: id"}, 200: En caso de que los valores del JSON estén correctos, es decir, que el id sea un entero y que haya encontrado el id en la base de datos. Adjunto con el código de estado 200.
 
-- {"message": "ERROR! no exists ID"}: En caso de que el id no exista dentro de nuestra base de datos, es decir, que no se haya realizado un predict con ese id o se haya eliminado anteriormente. Adjunto con el código de estado 404.
+- {"message": "ERROR! no exists ID"}: En caso de que el id no exista dentro de nuestra base de datos, es decir, que no se haya realizado un predict con ese id o se haya eliminado anteriormente. Adjunto con el código de estado 204.
 
 - {"message": "ERROR! ID is not int"}: En caso de que el parámetro pasado en el campo de id no sea un entero. Adjunto con el código de estado 400.
 
@@ -327,9 +327,9 @@ Retornará un json con los siguientes posibles mensajes:
 
 - {"message": "ERROR! name is not string"}: En caso de que el parámetro model no sea un string. Adjunto con el código de estado 400.
 
-- {"message": "ERROR! name model not exists"}:En caso de que el parámetro model no coincida con los nombres de los modelos "fred", "wini" o "lyso". Adjunto con el código de estado 404.
+- {"message": "ERROR! name model not exists"}:En caso de que el parámetro model no coincida con los nombres de los modelos "fred", "wini" o "lyso". Adjunto con el código de estado 204.
 
-- {"message": "DELETE ALL ROW: model"}: En caso de que el parámetro model sea "fred", "wini" o "lyso". Adjunt con el código de estado 200.
+- {"message": "DELETE ALL ROWS: model"}: En caso de que el parámetro model sea "fred", "wini" o "lyso". Adjunt con el código de estado 200.
 
 Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
 
