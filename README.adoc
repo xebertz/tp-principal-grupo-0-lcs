@@ -14,9 +14,9 @@ v1, {docdate}
 
 Debido a la finalización del desarrollo de modelos y teniendo en cuenta la necesidad de completar la integración de manera satisfactoria y los requerimientos de otros equipos, para este sprint nos pusimos tres objetivos:
 
-1. Testear la integración realizada por todos los equipos
-2. Brindar soporte al resto de los equipos con respecto a problemas en la API o en los modelos
-3. Si hay tiempo de sobra, iniciar la presentación final
+1. Testear la integración realizada por todos los equipos.
+2. Brindar soporte al resto de los equipos con respecto a problemas en la API o en los modelos.
+3. Si hay tiempo de sobra, iniciar la presentación final.
 
 == Objetivos del documento
 
@@ -46,6 +46,12 @@ El feedback del modelo _fred_ funcionaba perfectamente en todos los casos, al ig
 
 Durante las pruebas, notamos que habían ciertas imágenes que no se podían cargar en la web. El equipo de UX nos mencionó que ellos consideraban una imagen como válida cuando tiene un tamaño de mínimo 225x225 pixeles. Entonces, nuestro problema surgió debido a que las imágenes que utilizabamos eran de 224x224 pixeles. El equipo de frontend modificó esta restricción, para que las imágenes sean de mínimo 224x224 pixeles, debido a que los modelos reciben imágenes de, como mínimo, ese tamaño.
 
+== API
+
 == Soporte
 
-== API
+Nos llegó una advertencia del equipo de UX, debido a que se había perdido información de los diagnósticos del 4 al 35. En principio, pensamos que se había utilizado el endpoint `delete all` luego de la inserción de los datos. Sin embargo, rápidamente nos dimos cuenta que no fue así.
+
+La causa de este problema fue un reinicio automático no notificado de `Google Cloud`. Para evitar que esto vuelva a ocurrir, se utilizó robots para que realicen `ping` a la API cada un minuto. Esto no permite que la API entre en estado de suspensión, por lo que no se puede realizar un reinicio.
+
+También, realizamos una limpieza de los datos restantes, en conjunto con el equipo de datos. De otra forma, no podíamos garantizar la consistencia de los datos.
