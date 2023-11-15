@@ -34,4 +34,8 @@ Las funcionalidades testeadas desde el frontend fueron la realización del diagn
 
 == Testing
 
+Durante el testing se encontraron los siguientes problemas:
+
+1. El feedback del modelo _lyso_ se devolvía invertido. Es decir, si el profesional determinaba que se trataba de un caso de un paciente con neumonía, desde el frontend nos llegaba que el paciente no tenía neumonía, y viceversa. Los síntomas del paciente se cargaban correctamente. Se habló con el equipo de UX para solucionar este problema.
+
 == API
