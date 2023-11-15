@@ -42,6 +42,10 @@ Durante el testing se encontraron los siguientes problemas:
 
 Para ambos solucionar ambos problemas se habló con el equipo de UX, ya que detectamos que el problema podría provenir de su parte. Llegamos a esta conclusión debido a que desde nuestra API y desde la API del equipo de datos la información se almacenaba de manera correcta.
 
-El feedback del modelo _fred_ funcionaba perfectamente en todos los casos.
+El feedback del modelo _fred_ funcionaba perfectamente en todos los casos, al igual que los diagnósticos de todos los modelos.
+
+Durante las pruebas, notamos que habían ciertas imágenes que no se podían cargar en la web. El equipo de UX nos mencionó que ellos consideraban una imagen como válida cuando tiene un tamaño de mínimo 225x225 pixeles. Entonces, nuestro problema surgió debido a que las imágenes que utilizabamos eran de 224x224 pixeles. El equipo de frontend modificó esta restricción, para que las imágenes sean de mínimo 224x224 pixeles, debido a que los modelos reciben imágenes de, como mínimo, ese tamaño.
+
+== Soporte
 
 == API
