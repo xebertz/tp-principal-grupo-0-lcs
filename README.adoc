@@ -12,6 +12,12 @@ v1, {docdate}
 
 == Introducción
 
+Debido a la finalización del desarrollo de modelos y teniendo en cuenta la necesidad de completar la integración de manera satisfactoria y los requerimientos de otros equipos, para este sprint nos pusimos tres objetivos:
+
+1. Testear la integración realizada por todos los equipos
+2. Brindar soporte al resto de los equipos con respecto a problemas en la API o en los modelos
+3. Si hay tiempo de sobra, iniciar la presentación final
+
 == Objetivos del documento
 
 == Metodología de trabajo
