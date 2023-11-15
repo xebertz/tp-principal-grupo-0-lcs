@@ -36,7 +36,9 @@ Las funcionalidades testeadas desde el frontend fueron la realización del diagn
 
 Durante el testing se encontraron los siguientes problemas:
 
-1. El feedback del modelo _lyso_ se devolvía invertido. Es decir, si el profesional determinaba que se trataba de un caso de un paciente con neumonía, desde el frontend nos llegaba que el paciente no tenía neumonía, y viceversa. Si se re3alizaba un feeback desde la sección de comentarios, éste se almacenaba de forma correcta, al igual que los síntomas del paciente. Se habló con el equipo de UX para solucionar este problema.
+1. El feedback del modelo _lyso_ se devolvía invertido. Es decir, si el profesional determinaba que se trataba de un caso de un paciente con neumonía, desde el frontend nos llegaba que el paciente no tenía neumonía, y viceversa. Si se re3alizaba un feeback desde la sección de comentarios, éste se almacenaba de forma correcta, al igual que los síntomas del paciente.
++
+2. El feedback del modelo _wini_ fallaba en todos los casos en los que el médico seleccionaba la enfermedad correspondiente,. Sin embargo, cuando el médico ingresaba un comentario, éste se almacenaba de manera correcta.
 
 
 == API
