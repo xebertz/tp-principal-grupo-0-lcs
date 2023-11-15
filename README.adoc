@@ -40,5 +40,6 @@ Durante el testing se encontraron los siguientes problemas:
 +
 2. El feedback del modelo _wini_ fallaba en todos los casos en los que el médico seleccionaba la enfermedad correspondiente,. Sin embargo, cuando el médico ingresaba un comentario, éste se almacenaba de manera correcta.
 
+Para ambos solucionar ambos problemas se habló con el equipo de UX, ya que detectamos que el problema podría provenir de su parte. Llegamos a esta conclusión debido a que desde nuestra API y desde la API del equipo de datos la información se almacenaba de manera correcta.
 
 == API
