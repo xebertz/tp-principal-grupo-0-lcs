@@ -26,9 +26,9 @@ En este documento expondremos el trabajo realizado durante el sprint, la divisi�
 
 == Metodología de trabajo
 
-Durante los días 08/11/2023 y 09/11/2023, se brindó soporte a los demás equipos. Esto fue así debido a la ausencia de tres miembros del equipo, por motivos de estudio.
+Durante los días 08-11-2023 y 09-11-2023, se brindó soporte a los demás equipos. Esto fue así debido a la ausencia de tres miembros del equipo, por motivos de estudio.
 
-Luego del viernes 10/11/2023, se iniciaron tareas de testeo de integración, para verificar el correcto funcionamiento de las funcionalidades con respecto a los modelos desarrollados por AverIA.
+Luego del viernes 10-11-2023, se iniciaron tareas de testeo de integración, para verificar el correcto funcionamiento de las funcionalidades con respecto a los modelos desarrollados por AverIA.
 
 Las funcionalidades testeadas desde el frontend fueron la realización del diagnótico y el feedback del médico a partir de un diagnóstico. Esto último fue reforzado por pedido del equipo de UX-UI.
 
