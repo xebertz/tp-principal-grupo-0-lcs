@@ -48,6 +48,8 @@ Durante las pruebas, notamos que habían ciertas imágenes que no se podían car
 
 == API
 
+Para facilitar la tarea de testing, se añadió el endpoint `retrieve` a la API. Este endpoint retorna, a partir de un ID, la información almacenada correspondiente a el diagnóstico realizado para esa imagen. De esta forma, se puede saber si la información enviada desde UX se almacena correctamente de una forma más sencilla, ya que previamente se debía descargar toda la información almacenada según el modelo.
+
 == Soporte
 
 Nos llegó una advertencia del equipo de UX, debido a que se había perdido información de los diagnósticos del 4 al 35. En principio, pensamos que se había utilizado el endpoint `delete all` luego de la inserción de los datos. Sin embargo, rápidamente nos dimos cuenta que no fue así.
