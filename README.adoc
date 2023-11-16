@@ -62,3 +62,7 @@ Sin embargo, esto no solucionó nuestro problema. La causa de los reinicios auto
 
 1. Utilizar un volumen de Google Cloud para garantizar la persistencia de los datos.
 2. Utilizar una base de datos.
+
+La segunda opción implica modificar la API casi completamente, por lo que decidimos que sería una alternativa, en caso de no funcionar otros servicios.
+
+Finalmente, se implementó una máquina virtual con garantía de persistencia, por lo que, si se reinicia, la información no se pierde. Esto permitió resolver el problema sin modificaciones al código de la API.
