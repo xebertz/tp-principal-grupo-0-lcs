@@ -197,6 +197,8 @@ image::gestion/sprint-5/wbs-s5.svg[]
 
 === Calendario
 
+Debido al cambio de prioridad y surgimiento de nuevas tareas, el calendario presenta una serie de tareas completadas el día 16/11/2023.
+
 .Calendario Sprint 5
 image::gestion/sprint-5/calendario.png[]
 
@@ -404,21 +406,27 @@ Los _bugs_ encontrados serán agregados como _card_ en el tablero del equipo en 
 
 Tras recibir una petición de cambio, documentaremos las nuevas funcionalidades que se solicitan y posteriormente se agregarán al _Product Backlog_. Esta nueva modificación se evaluará, se estimará con los integrantes del proyecto, se modificará la WBS, Diccionario y se agregará al _Sprint Backlog_.
 
-Durante este _sprint_ tuvimos **x** cambios:
+Durante este _sprint_ tuvimos **4** cambios:
 
 - Cambio de prioridad: Se priorizó la integración y testeo de todas las funcionalidades de nuestra API, dejando la preparación de la presentación final en un nivel bajo de prioridad.
 
 - Creación de un nuevo _endpoint_ *"_retrieve_"* para facilitar el testeo de nuestra API.
+
+- Cambio de _hosting_: Google Cloud tiene unos reinicios repentinos causando la eliminación de los datos. Para evitar que vuelva a suceder, se implementó una máquina virtual con almacenamiento persistente, también en Google Cloud. 
+
+- _Backup_: se levantó una base de datos en MongoDB Atlas como respaldo.
 
 === *Burndown Chart*
 
 Al utilizar _Scrum_ precisamos ver el avance de nuestro trabajo de cada _sprint_. 
 El trabajo se expresará en Story Points, teniendo en cuenta que un Story Point es igual a 1 hora.
 
-El _sprint_ tuvo su comienzo con **x** _story points_ estimados. Se estimó completar **y _story points_**, quedando un total de **z** para el siguiente _sprint_.
+El _sprint_ tuvo su comienzo con **123** _story points_ estimados (el día 08/11/23 se completaron tareas). Se estimó completar **104 _story points_**, quedando un total de **15** para el siguiente _sprint_ (reuniones).
 
 .Burndown Chart Sprint 5
 image::gestion/sprint-5/burndown-chart.png[]
+
+Se decidió postergar la preparación de la presentación final, dejando **40 puntos de historia** para el próximo _sprint_, los 19 puntos faltantes son las reuniones.
 
 == User Stories Finalizadas
 
@@ -456,6 +464,7 @@ Las tecnologías a utilizadas fueron las siguientes:
 - *matplotlib.pyplot* para generar gráficos.
 - *GitHub* como repositorio de trabajo.
 - *Google Spreadsheets* como _dashboard_ para la gestión del proyecto.
+- *Flask* para el despliegue de la API.
 
 === Repositorio de GitHub
 
