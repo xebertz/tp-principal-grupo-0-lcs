@@ -57,3 +57,8 @@ Nos llegó una advertencia del equipo de UX, debido a que se había perdido info
 La causa de este problema fue un reinicio automático no notificado de `Google Cloud`. Para evitar que esto vuelva a ocurrir, se utilizó robots para que realicen `ping` a la API cada un minuto. Esto no permite que la API entre en estado de suspensión, por lo que no se puede realizar un reinicio.
 
 También, realizamos una limpieza de los datos restantes, en conjunto con el equipo de datos. De otra forma, no podíamos garantizar la consistencia de los datos.
+
+Sin embargo, esto no solucionó nuestro problema. La causa de los reinicios automáticos no está clara, por lo que decidimos cambiar el enfoque para resolver el problema. Surgieron dos alternativas:
+
+1. Utilizar un volumen de Google Cloud para garantizar la persistencia de los datos.
+2. Utilizar una base de datos.
