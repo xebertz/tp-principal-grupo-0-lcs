@@ -138,6 +138,11 @@ wbsDiagram {
 *** 1.4.3 - Integración de BBDD con API <<green>>
 *** 1.4.4 - Conexión con equipo de datos <<green>>
 
+** 1.5 - Backup <<orange>>
+*** 1.5.1 - Reconstrucción de Datos <<new>>
+*** 1.5.2 - VM GCloud <<new>>
+*** 1.5.3 - MongoDB <<new>>
+
 ** 1.A - Reuniones <<orange>>
 *** 1.A.1 - Reunión Formal 1 <<green>>
 *** 1.A.2 - Reunión Formal 2 <<green>>
