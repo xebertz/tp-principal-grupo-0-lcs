@@ -364,11 +364,11 @@ Para simplificar la visualización de riesgos, no se mostró la tabla de riesgos
 |Activo
 |16/11/23
 |6
-|Pendiente
-|3
-|100
+|Ejecutado
+|2
+|66,66
 |Activo
-|10/11/23
+|16/11/23
 |7
 |Ejecutado
 |1
@@ -386,9 +386,10 @@ Para simplificar la visualización de riesgos, no se mostró la tabla de riesgos
 |0
 |0
 |No activo
+|16/11/23
 |===
 
-Teniendo un Impacto Potencial Reducido de 27, siendo 38 el impacto original con un Índice de Mitigación del 71%.
+Teniendo un Impacto Potencial Reducido de 26, siendo 36 el impacto original con un Índice de Mitigación del 72%.
 
 .Índice de probabilidad
 image::gestion/sprint-5/indice-probabilidad.png[420,420,align="center"]
