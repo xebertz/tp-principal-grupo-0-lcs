@@ -32,12 +32,12 @@ EN CASO DE PASARLE UN VALOR DISTINTO A *TRUE* EN LOS PARÁMETROS BOOLEANOS, SE L
 ----
 
 == Ping
-Mediante una solicitud HTTP-GET se puede solicitar el _endpoint_, donde si está activo el servicio retorna un 200 y un JSON con el mensaje "API on!". Para acceder al _endpoint_ se debe agregar al dominio donde está la API subida _/ping_. EJ: `https://averiapi-4vtuhnxfba-uc.a.run.app/ping`
+Mediante una solicitud HTTP-GET se puede solicitar el _endpoint_, donde si está activo el servicio retorna un 200 y un JSON con el mensaje "API on!". Para acceder al _endpoint_ se debe agregar al dominio donde está la API subida _/ping_. EJ: `http://averia.chickenkiller.com/ping`
 
 .ejemplo_get.js
 [source,javascript]
 ----
-fetch('https://averiapi-4vtuhnxfba-uc.a.run.app/ping')
+fetch('http://averia.chickenkiller.com/ping')
   .then(response => {
     if (response.ok) {
       // El código de estado es 200 (OK)
@@ -93,7 +93,7 @@ formData.append('convulsiones', False);
 formData.append('perdida_visual', True); 
 
 // Realizar la solicitud POST a la API
-fetch('https://averiapi-4vtuhnxfba-uc.a.run.app/predict/fred', {
+fetch('http://averia.chickenkiller.com/predict/fred', {
   method: 'POST',
   body: formData
 })
@@ -114,7 +114,7 @@ fetch('https://averiapi-4vtuhnxfba-uc.a.run.app/predict/fred', {
 
 === */predict/wini*
 
-Se realiza el mismo procedimiento del modelo **fred**, pero con distintos campos del JSON y cambiando el dominio por **wini**: `https://averiapi-4vtuhnxfba-uc.a.run.app/predict/wini`
+Se realiza el mismo procedimiento del modelo **fred**, pero con distintos campos del JSON y cambiando el dominio por **wini**: `http://averia.chickenkiller.com/predict/wini`
 
 - image: Debe ser un archivo binario (imagen).
 
@@ -146,7 +146,7 @@ Adjuntando el código de estado 200.
 
 === */predict/lyso*
 
-Se realiza el mismo procedimiento del modelo **fred** y **wini**, pero con distintos campos del JSON y cambiando el dominio por **lyso**: 'https://averiapi-4vtuhnxfba-uc.a.run.app/predict/lyso'
+Se realiza el mismo procedimiento del modelo **fred** y **wini**, pero con distintos campos del JSON y cambiando el dominio por **lyso**: 'http://averia.chickenkiller.com/predict/lyso'
 
 - image: Debe ser un archivo binario (imagen).
 
@@ -190,7 +190,7 @@ Al realizar una predicción mediante el _endpoint_ *Predict* se almacenaba la im
 El feedback se añade a la base de datos, adjuntandolo a la imagen con el mismo id.
 
 === */feedback/fred*
-ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/feedback/fred`
+ruta = `http://averia.chickenkiller.com/feedback/fred`
 
 Mediante una solicitud HTTP-POST se puede enviar al _endpoint_ un JSON, cual puede recibir los siguientes valores: 
 
@@ -214,7 +214,7 @@ Retornará un JSON con los siguientes posibles mensajes:
 Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
 
 === */feedback/wini*
-ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/feedback/wini`
+ruta = `http://averia.chickenkiller.com/feedback/wini`
 
 Mediante una solicitud HTTP-POST se puede enviar al _endpoint_ un JSON, cual puede recibir los siguientes valores: 
 
@@ -236,7 +236,7 @@ Retornará un json con los siguientes posibles mensajes:
 Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
 
 === */feedback/lyso*
-ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/feedback/lyso`
+ruta = `http://averia.chickenkiller.com/feedback/lyso`
 
 Mediante una solicitud HTTP-POST se puede enviar al _endpoint_ un JSON, cual puede recibir los siguientes valores: 
 
@@ -266,7 +266,7 @@ Elimina los datos de una imagen y la misma imagen de la base de datos. Se le deb
 Por otro lado también se puede eliminar todos los datos del modelo seleccionado, en el caso de consumir */delete/all*.
 
 === */delete/fred*
-ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/delete/fred`
+ruta = `http://averia.chickenkiller.com/delete/fred`
 
 Mediante una solicitud HTTP-DELETE se puede enviar al _endpoint_ un JSON, cual puede recibir los siguientes valores: 
 
@@ -283,7 +283,7 @@ Retornará un json con los siguientes posibles mensajes:
 Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
 
 === */delete/wini*
-ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/delete/wini`
+ruta = `http://averia.chickenkiller.com/delete/wini`
 
 Mediante una solicitud HTTP-DELETE se puede enviar al _endpoint_ un JSON, cual puede recibir los siguientes valores: 
 
@@ -300,7 +300,7 @@ Retornará un json con los siguientes posibles mensajes:
 Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
 
 === */delete/lyso*
-ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/delete/lyso`
+ruta = `http://averia.chickenkiller.com/delete/lyso`
 
 Mediante una solicitud HTTP-DELETE se puede enviar al _endpoint_ un JSON, cual puede recibir los siguientes valores: 
 
@@ -317,7 +317,7 @@ Retornará un json con los siguientes posibles mensajes:
 Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
 
 === */delete/all*
-ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/delete/all`
+ruta = `http://averia.chickenkiller.com/delete/all`
 
 Mediante una solicitud HTTP-DELETE se puede enviar al _endpoint_ un JSON, cual puede recibir los siguientes valores: 
 
@@ -338,21 +338,21 @@ Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos
 Descarga un archivo _.zip_ del modelo seleccionado. El _.zip_ contiene un csv y una carpeta images. El csv contiene los datos ingresados en los _endpoints_ de  *predict* y *feedback*, con la correspondiente imagen en la carpeta _images_.
 
 === */download/fred*
-ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/download/fred`
+ruta = `http://averia.chickenkiller.com/download/fred`
 
 Mediante una solicitud HTTP-GET se puede descargar un _zip_ con las imágenes almacenadas de los predict de fred. Además, adjunto con un csv con datos para un posible entrenamiento de un nuevo modelo.
 
 Se consume de la misma manera del _endpoint_ `predict/fred` sin campos, cambiando el _endpoint_.
 
 === */download/wini*
-ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/download/wini`
+ruta = `http://averia.chickenkiller.com/download/wini`
 
 Mediante una solicitud HTTP-GET se puede descargar un _.zip_ con las imágenes almacenadas de los predict de wini. Además, adjunto con un csv con datos para un posible entrenamiento de un nuevo modelo.
 
 Se consume de la misma manera del _endpoint_ `predict/fred` sin campos, cambiando el _endpoint_.
 
 === */download/lyso*
-ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/download/lyso`
+ruta = `http://averia.chickenkiller.com/download/lyso`
 
 Mediante una solicitud HTTP-GET se puede descargar un _.zip_ con las imágenes almacenadas de los predict de lyso. Además, adjunto con un csv con datos para un posible entrenamiento de un nuevo modelo.
 
@@ -362,7 +362,7 @@ Se consume de la misma manera del _endpoint_ `predict/fred` sin campos, cambiand
 
 Mediante el id asociada a una imagen/predicción se obtienen los datos de la predicción y feedback en formato JSON. 
 
-ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/retrieve`
+ruta = `http://averia.chickenkiller.com/retrieve`
 
 Mediante una solicitud HTTP-GET se puede enviar al _endpoint_ un JSON, cual puede recibir los siguientes valores: 
 
