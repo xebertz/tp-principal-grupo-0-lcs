@@ -163,6 +163,11 @@ image::gestion/sprint-5/wbs-s5.svg[]
 |Last tareas del Líder Técnico para gestionar el desarrollo.
 |Asignar tareas, confirmar desarrollo y cambios.
 |10
+|FINN
+|Presentación Final
+|Preparación de presentación ante jurado.
+|Presentar ante jurado el día 21-11-2023
+|40
 |IV 
 |Soporte
 |Estar a la escucha de cualquier inconveniente surgido en nuestro dominio.
@@ -173,11 +178,21 @@ image::gestion/sprint-5/wbs-s5.svg[]
 |La actividad del servidor puede ser exportada a _json_ o _csv_ para su análisis.
 |Revisar los logs del servidor para determinar la causa de la eliminación de los datos.
 |1
-|FINN
-|Presentación Final
-|Preparación de presentación ante jurado.
-|Presentar ante jurado el día 21-11-2023
-|40
+|1.5.1
+|Reconstrucción de datos
+|Mediante la API del grupo de datos podemos obtener los diagnósticos realizados.
+|Reconstruir los datos perdidos y almacenarlos.
+|3
+|1.5.2
+|VM GCloud
+|Google Cloud ofrece la posibilidad de crear virtual machines.
+|Crear una máquina virtual con almacenamiento persistente para alojar el servidor.
+|3
+|1.5.3
+|MongoDB
+|MongoDB ofrece una base de datos en la nube con Mongo Atlas.
+|Levantar una base de datos en Mongo Atlas.
+|3
 |===
 
 === Calendario
