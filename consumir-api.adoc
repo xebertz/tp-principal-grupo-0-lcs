@@ -152,7 +152,7 @@ Se realiza el mismo procedimiento del modelo **fred** y **wini**, pero con disti
 
 - id: Almacena un id.
 
-- hermaturia: Almacena un booleano.
+- hematuria: Almacena un booleano.
 
 - dolor_lumbar: Almacena un booleano.
 
@@ -329,7 +329,7 @@ Retornará un json con los siguientes posibles mensajes:
 
 - {"message": "ERROR! name model not exists"}:En caso de que el parámetro model no coincida con los nombres de los modelos "fred", "wini" o "lyso". Adjunto con el código de estado 204.
 
-- {"message": "DELETE ALL ROWS: model"}: En caso de que el parámetro model sea "fred", "wini" o "lyso". Adjunt con el código de estado 200.
+- {"message": "DELETE ALL ROWS: model"}: En caso de que el parámetro model sea "fred", "wini" o "lyso". Adjunto con el código de estado 200.
 
 Se consume de la misma manera del _endpoint_ `predict/fred` cambiando los campos y el _endpoint_.
 
@@ -360,7 +360,7 @@ Se consume de la misma manera del _endpoint_ `predict/fred` sin campos, cambiand
 
 == Retrieve
 
-Mediante el id asociada a una imagen/prediccion se obtienen los datos de la predicción y feedback en formato JSON. 
+Mediante el id asociada a una imagen/predicción se obtienen los datos de la predicción y feedback en formato JSON. 
 
 ruta = `https://averiapi-4vtuhnxfba-uc.a.run.app/retrieve`
 
