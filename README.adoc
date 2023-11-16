@@ -30,13 +30,13 @@ Durante los días 08-11-2023 y 09-11-2023, se brindó soporte a los demás equip
 
 Luego del viernes 10-11-2023, se iniciaron tareas de testeo de integración, para verificar el correcto funcionamiento de las funcionalidades con respecto a los modelos desarrollados por AverIA.
 
-Las funcionalidades testeadas desde el frontend fueron la realización del diagnótico y el feedback del médico a partir de un diagnóstico. Esto último fue reforzado por pedido del equipo de UX-UI.
+Las funcionalidades testeadas desde el frontend fueron la realización del diagnóstico y el feedback del médico a partir de un diagnóstico. Esto último fue reforzado por pedido del equipo de UX-UI.
 
 == Testing
 
 Durante el testing se encontraron los siguientes problemas:
 
-1. El feedback del modelo _lyso_ se devolvía invertido. Es decir, si el profesional determinaba que se trataba de un caso de un paciente con neumonía, desde el frontend nos llegaba que el paciente no tenía neumonía, y viceversa. Si se realizaba un feeback desde la sección de comentarios, éste se almacenaba de forma correcta, al igual que los síntomas del paciente.
+1. El feedback del modelo _lyso_ se devolvía invertido. Es decir, si el profesional determinaba que se trataba de un caso de un paciente con neumonía, desde el frontend nos llegaba que el paciente no tenía neumonía, y viceversa. Si se realizaba un feedback desde la sección de comentarios, éste se almacenaba de forma correcta, al igual que los síntomas del paciente.
 +
 2. El feedback del modelo _wini_ fallaba en todos los casos en los que el médico seleccionaba la enfermedad correspondiente. Sin embargo, cuando el médico ingresaba un comentario, éste se almacenaba de manera correcta. Los síntomas del paciente se almacenaban de manera correcta.
 
@@ -44,7 +44,7 @@ Para ambos solucionar ambos problemas se habló con el equipo de UX, ya que dete
 
 El feedback del modelo _fred_ funcionaba perfectamente en todos los casos, al igual que los diagnósticos de todos los modelos.
 
-Durante las pruebas, notamos que habían ciertas imágenes que no se podían cargar en la web. El equipo de UX nos mencionó que ellos consideraban una imagen como válida cuando tiene un tamaño de mínimo 225x225 pixeles. Entonces, nuestro problema surgió debido a que las imágenes que utilizabamos eran de 224x224 pixeles. El equipo de frontend modificó esta restricción, para que las imágenes sean de mínimo 224x224 pixeles, debido a que los modelos reciben imágenes de, como mínimo, ese tamaño.
+Durante las pruebas, notamos que habían ciertas imágenes que no se podían cargar en la web. El equipo de UX nos mencionó que ellos consideraban una imagen como válida cuando tiene un tamaño de mínimo 225x225 pixeles. Entonces, nuestro problema surgió debido a que las imágenes que utilizábamos eran de 224x224 pixeles. El equipo de frontend modificó esta restricción, para que las imágenes sean de mínimo 224x224 pixeles, debido a que los modelos reciben imágenes de, como mínimo, ese tamaño.
 
 == API
 
