@@ -201,7 +201,7 @@ image::gestion/sprint-5/wbs-s5.svg[]
 image::gestion/sprint-5/calendario.png[]
 
 .Referencia de color
-image:../sprint-2-cerebro/gestion/sprint-5/comparativa-color.png[120,120, align="center"]
+image:sprint-2-cerebro/.img/comparativa-color.png[120,120, align="center"]
 
 === Plan de comunicaciones
 
@@ -226,7 +226,7 @@ La actualización de la documentación se hará formalmente al final de cada _sp
 Se armó una tabla con rangos de horarios en los cuales cada integrante del equipo indicaba cuándo se encontraba disponible en el _sprint_.
 
 .Horarios Sprint 5
-image::../sprint-2-cerebro/gestion/sprint-5/horarios-sprint.png[align="center"]
+image::sprint-2-cerebro/.img/horarios-sprint.png[align="center"]
 
 === Riesgos
 
@@ -395,7 +395,7 @@ Teniendo un Impacto Potencial Reducido de 26, siendo 36 el impacto original con 
 image::gestion/sprint-5/indice-probabilidad.png[420,420,align="center"]
 
 .Índice de mitigación 
-image::gestion/sprint-5/indice-mitigación.png[420,420,align="center"]
+image::gestion/sprint-5/indice-mitigacion.png[420,420,align="center"]
 
 === Administración en el Manejo de bugs
 Los _bugs_ encontrados serán agregados como _card_ en el tablero del equipo en *Trello*.
