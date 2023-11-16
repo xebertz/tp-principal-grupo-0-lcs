@@ -32,6 +32,8 @@ Luego del viernes 10-11-2023, se iniciaron tareas de testeo de integración, par
 
 Las funcionalidades testeadas desde el frontend fueron la realización del diagnóstico y el feedback del médico a partir de un diagnóstico. Esto último fue reforzado por pedido del equipo de UX-UI.
 
+Como parte del soporte, a partir del 14-11-2023 se trabajó en problemas en la API expuestos por el equipo de UX.
+
 == Testing
 
 Durante el testing se encontraron los siguientes problemas:
