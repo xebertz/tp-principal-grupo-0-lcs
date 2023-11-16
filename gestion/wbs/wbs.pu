@@ -129,6 +129,8 @@ wbsDiagram {
 *** 1.3.A - Refinamiento de API MDTC <<green>>
 *** 1.3.B - Refinamiento de API MDEP <<green>>
 *** 1.3.C - Refinamiento de API MDER <<green>>
+*** IV - Soporte <<new>>
+*** V - Monitoreo de Logs <<new>>
 
 ** 1.4 - Reentrenamiento <<orange>>
 *** 1.4.1 - Investigación sobre bases de datos <<green>>
